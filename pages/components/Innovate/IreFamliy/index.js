@@ -1,8 +1,5 @@
-import Image from "next/image";
 import React from "react";
 import s from "./index.module.css";
-import title_famliy from "assets/2560/innovate/title_famliy.png";
-import ire_logo from "assets/2560/innovate/ire_logo.png";
 export default function index() {
   return (
     <div className={`${s.wrap} col-12 d-center flex-column`}>

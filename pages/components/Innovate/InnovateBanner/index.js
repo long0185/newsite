@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import ire_banner from "assets/2560/innovate/banner.png";
 import s from "./index.module.css";
 export default function index() {
   return (

@@ -1,7 +1,5 @@
-import Image from "next/image";
 import React from "react";
 import s from "./index.module.css";
-import title_img_3 from "assets/2560/innovate/title_img_3.png";
 
 export default function index() {
   return (
