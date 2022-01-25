@@ -17,9 +17,10 @@ export default function index() {
             </div>
             <div className="c_sub_title d-flex align-items-center justify-content-between">
               <div className="d-flex align-items-center">
-                <div className={`${s.svg} relative mr-2`}>
-                  <Image src={calendar} layout="fill" />
-                </div>
+                <img
+                  src="/assets/2560/service/useguide/calendar.svg"
+                  className={`${s.svg} relative mr-2`}
+                ></img>
                 <span>2020年7月23日</span>
               </div>
               <span>浏览：231</span>
@@ -27,9 +28,10 @@ export default function index() {
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
               <span>View more</span>
-              <span className={`${s.arrow} relative`}>
-                <Image layout="fill" src={arrow_right} />
-              </span>
+              <img
+                src="/assets/2560/example/right_arrow.svg"
+                className={`${s.arrow} relative`}
+              ></img>
             </div>
           </div>
         </div>
@@ -43,9 +45,10 @@ export default function index() {
             </div>
             <div className="c_sub_title d-flex align-items-center justify-content-between">
               <div className="d-flex align-items-center">
-                <div className={`${s.svg} relative mr-2`}>
-                  <Image src={calendar} layout="fill" />
-                </div>
+                <img
+                  src="/assets/2560/service/useguide/calendar.svg"
+                  className={`${s.svg} relative mr-2`}
+                ></img>
                 <span>2020年7月23日</span>
               </div>
               <span>浏览：231</span>
@@ -53,9 +56,10 @@ export default function index() {
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
               <span>View more</span>
-              <span className={`${s.arrow} relative`}>
-                <Image layout="fill" src={arrow_right} />
-              </span>
+              <img
+                src="/assets/2560/example/right_arrow.svg"
+                className={`${s.arrow} relative`}
+              ></img>
             </div>
           </div>
         </div>
@@ -69,9 +73,10 @@ export default function index() {
             </div>
             <div className="c_sub_title d-flex align-items-center justify-content-between">
               <div className="d-flex align-items-center">
-                <div className={`${s.svg} relative mr-2`}>
-                  <Image src={calendar} layout="fill" />
-                </div>
+                <img
+                  src="/assets/2560/service/useguide/calendar.svg"
+                  className={`${s.svg} relative mr-2`}
+                ></img>
                 <span>2020年7月23日</span>
               </div>
               <span>浏览：231</span>
@@ -79,9 +84,10 @@ export default function index() {
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
               <span>View more</span>
-              <span className={`${s.arrow} relative`}>
-                <Image layout="fill" src={arrow_right} />
-              </span>
+              <img
+                src="/assets/2560/example/right_arrow.svg"
+                className={`${s.arrow} relative`}
+              ></img>
             </div>
           </div>
         </div>
@@ -95,9 +101,10 @@ export default function index() {
             <div className="c_title">第21届中国国际高新技术成果交易会</div>
             <div className="c_sub_title d-flex align-items-center justify-content-between">
               <div className="d-flex align-items-center">
-                <div className={`${s.svg} relative mr-2`}>
-                  <Image src={calendar} layout="fill" />
-                </div>
+                <img
+                  src="/assets/2560/service/useguide/calendar.svg"
+                  className={`${s.svg} relative mr-2`}
+                ></img>
                 <span>2020年7月23日</span>
               </div>
               <span>浏览：231</span>
@@ -105,9 +112,10 @@ export default function index() {
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
               <span>View more</span>
-              <span className={`${s.arrow} relative`}>
-                <Image layout="fill" src={arrow_right} />
-              </span>
+              <img
+                src="/assets/2560/example/right_arrow.svg"
+                className={`${s.arrow} relative`}
+              ></img>
             </div>
           </div>
         </div>
@@ -121,9 +129,10 @@ export default function index() {
             </div>
             <div className="c_sub_title d-flex align-items-center justify-content-between">
               <div className="d-flex align-items-center">
-                <div className={`${s.svg} relative mr-2`}>
-                  <Image src={calendar} layout="fill" />
-                </div>
+                <img
+                  src="/assets/2560/service/useguide/calendar.svg"
+                  className={`${s.svg} relative mr-2`}
+                ></img>
                 <span>2020年7月23日</span>
               </div>
               <span>浏览：231</span>
@@ -131,9 +140,10 @@ export default function index() {
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
               <span>View more</span>
-              <span className={`${s.arrow} relative`}>
-                <Image layout="fill" src={arrow_right} />
-              </span>
+              <img
+                src="/assets/2560/example/right_arrow.svg"
+                className={`${s.arrow} relative`}
+              ></img>
             </div>
           </div>
         </div>
@@ -147,9 +157,10 @@ export default function index() {
             </div>
             <div className="c_sub_title d-flex align-items-center justify-content-between">
               <div className="d-flex align-items-center">
-                <div className={`${s.svg} relative mr-2`}>
-                  <Image src={calendar} layout="fill" />
-                </div>
+                <img
+                  src="/assets/2560/service/useguide/calendar.svg"
+                  className={`${s.svg} relative mr-2`}
+                ></img>
                 <span>2020年7月23日</span>
               </div>
               <span>浏览：231</span>
@@ -157,9 +168,10 @@ export default function index() {
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
               <span>View more</span>
-              <span className={`${s.arrow} relative`}>
-                <Image layout="fill" src={arrow_right} />
-              </span>
+              <img
+                src="/assets/2560/example/right_arrow.svg"
+                className={`${s.arrow} relative`}
+              ></img>
             </div>
           </div>
         </div>

@@ -5,9 +5,10 @@ import s from "./index.module.css";
 export default function index() {
   return (
     <div className={`bg-info position-relative`}>
-      <div className={`${s.ire_banner} position-relative`}>
-        <Image layout="fill" src={ire_banner} />
-      </div>
+      <img
+        src="/assets/2560/innovate/banner.png"
+        className={`${s.ire_banner} position-relative`}
+      />
     </div>
   );
 }

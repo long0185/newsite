@@ -10,9 +10,10 @@ export default function index() {
       <div className="col-12 p-0 d-center">
         <div className={`${s.content_2} d-flex justify-between`}>
           <div className={`${s.item_2} flex items-start mx-3`}>
-            <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
-              <Image src={p_1} layout="fill" />
-            </div>
+            <img
+              src="/assets/2560/info/expert/p_1.png"
+              className={`${s.sm_img} relative bg-gray-400 border-2`}
+            ></img>
             <div className={`flex items-star flex-col `}>
               <div className="flex items-center">
                 <span className="c_title">陈武雄</span>
@@ -25,9 +26,10 @@ export default function index() {
 
               <div className="c_sub_title d-flex align-items-center justify-content-between mt-5">
                 <div className="d-flex align-items-center">
-                  <div className={`${s.svg} relative mr-2`}>
-                    <Image src={calendar} layout="fill" />
-                  </div>
+                  <img
+                    src="/assets/2560/service/useguide/calendar.svg"
+                    className={`${s.svg} relative mr-2`}
+                  ></img>
                   <span>2020年7月23日</span>
                 </div>
                 <span>浏览：231</span>
@@ -35,16 +37,18 @@ export default function index() {
               <div className={s.line}></div>
               <div className="mt-3 flex items-center justify-between c_sub_title">
                 <span>View more</span>
-                <span className={`${s.arrow} relative`}>
-                  <Image layout="fill" src={arrow_right} />
-                </span>
+                <img
+                  src="/assets/2560/example/right_arrow.svg"
+                  className={`${s.arrow} relative`}
+                ></img>
               </div>
             </div>
           </div>
           <div className={`${s.item_2} flex items-start mx-3`}>
-            <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
-              <Image src={p_1} layout="fill" />
-            </div>
+            <img
+              src="/assets/2560/info/expert/p_1.png"
+              className={`${s.sm_img} relative bg-gray-400 border-2`}
+            ></img>
             <div className={`flex items-star flex-col `}>
               <div className="flex items-center">
                 <span className="c_title">陈武雄</span>
@@ -57,9 +61,10 @@ export default function index() {
 
               <div className="c_sub_title d-flex align-items-center justify-content-between mt-5 ">
                 <div className="d-flex align-items-center">
-                  <div className={`${s.svg} relative mr-2`}>
-                    <Image src={calendar} layout="fill" />
-                  </div>
+                  <img
+                    src="/assets/2560/service/useguide/calendar.svg"
+                    className={`${s.svg} relative mr-2`}
+                  ></img>
                   <span>2020年7月23日</span>
                 </div>
                 <span>浏览：231</span>
@@ -67,9 +72,10 @@ export default function index() {
               <div className={s.line}></div>
               <div className="mt-3 flex items-center justify-between c_sub_title">
                 <span>View more</span>
-                <span className={`${s.arrow} relative`}>
-                  <Image layout="fill" src={arrow_right} />
-                </span>
+                <img
+                  src="/assets/2560/example/right_arrow.svg"
+                  className={`${s.arrow} relative`}
+                ></img>
               </div>
             </div>
           </div>
@@ -78,9 +84,10 @@ export default function index() {
       <div className="col-12 p-0 d-center mb-20">
         <div className={`${s.content_2} d-flex justify-between`}>
           <div className={`${s.item_2} flex items-start mx-3`}>
-            <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
-              <Image src={p_1} layout="fill" />
-            </div>
+            <img
+              src="/assets/2560/info/expert/p_1.png"
+              className={`${s.sm_img} relative bg-gray-400 border-2`}
+            ></img>
             <div className={`flex items-star flex-col `}>
               <div className="flex items-center">
                 <span className="c_title">陈武雄</span>
@@ -93,9 +100,10 @@ export default function index() {
 
               <div className="c_sub_title d-flex align-items-center justify-content-between mt-5">
                 <div className="d-flex align-items-center">
-                  <div className={`${s.svg} relative mr-2`}>
-                    <Image src={calendar} layout="fill" />
-                  </div>
+                  <img
+                    src="/assets/2560/service/useguide/calendar.svg"
+                    className={`${s.svg} relative mr-2`}
+                  ></img>
                   <span>2020年7月23日</span>
                 </div>
                 <span>浏览：231</span>
@@ -103,16 +111,18 @@ export default function index() {
               <div className={s.line}></div>
               <div className="mt-3 flex items-center justify-between c_sub_title">
                 <span>View more</span>
-                <span className={`${s.arrow} relative`}>
-                  <Image layout="fill" src={arrow_right} />
-                </span>
+                <img
+                  src="/assets/2560/example/right_arrow.svg"
+                  className={`${s.arrow} relative`}
+                ></img>
               </div>
             </div>
           </div>
           <div className={`${s.item_2} flex items-start mx-3`}>
-            <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
-              <Image src={p_1} layout="fill" />
-            </div>
+            <img
+              src="/assets/2560/info/expert/p_1.png"
+              className={`${s.sm_img} relative bg-gray-400 border-2`}
+            ></img>
             <div className={`flex items-star flex-col `}>
               <div className="flex items-center">
                 <span className="c_title">陈武雄</span>
@@ -125,9 +135,10 @@ export default function index() {
 
               <div className="c_sub_title d-flex align-items-center justify-content-between mt-5 ">
                 <div className="d-flex align-items-center">
-                  <div className={`${s.svg} relative mr-2`}>
-                    <Image src={calendar} layout="fill" />
-                  </div>
+                  <img
+                    src="/assets/2560/service/useguide/calendar.svg"
+                    className={`${s.svg} relative mr-2`}
+                  ></img>
                   <span>2020年7月23日</span>
                 </div>
                 <span>浏览：231</span>
@@ -135,9 +146,10 @@ export default function index() {
               <div className={s.line}></div>
               <div className="mt-3 flex items-center justify-between c_sub_title">
                 <span>View more</span>
-                <span className={`${s.arrow} relative`}>
-                  <Image layout="fill" src={arrow_right} />
-                </span>
+                <img
+                  src="/assets/2560/example/right_arrow.svg"
+                  className={`${s.arrow} relative`}
+                ></img>
               </div>
             </div>
           </div>

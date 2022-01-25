@@ -6,13 +6,15 @@ import ire_logo from "assets/2560/innovate/ire_logo.png";
 export default function index() {
   return (
     <div className={`${s.wrap} col-12 d-center flex-column`}>
-      <div className={`${s.title_img} position-relative`}>
-        <Image layout="fill" src={title_famliy} />
-      </div>
+      <img
+        src="/assets/2560/innovate/title_famliy.png"
+        className={`${s.title_img} position-relative`}
+      ></img>
       <div className={`${s.content} d-center`}>
-        <div className={`${s.img_wrap} position-relative`}>
-          <Image layout="fill" src={ire_logo} />
-        </div>
+        <img
+          src="/assets/2560/innovate/ire_logo.png"
+          className={`${s.img_wrap} position-relative`}
+        />
         <div className={`${s.text} d-flex flex-column`}>
           <span className={`${s.title} d-block`}>“爱睿家”</span>
           <span className={`${s.line} d-block`}></span>
