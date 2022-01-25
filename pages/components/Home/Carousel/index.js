@@ -144,7 +144,7 @@ const Example = () => {
       <div className={`absolute col-12  ${s.bar_wrap} flex justify-center`}>
         <span className={`${s.bar}`}>
           <motion.div
-            className="h-100 w-0 bg-primary"
+            className="h-100 w-0 bg-$primary"
             animate={{ width: `${num == 1 ? "100%" : 0}` }}
             transition={{ duration: 3 }}
           ></motion.div>
