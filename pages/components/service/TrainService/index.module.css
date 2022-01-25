@@ -1,0 +1,62 @@
+@media screen and (min-width: 768px) {
+  .img {
+    height: 62px;
+    width: 405px;
+    margin-top: 78px;
+  }
+  .content {
+    margin-top: 72px;
+  }
+  .item {
+    width: 629px;
+    height: 199px;
+    box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
+    border-radius: 6px;
+    margin: 0 18px;
+    padding-right: 52px;
+    /* background-image: url("../../../../public/assets/2560/service/train/white.png"); */
+    background-size: cover;
+  }
+  .item_2 {
+    margin-top: 40px;
+  }
+  .svg_img {
+    margin-left: 52px;
+    margin-right: 32px;
+    width: 77px;
+    height: 77px;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #363737;
+  }
+  .line {
+    /* width: 423px; */
+    height: 6px;
+    background: #ececec;
+    margin: 18px 0;
+  }
+  .desc {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #686868;
+  }
+
+  .item_3 {
+    margin-top: 93px;
+    width: 1295px;
+    height: 190px;
+    box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
+    border-radius: 6px;
+    padding: 62px 55px;
+    padding-bottom: 42px;
+  }
+  .train_title {
+    font-size: 24px;
+    color: #363737;
+  }
+}

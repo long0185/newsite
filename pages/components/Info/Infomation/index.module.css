@@ -1,0 +1,31 @@
+.content {
+  margin-top: 108px;
+}
+.img {
+  width: 596px;
+  height: 350px;
+}
+.item {
+  margin: 0 20px;
+  width: 596px;
+  height: 600px;
+  box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
+}
+.svg {
+  width: 13px;
+  height: 14px;
+}
+.desc {
+  padding: 0 26px;
+  padding-top: 36px;
+}
+.line {
+  margin-top: 26px;
+  margin-bottom: 16px;
+  height: 1px;
+  background: #ececec;
+}
+.arrow {
+  width: 34px;
+  height: 25px;
+}

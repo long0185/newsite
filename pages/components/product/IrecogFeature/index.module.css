@@ -1,0 +1,60 @@
+.content {
+}
+
+.titleimg {
+  height: 70px;
+  width: 494px;
+}
+.wrap {
+  background: #ced2de;
+  padding-bottom: 162px;
+}
+.title {
+  padding-top: 128px;
+}
+
+.content_img {
+  width: 926px;
+  height: 436px;
+}
+.svg_wrap {
+  top: 0;
+  left: 64px;
+  bottom: 0;
+}
+.svg {
+  width: 118px;
+  height: 120px;
+}
+.big_title {
+  font-size: 30px;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.sm_title {
+  font-size: 21px;
+  color: #fff;
+  font-family: MicrosoftYaHei;
+}
+.big_title_4 {
+  font-size: 30px;
+  color: #000;
+  margin: 20px 0;
+}
+
+.sm_title_4 {
+  font-size: 21px;
+  color: #000;
+  font-family: MicrosoftYaHei;
+}
+.bg_wrap {
+  right: 43px;
+  padding: 26px 0;
+  top: 0;
+  bottom: 0;
+}
+.png {
+  width: 496px;
+  height: 382px;
+}

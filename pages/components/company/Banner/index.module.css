@@ -1,0 +1,48 @@
+.banner {
+  background-image: url("../../../../public/assets/2560/company/grey_bg_1.png");
+  height: 760px;
+  background-size: cover;
+}
+.banner_img {
+  height: 210px;
+  width: 654px;
+}
+.banner_text {
+  width: 1260px;
+}
+.title {
+  width: 103px;
+  height: 33px;
+  line-height: 33px;
+  color: #fff;
+  background: #caa95c;
+}
+.desc {
+  color: #373737;
+}
+.left_img {
+  width: 1012px;
+  height: 729px;
+}
+.center_top {
+  width: 532px;
+  height: 454px;
+}
+.center_bottom {
+  width: 532px;
+  height: 275px;
+  background: #caab53;
+}
+
+.right_top_img {
+  width: 1016px;
+  height: 365px;
+}
+.point {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.bg_primary {
+  color: #caa95c !important;
+}

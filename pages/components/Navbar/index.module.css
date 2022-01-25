@@ -1,0 +1,7 @@
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #caa95c;
+}

@@ -1,0 +1,71 @@
+/* advantage*/
+.wrap {
+  padding-bottom: 100px;
+  background: #31322b;
+}
+.title {
+}
+.title-text {
+  color: #fff;
+  font-size: 18px;
+}
+.title_text_1 {
+  font-size: 18px;
+  color: #fff;
+}
+.title_text_2 {
+  color: #fff;
+  font-size: 18px;
+}
+.titleimg {
+  height: 70px;
+  width: 494px;
+}
+.content {
+}
+.content_item_1 {
+  width: 435px;
+  height: 597px;
+}
+.item_wrap_1 {
+  margin-right: 115px;
+}
+.item_wrap_3 {
+  margin-left: 115px;
+}
+.content_item_2 {
+  width: 872px;
+  height: 597px;
+}
+.content_item_3 {
+  width: 435px;
+  height: 597px;
+}
+
+.modal {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #c69142;
+  opacity: 0.9;
+}
+.desc {
+  font-size: 18px;
+  color: #fff;
+  margin-top: 26px;
+  display: block;
+}
+.desc_text_1,
+.desc_text_2,
+.desc_text_3 {
+  margin-bottom: 18px;
+  color: #fff;
+}
+.desc_text_4 {
+  color: #fff;
+}
+.q_desc {
+  /* margin-top: 26px; */
+  font-size: 18px;
+}

@@ -1,0 +1,19 @@
+.nav_item {
+  /* margin-top: 60px; */
+}
+.wrap {
+  /* margin-top: 62px; */
+}
+.img {
+  width: 481px;
+  height: 340px;
+}
+.link {
+  width: 162px;
+  height: 46px;
+  border-radius: 23px;
+  border: solid 1px #ccc;
+}
+.active {
+  border: solid 1px #caa95c;
+}

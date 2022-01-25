@@ -1,0 +1,74 @@
+.img {
+  height: 62px;
+  width: 405px;
+  margin-top: 78px;
+}
+.content {
+  margin-top: 66px;
+  height: 630px;
+  width: 1305px;
+  /* height: 626px; */
+  /* width: 1300px; */
+  background-size: cover;
+  background-image: url("../../../../public/assets/2560/service/maintain/white_block.png");
+}
+.info_1 {
+  width: 808px;
+  height: 298px;
+  padding-top: 41px;
+  padding-left: 70px;
+  padding-right: 48px;
+}
+.label {
+  font-size: 24px;
+  letter-spacing: 0px;
+  /* color: #fafafa; */
+}
+.line {
+  height: 8px;
+  margin-top: 24px;
+  background-color: #ececec;
+}
+._label {
+  font-size: 24px;
+}
+.input_1 {
+  margin-top: 22px;
+}
+.input_item {
+  border: none;
+  border-radius: 0px !important;
+}
+.info_2 {
+  width: 808px;
+  height: 298px;
+  padding-top: 56px;
+  padding-left: 70px;
+  padding-right: 48px;
+}
+.right {
+  margin-left: 25px;
+  padding-top: 40x;
+  padding-left: 40px;
+  padding-right: 60px;
+  width: 465px;
+}
+.desc {
+  font-size: 24px;
+  margin-top: 40px;
+}
+.textarea {
+  width: 210px;
+  height: 280px;
+}
+.btn {
+  margin-top: 50px;
+  width: 257px;
+  height: 56px;
+  border-radius: 3px;
+  background-color: #caa95c;
+  border: none;
+  color: #fff;
+  font-size: 21px;
+  margin-bottom: 110px;
+}

@@ -1,0 +1,56 @@
+.wrap {
+  width: 100%;
+  height: 100vh;
+  padding-top: 136px;
+}
+.menu {
+  top: 36px;
+  width: 2315px;
+  height: 60px;
+}
+.left_img {
+  width: 235px;
+  height: 60px;
+}
+.right_img {
+  width: 52px;
+  height: 40px;
+}
+.innovate_1 {
+  width: 754px;
+  height: 708px;
+  margin-right: 14px;
+}
+.innovate_2 {
+  width: 1492px;
+  height: 708px;
+}
+.news {
+  margin-top: 14px;
+  margin-bottom: 135px;
+}
+.innovate_btn {
+  width: 150px;
+  height: 53px;
+  text-align: center;
+  line-height: 53px;
+  color: #fff;
+  background-color: #987e40;
+  left: 54px;
+  bottom: 54px;
+}
+.market {
+  width: 755px;
+  height: 447px;
+  margin-right: 7px;
+}
+.news_1 {
+  width: 486px;
+  height: 447px;
+  margin: 0 7px;
+}
+.news_last {
+  width: 486px;
+  height: 447px;
+  margin-left: 7px;
+}

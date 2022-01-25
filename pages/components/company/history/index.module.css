@@ -1,0 +1,56 @@
+.wrap {
+  background: #303f5c;
+}
+
+.title {
+  height: 62px;
+  width: 404px;
+  margin-top: 65px;
+  margin-bottom: 40px;
+}
+.item {
+  font-size: 18px;
+  color: #fff;
+}
+.point {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #c0c0c0;
+}
+.line {
+  width: 2073px;
+  height: 1px;
+  background-color: #c0c0c0;
+  bottom: 9px;
+}
+.active {
+  background-color: #caa95c;
+}
+.history_item {
+  margin-top: 84px;
+}
+.img {
+  width: 655px;
+  height: 386px;
+}
+.img_title {
+  width: 655px;
+  height: 144px;
+  padding: 35px;
+}
+.sub_title {
+  width: 598px;
+  font-family: MicrosoftYaHei;
+  font-size: 26px;
+  font-weight: normal;
+  font-stretch: normal;
+  color: #373737;
+}
+.icon {
+  width: 12px;
+  height: 14px;
+}
+.item_wrap {
+  margin-bottom: 200px;
+}

@@ -1,0 +1,17 @@
+.wrap {
+  width: 2560px;
+  height: 1094px;
+  background-image: url("../../../../public/assets/2560/Innovate/new_iremo.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.top_img {
+  margin-top: 80px;
+  width: 915px;
+  height: 80px;
+}
+.text {
+  width: 672px;
+  color: #373737;
+  font-size: 18px;
+}

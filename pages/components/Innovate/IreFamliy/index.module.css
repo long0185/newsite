@@ -1,0 +1,41 @@
+.wrap {
+  background-image: url("../../../../public/assets/2560/Innovate/bg_1.png");
+}
+.title_img {
+  height: 68px;
+  width: 434px;
+  margin-top: 100px;
+}
+.content {
+  margin-top: 62px;
+  margin-bottom: 124px;
+}
+.img_wrap {
+  height: 343px;
+  width: 343px;
+}
+
+.text {
+  width: 799px;
+  /* height: 359px; */
+  margin-left: 92px;
+}
+.title_1 {
+  font-size: 24px;
+  color: #373737;
+  font-weight: 700;
+}
+.line {
+  width: 116px;
+  height: 5px;
+  background: #d6d6d6;
+  margin-top: 4px;
+  margin-bottom: 18x;
+}
+.desc {
+  font-family: MicrosoftYaHei;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #373737;
+}
