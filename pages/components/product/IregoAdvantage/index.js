@@ -20,9 +20,7 @@ export default function index() {
         }
       />
       <div className={`col-12 d-center  ${styles.content}`}>
-        <div
-          className={`${styles.content_item} cursor-pointer relative border `}
-        >
+        <div className={`${styles.content_item} cursor-pointer relative  `}>
           <img
             className={`${styles.content_item} img-fluid absolute`}
             src="/assets/2560/product/irego/advantage_1.png"
@@ -46,7 +44,7 @@ export default function index() {
         </div>
         <div className={`${styles.content_item} position-relative`}>
           <img
-            className={`${styles.content_item} img-fluid hover:opacity-80`}
+            className={`${styles.content_item} img-fluid `}
             src="/assets/2560/product/irego/product_2.png"
           />
           <motion.div

@@ -91,19 +91,6 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        {/* <motion.div
-          className="bg-white fixed w-100 h-100 z-50 flex items-center justify-center flex-col"
-          animate={{
-            opacity: 0.5,
-            zIndex: -1,
-          }}
-          transition={{
-            duration: 2,
-            delay: 4,
-          }}
-        >
-          <Modal />
-        </motion.div> */}
         <Menu />
         <ReactFullpage
           scrollingSpeed={1000}
@@ -111,7 +98,6 @@ class App extends React.Component {
           loopHorizontal={false}
           pluginWrapper={pluginWrapper}
           onLeave={this.onLeave.bind(this)}
-          // scrollHorizontally = {true}
           sectionsColor={this.state.sectionsColor}
           render={(comp) => (
             <ReactFullpage.Wrapper>

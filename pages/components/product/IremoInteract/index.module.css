@@ -1,15 +1,19 @@
-.u_img{
-	width: 660px;
-	height: 372px;
+.u_img {
+  width: 660px;
+  height: 372px;
 }
-.big_title{
-	margin-bottom: 30px;
-	font-size: 30px;
-	color: #fff;
+.big_title {
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #fff;
 }
-.img_mid{
-	margin: 0 20px;
+.img_mid {
+  margin: 0 20px;
 }
-.wrap{
-	padding-bottom: 150px;
+.wrap {
+  padding-bottom: 150px;
+}
+.interact {
+  background-image: url("/assets/2560/gray-bg.jpeg");
+  background-size: cover;
 }

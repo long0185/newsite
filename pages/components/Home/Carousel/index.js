@@ -22,14 +22,22 @@ const swipePower = (offset, velocity) => {
 };
 
 const Example = () => {
-  const [num, setNum] = useState(1);
+  const [num, setNum] = useState(0);
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    clearTimeout(ref.current);
+    ref.current = setTimeout(() => {
+      setNum((num) => (num + 1) % 2);
+    }, 5000);
+    return () => clearTimeout(ref.current);
+  }, [num]);
   const handleClick = (direction) => {
     if (direction == "left") {
-      const newNum = num - 1 <= 0 ? 1 : num - 1;
+      const newNum = (num - 1) % 2;
       setNum(newNum);
     }
     if (direction == "right") {
-      const newNum = num + 1 >= 3 ? 2 : num + 1;
+      const newNum = (num + 1) % 2;
       setNum(newNum);
     }
   };
@@ -44,7 +52,7 @@ const Example = () => {
     }),
     reset: {
       marginTop: `600px`,
-      opacity: 0.3,
+      opacity: 0.5,
       transition: {
         duration: 1,
         delay: 1.5,
@@ -57,7 +65,7 @@ const Example = () => {
       <Navbar />
       <motion.div
         className={`${s.img_wrap} flex relative`}
-        animate={{ marginLeft: `${-100 * (num - 1)}vw` }}
+        animate={{ marginLeft: `${-100 * num}vw` }}
         transition={{ duration: 2 }}
       >
         <div className={`${s.img} relative`}>
@@ -68,7 +76,7 @@ const Example = () => {
           <motion.div
             className={` w-2 h-2 absolute ${s.title_wrap} flex flex-col`}
             variants={variants}
-            animate={`${num == 1 ? "toTop" : "reset"}`}
+            animate={`${num == 0 ? "toTop" : "reset"}`}
           >
             <img
               className={`${s.title_text} img-fluid absolute`}
@@ -88,7 +96,7 @@ const Example = () => {
           <motion.div
             className={`w-2 h-2 absolute ${s.title_wrap_1}`}
             variants={variants}
-            animate={`${num == 2 ? "toTop" : "reset"}`}
+            animate={`${num == 1 ? "toTop" : "reset"}`}
           >
             <div className={`${s.title_text} relative`}>
               <img

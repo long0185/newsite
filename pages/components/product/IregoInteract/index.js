@@ -1,10 +1,11 @@
 import React from "react";
 import Banner from "../../Banner";
+import s from "./index.module.css";
 export default function index() {
   return (
     <div
       id="interact"
-      className="product-interact adavantageImga d-flex flex-column align-item-center justify-content-center"
+      className={`${s.interact}  adavantageImga d-flex flex-column align-item-center justify-content-center`}
     >
       <Banner img={"/assets/newtitle/irego/title_4.png"}></Banner>
       <div className="p-0  d-flex justify-content-center">

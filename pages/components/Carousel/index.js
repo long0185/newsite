@@ -10,13 +10,23 @@ const swipePower = (offset, velocity) => {
 
 const Example = ({ banners = [], imgs = [] }) => {
   const [num, setNum] = useState(1);
+  console.log("num", num);
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    clearTimeout(ref.current);
+    ref.current = setTimeout(() => {
+      setNum((num) => (num + 1) % banners.length);
+    }, 5000);
+    return () => clearTimeout(ref.current);
+  }, [num]);
   const handleClick = (direction) => {
+    clearTimeout(ref.current);
     if (direction == "left") {
-      const newNum = num - 1 <= 0 ? 1 : num - 1;
+      const newNum = (num - 1) % banners.length;
       setNum(newNum);
     }
     if (direction == "right") {
-      const newNum = num + 1 >= banners.length + 1 ? 2 : num + 1;
+      const newNum = (num + 1) % banners.length;
       setNum(newNum);
     }
   };
@@ -26,11 +36,11 @@ const Example = ({ banners = [], imgs = [] }) => {
       <motion.div
         className={`${s.img_wrap} flex relative`}
         style={{ width: `${banners.length}*100%` }}
-        animate={{ marginLeft: `${-100 * (num - 1)}vw` }}
+        animate={{ marginLeft: `${-100 * num}vw` }}
         transition={{ duration: 2 }}
       >
         {banners.map((item, index) => (
-          <div key={index} className={`${s.img} relative`}>
+          <div key={index} className={`${s.img} w-screen relative`}>
             <img className={`${s.img} w-screen  h_786 img-fluid`} src={item} />
           </div>
         ))}
@@ -39,20 +49,19 @@ const Example = ({ banners = [], imgs = [] }) => {
         className={`absolute  ${s.icon_wrap} flex flex-col justify-between px-5`}
       >
         {imgs.map((item, index) => {
-          console.log("item", item);
           return (
             <div
               key={index}
               className={`${
                 s.icon
               } relative cursor-pointer my-1 overflow-hidden ${
-                num == index + 1 ? " border-$primary border-2" : ""
+                num == index ? " border-$primary border-2" : ""
               } `}
             >
               <img
                 className={s.icon}
                 src={item}
-                onClick={() => setNum(index + 1)}
+                onClick={() => setNum((num) => (index + 1) % 2)}
               />
             </div>
           );
