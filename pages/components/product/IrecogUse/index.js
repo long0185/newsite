@@ -10,6 +10,13 @@ export default function index() {
         </div>
       </div>
       <div className="col-12 w-100 d-flex align-items-center justify-content-center ">
+        <div className="irego-video position-relative ">
+          <video controls>
+            <source src="/assets/iremo.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div className="col-12 w-100 d-flex align-items-center justify-content-center ">
         <div className={`${s.content} d-flex flex-column align-items-center`}>
           <Banner
             img={"/assets/newtitle/irecog/title_1.png"}
