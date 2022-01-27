@@ -22,8 +22,8 @@ const Example = ({ banners = [], imgs = [] }) => {
   const handleClick = (direction) => {
     clearTimeout(ref.current);
     if (direction == "left") {
-      const newNum = (num - 1) % banners.length;
-      setNum(newNum);
+      const newNum = num - 1 < 0 ? 0 : num - 1;
+      setNum(newNum % banners.length);
     }
     if (direction == "right") {
       const newNum = (num + 1) % banners.length;

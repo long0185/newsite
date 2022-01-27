@@ -5,7 +5,7 @@ export default function index() {
   return (
     <div
       id="interact"
-      className={`${s.wrap} ${s.interact} product-interact col-12 d-flex flex-column align-item-center justify-content-center`}
+      className={`${s.wrap} bg_coffee product-interact col-12 d-flex flex-column align-item-center justify-content-center`}
     >
       <Banner img={"/assets/newtitle/iremo/title_4.png"} />
       <div className="col-12 p-0  d-flex justify-content-center">

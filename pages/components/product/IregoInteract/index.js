@@ -5,7 +5,7 @@ export default function index() {
   return (
     <div
       id="interact"
-      className={`${s.interact}  adavantageImga d-flex flex-column align-item-center justify-content-center`}
+      className={`bg_coffee  adavantageImga d-flex flex-column align-item-center justify-content-center`}
     >
       <Banner img={"/assets/newtitle/irego/title_4.png"}></Banner>
       <div className="p-0  d-flex justify-content-center">

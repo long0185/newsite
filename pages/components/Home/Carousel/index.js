@@ -33,8 +33,8 @@ const Example = () => {
   }, [num]);
   const handleClick = (direction) => {
     if (direction == "left") {
-      const newNum = (num - 1) % 2;
-      setNum(newNum);
+      const newNum = num - 1 < 0 ? 0 : num - 1;
+      setNum(newNum % 2);
     }
     if (direction == "right") {
       const newNum = (num + 1) % 2;

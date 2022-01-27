@@ -648,8 +648,20 @@ a:hover {
   font-size: 21px;
 }
 .w_726 {
-  width: 726px;
+  width: 726px !important;
+}
+.w_727 {
+  width: 727px !important;
 }
 .h_413 {
-  height: 413px;
+  height: 413px !important;
+}
+.h_505 {
+  height: 505px !important;
+}
+.w_194 {
+  width: 194px !important;
+}
+.bg_coffee {
+  background-color: #756e68;
 }

@@ -1,8 +1,8 @@
 .icon {
-  width: 25px;
-  height: 45px;
+  width: 45px;
+  height: 65px;
 }
 .wrap {
-  width: 2178px;
+  flex: 0 0 2181px;
   height: 505px;
 }
