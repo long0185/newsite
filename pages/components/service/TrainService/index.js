@@ -1,27 +1,19 @@
-import Image from "next/image";
 import React from "react";
 import s from "./index.module.css";
-import title_img from "assets/2560/service/train/title.png";
-import zj_train from "assets/2560/service/train/zj_train.svg";
-import lc_train from "assets/2560/service/train/lc_train.svg";
-import jz_train from "assets/2560/service/train/jz_train.svg";
-import learn_train from "assets/2560/service/train/learn_train.svg";
-import calendar from "assets/2560/service/useguide/calendar.svg";
+
 
 export default function index() {
   return (
     <div
       className={`${s.wrap} col-12 p-0 d-flex flex-column align-items-center`}
     >
-      <div className={`${s.img} position-relative`}>
-        <Image layout="fill" src={title_img} />
-      </div>
+      <img src='/assets/2560/service/train/title.png' className={`${s.img} position-relative`}>
+      </img>
       <div className={`${s.content} d-flex flex-column align-items-center `}>
         <div className="d-flex">
           <div className={`${s.item} d-flex align-items-center`}>
-            <div className={`${s.svg_img} position-relative `}>
-              <Image layout="fill" src={zj_train} />
-            </div>
+            <img src='/assets/2560/service/train/zj_train.svg' className={`${s.svg_img} position-relative `}>
+            </img>
             <div className={`${s.txt} d-flex  flex-column`}>
               <div className={`${s.title}`}>装机培训:</div>
               <div className={`${s.line}`}></div>
@@ -31,9 +23,8 @@ export default function index() {
             </div>
           </div>
           <div className={`${s.item} d-flex align-items-center`}>
-            <div className={`${s.svg_img} position-relative `}>
-              <Image layout="fill" src={jz_train} />
-            </div>
+            <img src='/assets/2560/service/train/jz_train.svg' className={`${s.svg_img} position-relative `}>
+            </img>
             <div className={`${s.txt} d-flex  flex-column`}>
               <div className={`${s.title}`}>公司集中培训:</div>
               <div className={`${s.line}`}></div>
@@ -45,9 +36,8 @@ export default function index() {
         </div>
         <div className={`d-flex ${s.item_2}`}>
           <div className={`${s.item} d-flex align-items-center`}>
-            <div className={`${s.svg_img} position-relative `}>
-              <Image layout="fill" src={lc_train} />
-            </div>
+            <img src='/assets/2560/service/train/lc_train.svg' className={`${s.svg_img} position-relative `}>
+            </img>
             <div className={`${s.txt} d-flex  flex-column`}>
               <div className={`${s.title}`}>联合临床培训:</div>
               <div className={`${s.line}`}></div>
@@ -57,9 +47,8 @@ export default function index() {
             </div>
           </div>
           <div className={`${s.item} d-flex align-items-center`}>
-            <div className={`${s.svg_img} position-relative `}>
-              <Image layout="fill" src={learn_train} />
-            </div>
+            <img src='/assets/2560/service/train/learn_train.svg' className={`${s.svg_img} position-relative `}>
+            </img>
             <div className={`${s.txt} d-flex  flex-column`}>
               <div className={`${s.title}`}>装机培训:</div>
               <div className={`${s.line}`}></div>
@@ -69,6 +58,7 @@ export default function index() {
             </div>
           </div>
         </div>
+        <div className={`${s.train_wrap} flex items-center justify-center`}>
         <div
           className={`${s.item_3} d-flex  flex-column align-items-start justify-content-between`}
         >
@@ -79,9 +69,8 @@ export default function index() {
             className={`${s.sub_title} d-flex align-items-center justify-content-between c_sub_title`}
           >
             <div className="d-flex align-items-center justify-content-between c_sub_title">
-              <div className="calendar position-relative">
-                <Image src={calendar} layout="fill"></Image>
-              </div>
+              <img src='/assets/2560/service/useguide/calendar.svg' className="calendar position-relative">
+              </img>
               <span className="ml-1">培训时间：</span>
               <span>2021年7月23日 </span>
               <span className="ml-3">17:30分</span>
@@ -94,6 +83,8 @@ export default function index() {
             </div>
           </div>
         </div>
+        </div>
+
       </div>
     </div>
   );

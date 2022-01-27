@@ -6,7 +6,7 @@ const ServiceMaintain = () => {
   return (
     <>
       <NavBar />
-      <div>
+      <div className="pt_104">
         <MaintainBanner />
         <MaintainForm />
       </div>

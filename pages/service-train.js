@@ -7,7 +7,7 @@ const ServiceTrain = () => {
   return (
     <>
       <NavBar />
-      <div>
+      <div className="pt_104">
         <MaintainBanner />
         <TrainService />
         <TrainForm />

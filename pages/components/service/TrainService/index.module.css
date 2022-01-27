@@ -23,8 +23,8 @@
   .svg_img {
     margin-left: 52px;
     margin-right: 32px;
-    width: 77px;
-    height: 77px;
+    width:103px;
+    height: 103px;
   }
   .title {
     font-size: 24px;
@@ -47,9 +47,10 @@
   }
 
   .item_3 {
-    margin-top: 93px;
     width: 1295px;
     height: 190px;
+    
+    background-size: cover;
     box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
     border-radius: 6px;
     padding: 62px 55px;
@@ -59,4 +60,11 @@
     font-size: 24px;
     color: #363737;
   }
+}
+.train_wrap{
+  margin-top: 93px;
+  background-image: url('/assets/2560/service/train/gril.png');
+	width: 1831px;
+	height: 317px;
+  background-size: cover;
 }

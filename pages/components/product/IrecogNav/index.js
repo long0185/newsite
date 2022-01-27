@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 export default function IregoNav() {
   const router = useRouter();
-  const [href, setHref] = useState("#appearance");
+  const [href, setHref] = useState("#usefn");
   useEffect(() => {
     window.addEventListener("hashchange", handhash);
     return () => window.removeEventListener("hashchange", handhash);
@@ -14,7 +14,7 @@ export default function IregoNav() {
 
   const list = [
     {
-      href: "#usefna",
+      href: "#usefn",
       name: "使用功能",
     },
     {
@@ -22,7 +22,7 @@ export default function IregoNav() {
       name: "产品特点",
     },
     {
-      href: "#usefn",
+      href: "/service-guide",
       name: "使用指南",
     },
   ];

@@ -6,7 +6,7 @@ const ServiceGuide = () => {
   return (
     <>
       <NavBar />
-      <div>
+      <div className="mt_104">
         <MaintainBanner />
         <UseGuide />
       </div>

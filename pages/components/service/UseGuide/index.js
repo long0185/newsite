@@ -1,61 +1,45 @@
-import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import s from "./index.module.css";
-import title_img from "assets/2560/service/maintain/title.png";
 import Irego from "../Irego";
+import Iremo from "../Iremo";
 export default function index() {
+  const [index, setIndex] = useState(1);
   return (
-    <div
-      className={`${s.wrap} col-12 p-0 d-flex flex-column align-items-center`}
-    >
-      <ul
-        className="product-subnav nav w-100 nav-pills d-flex justify-content-center align-items-center"
-        id="pills-use-tab"
-        role="tablist"
-      >
-        <li className={`${s.nav_item} d-center`} role="presentation">
-          <a
-            className={`${s.link} active`}
-            id="use-irego-tab"
-            data-toggle="pill"
-            href="#use-irego"
-            role="tab"
-            aria-controls="use-irego"
-            aria-selected="true"
+    <div className={`${s.wrap} flex mt_118 justify-center flex-col  mb_118`}>
+      <ul className="product-subnav nav w-100 nav-pills align-items-center flex justify-center items-center">
+          <li
+            className={`${s.nav_item} d-center mx-3`}
+            onClick={() => setIndex(1)}
           >
-            iReGo下肢机器人
-          </a>
-        </li>
-        <li className={`${s.nav_item} d-center`} role="presentation">
-          <a
-            className={`${s.link} `}
-            id="use-iremo-tab"
-            data-toggle="pill"
-            href="#use-iremo"
-            role="tab"
-            aria-controls="use-iremo"
-            aria-selected="false"
+            <span
+              className={`${s.link} ${
+                index==1 ? s.active : ""
+              } flex items-center justify-center`}
+            >
+              iReGo下肢机器人
+            </span>
+          </li>
+          <li
+            className={`${s.nav_item} d-center mx-3`}
+            onClick={() => setIndex(2)}
           >
-            iReMo上肢机器人
-          </a>
-        </li>
+            <span
+              className={`${s.link} ${
+                index==2 ? s.active : ""
+              } flex items-center justify-center`}
+            >iReMo上肢机器人
+            </span>
+          </li>
+
       </ul>
-      <div className="tab-content " id="pills-tabContent">
+      <div className={`${s.wrap}`} id="tablist">
         <div
-          className="tab-pane fade show active "
-          id="use-irego"
+          className="tab-pane fade show active flex "
+          id="honor"
           role="tabpanel"
-          aria-labelledby="use-irego-tab"
+          aria-labelledby="honor-tab"
         >
-          <Irego />
-        </div>
-        <div
-          className="tab-pane fade"
-          id="use-iremo"
-          role="tabpanel"
-          aria-labelledby="use-iremo-tab"
-        >
-          fdaf
+         {index==1?<Irego/>:<Iremo/>}
         </div>
       </div>
     </div>

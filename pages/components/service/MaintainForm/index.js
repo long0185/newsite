@@ -1,15 +1,12 @@
-import Image from "next/image";
 import React from "react";
 import s from "./index.module.css";
-import title_img from "assets/2560/service/maintain/title.png";
 export default function index() {
   return (
     <div
       className={`${s.wrap} col-12 p-0 d-flex flex-column align-items-center`}
     >
-      <div className={`${s.img} position-relative`}>
-        <Image layout="fill" src={title_img} />
-      </div>
+      <img src='/assets/2560/service/maintain/title.png' className={`${s.img} position-relative`}>
+      </img>
       <div className={`${s.content} d-flex  `}>
         <div>
           <div className={`${s.info_1} d-flex flex-column`}>
@@ -79,7 +76,7 @@ export default function index() {
         </div>
       </div>
       <div className={`col-12 text-center`}>
-        <button className={s.btn}>提交</button>
+        <button className={`${s.btn} hover:bg-yellow-700 `}>提交</button>
       </div>
     </div>
   );

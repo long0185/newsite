@@ -8,7 +8,7 @@ export default function index() {
         </div>
       </div>
       <div className="col-12 w-100 mb-32 d-flex align-items-center justify-content-center ">
-        <div className="irego-video position-relative ">
+        <div className="irego-video position-relative w_1021 h_574 ">
           <video controls>
             <source src="/assets/iremo.mp4" type="video/mp4" />
           </video>

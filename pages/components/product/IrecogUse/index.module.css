@@ -4,7 +4,7 @@
 }
 .content {
   width: 1329px;
-  height: 414px;
+  /* height: 414px; */
 }
 .img {
   width: 485px;
@@ -28,5 +28,5 @@
   color: #373737;
 }
 .wrap {
-  padding-bottom: 145px;
+  
 }

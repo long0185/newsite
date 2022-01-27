@@ -2,6 +2,7 @@
 .wrap {
   padding-bottom: 100px;
   background-image: url("/assets/2560/product/quality_bg.png");
+  background-size: cover;
 }
 .title {
 }

@@ -38,11 +38,11 @@ export default function IregoNav() {
       name: "品质保障",
     },
     {
-      href: "#qualitya",
+      href: "/example-irego",
       name: "投放效果",
     },
     {
-      href: "#qualityb",
+      href: "/service-guide",
       name: "使用指南",
     },
   ];

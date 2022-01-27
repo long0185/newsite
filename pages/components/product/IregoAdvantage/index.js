@@ -1,7 +1,12 @@
 import React from "react";
 import styles from "./index.module.css";
 import Banner from "../../Banner";
-import { motion } from "framer-motion";
+const list = [
+  "/assets/2560/product/irego/advantage_1.png",
+  "/assets/2560/product/irego/product_2.png",
+  "/assets/2560/product/irego/product_3.png",
+  "/assets/2560/product/irego/product_4.png",
+];
 export default function index() {
   return (
     <div
@@ -20,94 +25,31 @@ export default function index() {
         }
       />
       <div className={`col-12 d-center  ${styles.content}`}>
-        <div className={`${styles.content_item} cursor-pointer relative  `}>
-          <img
-            className={`${styles.content_item} img-fluid absolute`}
-            src="/assets/2560/product/irego/advantage_1.png"
-          />
-          <motion.div
-            className={`${styles.modal} absolute z-100  clear-both bg-$primary flex flex-col justify-center items-center `}
-            whileHover={{ opacity: 0.9 }}
-            whileTap={{ opacity: 1 }}
+        {list.map((item, index) => (
+          <div
+            key={index}
+            className={`${styles.content_item} position-relative`}
           >
-            <span className={`${styles.desc_text_1}`}>
-              骨盆四连杆装置通过简易的弹簧设计，
-            </span>
-            <span className={`${styles.desc_text_2}`}>
-              有效地实现骨盆横摆的自由度，
-            </span>
-            <span className={`${styles.desc_text_3}`}>
-              可根据不同程度的患者情况自由调节横
-            </span>
-            <span className={`${styles.desc_text_4}`}>摆的位移量</span>
-          </motion.div>
-        </div>
-        <div className={`${styles.content_item} position-relative`}>
-          <img
-            className={`${styles.content_item} img-fluid `}
-            src="/assets/2560/product/irego/product_2.png"
-          />
-          <motion.div
-            className={`${styles.modal} absolute z-100  clear-both bg-$primary flex flex-col justify-center items-center `}
-            whileHover={{ opacity: 0.9 }}
-            whileTap={{ opacity: 1 }}
-          >
-            <span className={`${styles.desc_text_1}`}>
-              骨盆四连杆装置通过简易的弹簧设计，
-            </span>
-            <span className={`${styles.desc_text_2}`}>
-              有效地实现骨盆横摆的自由度，
-            </span>
-            <span className={`${styles.desc_text_3}`}>
-              可根据不同程度的患者情况自由调节横
-            </span>
-            <span className={`${styles.desc_text_4}`}>摆的位移量</span>
-          </motion.div>
-        </div>
-        <div className={`${styles.content_item} relative`}>
-          <img
-            className={styles.conntent_item}
-            src={"/assets/2560/product/irego/product_3.png"}
-          />
-          <motion.div
-            className={`${styles.modal} absolute z-100  clear-both bg-$primary flex flex-col justify-center items-center `}
-            whileHover={{ opacity: 0.9 }}
-            whileTap={{ opacity: 1 }}
-          >
-            <span className={`${styles.desc_text_1}`}>
-              骨盆四连杆装置通过简易的弹簧设计，
-            </span>
-            <span className={`${styles.desc_text_2}`}>
-              有效地实现骨盆横摆的自由度，
-            </span>
-            <span className={`${styles.desc_text_3}`}>
-              可根据不同程度的患者情况自由调节横
-            </span>
-            <span className={`${styles.desc_text_4}`}>摆的位移量</span>
-          </motion.div>
-        </div>
-        <div className={`${styles.content_item} position-relative`}>
-          <img
-            className={styles.conntent_item}
-            src={"/assets/2560/product/irego/product_4.png"}
-          />
-          <motion.div
-            className={`${styles.modal} absolute z-100  clear-both bg-$primary flex flex-col justify-center items-center `}
-            whileHover={{ opacity: 0.9 }}
-            whileTap={{ opacity: 1 }}
-          >
-            <span className={`${styles.desc_text_1}`}>
-              骨盆四连杆装置通过简易的弹簧设计，
-            </span>
-            <span className={`${styles.desc_text_2}`}>
-              有效地实现骨盆横摆的自由度，
-            </span>
-            <span className={`${styles.desc_text_3}`}>
-              可根据不同程度的患者情况自由调节横
-            </span>
-            <span className={`${styles.desc_text_4}`}>摆的位移量</span>
-          </motion.div>
-        </div>
+            <img
+              className={`${styles.content_item} z-10`}
+              src={item}
+            />
+            <div
+              className={`w-100 h-100 ${styles.modal} flex flex-col items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute cursor-pointer z-30`}
+            >
+              <span className={`${styles.desc_text_1} `}>
+                骨盆四连杆装置通过简易的弹簧设计，
+              </span>
+              <span className={`${styles.desc_text_2}`}>
+                有效地实现骨盆横摆的自由度，
+              </span>
+              <span className={`${styles.desc_text_3}`}>
+                可根据不同程度的患者情况自由调节横
+              </span>
+              <span className={`${styles.desc_text_4}`}>摆的位移量</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

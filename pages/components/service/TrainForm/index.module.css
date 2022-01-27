@@ -1,6 +1,6 @@
 .wrap {
   margin-top: 96px;
-  background-image: url("../../../../public/assets/2560/service/train/balck_bg.png");
+  background-image: url("/assets/2560/service/train/balck_bg.png");
   background-size: cover;
 }
 
