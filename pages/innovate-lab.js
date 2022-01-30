@@ -8,7 +8,7 @@ export default function innovatelab() {
     <div>
       <Navbar />
       <div className="w-100 pt_104">
-        <img src="/assets/2560/innovate/banner.png" className="img-fluid"></img>
+        <img src="/assets/2560/innovate/banner.png" className="img-fluid h_786 w-100"></img>
         <div className="w-100  lab_bg flex flex-col items-center">
           <div className="bg-white w_1633">
             <Banner img="/assets/2560/innovate/title-lab.png" />

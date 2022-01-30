@@ -1,11 +1,100 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import s from "./index.module.css";
 import calendar from "assets/2560/service/useguide/calendar.svg";
 import arrow_right from "assets/2560/example/right_arrow.svg";
+import Detail from "../Detail";
+
+let _list=[
+	{
+		id:1,
+    element:<div className="w-100 h-100 flex flex-col pt-5">
+    <div className="w-100 flex flex-col items-center justify-center">
+      <span className="font_24 font-black">标题标题标题标题标题标题标题</span>
+      <div className="flex justify-center items-center">
+        <img src="/assets/2560/service/useguide/calendar.svg" 
+        className={`${s.icon} calendar-icon img-fluid mr-1`} ></img>
+        <span>2021年7月23日</span>
+        </div>
+      </div>
+      <div className="flex items-center px-5">
+        <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
+      </div>
+      <div className="flex justify-center mt-3">
+        <div className="w-50 bg-gray-600 h-96"></div>
+      </div>
+      <div className="flex items-center px-5 mt-3">
+        <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
+      </div>
+      <div className="flex justify-center mt-3">
+        <div className="w-50 bg-gray-600 h-60"></div>
+      </div>
+    <div></div>
+  </div>
+	},
+	{
+		id:2,
+		element:<div className="w-100 h-100 flex flex-col pt-5">
+      <div className="w-100 flex flex-col items-center justify-center">
+        <span className="font_24 font-black">标题标题标题标题标题标题标题</span>
+        <div className="flex justify-center items-center">
+          <img src="/assets/2560/service/useguide/calendar.svg" 
+          className={`${s.icon} calendar-icon img-fluid mr-1`} ></img>
+          <span>2021年7月23日</span>
+          </div>
+        </div>
+        <div className="flex items-center px-5">
+          <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
+        </div>
+        <div className="flex justify-center mt-3">
+          <div className="w-50 bg-gray-600 h-96"></div>
+        </div>
+        <div className="flex items-center px-5 mt-3">
+          <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
+        </div>
+        <div className="flex justify-center mt-3 mb-5">
+          <div className="w-50 bg-gray-600 h-60"></div>
+        </div>
+      <div></div>
+    </div>
+	},
+	{
+		id:3,
+    element:<div className="w-100 h-100 flex flex-col pt-5">
+    <div className="w-100 flex flex-col items-center justify-center">
+      <span className="font_24 font-black">标题标题标题标题标题标题标题</span>
+      <div className="flex justify-center items-center">
+        <img src="/assets/2560/service/useguide/calendar.svg" 
+        className={`${s.icon} calendar-icon img-fluid mr-1`} ></img>
+        <span>2021年7月23日</span>
+        </div>
+      </div>
+      <div className="flex items-center px-5">
+        <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
+      </div>
+      <div className="flex justify-center mt-3">
+        <div className="w-50 bg-gray-600 h-96"></div>
+      </div>
+      <div className="flex items-center px-5 mt-3">
+        <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
+      </div>
+      <div className="flex justify-center mt-3">
+        <div className="w-50 bg-gray-600 h-60"></div>
+      </div>
+    <div></div>
+  </div>
+	}
+]
+
+
 export default function index() {
+  const [isShow, setIsShow] = useState(false);
+  const handleShow = (bool)=>{
+    setIsShow(bool)
+  }
   return (
     <div className={`${s.content} `}>
+      {isShow && <Detail handleShow={handleShow} showList={_list} />}
       <div className="flex d-center">
         <div className={`${s.item} `}>
           <div className={`${s.img}  relative bg-info`}>
@@ -27,7 +116,7 @@ export default function index() {
             </div>
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
-              <span>View more</span>
+              <span onClick={()=>handleShow(true)}>View more</span>
               <img
                 src="/assets/2560/example/right_arrow.svg"
                 className={`${s.arrow} relative`}
@@ -55,7 +144,7 @@ export default function index() {
             </div>
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
-              <span>View more</span>
+              <span onClick={()=>handleShow(true)}>View more</span>
               <img
                 src="/assets/2560/example/right_arrow.svg"
                 className={`${s.arrow} relative`}
@@ -83,7 +172,7 @@ export default function index() {
             </div>
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
-              <span>View more</span>
+              <span onClick={()=>handleShow(true)}>View more</span>
               <img
                 src="/assets/2560/example/right_arrow.svg"
                 className={`${s.arrow} relative`}
@@ -111,7 +200,7 @@ export default function index() {
             </div>
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
-              <span>View more</span>
+              <span onClick={()=>handleShow(true)}>View more</span>
               <img
                 src="/assets/2560/example/right_arrow.svg"
                 className={`${s.arrow} relative`}
@@ -139,7 +228,7 @@ export default function index() {
             </div>
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
-              <span>View more</span>
+              <span onClick={()=>handleShow(true)}>View more</span>
               <img
                 src="/assets/2560/example/right_arrow.svg"
                 className={`${s.arrow} relative`}
@@ -167,7 +256,7 @@ export default function index() {
             </div>
             <div className={s.line}></div>
             <div className=" flex items-center justify-between c_sub_title">
-              <span>View more</span>
+              <span onClick={()=>handleShow(true)}>View more</span>
               <img
                 src="/assets/2560/example/right_arrow.svg"
                 className={`${s.arrow} relative`}

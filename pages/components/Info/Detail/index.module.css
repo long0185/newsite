@@ -1,0 +1,40 @@
+
+  .middle {
+	overflow: hidden;
+	position: fixed;
+	top: 104px;
+	left: 0;
+	right: 0;
+	bottom: 74px;
+	transform-style: preserve-3d;
+	perspective: 800px;
+	margin: 0 auto;
+  }
+.ul {
+	position: relative;
+  }
+.li {
+	overflow: hidden;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 1;
+  }
+.img {
+	width: 100%;
+  }
+  
+.left_icon{
+	top: 0;
+	left:-120px;
+}
+.right_icon{
+	top: 0;
+	right: -120px;
+}
+.back{
+	bottom: -80px;
+}

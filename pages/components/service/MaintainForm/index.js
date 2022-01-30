@@ -29,7 +29,7 @@ export default function index() {
               className={`input-group input-group-lg d-flex  align-items-end ${s.input_1}`}
             >
               <span className={`${s._label} w-25`} id="inputGroup-sizing-lg">
-                联系地址:
+                联系地址
               </span>
               <input
                 type="text"
@@ -40,7 +40,7 @@ export default function index() {
             </div>
           </div>
           <div className={`${s.info_2} d-flex flex-column`}>
-            <span className={`${s.label}`}>预约详情：</span>
+            <span className={`${s.label}`}>预约详情</span>
             <span className={`${s.line}`}></span>
             <div
               className={`input-group input-group-lg d-flex  align-items-end ${s.input_1}`}
@@ -71,12 +71,12 @@ export default function index() {
           </div>
         </div>
         <div className={`${s.right} d-flex flex-column`}>
-          <span className={s.desc}>请输入备注：</span>
+          <span className={s.desc}>请输入备注</span>
           <textarea className={`${s.textarea} mt-2 w-100 outline-none`} />
         </div>
       </div>
       <div className={`col-12 text-center`}>
-        <button className={`${s.btn} hover:bg-yellow-700 `}>提交</button>
+        <button className={`${s.btn} hover:bg-yellow-400 `}>提交</button>
       </div>
     </div>
   );

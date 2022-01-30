@@ -6,7 +6,7 @@ export default function index() {
     <div id="usefn" className={`${s.wrap} mb_236`}>
       <div className="product-title irego-title col-12 d-flex align-items-center justify-content-center">
         <div className="position-relative ">
-          <img src="/assets/2560/product/irecog/irecog.svg" />
+          <img className="img-fluid" src="/assets/2560/product/irecog/irecog.svg" />
         </div>
       </div>
       <div className="col-12 w-100 d-flex align-items-center justify-content-center ">

@@ -6,7 +6,7 @@ const ExpampleIrego = () => {
     <div>
       <NavBar />
       <div className="w-screen mt_104">
-      <img className="img-fluid w-100 h-768" src="/assets/2560/example/banner.png" alt="" />
+      <img className="img-fluid w-100 h-786" src="/assets/2560/example/banner.png" alt="" />
       </div>
       <Application />
     </div>

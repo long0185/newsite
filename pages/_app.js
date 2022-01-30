@@ -1,5 +1,6 @@
 import Layout from "./components/layout";
 import React, { useEffect } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../style.css";
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {

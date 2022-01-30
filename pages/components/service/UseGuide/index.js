@@ -5,8 +5,8 @@ import Iremo from "../Iremo";
 export default function index() {
   const [index, setIndex] = useState(1);
   return (
-    <div className={`${s.wrap} flex mt_118 justify-center flex-col  mb_118`}>
-      <ul className="product-subnav nav w-100 nav-pills align-items-center flex justify-center items-center">
+    <div className={`${s.wrap} flex mt_63 justify-center flex-col  mb_118`}>
+      <ul className="nav w-100 nav-pills align-items-center flex justify-center items-center">
           <li
             className={`${s.nav_item} d-center mx-3`}
             onClick={() => setIndex(1)}

@@ -1,130 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./index.module.css";
+import GuideItem from '../GuideItem'
+import { motion } from "framer-motion";
 export default function index() {
+  const [num, setNum] = useState(0);
   return (
-    <div className={`col-12 d-center flex-column mt_118 }`}>
-      <div className={`${s.wrap} d-flex`}>
-        <div className={`${s.img_wrap}`}>
-          <div className={`${s.img} position-relative`}>
-            <img src="/assets/2560/service/useguide/irego.png" />
-            <div className={`position-absolute border ${s.sm_img_wrap}`}>
-              <div className={`${s.sm_img} position-relative`}>
-                <img src={"/assets/2560/service/useguide/play.png"} />
-              </div>
-            </div>
-          </div>
-          <div className={`${s.title} border`}>
-            <div className={s.big_title}>iReMo操作指南 康复计划制定</div>
-            <div className={`${s.sm_title} d-flex align-items-center`}>
-              <div className={`${s.calendar} position-relative`}>
-                <img src={"/assets/2560/service/useguide/calendar.svg"} />
-              </div>
-              <span className={s.date}>2020年7月23日</span>
-            </div>
-          </div>
-        </div>
-        <div className={`${s.img_wrap}`}>
-          <div className={`${s.img} position-relative`}>
-            <img src="/assets/2560/service/useguide/irego.png" />
-            <div className={`position-absolute border ${s.sm_img_wrap}`}>
-              <div className={`${s.sm_img} position-relative`}>
-                <img src={"/assets/2560/service/useguide/play.png"} />
-              </div>
-            </div>
-          </div>
-          <div className={`${s.title} border`}>
-            <div className={s.big_title}>iReMo操作指南 康复计划制定</div>
-            <div className={`${s.sm_title} d-flex align-items-center`}>
-              <div className={`${s.calendar} position-relative`}>
-                <img src={"/assets/2560/service/useguide/calendar.svg"} />
-              </div>
-              <span className={s.date}>2020年7月23日</span>
-            </div>
-          </div>
-        </div>
-        <div className={`${s.img_wrap}`}>
-          <div className={`${s.img} position-relative`}>
-            <img src="/assets/2560/service/useguide/irego.png" />
-            <div className={`position-absolute border ${s.sm_img_wrap}`}>
-              <div className={`${s.sm_img} position-relative`}>
-                <img src={"/assets/2560/service/useguide/play.png"} />
-              </div>
-            </div>
-          </div>
-          <div className={`${s.title} border`}>
-            <div className={s.big_title}>iReMo操作指南 康复计划制定</div>
-            <div className={`${s.sm_title} d-flex align-items-center`}>
-              <div className={`${s.calendar} position-relative`}>
-                <img src={"/assets/2560/service/useguide/calendar.svg"} />
-              </div>
-              <span className={s.date}>2020年7月23日</span>
-            </div>
-          </div>
-        </div>
+    <div className={`w-100 d-center flex-column mt_63`}>
+      <div className={`${s.warp} w-screen flex overflow-hidden`}>
+        <motion.div
+        animate={{
+          translateX:`${-num * 33.333 + "%"}`,
+        }}
+        transition={{
+          duration:2
+        }}
+        className={`${s.item_wrap} flex justify-center `}>
+          <GuideItem title='iReMo操作指南 康复计划制定' />
+          <GuideItem title='iReMo操作指南 康复计划制定' />
+          <GuideItem title='iReMo操作指南 康复计划制定' />
+        </motion.div>
       </div>
-      <div className={`${s.wrap} d-flex`}>
-        <div className={`${s.img_wrap}`}>
-          <div className={`${s.img} position-relative`}>
-            <img src="/assets/2560/service/useguide/irego.png" />
-            <div className={`position-absolute ${s.sm_img_wrap}`}>
-              <div className={`${s.sm_img} position-relative`}>
-                <img src={"/assets/2560/service/useguide/play.png"} />
-              </div>
-            </div>
-          </div>
-          <div className={`${s.title} border`}>
-            <div className={s.big_title}>iReMo操作指南 康复计划制定</div>
-            <div className={`${s.sm_title} d-flex align-items-center`}>
-              <div className={`${s.calendar} position-relative`}>
-                <img src={"/assets/2560/service/useguide/calendar.svg"} />
-              </div>
-              <span className={s.date}>2020年7月23日</span>
-            </div>
-          </div>
-        </div>
-        <div className={`${s.img_wrap}`}>
-          <div className={`${s.img} position-relative`}>
-            <img src="/assets/2560/service/useguide/irego.png" />
-            <div className={`position-absolute  ${s.sm_img_wrap}`}>
-              <div className={`${s.sm_img} position-relative`}>
-                <img src={"/assets/2560/service/useguide/play.png"} />
-              </div>
-            </div>
-          </div>
-          <div className={`${s.title} border`}>
-            <div className={s.big_title}>iReMo操作指南 康复计划制定</div>
-            <div className={`${s.sm_title} d-flex align-items-center`}>
-              <div className={`${s.calendar} position-relative`}>
-                <img src={"/assets/2560/service/useguide/calendar.svg"} />
-              </div>
-              <span className={s.date}>2020年7月23日</span>
-            </div>
-          </div>
-        </div>
-        <div className={`${s.img_wrap}`}>
-          <div className={`${s.img} position-relative`}>
-            <img src={'/assets/2560/service/useguide/irego.png'} />
-            <div className={`position-absolute  ${s.sm_img_wrap}`}>
-              <div className={`${s.sm_img} position-relative`}>
-                <img src={"/assets/2560/service/useguide/play.png"} />
-              </div>
-            </div>
-          </div>
-          <div className={`${s.title} border`}>
-            <div className={s.big_title}>iReMo操作指南 康复计划制定</div>
-            <div className={`${s.sm_title} d-flex align-items-center`}>
-              <div className={`${s.calendar} position-relative`}>
-                <img src={"/assets/2560/service/useguide/calendar.svg"} />
-              </div>
-              <span className={s.date}>2020年7月23日</span>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div className="flex mt_118">
-        <div className={`${s.slide} bg-$primary`}></div>
-        <div className={`${s.slide} bg-$gray mx-5`}></div>
-        <div className={`${s.slide} bg-$gray`}></div>
+        <div onClick={()=>setNum(0)} className={`${s.slide} ${num==0?'bg-$primary':'bg-$gray'}  cursor-pointer`}></div>
+        <div onClick={()=>setNum(1)} className={`${s.slide} ${num==1?'bg-$primary':'bg-$gray'}  mx-5 cursor-pointer`}></div>
+        <div onClick={()=>setNum(2)} className={`${s.slide} ${num==2?'bg-$primary':'bg-$gray'}  cursor-pointer`}></div>
       </div>
     </div>
   );

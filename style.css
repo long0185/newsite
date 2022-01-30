@@ -65,7 +65,6 @@ a:hover {
 }
 .navbar .nav-link a,
 .navbar .nav-link span {
-  /* prettier-ignore */
   font-size: 24PX!important;
   text-decoration: none;
   color: #686868 !important;
@@ -91,8 +90,7 @@ a:hover {
   height: 39px;
 }
 .navbar {
-  /* prettier-ignore */
-  min-height: 60PX;
+  /* min-height: 60PX; */
   height: 104px;
   background-color: #fff;
   top: 0;
@@ -100,8 +98,7 @@ a:hover {
 .sub-navbar {
   /* prettier-ignore */
   /* margin-top: 60PX; */
-  /* prettier-ignore */
-  min-height: 60PX;
+  /* min-height: 60px; */
   /* top: 104px; */
   height: 87px;
 }
@@ -473,7 +470,10 @@ main {
   margin-top: 104px;
 }
 .pt_104 {
-  padding-top: 104px;
+  padding-top: 104px!important;
+}
+.pb_104 {
+  padding-bottom: 104px!important;
 }
 .w-972 {
   width: 972px;
@@ -659,6 +659,7 @@ a:hover {
 .h_505 {
   height: 505px !important;
 }
+
 .w_194 {
   width: 194px !important;
 }
@@ -678,3 +679,13 @@ a:hover {
   margin-bottom: 118px!important;
 }
 .mb_236{margin-bottom: 236px!important;}
+.pb_200{
+  padding-bottom: 200px!important;
+}
+.calendar-icon{
+  width: 25px;
+  height: 25px;
+}
+.mt_63{
+  margin-top: 63px!important;
+}

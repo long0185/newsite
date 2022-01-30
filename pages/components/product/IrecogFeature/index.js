@@ -5,7 +5,7 @@ export default function index() {
   return (
     <div
       id="feature"
-      className={`${s.wrap} col-12 d-flex flex-column align-items-center mb_118`}
+      className={`${s.wrap} col-12 d-flex flex-column align-items-center `}
     >
       <Banner img={`/assets/2560/product/irecog/title-feathure.png`} />
       <div className={`col-12 d-center  ${s.content}`}>

@@ -19,5 +19,6 @@
   border: solid 1px #ccc;
 }
 .active {
-  border: solid 1px #caa95c;
+  background-color: #caa95c;
+  color: #fff;
 }

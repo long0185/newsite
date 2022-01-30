@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import Image from "next/image";
-import wxImg from "assets/2560/home/weixin.svg";
-import phone from "assets/2560/home/phone.svg";
 import s from "./index.module.css";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const variants = {
   show: {
@@ -32,10 +30,10 @@ export default function Footer() {
           沪ICP备19033942号
         </span>
         <span className="mx-3">|</span>
-        <span className="mr-5">法律声明</span>
+        <Link href={'/legal-declaration'} >
+          <span className="mr-5 cursor-pointer">法律声明</span></Link>
       </div>
-      <div className=" pr-20 mr-5 d-center"></div>
-      <div className={` h-100   right-0  absolute z-20 ${s.right}`}>
+      <div className={` h-100   right-0  absolute z-20 ${s.right} `}>
         <div>
           <img
             className={` footer-img ${s.phone} absolute`}

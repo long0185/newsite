@@ -1,7 +1,7 @@
 .wrap {
   width: 2560px;
-  height: 1094px;
-  background-image: url("../../../../public/assets/2560/Innovate/new_irego.jpeg");
+  height: 786px;
+  background-image: url("/assets/2560/Innovate/new_irego.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
