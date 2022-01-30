@@ -25,7 +25,7 @@ const variants = {
 }
 
 export default function index({ handleShow, showList }) {
-	const [list, setList] = useState([...showList]);
+	const [list, setList] = useState(showList);
 	const handleClick = (direction) => {
 		if (direction == 'left') {
 			const temp = list[0];
