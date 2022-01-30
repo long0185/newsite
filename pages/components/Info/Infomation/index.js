@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import s from "./index.module.css";
-import calendar from "assets/2560/service/useguide/calendar.svg";
-import arrow_right from "assets/2560/example/right_arrow.svg";
 import Detail from "../Detail";
 
 let _list=[

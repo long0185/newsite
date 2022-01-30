@@ -49,7 +49,7 @@ export default function index({ handleShow, showList }) {
 				<button onClick={()=>handleShow(false) } className='text-$color px-5 py-1 bg-white border-1 border-$primary'>返回列表</button></div>
 
 			{
-				list.map((item,index) => <motion.li className={`${s.li}`} style={{zIndex:`${item.id==1?'100':'10'}`}} variants={variants} animate={item.id.toString()}  >{item.element}</motion.li>)
+				list.map((item,index) => <motion.li key={index} className={`${s.li}`} style={{zIndex:`${item.id==1?'100':'10'}`}} variants={variants} animate={item.id.toString()}  >{item.element}</motion.li>)
 			}
 		</ul>
 	</div>

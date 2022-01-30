@@ -114,7 +114,6 @@ export default function index() {
           </div>
           <div className={`${s.item} `}>
             <div className={`${s.img}  relative bg-info`}>
-              {/* <Image src={} layout='fill' /> */}
             </div>
             <div className={`${s.desc}`}>
               <div className="c_title">华山医院临床应用</div>
@@ -162,7 +161,6 @@ export default function index() {
         <div className={`${s.content_2} d-flex justify-between`}>
           <div className={`${s.item_2} flex items-start  justify-between`}>
             <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
-              {/* <Image src={} layout="fill"/> */}
             </div>
             <div className={``}>
               <span className="c_title">
@@ -188,7 +186,7 @@ export default function index() {
             <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
               {/* <Image src={} layout="fill"/> */}
             </div>
-            <div className={``}>
+            <div >
               <span className="c_title">
                 岳阳医院患者效果标题标题标题题标题标题标 标题标题
               </span>
