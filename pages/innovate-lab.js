@@ -8,10 +8,10 @@ export default function innovatelab() {
     <div>
       <Navbar />
       <div className="w-100 pt_104">
-        <img src="/assets/2560/innovate/banner.png" className="img-fluid h_786 w-100"></img>
+        <img src="/assets/2560/Innovate/banner.png" className="img-fluid h_786 w-100"></img>
         <div className="w-100  lab_bg flex flex-col items-center">
           <div className="bg-white w_1633">
-            <Banner img="/assets/2560/innovate/title-lab.png" />
+            <Banner img="/assets/2560/Innovate/title-lab.png" />
           </div>
           <div className="h_333 w_1633 flex justify-center   ">
             <div className="bg-gray-300 opacity-60 flex-1 flex flex-col items-center justify-center">
@@ -30,7 +30,7 @@ export default function innovatelab() {
             </div>
             <div className="flex-1 bg-$primary opacity-70">
               <img
-                src="/assets/2560/innovate/tubiao2.svg  "
+                src="/assets/2560/Innovate/tubiao2.svg  "
                 alt=""
                 className="w-100 h-100 img-fluid"
               />
@@ -59,7 +59,7 @@ export default function innovatelab() {
           <div className="h_333 w_1633 flex justify-center   ">
             <div className="flex-1 bg-$primary opacity-70">
               <img
-                src="/assets/2560/innovate/tubiao1.svg  "
+                src="/assets/2560/Innovate/tubiao1.svg  "
                 alt=""
                 className="w-100 h-100 img-fluid"
               />
@@ -86,7 +86,7 @@ export default function innovatelab() {
             </div>
             <div className="flex-1 bg-$primary opacity-70">
               <img
-                src="/assets/2560/innovate/tubiao3.svg  "
+                src="/assets/2560/Innovate/tubiao3.svg  "
                 alt=""
                 className="w-100 h-100 img-fluid"
               />
