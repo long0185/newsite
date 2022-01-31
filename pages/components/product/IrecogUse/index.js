@@ -13,6 +13,7 @@ export default function index() {
         <div className={`${s.content} d-flex flex-column align-items-center`}>
           <Banner
             img={"/assets/newtitle/irecog/title_1.png"}
+            styles={{marginTop:0}}
             desc={
               <>
                 <span>

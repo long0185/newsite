@@ -2,12 +2,13 @@ import Image from "next/image";
 import React from "react";
 import Desc from "../Desc";
 import s from "./index.module.css";
-export default function index({ img, desc = "", classes = "" }) {
+export default function index({ img, desc = "", classes = "",styles={} }) {
   return (
     <div
       className={`col-12 d-center flex-column  ${
         desc ? s.banner_desc : s.banner
       }`}
+      style={styles}
     >
       <div className={`position-relative ${s.img}`}>
         <Image src={img} layout="fill" />
