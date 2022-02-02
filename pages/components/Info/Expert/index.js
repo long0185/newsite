@@ -105,7 +105,7 @@ export default function index() {
   return (
     <>
     {isShow && <Detail handleShow={handleShow} showList={_list} />}
-      <div className="col-12 p-0 d-center">
+      <div className="p-0 d-center">
         <div className={`${s.content_2} d-flex justify-between`}>
           <div className={`${s.item_2} flex items-start mx-3`}>
             <img

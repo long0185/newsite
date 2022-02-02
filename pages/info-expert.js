@@ -26,14 +26,7 @@ export default function info() {
           >
             <Infomation />
           </div>
-          <div
-            className="tab-pane fade"
-            id="pills-contact"
-            role="tabpanel"
-            aria-labelledby="pills-contact-tab"
-          >
-            d
-          </div>
+         
         </div>
       </div>
     </>

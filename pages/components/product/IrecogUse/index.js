@@ -3,7 +3,7 @@ import React from "react";
 import Banner from "../../Banner";
 export default function index() {
   return (
-    <div id="usefn" className={`${s.wrap} mb_236`}>
+    <div id="usefn" className={`${s.wrap} mb_114`}>
       <div className="product-title irego-title col-12 d-flex align-items-center justify-content-center">
         <div className="position-relative ">
           <img className="img-fluid" src="/assets/2560/product/irecog/irecog.svg" />
