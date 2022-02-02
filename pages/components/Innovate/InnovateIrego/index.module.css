@@ -3,6 +3,7 @@
   height: 786px;
   background-image: url("/assets/2560/Innovate/new_irego.jpeg");
   background-size: cover;
+  background-origin: content-box;
   background-repeat: no-repeat;
 }
 .top_img {

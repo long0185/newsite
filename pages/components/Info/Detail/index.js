@@ -14,7 +14,7 @@ const variants = {
 		translateX: 0,
 		scale: 1,
 		background:'#fff',
-		zIndex:100
+		zIndex:1000
 	},
 	3: {
 		translateX: 220,
@@ -39,7 +39,7 @@ export default function index({ handleShow, showList }) {
 		}
 	}
 
-	return <div className={`${s.middle} bg-gray-300 pt_104 pb_200 z-10 w-screen flex items-center justify-center`}>
+	return <div className={`${s.middle} bg-gray-300 opacity-90 pt_104 pb_200 z-10 w-screen flex items-center justify-center`}>
 		<ul className={`${s.ul} h-100 w-50`}>
 			<div className={`absolute top-50 w-100 z-20 h-20`} >
 				<img onClick={() => handleClick('left')} className={`${s.left_icon} cursor-pointer h-100 absolute`} src='/assets/left-active.svg'  ></img>

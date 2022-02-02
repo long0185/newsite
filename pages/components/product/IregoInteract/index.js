@@ -33,7 +33,7 @@ export default function index() {
       <div className=" p-0 d-center">
         <div className="interact-line"></div>
       </div>
-      <div className="flex justify-content-center mb_100">
+      <div className="flex justify-content-center mb_118">
         <div className="d-flex flex-column friendly-wrap">
           <span className="interact-big-title font-black mb-4">人性化设计</span>
           <div className="col-12 p-0 d-flex justify-between">
@@ -42,7 +42,7 @@ export default function index() {
                 className="h_424 w_624 position-relative"
                 src="/assets/2560/product/irego/interact_1.png"
               ></img>
-              <span className="friendly-span d-block text-white">
+              <span className="friendly-span d-block text-white mt-3">
                 骨盆宽度可调
               </span>
             </div>
@@ -51,7 +51,7 @@ export default function index() {
                 className="h_424 w_350 position-relative "
                 src="/assets/2560/product/irego/interact_2.png"
               ></img>
-              <span className="friendly-span d-block text-white">
+              <span className="friendly-span d-block text-white mt-3">
                 屏幕角度可调
               </span>
             </div>
@@ -60,14 +60,14 @@ export default function index() {
                 className="h_424 w_350 position-relative"
                 src="/assets/2560/product/irego/interact_3.png"
               ></img>
-              <span className="friendly-span d-block text-white">扫脸登录</span>
+              <span className="friendly-span d-block text-white mt-3">扫脸登录</span>
             </div>
             <div className="p-0 text-center">
               <img
                 className="friendly-img-wrap_2 position-relative h_424"
                 src="/assets/2560/product/irego/user-friendly_4.png"
               ></img>
-              <span className="friendly-span d-block text-white">扫脸登录</span>
+              <span className="friendly-span d-block text-white mt-3">扫脸登录</span>
             </div>
           </div>
         </div>

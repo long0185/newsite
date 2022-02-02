@@ -98,6 +98,7 @@ let _list=[
 ]
 
 export default function index() {
+  const [list, setList] = useState([1]);
   const [isShow, setIsShow] = useState(false);
   const handleShow = (bool)=>{
     setIsShow(bool)
@@ -105,7 +106,8 @@ export default function index() {
   return (
     <>
     {isShow && <Detail handleShow={handleShow} showList={_list} />}
-      <div className="p-0 d-center">
+    {list.map((item,index)=><div key={index}>
+    <div className="p-0 d-center">
         <div className={`${s.content_2} d-flex justify-between`}>
           <div className={`${s.item_2} flex items-start mx-3`}>
             <img
@@ -114,7 +116,7 @@ export default function index() {
             ></img>
             <div className={`flex items-star flex-col `}>
               <div className="flex items-center">
-                <span className="c_title">陈武雄</span>
+                <span className="c_title font-extrabold">陈武雄</span>
                 <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
               </div>
               <span className="c_sub_title my-2">专家顾问 / 康复医学主任</span>
@@ -148,7 +150,7 @@ export default function index() {
             ></img>
             <div className={`flex items-star flex-col `}>
               <div className="flex items-center">
-                <span className="c_title">陈武雄</span>
+                <span className="c_title font-extrabold">陈武雄</span>
                 <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
               </div>
               <span className="c_sub_title my-2">专家顾问 / 康复医学主任</span>
@@ -178,7 +180,7 @@ export default function index() {
           </div>
         </div>
       </div>
-      <div className="col-12 p-0 d-center mb-20">
+      <div className="col-12 p-0 d-center">
         <div className={`${s.content_2} d-flex justify-between`}>
           <div className={`${s.item_2} flex items-start mx-3`}>
             <img
@@ -187,7 +189,7 @@ export default function index() {
             ></img>
             <div className={`flex items-star flex-col `}>
               <div className="flex items-center">
-                <span className="c_title">陈武雄</span>
+                <span className="c_title font-extrabold">陈武雄</span>
                 <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
               </div>
               <span className="c_sub_title my-2">专家顾问 / 康复医学主任</span>
@@ -222,7 +224,7 @@ export default function index() {
             ></img>
             <div className={`flex items-star flex-col `}>
               <div className="flex items-center">
-                <span className="c_title">陈武雄</span>
+                <span className="c_title font-extrabold">陈武雄</span>
                 <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
               </div>
               <span className="c_sub_title my-2">专家顾问 / 康复医学主任</span>
@@ -251,6 +253,10 @@ export default function index() {
             </div>
           </div>
         </div>
+      </div>
+          </div>)}
+          <div className="flex justify-center items-center mb_100 mt_100">
+        <button onClick={()=>setList([...list,1])} className="bg-$primary text-white px-5 py-2 rounded-lg">Show more</button>
       </div>
     </>
   );

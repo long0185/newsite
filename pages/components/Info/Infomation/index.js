@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import s from "./index.module.css";
 import Detail from "../Detail";
+import { list } from "postcss";
 
 let _list=[
 	{
@@ -87,12 +88,14 @@ let _list=[
 
 export default function index() {
   const [isShow, setIsShow] = useState(false);
+  const [list, setList] = useState([1]);
   const handleShow = (bool)=>{
     setIsShow(bool)
   }
   return (
     <div className={`${s.content} `}>
       {isShow && <Detail handleShow={handleShow} showList={_list} />}
+      {list.map((item,index)=><div key={index}>
       <div className="flex d-center">
         <div className={`${s.item} `}>
           <div className={`${s.img}  relative bg-info`}>
@@ -262,6 +265,10 @@ export default function index() {
             </div>
           </div>
         </div>
+      </div>
+      </div> )}
+      <div className="flex justify-center items-center mb_100 mt_100">
+        <button onClick={()=>setList([...list,1])} className="bg-$primary text-white px-5 py-2 rounded-lg">Show more</button>
       </div>
     </div>
   );

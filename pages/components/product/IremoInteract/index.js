@@ -5,7 +5,7 @@ export default function index() {
   return (
     <div
       id="interact"
-      className={`${s.wrap} bg_coffee product-interact col-12 d-flex flex-column align-item-center justify-content-center`}
+      className={` bg_coffee product-interact col-12 d-flex flex-column align-item-center justify-content-center`}
     >
       <Banner img={"/assets/newtitle/iremo/title_4.png"} />
       <div className="col-12 p-0  d-flex justify-content-center">
@@ -33,7 +33,7 @@ export default function index() {
       <div className="col-12 p-0 d-center">
         <div className="interact-line"></div>
       </div>
-      <div className="col-12 p-0 d-flex justify-content-center ">
+      <div className="col-12 p-0 d-flex justify-content-center mb_100 ">
         <div className="d-flex flex-column friendly-wrap">
           <span className={`${s.big_title} font-black`}>人性化设计</span>
           <div className="col-12 p-0 d-flex justify-content-center">
@@ -42,7 +42,7 @@ export default function index() {
                 src="/assets/2560/product/iremo/user-friendly_1.png"
                 className={`${s.u_img} position-relative`}
               ></img>
-              <span className="friendly-span d-block text-white">
+              <span className="friendly-span d-block text-white mt-3">
                 力过载保护
               </span>
             </div>
@@ -51,7 +51,7 @@ export default function index() {
                 src="/assets/2560/product/iremo/friend_3.png"
                 className={`${s.u_img} position-relative`}
               ></img>
-              <span className="friendly-span d-block text-white">
+              <span className="friendly-span d-block text-white mt-3">
                 针对性参数设置（具有主动、被动、按需三种训练模式）
               </span>
             </div>
@@ -60,7 +60,7 @@ export default function index() {
                 src="/assets/2560/product/iremo/user-friendly_3.png"
                 className={`${s.u_img} position-relative`}
               ></img>
-              <span className="friendly-span d-block text-white">
+              <span className="friendly-span d-block text-white mt-3">
                 多种登录方式
               </span>
             </div>

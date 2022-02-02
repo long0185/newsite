@@ -7,10 +7,10 @@ export default function index() {
     >
       <img src='/assets/2560/service/maintain/title.png' className={`${s.img} position-relative`}>
       </img>
-      <div className={`${s.content} d-flex  `}>
+      <div className={`${s.content} flex  pt-3 pl-5  `}>
         <div>
-          <div className={`${s.info_1} d-flex flex-column`}>
-            <span className={`${s.label}`}>联系人信息</span>
+          <div className={`${s.info_1} flex flex-col`}>
+            <span className={`${s.label} font-extrabold`}>联系人信息</span>
             <span className={`${s.line}`}></span>
             <div
               className={`input-group input-group-lg d-flex  align-items-end ${s.input_1}`}
@@ -39,8 +39,8 @@ export default function index() {
               />
             </div>
           </div>
-          <div className={`${s.info_2} d-flex flex-column`}>
-            <span className={`${s.label}`}>预约详情</span>
+          <div className={`${s.info_2} flex flex-col`}>
+            <span className={`${s.label} font-extrabold`}>预约详情</span>
             <span className={`${s.line}`}></span>
             <div
               className={`input-group input-group-lg d-flex  align-items-end ${s.input_1}`}

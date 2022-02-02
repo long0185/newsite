@@ -83,6 +83,7 @@ let _list=[
 ]
 export default function index() {
   const [isShow, setIsShow] = useState(false);
+  const [list, setList] = useState([1]);
   const handleShow = (bool)=>{
     setIsShow(bool)
   }
@@ -91,7 +92,7 @@ export default function index() {
       {isShow && <Detail handleShow={handleShow} showList={_list} />}
       <div className={`${s.wrap}`}>
         <div className={`${s.content}  col-12 d-center`}>
-          <div className={`${s.item} `}>
+          <div onClick={()=>handleShow(true)} className={`${s.item} `}>
             <div className={`${s.img}  relative bg-info`}>
             </div>
             <div className={`${s.desc}`}>
@@ -106,16 +107,16 @@ export default function index() {
               </div>
               <div className={s.line}></div>
               <div className=" flex items-center justify-between c_sub_title">
-                <span onClick={()=>handleShow(true)}>View more</span>
+                <span >View more</span>
                 <img src='/assets/2560/example/right_arrow.svg' className={`${s.arrow} relative`}>
                 </img>
               </div>
             </div>
           </div>
-          <div className={`${s.item} `}>
+          <div onClick={()=>handleShow(true)} className={`${s.item} `}>
             <div className={`${s.img}  relative bg-info`}>
             </div>
-            <div className={`${s.desc}`}>
+            <div  className={`${s.desc}`}>
               <div className="c_title">华山医院临床应用</div>
               <div className="c_sub_title d-flex align-items-center justify-content-between">
                 <div className="d-flex align-items-center">
@@ -133,11 +134,11 @@ export default function index() {
               </div>
             </div>
           </div>
-          <div className={`${s.item} `}>
+          <div onClick={()=>handleShow(true)} className={`${s.item} `}>
             <div className={`${s.img}  relative bg-info`}>
               {/* <Image src={} layout='fill' /> */}
             </div>
-            <div className={`${s.desc}`}>
+            <div onClick={()=>handleShow(true)} className={`${s.desc}`}>
               <div className="c_title">华山医院临床应用</div>
               <div className="c_sub_title d-flex align-items-center justify-content-between">
                 <div className="d-flex align-items-center">
@@ -157,10 +158,11 @@ export default function index() {
           </div>
         </div>
       </div>
-      <div className="col-12 p-0 d-center">
+     {list.map((item,index)=><>
+      <div onClick={()=>handleShow(true)} className="col-12 p-0 d-center">
         <div className={`${s.content_2} d-flex justify-between`}>
-          <div className={`${s.item_2} flex items-start  justify-between`}>
-            <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
+          <div className={`${s.item_2}  flex items-start  justify-between`}>
+            <div className={`${s.sm_img} relative bg-gray-400 `}>
             </div>
             <div className={``}>
               <span className="c_title">
@@ -184,7 +186,6 @@ export default function index() {
           </div>
           <div className={`${s.item_2} flex items-start  justify-between`}>
             <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
-              {/* <Image src={} layout="fill"/> */}
             </div>
             <div >
               <span className="c_title">
@@ -259,6 +260,11 @@ export default function index() {
             </div>
           </div>
         </div>
+      </div></>)} 
+      <div className="w-100 flex items-center justify-center mt_100">
+      <div className="flex">
+        <button onClick={()=>setList([...list,1])} className="bg-$primary text-white px-5 py-2 rounded-lg">Show more</button>
+      </div>
       </div>
     </div>
   );
