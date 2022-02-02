@@ -3,6 +3,40 @@ import Banner from "../../Banner";
 import Carousel from "../../../components/Carousel";
 import s from "./index.module.css";
 import { motion } from "framer-motion";
+
+let list = [
+  {
+  img_src:'/assets/2560/product/irego/dog.png',
+  id:1,
+  text:'酷跑猫'
+},
+{
+  img_src:'/assets/2560/product/irego/forest.png',
+  id:2,
+  text:'酷跑猫'
+},
+{
+  img_src:'/assets/2560/product/irego/run-cat.png',
+  id:3,
+  text:'酷跑猫'
+},
+{
+  img_src:'/assets/2560/product/irego/dog.png',
+  id:4,
+  text:'酷跑猫'
+},
+{
+  img_src:'/assets/2560/product/irego/forest.png',
+  id:5,
+  text:'酷跑猫'
+},
+{
+  img_src:'/assets/2560/product/irego/run-cat.png',
+  id:6,
+  text:'酷跑猫'
+},
+]
+
 export default function index() {
   const [num, setnum] = useState(2);
   const handleClick = (direction) => {
@@ -11,7 +45,7 @@ export default function index() {
       setnum(newNum);
     }
     if (direction == "right") {
-      const newNum = num + 1 > 2 ? 2 : num + 1;
+      const newNum = num + 1 > 3 ? 3 : num + 1;
       setnum(newNum);
     }
   };
@@ -35,44 +69,23 @@ export default function index() {
         </div>
         <div className={`${s.wrap}`}>
           <motion.div
-            className={`flex`}
+            className={`flex w-200 justify-between`}
             animate={{
-              translateX: `${-num * 33.333 + "%"}`,
+              translateX: `${-num * 16.667 + "%"}`,
               transition: {
                 duration: 2,
               },
             }}
           >
-            <img
-              className="w_727 h-100 img-fluid"
-              src="/assets/2560/product/irego/dog.png"
-            />
-            <img
-              className="w_727 h-100 img-fluid"
-              src="/assets/2560/product/irego/forest.png"
-            />
-            <img
-              className="w_727 h-100 img-fluid"
-              src="/assets/2560/product/irego/run-cat.png"
-            />
-            <div className="w_727 h-100 relative text-transparent hover:text-gray-800 cursor-pointer">
-              <img
-                className="w-100 h-100"
-                src="/assets/2560/product/irego/dog.png"
-              />
-              <span className="flex z-30 flex-col absolute bottom-0 top-0 left-0 right-0">
-                fdafd
-              </span>
-            </div>
-
-            <img
-              className="w_727 h-100 img-fluid"
-              src="/assets/2560/product/irego/forest.png"
-            />
-            <img
-              className="w_727 h-100 img-fluid"
-              src="/assets/2560/product/irego/run-cat.png"
-            />
+            {list.map(item=><div key={item.id} className=" flex-1 h-100 h_505 relative">
+            <img className="w-100 h-100 img-fluid absolute z-10"
+             src={item.img_src} alt="" />
+            <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
+               <span className=" top-8 bg-black  text-center py-3 w-100">{item.text}</span>
+            </div> 
+            </div>)}
+          
+          
           </motion.div>
         </div>
         <div className="flex-1 flex items-center justify-center z-10 bg-$gray border h_505 opacity-50 right-0">

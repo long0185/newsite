@@ -30,7 +30,7 @@ export default function index() {
               className="md_input pl-3 mr-3 rounded"
               placeholder="备注："
             />
-            <button className="hover:bg-yellow-400 sm_input nav-link bg-$primary flex items-center justify-center  text-white">
+            <button className="hover:bg-yellow-400 rounded sm_input nav-link bg-$primary flex items-center justify-center  text-white">
               立即提交
             </button>
           </div>

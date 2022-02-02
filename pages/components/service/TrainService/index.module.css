@@ -28,10 +28,10 @@
   }
   .title {
     font-size: 24px;
-    font-weight: normal;
+    font-weight: bolder;
     font-stretch: normal;
     letter-spacing: 0px;
-    color: #363737;
+    color: #373737;
   }
   .line {
     /* width: 423px; */

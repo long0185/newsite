@@ -98,7 +98,7 @@ let _list=[
 ]
 
 export default function index() {
-  const [isShow, setIsShow] = useState(true);
+  const [isShow, setIsShow] = useState(false);
   const handleShow = (bool)=>{
     setIsShow(bool)
   }

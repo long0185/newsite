@@ -4,17 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import s from "./index.module.css";
-import Image from "next/image";
-import banner_01 from "assets/2560/home/banner_01.png";
-import title_img_1 from "assets/2560/home/banner_1_text.png";
-import title_img_2 from "assets/2560/home/banner_2_text.png";
-import title_2 from "assets/2560/home/banner_2_btn.png";
-import title_1 from "assets/2560/home/banner_1_btn.png";
-import banner_02 from "assets/2560/home/banner_02.png";
-import right_arrow from "assets/2560/home/right-arrow.svg";
-import left_arrow from "assets/2560/home/left-arrow.svg";
-// import { images } from "./image-data";
-const images = [banner_01, banner_02];
+
 
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset, velocity) => {

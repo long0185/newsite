@@ -5,12 +5,12 @@
 }
 .content {
   margin-top: 66px;
-  height: 630px;
-  width: 1305px;
+  height: 690px;
+  width: 1365px;
   /* height: 626px; */
   /* width: 1300px; */
   background-size: cover;
-  background-image: url("../../../../public/assets/2560/service/maintain/white_block.png");
+  background-image: url("/assets/2560/service/maintain/white_block.png");
 }
 .info_1 {
   width: 808px;

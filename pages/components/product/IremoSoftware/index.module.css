@@ -1,6 +1,6 @@
 .subtitle_wrap {
   margin-top: 88px;
-  margin-bottom: 48px;
+  margin-bottom: 88px;
 }
 .subtitle {
   font-size: 24px;
@@ -26,8 +26,15 @@
   height: 144px;
   margin-left: 6px;
 }
-
+.icon {
+  width: 45px;
+  height: 65px;
+}
 .sm_img_wrap {
   height: 336x;
   z-index: 999;
+}
+.wrap {
+  flex: 0 0 2181px;
+  height: 415px;
 }

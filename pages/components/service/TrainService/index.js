@@ -15,7 +15,7 @@ export default function index() {
             <img src='/assets/2560/service/train/zj_train.svg' className={`${s.svg_img} position-relative `}>
             </img>
             <div className={`${s.txt} d-flex  flex-column`}>
-              <div className={`${s.title}`}>装机培训:</div>
+              <div className={`${s.title} font-extrabold`}>装机培训:</div>
               <div className={`${s.line}`}></div>
               <span className={`${s.desc}`}>
                 售后工程师在设备安装完成后，进行设备使用培训，帮助用户独立完成临床使用，充分发挥设备性能。
@@ -26,7 +26,7 @@ export default function index() {
             <img src='/assets/2560/service/train/jz_train.svg' className={`${s.svg_img} position-relative `}>
             </img>
             <div className={`${s.txt} d-flex  flex-column`}>
-              <div className={`${s.title}`}>公司集中培训:</div>
+              <div className={`${s.title} font-extrabold`}>公司集中培训:</div>
               <div className={`${s.line}`}></div>
               <span className={`${s.desc}`}>
                 由研发人员、产品经理、临床治疗师组成讲师团队，定期举办培训班，为用户讲解原理，临床应用及新技术进展，系统化提高专业技术水平。
@@ -39,7 +39,7 @@ export default function index() {
             <img src='/assets/2560/service/train/lc_train.svg' className={`${s.svg_img} position-relative `}>
             </img>
             <div className={`${s.txt} d-flex  flex-column`}>
-              <div className={`${s.title}`}>联合临床培训:</div>
+              <div className={`${s.title} font-extrabold`}>联合临床培训:</div>
               <div className={`${s.line}`}></div>
               <span className={`${s.desc}`}>
                 与全国各治疗领域领衔专家，联合开展系列培训课程，针对临床应用，深度讲解，深入临床一线实践，提高临床操作水准。
@@ -50,7 +50,7 @@ export default function index() {
             <img src='/assets/2560/service/train/learn_train.svg' className={`${s.svg_img} position-relative `}>
             </img>
             <div className={`${s.txt} d-flex  flex-column`}>
-              <div className={`${s.title}`}>装机培训:</div>
+              <div className={`${s.title} font-extrabold`}>装机培训:</div>
               <div className={`${s.line}`}></div>
               <span className={`${s.desc}`}>
                 与用户单位共同开办学术沙龙，邀请专家、资深临床治疗师，协助用户单位成为地区标杆，扩展影响力。
@@ -60,7 +60,7 @@ export default function index() {
         </div>
         <div className={`${s.train_wrap} flex items-center justify-center`}>
         <div
-          className={`${s.item_3} d-flex  flex-column align-items-start justify-content-between`}
+          className={`${s.item_3} d-flex  flex-column align-items-start justify-center`}
         >
           <div className={s.train_title}>
             培训标题：标培训培训培训题标题标题培训培训标题标题标题标题标题

@@ -15,9 +15,9 @@ export default function index() {
           duration:2
         }}
         className={`${s.item_wrap} flex justify-center `}>
-          <GuideItem title='iReMo操作指南 康复计划制定' />
-          <GuideItem title='iReMo操作指南 康复计划制定' />
-          <GuideItem title='iReMo操作指南 康复计划制定' />
+          <GuideItem title='iReMo操作指南 康复计划制定1' />
+          <GuideItem title='iReMo操作指南 康复计划制定2' />
+          <GuideItem title='iReMo操作指南 康复计划制定3' />
         </motion.div>
       </div>
 

@@ -264,6 +264,10 @@ a:hover {
   width: 727px;
   height: 505px;
 }
+.iremo-software-content .img-wrap {
+  width: 727px;
+  height: 415px;
+}
 .product-interact {
   background: #756e68;
 }
@@ -688,4 +692,19 @@ a:hover {
 }
 .mt_63{
   margin-top: 63px!important;
+}
+.h_505{
+  height: 505px!important;
+}
+.w-200{
+  width: 200%!important;
+}
+.opacity-01{
+  opacity: .01;
+}
+.h_491{
+  height: 491px;
+}
+.h_415{
+  height: 415px!important;
 }
