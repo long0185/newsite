@@ -14,7 +14,7 @@ export default function innovatelab() {
             <Banner img="/assets/2560/Innovate/title-lab.png" />
           </div>
           <div className="h_333 w_1633 flex justify-center   ">
-            <div className="bg-gray-300 opacity-50 flex-1 flex flex-col items-center justify-center">
+            <div className="bg-gray-300 opacity-60 flex-1 flex flex-col items-center justify-center">
               <span className="font_16 mb-2 color-$color">
                 金矢机器人目前已于上海大学、上海中医药大学联合，
               </span>
@@ -28,14 +28,14 @@ export default function innovatelab() {
                 认知康复机器人iReCog等“爱睿家iRE+”系列产品。
               </span>
             </div>
-            <div className="flex-1 bg-$primary opacity-50">
+            <div className="flex-1 bg-$primary opacity-60">
               <img
                 src="/assets/2560/Innovate/tubiao2.svg  "
                 alt=""
                 className="w-100 h-100 img-fluid"
               />
             </div>
-            <div className="bg-gray-300 opacity-50 flex-1 flex flex-col items-center justify-center">
+            <div className="bg-gray-300 opacity-60 flex-1 flex flex-col items-center justify-center">
               <span className="font_16 mb-2 color-$color">
                 上海中医药大学、岳阳中西医结合医院、上海徐汇中心医院、
               </span>
@@ -57,7 +57,7 @@ export default function innovatelab() {
             </div>
           </div>
           <div className="h_333 w_1633 flex justify-center   ">
-            <div className="flex-1 bg-$primary opacity-50">
+            <div className="flex-1 bg-$primary opacity-60">
               <img
                 src="/assets/2560/Innovate/tubiao1.svg  "
                 alt=""
@@ -84,7 +84,7 @@ export default function innovatelab() {
                 从而推动中国康复技术临床研究进入一个新的高度。
               </span>
             </div>
-            <div className="flex-1 bg-$primary opacity-70">
+            <div className="flex-1 bg-$primary opacity-60">
               <img
                 src="/assets/2560/Innovate/tubiao3.svg  "
                 alt=""
