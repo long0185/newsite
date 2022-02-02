@@ -4,12 +4,12 @@ export default function index() {
   return (
     <div className={`${s.wrap} col-12 d-center flex-column`}>
       <img
-        src="/assets/2560/innovate/title_famliy.png"
+        src="/assets/2560/Innovate/title_famliy.png"
         className={`${s.title_img} position-relative`}
       ></img>
       <div className={`${s.content} d-center`}>
         <img
-          src="/assets/2560/innovate/ire_logo.png"
+          src="/assets/2560/Innovate/ire_logo.png"
           className={`${s.img_wrap} position-relative`}
         />
         <div className={`${s.text} d-flex flex-column`}>
