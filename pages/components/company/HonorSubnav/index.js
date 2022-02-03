@@ -19,7 +19,7 @@ const list = [
       "/assets/2560/company/knowledge/p_2.png",
       "/assets/2560/company/knowledge/p_3.png",
       "/assets/2560/company/knowledge/p_4.png",
-      "/assets/2560/company/knowledge/p_5.png",
+      // "/assets/2560/company/knowledge/p_5.png",
     ],
   },
   {
@@ -45,7 +45,7 @@ const list = [
 export default function index() {
   const [index, setIndex] = useState(1);
   return (
-    <div className={`${s.wrap} flex w-50 justify-center flex-col  mb_100`}>
+    <div className={`${s.wrap} flex w-100 justify-center flex-col  mb_100`}>
       <ul className="product-subnav nav w-100 nav-pills align-items-center flex justify-center items-center">
         {list.map((item) => (
           <li
@@ -63,19 +63,12 @@ export default function index() {
           </li>
         ))}
       </ul>
-      <div className={`${s.wrap}`} id="tablist">
-        <div
-          className="tab-pane fade show active flex "
-          id="honor"
-          role="tabpanel"
-          aria-labelledby="honor-tab"
-        >
+      <div className={`${s.wrap} flex justify-center`} >
           {list
             .find((item) => item.id == index)
             .children.map((item) => (
-              <img className={`${s.img} img-fluid`} src={item}></img>
+              <img className={`${s.img} img-fluid mx-3`} src={item}></img>
             ))}
-        </div>
       </div>
     </div>
   );

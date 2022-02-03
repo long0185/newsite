@@ -96,7 +96,7 @@ export default function index() {
     <div className={`${s.content} `}>
       {isShow && <Detail handleShow={handleShow} showList={_list} />}
       {list.map((item,index)=><div key={index}>
-      <div className="flex d-center">
+      <div className="flex d-center mt-14">
         <div className={`${s.item} `}>
           <div className={`${s.img}  relative bg-info`}>
             {/* <Image src={} layout='fill' /> */}
@@ -183,12 +183,13 @@ export default function index() {
         </div>
       </div>
       <div className="flex d-center mt-14">
-        <div className={`${s.item} `}>
+      <div className={`${s.item} `}>
           <div className={`${s.img}  relative bg-info`}>
-            {/* <Image src={} layout='fill' /> */}
           </div>
           <div className={`${s.desc}`}>
-            <div className="c_title">第21届中国国际高新技术成果交易会</div>
+            <div className="c_title">
+              金矢机器人王志勇总经理携iReGo亮相创赢未来栏目
+            </div>
             <div className="c_sub_title d-flex align-items-center justify-content-between">
               <div className="d-flex align-items-center">
                 <img
@@ -211,7 +212,6 @@ export default function index() {
         </div>
         <div className={`${s.item} `}>
           <div className={`${s.img}  relative bg-info`}>
-            {/* <Image src={} layout='fill' /> */}
           </div>
           <div className={`${s.desc}`}>
             <div className="c_title">
@@ -268,7 +268,7 @@ export default function index() {
       </div>
       </div> )}
       <div className="flex justify-center items-center mb_100 mt_100">
-        <button onClick={()=>setList([...list,1])} className="bg-$primary text-white px-5 py-2 rounded-lg">Show more</button>
+        <button onClick={()=>setList([...list,1])} className="l_btn hover:bg-yellow-300">Show more</button>
       </div>
     </div>
   );

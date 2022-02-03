@@ -28,8 +28,12 @@
   margin-top: 80px;
   margin-bottom: 187px;
 }
+.box{
+  
+}
 .expert_img_wrap {
   width: 667px;
+  padding: 28px;
   height: 286px;
   box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
   border-radius: 6px;
@@ -46,5 +50,4 @@
   opacity: 0.8;
   margin-right: 40px;
 }
-.manager_img {
-}
+

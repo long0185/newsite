@@ -535,8 +535,9 @@ main {
   color: #caa95c !important;
 }
 .sm_input {
-  width: 193px;
+  width: 196px;
   height: 35px;
+  border-radius: 3px;
 }
 .full_input {
   width: 612px;
@@ -715,4 +716,25 @@ a:hover {
 .wh_200{
   width: 200px!important;
   height: 200px!important;
+}
+.w_257{
+  width: 257px!important;
+}
+.h_56{
+  height: 56px!important;
+}
+.l_btn{
+  width: 257px;
+  height: 56px;
+  border-radius: 3px;
+  background-color: #caa95c;
+  border: none;
+  color: #fff;
+  font-size: 21px;
+}
+.h_67{
+  height: 67px;
+}
+.h_90{
+  height: 90px;
 }

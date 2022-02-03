@@ -56,7 +56,7 @@ export default function index() {
             />
           </div>
           <div className="mt-3 w-100  flex items-center justify-center ">
-            <button className="mr-5 rounded nav-link bg-$primary px-5 py-2 text-white">
+            <button className="mr-5 hover:bg-yellow-300 rounded nav-link bg-$primary px-5 py-2 text-white">
               立即提交
             </button>
           </div>

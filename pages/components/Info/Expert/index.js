@@ -114,7 +114,7 @@ export default function index() {
               src="/assets/2560/info/expert/p_1.png"
               className={`${s.sm_img} relative bg-gray-400 border-2`}
             ></img>
-            <div className={`flex items-star flex-col `}>
+            <div className={`flex-1 flex items-star flex-col `}>
               <div className="flex items-center">
                 <span className="c_title font-extrabold">陈武雄</span>
                 <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
@@ -148,7 +148,7 @@ export default function index() {
               src="/assets/2560/info/expert/p_1.png"
               className={`${s.sm_img} relative bg-gray-400 border-2`}
             ></img>
-            <div className={`flex items-star flex-col `}>
+            <div className={`flex flex-1 items-star flex-col `}>
               <div className="flex items-center">
                 <span className="c_title font-extrabold">陈武雄</span>
                 <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
@@ -187,7 +187,7 @@ export default function index() {
               src="/assets/2560/info/expert/p_1.png"
               className={`${s.sm_img} relative bg-gray-400 border-2`}
             ></img>
-            <div className={`flex items-star flex-col `}>
+            <div className={`flex flex-1 items-star flex-col `}>
               <div className="flex items-center">
                 <span className="c_title font-extrabold">陈武雄</span>
                 <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
@@ -222,7 +222,7 @@ export default function index() {
               src="/assets/2560/info/expert/p_1.png"
               className={`${s.sm_img} relative bg-gray-400 border-2`}
             ></img>
-            <div className={`flex items-star flex-col `}>
+            <div className={`flex flex-1 items-star flex-col `}>
               <div className="flex items-center">
                 <span className="c_title font-extrabold">陈武雄</span>
                 <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
@@ -256,7 +256,7 @@ export default function index() {
       </div>
           </div>)}
           <div className="flex justify-center items-center mb_100 mt_100">
-        <button onClick={()=>setList([...list,1])} className="bg-$primary text-white px-5 py-2 rounded-lg">Show more</button>
+        <button onClick={()=>setList([...list,1])} className="l_btn hover:bg-yellow-300">Show more</button>
       </div>
     </>
   );

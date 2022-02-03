@@ -12,7 +12,7 @@ export default function index() {
         </div>
       </div>)}
       <div className="flex">
-        <button onClick={()=>setList([...list,1])} className="bg-$primary text-white px-5 py-2 rounded-lg">Show more</button>
+        <button onClick={()=>setList([...list,1])} className="l_btn hover:bg-yellow-300">Show more</button>
       </div>
     </div>
   );

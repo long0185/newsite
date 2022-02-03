@@ -1,5 +1,5 @@
 .wrap {
-  background-image: url("../../../../public/assets/2560/company/contact_bg.png");
+  background-image: url("/assets/2560/company/contact_bg.png");
   background-size: cover;
 }
 
@@ -11,15 +11,15 @@
 }
 .item {
   width: 770px;
-  height: 323px;
+  /* height: 323px; */
   padding-left: 76px;
   padding-top: 43px;
-  background-image: url("../../../../public/assets/2560/company/grey_bg.png");
+  background-image: url("/assets/2560/company/grey_bg.png");
   background-size: cover;
 }
 .item_1 {
   width: 770px;
-  height: 323px;
+  /* height: 323px; */
   padding-left: 76px;
   background: #eaeaea;
 }

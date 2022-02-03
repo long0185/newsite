@@ -10,7 +10,9 @@ module.exports = {
         $white: "#fff",
         $gray: "#ced2de",
         $color: "#373737",
-        $68:'#686868'
+        $68:'#686868',
+        $86:'#868686',
+        $37:'#373737'
       },
       pointerEvents: ["hover", "focus"],
     },

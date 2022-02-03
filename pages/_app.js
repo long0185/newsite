@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
       const scale = document.documentElement.clientWidth / 2560;
       const scaleH = document.documentElement.clientHeight / 1440;
       let reset = Math.min(scale, scaleH);
-      reset = reset < 0.4 ? 0.4 : reset;
+      // reset = reset < 0.3 ? 0.3 : reset;
       document.documentElement.style.fontSize = baseSize * reset + "px";
     }
     setRem();

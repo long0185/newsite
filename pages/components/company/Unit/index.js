@@ -15,79 +15,79 @@ export default function index() {
       <div className="flex">
         <img
           src="/assets/2560/company/unit/1.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/2.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/3.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/4.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/5.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/6.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
       </div>
       <div className="flex">
         <img
           src="/assets/2560/company/unit/7.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/8.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/9.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/10.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/11.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/12.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
       </div>
       <div className={`flex ${s.mt_150}`}>
         <img
           src="/assets/2560/company/unit/13.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/14.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/15.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/16.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/17.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
         <img
           src="/assets/2560/company/unit/18.png"
-          className={`${s.img} relative`}
+          className={`${s.img} relative hover:bg-white hover:scale-105 hover:z-50`}
         ></img>
       </div>
     </div>

@@ -1,6 +1,6 @@
 .img {
   width: 596px;
-  height: 350px;
+  /* height: 350px; */
 }
 .content {
   margin-top: 119px;
@@ -8,7 +8,7 @@
 .item {
   margin: 0 20px;
   width: 596px;
-  height: 533px;
+  /* height: 533px; */
   box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
 }
 .svg {
@@ -20,8 +20,8 @@
   padding-top: 36px;
 }
 .line {
-  margin-top: 26px;
-  margin-bottom: 16px;
+  margin-top: 16px;
+  margin-bottom: 6px;
   height: 1px;
   background: #ececec;
 }
@@ -29,26 +29,23 @@
   width: 34px;
   height: 25px;
 }
-/* .item_2 {
-  margin: 0 20px;
-  width: 596px;
-  height: 533px;
-  box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
-} */
+
 .content_2 {
   margin-top: 60px;
 }
 
 .item_2 {
   width: 882px;
-  height: 338px;
+  /* height: 338px; */
   padding: 41px;
   padding-bottom: 51px;
   box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
 }
 .sm_img {
-  width: 183px;
-  height: 246px;
+  /* width: 183px; */
+  width: 220px;
+  /* height: 246px; */
+  height: 100%;
   margin-right: 13px;
 }
 .badge {
