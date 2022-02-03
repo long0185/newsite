@@ -1,13 +1,18 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { Disclosure } from '@headlessui/react'
+import { ChevronUpIcon } from '@heroicons/react/solid'
 import s from "./index.module.css";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 const variants = {
   open: { translateY: "6.3rem", transition: { duration: 0.5 } },
   closed: { translateY: 0, transition: { duration: 0.5 } },
+};
+const mobileVariants = {
+  open: { translateX: 0, transition: { duration: 0.5 } },
+  closed: { translateY: '-100%', transition: { duration: 0.5 } },
 };
 const subnav = {
   product: [
@@ -122,7 +127,7 @@ const ResponsiveAppBar = () => {
       name: "产品",
       domain: "/product",
       path: "/product-irego",
-      chilren: subnav.product,
+      children: subnav.product,
     },
     {
       name: "创新",
@@ -166,26 +171,24 @@ const ResponsiveAppBar = () => {
       onMouseLeave={leave}
     >
       <nav
-        className={`navbar flex z-20 w-100 p-0 ${
-          isOpen ? "border-bottom" : ""
-        } `}
+        className={`navbar flex z-20 w-100 p-0 ${isOpen ? "border-bottom" : ""
+          } `}
       >
         <div className="block md:hidden relative ml-5 w-20 h-20">
-          <Image layout="fill" src="/assets/2560/menu.svg" />
+          <img className="w-100 h-100 img-fluid" src="/assets/2560/menu.svg" />
         </div>
         <img
           src="/assets/2560/home/logo.svg"
           className="navbar-brand position-relative img-fluid"
         ></img>
         <ul
-          className={`hidden navbar-nav md:flex flex-row justify-center pl-5`}
+          className={`hidden navbar-nav mobile:flex flex-row justify-center pl-5`}
         >
           {navBar.map((item) => (
             <li
               key={item.path}
-              className={`relative  h-100 navbar_li ${
-                pathname.split("-")[0] == item.domain ? "active" : ""
-              } `}
+              className={`relative  h-100 navbar_li ${pathname.split("-")[0] == item.domain ? "active" : ""
+                } `}
             >
               <Link href={item.path}>
                 <span
@@ -194,9 +197,8 @@ const ResponsiveAppBar = () => {
                       enter(item.domain);
                     }
                   }}
-                  className={`nav-link cursor-pointer nav_link font_24  ${
-                    pathname.split("-")[0] == item.domain ? "active" : ""
-                  }`}
+                  className={`nav-link cursor-pointer nav_link font_24  ${pathname.split("-")[0] == item.domain ? "active" : ""
+                    }`}
                 >
                   {item.name}
                 </span>
@@ -204,19 +206,44 @@ const ResponsiveAppBar = () => {
             </li>
           ))}
         </ul>
-        <ul className="navbar-nav mobile_navbar md:hidden flex flex-col  w-9/12 fixed bg-white justify-center pl-5">
-          {navBar.map((item) => (
-            <li key={item.path} className={`relative`}>
-              {item.path == "/" ? (
-                <Link href={item.path}>
-                  <span className="nav-link">{item.name}</span>
-                </Link>
-              ) : (
-                ""
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className='mobile:hidden z-10 fixed top-0 bottom-0 left-0 right-0 bg-black opacity-80'>
+          <motion.ul
+            variants={mobileVariants}
+            animate='open'
+            className="fixed opacity-100 top-0 left-0 overflow-y-auto bg-white z-20 navbar-nav border pt_110 pl_110 pb_110 pr_110 mobile_navbar mobile:hidden flex flex-col  w-9/12 justify-center">
+            {navBar.map((item) => (
+              <li key={item.path} className={`relative mt_110 `}>
+                {item.path == "/" ? (
+                  <Link href={item.path}>
+                    <span className="font_36">{item.name}</span>
+                  </Link>
+                ) : (
+                  <Disclosure>
+                    {({ open }) => (
+                      <>
+                        <Disclosure.Button className="flex justify-between w-full rounded-lg focus-visible:ring focus-visible:ring-opacity-75">
+                          <span className="font_36">{item.name}</span>
+                          <ChevronUpIcon
+                            className={`${open ? 'transform rotate-180' : 'rotate-90'
+                              } h-20`}
+                          />
+                        </Disclosure.Button>
+                        {Array.isArray(item.children) && item.children.map((ele, i) =>
+                          <Disclosure.Panel key={i} className={`${i == 0 ? 'border-top' : i == item.children.length - 1 ? 'border-bottom pb-10' : ''} pt-10 text-$37 pl-10`}>
+                            <Link href={ele.path}>
+                              <span className="pl-10">{ele.name}</span>
+                            </Link>
+                          </Disclosure.Panel>
+                        )}
+                      </>
+                    )}
+                  </Disclosure>
+                )}
+              </li>
+            ))}
+          </motion.ul>
+        </div>
+
         <div className="navbar-right d-flex justify-content-around">
           <div className="position-relative">
             <img
@@ -245,9 +272,8 @@ const ResponsiveAppBar = () => {
               <Link href={item.path} key={item.path + item.index}>
                 <div className="">
                   <span
-                    className={`nav-link cursor-pointer hover:bg-$primary hover:text-white ${
-                      item.path == pathname ? "main_bg" : ""
-                    } `}
+                    className={`nav-link cursor-pointer hover:bg-$primary hover:text-white ${item.path == pathname ? "main_bg" : ""
+                      } `}
                   >
                     {item.name}
                   </span>

@@ -23,7 +23,7 @@ const variants = {
 export default function Footer() {
   const [show, setShow] = useState(false);
   return (
-    <div className="footer w-100 d-flex align-items-center justify-content-between relative">
+    <div className="hidden md:block footer w-100 d-flex align-items-center justify-content-between relative">
       <div className="left-footer pl-16">
         <span className="pl-3 ml-3">
           Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved.

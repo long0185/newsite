@@ -1,7 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import s from "./index.module.css";
-import left_img from "assets/2560/home/logo.svg";
 const Path = (props) => (
   <motion.path
     fill="transparent"

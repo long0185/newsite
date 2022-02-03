@@ -4,6 +4,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'mobile': '1080px',
+    },
     extend: {
       colors: {
         $primary: "#caa95c",

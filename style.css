@@ -529,7 +529,9 @@ main {
   border-radius: 3px;
 }
 .mobile_navbar {
-  top: 104px;
+  transform: translateX(-100%);
+  /* top: 104px; */
+  top: 0;
 }
 .bg_primary {
   color: #caa95c !important;
@@ -738,3 +740,23 @@ a:hover {
 .h_90{
   height: 90px;
 }
+
+
+    .pt_110{
+      padding-top: 110px!important;
+    }
+    .pr_110{
+      padding-right: 110px!important;
+    }
+    .pb_110{
+      padding-bottom: 110px!important;
+    }
+    .pl_110{
+      padding-left: 110px;
+    }
+    .mt_110{
+      margin-top: 110px!important;
+    }
+    .font_36{
+      font-size: 36px!important;
+    }
