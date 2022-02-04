@@ -174,7 +174,7 @@ const ResponsiveAppBar = () => {
         className={`navbar flex z-20 w-100 p-0 ${isOpen ? "border-bottom" : ""
           } `}
       >
-        <div className="block md:hidden relative ml-5 w-20 h-20">
+        <div className="block mobile:hidden relative ml-5 w-20 h-20">
           <img className="w-100 h-100 img-fluid" src="/assets/2560/menu.svg" />
         </div>
         <img
