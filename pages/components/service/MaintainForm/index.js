@@ -70,9 +70,9 @@ export default function index() {
             </div>
           </div>
         </div>
-        <div className={`${s.right} d-flex flex-column`}>
+        <div className={`${s.right} flex flex-col `}>
           <span className={s.desc}>请输入备注</span>
-          <textarea className={`${s.textarea} mt-2 w-100 outline-none`} />
+          <textarea className={`${s.textarea}  mt-2 w-100 outline-none`} />
         </div>
       </div>
       <div className={`col-12 text-center`}>

@@ -207,7 +207,7 @@ export default function index() {
 
             </div>
           </div>
-          <div className={`${s.expert_img_wrap} flex `}>
+          <div className={`${s.expert_img_wrap} mx-20 flex `}>
             <img src="/assets/2560/company/qianlaoshi.png" className="img-fluid" />
             <div className="flex flex-col ml-3">
               <div className="flex items-center"> <span className="font_30 font-black text-black">

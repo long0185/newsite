@@ -206,7 +206,7 @@ const ResponsiveAppBar = () => {
             </li>
           ))}
         </ul>
-        <div className='mobile:hidden z-10 fixed top-0 bottom-0 left-0 right-0 bg-black opacity-80'>
+        <div className='hidden z-10 fixed top-0 bottom-0 left-0 right-0 bg-black opacity-80'>
           <motion.ul
             variants={mobileVariants}
             animate='open'

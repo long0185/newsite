@@ -15,7 +15,7 @@
 .img {
   height: 152px;
   width: 262px;
-  outline: 1px solid #ccc;
+  /* outline: 1px solid #ccc; */
 }
 .mt_150 {
   margin-bottom: 150px;

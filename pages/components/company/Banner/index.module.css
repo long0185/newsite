@@ -36,7 +36,7 @@
 
 .right_top_img {
   width: 1016px;
-  height: 365px;
+  height: 364px;
 }
 .point {
   width: 15px;
@@ -45,4 +45,20 @@
 }
 .bg_primary {
   color: #caa95c !important;
+}
+.yellow{
+  width: 160px;
+  height: 66px;
+  top: 50%;
+  margin-top: -33px;
+  left: 50%;
+  margin-left: -80px;
+}
+.right_desc{
+  width: 580px;
+  height: 180px;
+  top: 50%;
+  margin-top: -90px;
+  left: 50%;
+  margin-left: -400px;
 }

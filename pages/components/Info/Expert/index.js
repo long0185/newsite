@@ -14,6 +14,44 @@ import s from "./index.module.css";
 //   desc:'访谈标题访谈标题访谈标题访谈标题访谈标题',
 //   img_src:'/assets/2560/info/expert/p_1.png'
 // }]
+const ExpertCard = ({img_src='',name='',badge='',title='',desc='',date='',view='',handleShow})=>{
+  return(
+    <div className={`${s.item_2} flex items-start mx-3`}>
+    <img
+      src={img_src}
+      className={`${s.sm_img} relative bg-gray-400 border-2`}
+    ></img>
+    <div className={`flex-1 flex items-start px-2 flex-col justify-between h-100 `}>
+      <div className="flex items-center">
+        <span className="c_title font-extrabold">{name}</span>
+        <span className={`${s.badge} ml-2 px-3 py-2`}>{badge}</span>
+      </div>
+      <span className="c_sub_title my-2">{title}</span>
+      <span className="c_title">
+        {desc}
+      </span>
+      <div className="w-100 c_sub_title d-flex align-items-center justify-content-between">
+        <div className="d-flex align-items-center">
+          <img
+            src="/assets/2560/service/useguide/calendar.svg"
+            className={`${s.svg} relative mr-2`}
+          ></img>
+          <span>{date}</span>
+        </div>
+        <span>浏览：{view}</span>
+      </div>
+      {/* <div className={s.line}></div> */}
+      <div className="pt-3 border-top w-100 flex items-center justify-between c_sub_title">
+        <span onClick={()=>handleShow(true)} >View more</span>
+        <img
+          src="/assets/2560/example/right_arrow.svg"
+          className={`${s.arrow} relative`}
+        ></img>
+      </div>
+    </div>
+  </div> 
+  )
+}
 let _list=[
 	{
 		id:1,
@@ -106,152 +144,38 @@ export default function index() {
   return (
     <>
     {isShow && <Detail handleShow={handleShow} showList={_list} />}
-    {list.map((item,index)=><div key={index}>
-    <div className="p-0 d-center">
-        <div className={`${s.content_2} d-flex justify-between`}>
-          <div className={`${s.item_2} flex items-start mx-3`}>
-            <img
-              src="/assets/2560/info/expert/p_1.png"
-              className={`${s.sm_img} relative bg-gray-400 border-2`}
-            ></img>
-            <div className={`flex-1 flex items-star flex-col `}>
-              <div className="flex items-center">
-                <span className="c_title font-extrabold">陈武雄</span>
-                <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
-              </div>
-              <span className="c_sub_title my-2">专家顾问 / 康复医学主任</span>
-              <span className="c_title">
-                访谈标题访谈标题访谈标题访谈标题访谈标题
-              </span>
-              <div className="c_sub_title d-flex align-items-center justify-content-between mt-5">
-                <div className="d-flex align-items-center">
-                  <img
-                    src="/assets/2560/service/useguide/calendar.svg"
-                    className={`${s.svg} relative mr-2`}
-                  ></img>
-                  <span>2020年7月23日</span>
-                </div>
-                <span>浏览：231</span>
-              </div>
-              <div className={s.line}></div>
-              <div className="mt-3 flex items-center justify-between c_sub_title">
-                <span onClick={()=>handleShow(true)} >View more</span>
-                <img
-                  src="/assets/2560/example/right_arrow.svg"
-                  className={`${s.arrow} relative`}
-                ></img>
-              </div>
-            </div>
-          </div>
-          <div className={`${s.item_2} flex items-start mx-3`}>
-            <img
-              src="/assets/2560/info/expert/p_1.png"
-              className={`${s.sm_img} relative bg-gray-400 border-2`}
-            ></img>
-            <div className={`flex flex-1 items-star flex-col `}>
-              <div className="flex items-center">
-                <span className="c_title font-extrabold">陈武雄</span>
-                <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
-              </div>
-              <span className="c_sub_title my-2">专家顾问 / 康复医学主任</span>
-              <span className="c_title">
-                访谈标题访谈标题访谈标题访谈标题访谈标题
-              </span>
 
-              <div className="c_sub_title d-flex align-items-center justify-content-between mt-5 ">
-                <div className="d-flex align-items-center">
-                  <img
-                    src="/assets/2560/service/useguide/calendar.svg"
-                    className={`${s.svg} relative mr-2`}
-                  ></img>
-                  <span>2020年7月23日</span>
-                </div>
-                <span>浏览：231</span>
-              </div>
-              <div className={s.line}></div>
-              <div className="mt-3 flex items-center justify-between c_sub_title">
-                <span onClick={()=>handleShow(true)}>View more</span>
-                <img
-                  src="/assets/2560/example/right_arrow.svg"
-                  className={`${s.arrow} relative`}
-                ></img>
-              </div>
-            </div>
-          </div>
+    {list.map((item,index)=><div key={index}>
+    <div className="w-100 d-center">
+        <div className={`${s.content_2} d-flex justify-between`}>
+          <ExpertCard img_src="/assets/2560/info/expert/p_1.png" name='陈武雄' badge='医学专家'
+            desc="访谈标题访谈标题访谈标题访谈标题访谈标题"
+            date="2021年7月23日"
+            view="231"
+            handleShow={handleShow}
+          />
+           <ExpertCard img_src="/assets/2560/info/expert/p_1.png" name='陈武雄' badge='医学专家'
+            desc="访谈标题访谈标题访谈标题访谈标题访谈标题"
+            date="2021年7月23日"
+            view="231"
+            handleShow={handleShow}
+          />
         </div>
       </div>
-      <div className="col-12 p-0 d-center">
+      <div className="w-100 d-center">
         <div className={`${s.content_2} d-flex justify-between`}>
-          <div className={`${s.item_2} flex items-start mx-3`}>
-            <img
-              src="/assets/2560/info/expert/p_1.png"
-              className={`${s.sm_img} relative bg-gray-400 border-2`}
-            ></img>
-            <div className={`flex flex-1 items-star flex-col `}>
-              <div className="flex items-center">
-                <span className="c_title font-extrabold">陈武雄</span>
-                <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
-              </div>
-              <span className="c_sub_title my-2">专家顾问 / 康复医学主任</span>
-              <span className="c_title">
-                访谈标题访谈标题访谈标题访谈标题访谈标题
-              </span>
-
-              <div className="c_sub_title d-flex align-items-center justify-content-between mt-5">
-                <div className="d-flex align-items-center">
-                  <img
-                    src="/assets/2560/service/useguide/calendar.svg"
-                    className={`${s.svg} relative mr-2`}
-                  ></img>
-                  <span>2020年7月23日</span>
-                </div>
-                <span>浏览：231</span>
-              </div>
-              <div className={s.line}></div>
-              <div className="mt-3 flex items-center justify-between c_sub_title">
-                <span onClick={()=>handleShow(true)} >View more</span>
-                <img
-                  src="/assets/2560/example/right_arrow.svg"
-                  className={`${s.arrow} relative`}
-                ></img>
-              </div>
-            </div>
-          </div>
-          <div className={`${s.item_2} flex items-start mx-3`}>
-            <img
-              src="/assets/2560/info/expert/p_1.png"
-              className={`${s.sm_img} relative bg-gray-400 border-2`}
-            ></img>
-            <div className={`flex flex-1 items-star flex-col `}>
-              <div className="flex items-center">
-                <span className="c_title font-extrabold">陈武雄</span>
-                <span className={`${s.badge} ml-2 px-3 py-2`}>医学专家</span>
-              </div>
-              <span className="c_sub_title my-2">专家顾问 / 康复医学主任</span>
-              <span className="c_title">
-                访谈标题访谈标题访谈标题访谈标题访谈标题
-              </span>
-
-              <div className="c_sub_title d-flex align-items-center justify-content-between mt-5 ">
-                <div className="d-flex align-items-center">
-                  <img
-                    src="/assets/2560/service/useguide/calendar.svg"
-                    className={`${s.svg} relative mr-2`}
-                  ></img>
-                  <span>2020年7月23日</span>
-                </div>
-                <span>浏览：231</span>
-              </div>
-              <div className={s.line}></div>
-              <div className="mt-3 flex items-center justify-between c_sub_title">
-                <span onClick={()=>handleShow(true)}>View more</span>
-                <img
-                  src="/assets/2560/example/right_arrow.svg"
-                  className={`${s.arrow} relative`}
-                ></img>
-              </div>
-            </div>
-          </div>
+        <ExpertCard img_src="/assets/2560/info/expert/p_1.png" name='陈武雄' badge='医学专家'
+            desc="访谈标题访谈标题访谈标题访谈标题访谈标题"
+            date="2021年7月23日"
+            view="231"
+            handleShow={handleShow}
+          />
+           <ExpertCard img_src="/assets/2560/info/expert/p_1.png" name='陈武雄' badge='医学专家'
+            desc="访谈标题访谈标题访谈标题访谈标题访谈标题"
+            date="2021年7月23日"
+            view="231"
+            handleShow={handleShow}
+          />
         </div>
       </div>
           </div>)}

@@ -19,7 +19,7 @@ const list = [
       "/assets/2560/company/knowledge/p_2.png",
       "/assets/2560/company/knowledge/p_3.png",
       "/assets/2560/company/knowledge/p_4.png",
-      // "/assets/2560/company/knowledge/p_5.png",
+      "/assets/2560/company/knowledge/p_5.png",
     ],
   },
   {
@@ -67,7 +67,7 @@ export default function index() {
           {list
             .find((item) => item.id == index)
             .children.map((item) => (
-              <img className={`${s.img} img-fluid mx-3`} src={item}></img>
+              <img className={`${item.includes('knowledge')?s._img:s.img} img-fluid mx-3`} src={item}></img>
             ))}
       </div>
     </div>

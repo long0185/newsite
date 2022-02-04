@@ -1,7 +1,4 @@
-.img {
-  width: 596px;
-  /* height: 350px; */
-}
+
 .content {
   margin-top: 119px;
 }
@@ -20,7 +17,7 @@
   padding-top: 36px;
 }
 .line {
-  margin-top: 16px;
+  margin-top: 6px;
   margin-bottom: 6px;
   height: 1px;
   background: #ececec;
@@ -44,8 +41,8 @@
 .sm_img {
   /* width: 183px; */
   width: 220px;
-  /* height: 246px; */
-  height: 100%;
+  height: 246px;
+  /* height: 100%; */
   margin-right: 13px;
 }
 .badge {

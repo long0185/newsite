@@ -49,7 +49,7 @@ export default function index() {
             上海金矢机器人坐落于中国(上海)自由贸易试验区临港新片区，是专业从事智能康复机器人研发、生产、销售的高新技术企业。公司研发实力雄厚，拥有由高校教授、千人学者、海归博士等组成的专业研发团队。参与科技部重点研发计划、国家自科基金、省部级机器人课题多项，拥有多项发明专利和计算机软件著作权，核心技术处于国际领先水平。金矢机器人未来目标是成为中国康复装备行业的领军企业。
           </span>
         </div>
-        <div className="fixed  top-52 z-10 left-80 flex flex-col">
+        <div className="fixed  top-52 z-10 left-10 flex flex-col">
           {list.map((item, index) => (
             <a
               className="my-2 nav-link flex items-center text-$primary  hover:bg-$primary hover:text-$white "
@@ -64,23 +64,37 @@ export default function index() {
       </div>
       <div className={`w-100 flex justify-between`}>
         <img
-          src="/assets/2560/company/grey_bg.png"
+          src="/assets/2560/company/p_1.png"
           className={`${s.left_img} relative`}
         ></img>
         <div className="flex flex-col flex-1">
-          <div className={`${s.center_top} bg-gray-400 relative w-100`}></div>
+          <div className={`${s.center_top} relative w-100`}>
+            <img className="w-100 h-100 img-fluid" src="/assets/2560/company/p_2.png" />
+          </div>
           <div className={`${s.center_bottom} bg-gray-400 relative w-100`}>
-            <span className={s.big_title}></span>
+            <img className="w-100 h-100 img-fluid" src="/assets/2560/company/p_3.png" />
+            <div className={`${s.yellow} text-white flex flex-col absolute z-20 items-center justify-center`}>
+              <span className={`${s.big_title} font-30 text-white`}>愿景</span>
+              <span className={`${s.big_title} font-30 text-white`}>科技重塑人生</span>
+            </div>
           </div>
         </div>
         <div className={`flex flex-col`}>
+          <div className={`${s.right_top_img} relative`}>
+            <img
+              src="/assets/2560/company/p_4.png"
+              className={`w-100 h-100 img-fluid`}
+            ></img>
+            <div className={`${s.right_desc} absolute z-20 flex flex-col`}>
+              <span className="font-black font_30">公司使命</span>
+              <span className="font_16">金矢机器人致力于用先进的康复理念+智能化的</span>
+              <span className="font_16">康复机器人产品助力用户回归家庭、回归社会。</span>
+            </div>
+          </div>
+
           <img
-            src="/assets/2560/company/p_4.png"
-            className={`${s.right_top_img} relative`}
-          ></img>
-          <img
-            src="/assets/2560/company/p_5.png"
-            className={`${s.right_top_img} relative`}
+            src="/assets/2560/company/p_6.png"
+            className={`${s.right_top_img} relative img-fluid`}
           ></img>
         </div>
       </div>

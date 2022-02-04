@@ -59,34 +59,34 @@ const showList = list.map((item, index) => {
     element: <div className="w-100 h-100 flex flex-col pt-5">
       <div className="w-100 flex flex-col items-start justify-start p-5">
         <span className="font_24 font-black mb-10">{item.name}</span>
-        <div className="flex justify-center items-center mt-5">
+        <div className="flex justify-center items-center mt-3">
           <span className="font_24 font-black mr-5">职位薪资:</span>
           <span className="font_24 font-$color">{item.salary}k</span>
         </div>
-        <div className="flex justify-center items-center mt-5">
+        <div className="flex justify-center items-center mt-3">
           <span className="font_24 font-black mr-5">工作年限:</span>
           <span className="font_24 font-$color">{item.rang}年</span>
         </div>
-        <div className="flex justify-center items-center mt-5">
+        <div className="flex justify-center items-center mt-3">
           <span className="font_24 font-black mr-5">招聘人数:</span>
           <span className="font_24 font-$color">{item.num}</span>
         </div>
-        <div className="flex justify-center items-center mt-5">
+        <div className="flex justify-center items-center mt-3">
           <span className="font_24 font-black mr-5">工作地点</span>
           <span className="font_24 font-$color">{item.area}</span>
         </div>
-        <div className="flex justify-center items-center mt-5">
+        <div className="flex justify-center items-center mt-3">
           <span className="font_24 font-black">岗位职责:</span>
         </div>
-        <div className="flex justify-center items-start flex-col mt-5">
+        <div className="flex justify-center items-start flex-col mt-3">
           <p>1. 本科以上学历，具有2年以上相关工作经验，根据产品设计需求，实现、维护及优化WEB前端页面和业务功能</p>
           <p>2. 负责公司移动端，PC端产品研发，有实际移动平台web前端开发和HTML5实践工作经验</p>
           <p>3. 根据产品需求负责完成开发和调试工作，深入解析代码, 提升代码执行效率</p>
         </div>
-        <div className="flex justify-center items-center mt-5">
+        <div className="flex justify-center items-center mt-3">
           <span className="font_24 font-black">技能要求:</span>
         </div>
-        <div className="flex justify-center items-start flex-col mt-5">
+        <div className="flex justify-center items-start flex-col mt-3">
           <p>1.有扎实的javascript基础（作用域，继承，闭包，面向对象设计等）</p>
           <p>2.熟悉Vue、React等框架，具有Vue实际项目经验，（熟悉Echarts，element-ui等可视化组件者优先考虑）</p>
           <p>3.根据产品需求负责完成开发和调试工作，深入解析代码, 提升代码执行效率</p>
@@ -118,7 +118,7 @@ export default function company() {
       <div className="w-100 flex justify-center mb_100">
         <table className="w_1567">
           <thead className="h_67 bg-gray-200 text-$color border">
-            <tr className=" text-center border-1 border-$primary" style={{ borderLeft: 0, borderRight: 0 }}>
+            <tr className=" text-center z-10 border-1 border-$primary" style={{ borderLeft: 0, borderRight: 0 }}>
               <th className="c_title">序号</th>
               <th className="c_title">职位名称</th>
               <th className="c_title">工作地点</th>

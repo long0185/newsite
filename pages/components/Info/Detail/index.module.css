@@ -2,16 +2,16 @@
   .middle {
 	overflow: hidden;
 	position: fixed;
-	z-index: 100000;
-	/* top: 104px; */
-	top: 0;
+	z-index: 10;
+	top: 104px;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	/* bottom: 74px; */
+	bottom: 74px;
 	transform-style: preserve-3d;
 	perspective: 800px;
 	margin: 0 auto;
+	padding-top: 100px;
   }
 .ul {
 	position: relative;
@@ -39,5 +39,5 @@
 	right: -120px;
 }
 .back{
-	bottom: -80px;
+	bottom: -120px;
 }

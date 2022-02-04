@@ -4,7 +4,7 @@ import MenuItem from "./MenuItem";
 import s from "./index.module.css";
 const variants = {
   open: {
-    height: "90%",
+    height: "100%",
     paddingTop: "14%",
     opacity: 1,
     transition: { duration: 1 },
