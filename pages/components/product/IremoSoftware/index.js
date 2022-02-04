@@ -67,7 +67,7 @@ export default function index() {
           </>
         }
       />
-      <div className={`w-100 text-center`}>
+      <div className={`w-100 text-center mb_43`}>
         <span className={`${styles.subtitle}`}>平面康复训练游戏</span>
       </div>
       <div className="iremo-software-content w-100 flex items-center justify-center relative">
