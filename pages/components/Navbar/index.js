@@ -262,7 +262,7 @@ const ResponsiveAppBar = () => {
         </div>
       </nav>
       <motion.nav
-        className="hidden sub-navbar w-screen md:flex items-center absolute bg-white  justify-center z-10 border"
+        className="hidden sub-navbar w-screen mobile:flex items-center absolute bg-white  justify-center z-10 border"
         animate={isOpen ? "open" : "closed"}
         variants={variants}
       >
