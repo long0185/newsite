@@ -6,7 +6,7 @@ import s from './index.module.css'
 
 const variants = {
 	left: {
-		translateX: -400,
+		translateX: -440,
 		scale: .8,
 		opacity:.7,
 		background: '#e9e9e9',
@@ -20,7 +20,7 @@ const variants = {
 		zIndex: 1000
 	},
 	right: {
-		translateX: 385,
+		translateX: 425,
 		opacity:.7,
 		scale: .8,
 		background: '#e9e9e9',
@@ -153,7 +153,7 @@ export default function applicationdetail() {
 
 					{
 						Array.isArray(list) && list.length > 0 && list.map((item, index) =>
-							<motion.li key={index} className={`${s.li} rounded`}
+							<motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`}
 								style={{ zIndex: `${item?.id == 1 ? '100' : '10'}` }}
 								variants={variants} animate={index < num ? 'left' : index > num ? 'right' : 'mid'} >{item?.element}
 							</motion.li>)

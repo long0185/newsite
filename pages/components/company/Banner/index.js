@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 import s from "./index.module.css";
 
 let _list = [
@@ -35,6 +36,93 @@ let _list = [
 ];
 export default function index() {
   const [list, setList] = useState(_list);
+  useEffect(()=>{
+    window.addEventListener('scroll', (e)=>{
+      let scrollTop  = document.documentElement.scrollTop;
+      console.log('scrollTop', scrollTop);
+      if(scrollTop>600 && scrollTop<1230){
+        const newList = list.map(item=>{
+          if(item.href=='#team'){
+            return{
+              ...item,
+              active:true
+            }
+          }else{
+            return {
+              ...item,
+              active:false
+            }
+          }
+        })
+        setList(newList)
+      }
+      if(scrollTop>1230 && scrollTop<1800){
+        const newList = list.map(item=>{
+          if(item.href=='#history'){
+            return{
+              ...item,
+              active:true
+            }
+          }else{
+            return {
+              ...item,
+              active:false
+            }
+          }
+        })
+        setList(newList)
+      }
+      if(scrollTop>1800 && scrollTop<2040){
+        const newList = list.map(item=>{
+          if(item.href=='#honor'){
+            return{
+              ...item,
+              active:true
+            }
+          }else{
+            return {
+              ...item,
+              active:false
+            }
+          }
+        })
+        setList(newList)
+      }
+      if(scrollTop>1800 && scrollTop<1950){
+        const newList = list.map(item=>{
+          if(item.href=='#unit'){
+            return{
+              ...item,
+              active:true
+            }
+          }else{
+            return {
+              ...item,
+              active:false
+            }
+          }
+        })
+        setList(newList)
+      }
+      if(scrollTop>2040){
+        const newList = list.map(item=>{
+          if(item.href=='#contact'){
+            return{
+              ...item,
+              active:true
+            }
+          }else{
+            return {
+              ...item,
+              active:false
+            }
+          }
+        })
+        setList(newList)
+      }
+    })
+    return window.removeEventListener('scroll',()=>{})
+  },[])
   const hanleClick = (href) => {
     const newList = list.map(item=>{
       if(item.href==href){
@@ -102,7 +190,7 @@ export default function index() {
             <img className="w-100 h-100 img-fluid" src="/assets/2560/company/p_3.png" />
             <div className={`${s.yellow} text-white flex flex-col absolute z-20 items-center justify-center`}>
               <span className={`${s.big_title} font_30 font-black text-white`}>愿景</span>
-              <span className={`${s.big_title} font_16 text-white`}>科技重塑人生</span>
+              <span className={`${s.big_title} font_24 text-white`}>科技重塑人生</span>
             </div>
           </div>
         </div>
@@ -114,8 +202,8 @@ export default function index() {
             ></img>
             <div className={`${s.right_desc} absolute z-20 flex flex-col`}>
               <span className="font-black font_30">公司使命</span>
-              <span className="font_16">金矢机器人致力于用先进的康复理念+智能化的</span>
-              <span className="font_16">康复机器人产品助力用户回归家庭、回归社会。</span>
+              <span className="font_24">金矢机器人致力于用先进的康复理念+智能化的</span>
+              <span className="font_24">康复机器人产品助力用户回归家庭、回归社会。</span>
             </div>
           </div>
 

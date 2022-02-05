@@ -60,26 +60,26 @@ export default function index() {
         </div>
         <div className={`${s.train_wrap} flex items-center justify-center`}>
         <div
-          className={`${s.item_3} d-flex  flex-column align-items-start justify-center`}
+          className={`${s.item_3} flex  flex-col items-start`}
         >
-          <div className={s.train_title}>
+          <div className={`${s.train_title} `}>
             培训标题：标培训培训培训题标题标题培训培训标题标题标题标题标题
           </div>
           <div
             className={`${s.sub_title} d-flex align-items-center justify-content-between c_sub_title`}
           >
-            <div className="d-flex align-items-center justify-content-between c_sub_title">
+            <div className="text-$68 d-flex align-items-center justify-content-between c_sub_title">
               <img src='/assets/2560/service/useguide/calendar.svg' className="calendar position-relative">
               </img>
-              <span className="ml-1">培训时间：</span>
+              <span className="ml-1 text-$68">培训时间：</span>
               <span>2021年7月23日 </span>
               <span className="ml-3">17:30分</span>
             </div>
             <div>
-              <span>培训方式：线上直播（抖音账号：3455123）</span>
+              <span className="text-$68">培训方式：线上直播（抖音账号：3455123）</span>
             </div>
             <div>
-              <span>培训讲师：高金美</span>
+              <span className="text-$68">培训讲师：高金美</span>
             </div>
           </div>
         </div>

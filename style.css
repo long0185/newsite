@@ -546,6 +546,7 @@ main {
 .sm_input {
   width: 196px;
   height: 35px;
+  line-height:35px;
   border-radius: 3px;
 }
 .full_input {
