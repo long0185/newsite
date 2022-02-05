@@ -14,11 +14,13 @@
   /* height: 323px; */
   padding-left: 76px;
   padding-top: 43px;
+  padding-bottom: 43px;
   background-image: url("/assets/2560/company/grey_bg.png");
   background-size: cover;
 }
 .item_1 {
   width: 770px;
+  padding: 0 43px;
   /* height: 323px; */
   padding-left: 76px;
   background: #eaeaea;
@@ -28,8 +30,8 @@
   height: 50px;
 }
 .location {
-  width: 32px;
-  height: 48px;
+  width: 42px;
+  height: 58px;
 }
 .address {
   font-size: 16px;
@@ -37,4 +39,7 @@
 }
 .mb_270 {
   margin-bottom: 270px;
+}
+.btn{
+  flex: 0 0 193px;
 }

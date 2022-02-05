@@ -52,7 +52,7 @@ export default function index() {
             <span>加拿大“工业研发基金奖”获得者</span>
           </div>
         </div>
-        <div className={`${s.manager} flex flex-col justify-around mx-4 p-4`}>
+        <div className={`${s.manager} flex flex-col justify-around mx-2 p-4`}>
           <img
             src="/assets/2560/company/wzy.png"
             className={`${s.img} relative self-center`}
@@ -65,14 +65,14 @@ export default function index() {
           </div>
           <div className="flex opacity-70 text-$86 ">
             <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-            <span>原上海发那科机电有限公司华东区大客户经理</span>
+            <span className="font_size_18 text-$86" >原上海发那科机电有限公司华东区大客户经理</span>
           </div>
           <div className="opacity-70 flex text-$86 ">
             <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
             <span>10年机器人控制应用经验</span>
           </div>
         </div>
-        <div className={`${s.manager} flex flex-col justify-around mx-4 p-4`}>
+        <div className={`${s.manager} flex flex-col justify-around mx-2 p-4`}>
           <img
             src="/assets/2560/company/st.png"
             className={`${s.img} relative self-center`}
@@ -92,7 +92,7 @@ export default function index() {
             <span>10年以上机器人设计经验</span>
           </div>
         </div>
-        <div className={`${s.manager} flex flex-col justify-around mx-4 p-4`}>
+        <div className={`${s.manager} flex flex-col justify-around mx-2 p-4`}>
           <img
             src="/assets/2560/company/mzf.png"
             className={`${s.img} relative self-center`}

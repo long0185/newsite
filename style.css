@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html { -webkit-text-size-adjust: none; }
 body {
   transition: all 0.5s;
 }
@@ -402,6 +403,9 @@ a:hover {
   color: #caa95c;
   border: solid 1px #caa95c;
 }
+.top-40{
+  top: 38%;
+}
 .c_title {
   font-size: 24px;
   color: #373737;
@@ -522,6 +526,9 @@ main {
 .font_18 {
   font-size: 18px;
   color: #373737;
+}
+.font_size_18{
+  font-size: 18px!important;
 }
 .btn_44 {
   width: 162px;
@@ -766,3 +773,32 @@ a:hover {
     .font_size_24{
       font-size: 24px;
     }
+    .legal>p{
+      line-height: 30PX;
+      /* margin: 5px 0; */
+      font-size: 12PX;
+    }
+    .w_193{
+      height: 193px!important;
+    }
+    .h_35{
+      height: 35px!important;
+    }
+    .font_14{
+      font-size: 14px!important;
+    }
+
+
+    select{
+      appearance:none;
+      -moz-appearance:none; 
+      -webkit-appearance:none;
+      outline: none;
+      border: none;
+      background: url('/assets/2560/service/train/pull.svg') no-repeat scroll 90% center transparent;
+    padding-bottom: 10px;
+    background-size: 30px;
+    background-position-x: right;
+ 
+ }
+ select::-ms-expand{ display: none; }

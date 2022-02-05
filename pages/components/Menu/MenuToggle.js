@@ -12,12 +12,12 @@ const Path = (props) => (
 );
 
 const MenuToggle = ({ toggle }) => (
-  <div className="px-5">
+  <div className="">
     <img
       src="/assets/2560/home/logo.svg"
-      className={`${s.left_img} relative`}
+      className={`${s.left_img} relative ml-20`}
     ></img>
-    <button onClick={toggle} className={`${s.button} mr-2`}>
+    <button onClick={toggle} className={`${s.button} mr-20`}>
       <svg width="36" height="36" viewBox="0 0 23 23">
         <Path
           variants={{

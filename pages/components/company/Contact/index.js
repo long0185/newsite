@@ -5,9 +5,6 @@ import Banner from "../../../components/Banner";
 export default function index() {
   return (
     <div className={`col-12 p-0 ${s.wrap} d-center flex-col`} id="contact">
-      {/* <div className={`${s.title} relative`}>
-        <Image layout="fill" src={title_contact} />
-      </div> */}
       <Banner img={"/assets/2560/company/title_contact.png"} />
       <div className={`flex ${s.mb_270}`}>
         <div className={`${s.item} flex flex-col mr-3`}>
@@ -28,10 +25,10 @@ export default function index() {
             <span>公司网址：www.ga-robot.com</span>
           </div>
         </div>
-        <div className={`${s.item} flex flex-col mr-3`}>
+        <div className={`${s.item} flex flex-col mr-3 justify-center`}>
           <div>
-            <span className="c_title">咨询请留下您的信息</span>
-            <span className="c_sub_title text-gray-500 ml-2">
+            <span className="c_title font_24 font-black">咨询请留下您的信息</span>
+            <span className="font_14 text-$86 ml-2">
               我们将第一时间与您取得联系
             </span>
           </div>
@@ -56,7 +53,7 @@ export default function index() {
             />
           </div>
           <div className="mt-3 w-100  flex items-center justify-center ">
-            <button className="mr-5 hover:bg-yellow-300 rounded nav-link bg-$primary px-5 py-2 text-white">
+            <button className={`${s.btn} flex items-center justify-center mr-5 h_35 hover:bg-yellow-300 rounded nav-link bg-$primary text-white`}>
               立即提交
             </button>
           </div>

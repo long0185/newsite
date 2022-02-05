@@ -1,33 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./index.module.css";
 
-const list = [
+let _list = [
   {
     name: "关于金矢",
     href: "#about",
+    active:true
   },
   {
     name: "公司团队",
     href: "#team",
+    active:false
   },
   {
     name: "发展历程",
     href: "#history",
+    active:false
   },
   {
     name: "资质荣誉",
     href: "#honor",
+    active:false
   },
   {
     name: "合作单位",
     href: "#unit",
+    active:false
   },
   {
     name: "联系方式",
     href: "#contact",
+    active:false
   },
 ];
 export default function index() {
+  const [list, setList] = useState(_list);
+  const hanleClick = (href) => {
+    const newList = list.map(item=>{
+      if(item.href==href){
+        return{
+          ...item,
+          active:true
+        }
+      }else{
+        return {
+          ...item,
+          active:false
+        }
+      }
+    })
+    setList(newList)
+  };
+  
   return (
     <>
       <div
@@ -52,7 +76,8 @@ export default function index() {
         <div className="fixed  top-52 z-10 left-10 flex flex-col">
           {list.map((item, index) => (
             <a
-              className="my-2 nav-link flex items-center text-$primary  hover:bg-$primary hover:text-$white "
+              onClick={()=>hanleClick(item.href)}
+              className={`${item.active?'bg-$primary text-white':'text-$primary'} my-2 px-2 flex items-center text-$primary  hover:bg-$primary hover:text-white `}
               href={item.href}
               key={index}
             >
@@ -74,8 +99,8 @@ export default function index() {
           <div className={`${s.center_bottom} bg-gray-400 relative w-100`}>
             <img className="w-100 h-100 img-fluid" src="/assets/2560/company/p_3.png" />
             <div className={`${s.yellow} text-white flex flex-col absolute z-20 items-center justify-center`}>
-              <span className={`${s.big_title} font-30 text-white`}>愿景</span>
-              <span className={`${s.big_title} font-30 text-white`}>科技重塑人生</span>
+              <span className={`${s.big_title} font-30 font-black text-white`}>愿景</span>
+              <span className={`${s.big_title} font-24 text-white`}>科技重塑人生</span>
             </div>
           </div>
         </div>

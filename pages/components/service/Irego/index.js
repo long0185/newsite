@@ -16,9 +16,9 @@ export default function index() {
             duration: 2
           }}
           className={`${s.item_wrap} flex justify-center `}>
-          <GuideItem title={'iReGo操作指南 康复计划制定1'} />
-          <GuideItem title={'iReGo操作指南 康复计划制定2'} />
-          <GuideItem title={'iReGo操作指南 康复计划制定3'} />
+          <GuideItem img_src="/assets/2560/service/useguide/irego.png" title={'iReGo操作指南 康复计划制定1'} />
+          <GuideItem img_src="/assets/2560/service/useguide/irego.png" title={'iReGo操作指南 康复计划制定2'} />
+          <GuideItem img_src="/assets/2560/service/useguide/irego.png" title={'iReGo操作指南 康复计划制定3'} />
         </motion.div>
       </div>
 

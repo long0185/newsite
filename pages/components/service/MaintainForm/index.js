@@ -15,7 +15,7 @@ export default function index() {
             <div
               className={`input-group input-group-lg d-flex  align-items-end ${s.input_1}`}
             >
-              <span className={`${s._label}  w-25`} id="inputGroup-sizing-lg">
+              <span className={`${s._label} text-$68  w-25`} id="inputGroup-sizing-lg">
                 联系人
               </span>
               <input
@@ -28,7 +28,7 @@ export default function index() {
             <div
               className={`input-group input-group-lg d-flex  align-items-end ${s.input_1}`}
             >
-              <span className={`${s._label} w-25`} id="inputGroup-sizing-lg">
+              <span className={`${s._label} text-$68 w-25`} id="inputGroup-sizing-lg">
                 联系地址
               </span>
               <input
@@ -45,20 +45,24 @@ export default function index() {
             <div
               className={`input-group input-group-lg d-flex  align-items-end ${s.input_1}`}
             >
-              <span className={`${s._label}  w-25`} id="inputGroup-sizing-lg">
+              <span className={`${s._label} text-$68 w-25`} id="inputGroup-sizing-lg">
                 选择产品
               </span>
-              <input
-                type="text"
-                className={`${s.input_item} form-control border-none border-bottom`}
+              <select
+                className={`${s.input_item} flex-1 border-none border-bottom`}
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-lg"
-              />
+              >
+                <option value='irego'></option>
+                <option value='irego'>irego</option>
+                <option value='irego'>iremo</option>
+                <option value='irego'>ircog</option>
+              </select>
             </div>
             <div
               className={`input-group input-group-lg d-flex  align-items-end ${s.input_1}`}
             >
-              <span className={`${s._label} w-25`} id="inputGroup-sizing-lg">
+              <span className={`${s._label} w-25 text-$68`} id="inputGroup-sizing-lg">
                 意向上门时间
               </span>
               <input
@@ -71,8 +75,8 @@ export default function index() {
           </div>
         </div>
         <div className={`${s.right} flex flex-col `}>
-          <span className={s.desc}>请输入备注</span>
-          <textarea className={`${s.textarea}  mt-2 w-100 outline-none`} />
+          <textarea 
+          placeholder="请输入备注(最多200字)" rows={10} className={`${s.textarea} pt-5  mt-2 w-100 outline-none`} />
         </div>
       </div>
       <div className={`col-12 text-center`}>

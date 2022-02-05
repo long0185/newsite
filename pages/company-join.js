@@ -3,6 +3,7 @@ import SubNav from "./components/company/Subnav";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Detail from "./components/Info/Detail";
+import { useRouter } from "next/router";
 const list = [
   {
     name: "Web前端开发工程师（Html5)",
@@ -98,15 +99,9 @@ const showList = list.map((item, index) => {
   }
 })
 export default function company() {
-  const [isShow, setIsShow] = useState(false);
-  const [number, setnumber] = useState(1);
-  const handleShow = (bool,number)=>{
-    setnumber(number)
-    setIsShow(bool)
-  }
+  const router = useRouter()
   return (
     <div className="">
-      {isShow && <Detail number={number} handleShow={handleShow} showList={showList} />}
       <Navbar />
       <SubNav />
       <div className="w-100 h_865 relative">
@@ -131,7 +126,7 @@ export default function company() {
           </thead>
           <tbody>
             {list.map((item, index) => (
-              <tr key={index} className="text-center h_90 border-bottom">
+              <tr key={index} className="text-center h_90 border-bottom hover:bg-white">
                 <td className="font_18 ">{index + 1}</td>
                 <td className="font_18 border-x">{item.name}</td>
                 <td className="font_18">{item.area}</td>
@@ -140,7 +135,7 @@ export default function company() {
                 <td className="font_18 border-x">{item.num}人</td>
                 <td className="font_18">{item.salary}K</td>
                 <td style={{ borderRight: 0 }} className="font_18 border-x">
-                  <button onClick={()=>handleShow(true,index+1)} className="btn_44 bg-gray-300 text-white hover:bg-$primary">
+                  <button onClick={()=>router.push('/job-detail')} className="btn_44 bg-gray-300 text-white hover:bg-$primary">
                     查看详情
                   </button>
                 </td>

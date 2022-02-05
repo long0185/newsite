@@ -10,14 +10,15 @@ const list = [{
   img_src: '/assets/2560/service/useguide/irego.png',
   video_src: '/assets/2560/service/useguide/play.png'
 }]
-export default function index({title}) {
+export default function index({title,img_src=''}) {
   return (
     <div className='flex flex-col items-center' style={{width:'100vw'}} >
       <div className={`flex`}>
         {list.map(item => (<div className={`${s.img_wrap}`}>
           <div className={`${s.img} position-relative`}>
             <img
-              src={item.img_src}
+              className="img-fluid w-100 h-100"
+              src={img_src}
             />
             <div className={`position-absolute ${s.sm_img_wrap}`}>
               <div className={`${s.sm_img} position-relative`}>
@@ -44,7 +45,8 @@ export default function index({title}) {
         {list.map(item => (<div className={`${s.img_wrap}`}>
           <div className={`${s.img} position-relative`}>
             <img
-              src={item.img_src}
+            className="img-fluid w-100 h-100"
+              src={img_src}
             />
             <div className={`position-absolute ${s.sm_img_wrap}`}>
               <div className={`${s.sm_img} position-relative`}>

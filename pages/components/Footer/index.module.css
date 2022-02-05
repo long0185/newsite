@@ -12,7 +12,8 @@
 }
 
 .phone {
-  right: 535px;
+  /* right: 535px; */
+  left: 0;
   top: 50%;
   margin-top: -19px;
 }
@@ -22,7 +23,8 @@
   position: absolute;
   top: 50%;
   margin-top: -19px;
-  right: 220px;
+  /* right: 220px; */
+  left: 38px;
 }
 .qrcode {
   width: 15rem;

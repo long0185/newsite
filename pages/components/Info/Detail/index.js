@@ -24,6 +24,8 @@ const variants = {
 	}
 }
 
+
+
 export default function index({ handleShow, showList=[],number=1 }) {
 	const [list, setList] = useState([showList[showList.length-1],...showList,showList[0]]);
 	const [num, setNum] = useState(number);

@@ -33,6 +33,7 @@ export default function index() {
       <Banner img={"/assets/2560/company/title_history.png"} />
       <div className={`w-100 ${s.item_wrap}`}>
         <div className={`flex ${s.item} items-center justify-center relative`}>
+        <div className={`${s.line} absolute`}></div>
           {years.map((item) => (
             <div
               onClick={()=>handleClick(item.id)}
@@ -45,7 +46,6 @@ export default function index() {
               ></span>
             </div>
           ))}
-          <div className={`${s.line} absolute`}></div>
         </div>
         <div className={`${s.history_wrap} w-100 flex justify-center`}>
           <div className={`${s.history_item} flex flex-col`}>
@@ -59,7 +59,7 @@ export default function index() {
                   src="/assets/2560/service/useguide/calendar.svg"
                   className={`${s.icon} relative  mr-2`}
                 ></img>
-                <span className="c_sub_title mt-1">{years.find(item=>item.active==true).id}年7月23日</span>
+                <span className="c_sub_title text-$86 mt-1">{years.find(item=>item.active==true).id}年7月23日</span>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function index() {
                   src="/assets/2560/service/useguide/calendar.svg"
                   className={`${s.icon} relative  mr-2`}
                 ></img>
-                <span className="c_sub_title mt-1">{years.find(item=>item.active==true).id}年7月23日</span>
+                <span className="c_sub_title text-$86 mt-1">{years.find(item=>item.active==true).id}年7月23日</span>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function index() {
                   src="/assets/2560/service/useguide/calendar.svg"
                   className={`${s.icon} relative  mr-2`}
                 ></img>
-                <span className="c_sub_title mt-1">{years.find(item=>item.active==true).id}年7月23日</span>
+                <span className="c_sub_title text-$86 mt-1">{years.find(item=>item.active==true).id}年7月23日</span>
               </div>
             </div>
           </div>

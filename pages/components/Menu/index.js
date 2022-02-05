@@ -31,7 +31,7 @@ const Example = () => {
 
   return (
     <motion.nav
-      className={`${s.nav} pl-5`}
+      className={`${s.nav}`}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       ref={containerRef}
