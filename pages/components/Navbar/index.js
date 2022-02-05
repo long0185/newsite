@@ -161,7 +161,7 @@ const ResponsiveAppBar = () => {
     },
   ];
 
-  let { pathname } = useRouter();
+  let { pathname,push } = useRouter();
   console.log("pathname", pathname);
   const [state, setState] = React.useState({ scrollTop: 0 });
 
@@ -178,8 +178,9 @@ const ResponsiveAppBar = () => {
           <img className="w-100 h-100 img-fluid" src="/assets/2560/menu.svg" />
         </div>
         <img
+          onClick={()=>push('/')}
           src="/assets/2560/home/logo.svg"
-          className="navbar-brand position-relative img-fluid"
+          className="navbar-brand position-relative img-fluid cursor-pointer"
         ></img>
         <ul
           className={`hidden navbar-nav mobile:flex flex-row justify-center pl-5`}

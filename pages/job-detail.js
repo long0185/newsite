@@ -153,7 +153,7 @@ export default function applicationdetail() {
 
 					{
 						Array.isArray(list) && list.length > 0 && list.map((item, index) =>
-							<motion.li key={index} className={`${s.li}`}
+							<motion.li key={index} className={`${s.li} rounded`}
 								style={{ zIndex: `${item?.id == 1 ? '100' : '10'}` }}
 								variants={variants} animate={index < num ? 'left' : index > num ? 'right' : 'mid'} >{item?.element}
 							</motion.li>)

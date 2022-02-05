@@ -92,7 +92,7 @@ const ApplicationCard = ({ title = '', date = '', view = '' }) => {
     <div onClick={() => router.push('/application-detail')} className={`${s.item} flex flex-col `}>
       <div className={`${s.img} relative bg-info`}>
       </div>
-      <div className={`${s.desc} flex-1 border flex flex-col justify-around item-center`}>
+      <div className={`${s.desc} p-3 flex-1 border flex flex-col justify-between items-start`}>
         <div className="font_size_24 text-$37">{title}</div>
         <div className="font_14 text-$68 flex items-center justify-between">
           <div className="d-flex align-items-center">
@@ -102,8 +102,8 @@ const ApplicationCard = ({ title = '', date = '', view = '' }) => {
           </div>
           <span className="font_14 text-$68">浏览：{view}</span>
         </div>
-        {/* <div className={s.line}></div> */}
-        <div className="border-top pt-2 flex items-center justify-between c_sub_title">
+        <div className={s.line}></div>
+        <div className=" flex w-100 items-center justify-between c_sub_title">
           <span className="font_14 text-$68" >View more</span>
           <img src='/assets/2560/example/right_arrow.svg' className={`${s.arrow} relative`}>
           </img>

@@ -13,13 +13,12 @@
   height: 14px;
 }
 .desc {
-  padding: 0 26px;
-  padding-top: 36px;
+  /* padding: 0 26px;
+  padding-top: 6px; */
 }
 .line {
-  margin-top: 6px;
-  margin-bottom: 6px;
   height: 1px;
+  width: 100%;
   background: #ececec;
 }
 .arrow {
@@ -35,12 +34,12 @@
   width: 882px;
   /* height: 338px; */
   padding: 41px;
-  padding-bottom: 51px;
+  /* padding-bottom: 51px; */
   box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
 }
 .sm_img {
-  /* width: 183px; */
-  width: 220px;
+  width: 183px;
+  /* width: 220px; */
   height: 246px;
   /* height: 100%; */
   margin-right: 13px;

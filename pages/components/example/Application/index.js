@@ -86,27 +86,29 @@ let _list = [
 const ApplicationCard_2 = ({ title = '', date = '', view = '' }) => {
   const router = useRouter()
   return (
-    <div onClick={()=>router.push('/application-detail')} 
-    className={`${s.item_2} border flex items-start  justify-between`}>
+    <div onClick={() => router.push('/application-detail')}
+      className={`${s.item_2} flex items-start  justify-between`}>
       <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
       </div>
-      <div className={`flex-1`}>
-        <span className="font_size_24 text-$37">
+      <div className={`flex-1 flex flex-col items-start justify-between h-100`}>
+        <span className="font_size_24 text-$37 info-infomation">
           {title}
         </span>
-        <div className="c_sub_title d-flex align-items-center justify-content-between mt-5">
-          <div className="d-flex align-items-center">
-            <img src='/assets/2560/service/useguide/calendar.svg' className={`${s.svg} relative mr-2`}>
-            </img>
-            <span className="font_14 text-$68">{date}</span>
+        <div className="w-100 flex-1 justify-between flex flex-col pt-3">
+          <div className="c_sub_title w-100 flex align-items-center justify-content-between">
+            <div className="d-flex align-items-center">
+              <img src='/assets/2560/service/useguide/calendar.svg' className={`${s.svg} mr-2 relative`}>
+              </img>
+              <span className="font_14 text-$68">{date}</span>
+            </div>
+            <span className="font_14 text-$68">浏览：{view}</span>
           </div>
-          <span className="font_14 text-$68">浏览：{view}</span>
-        </div>
-        {/* <div className={s.line}></div> */}
-        <div className=" border-top pt-2 mt-3 flex items-center justify-between c_sub_title">
-          <span className="font_14 text-$68">View more</span>
-          <img src='/assets/2560/example/right_arrow.svg' className={`${s.arrow} relative`}>
-          </img>
+          <div className={`${s.line}`}></div>
+          <div className=" flex w-100 items-center justify-between c_sub_title">
+            <span className="font_14 text-$68">View more</span>
+            <img src='/assets/2560/example/right_arrow.svg' className={`${s.arrow} relative`}>
+            </img>
+          </div>
         </div>
       </div>
     </div>
@@ -121,7 +123,7 @@ const ApplicationCard = ({ title = '', date = '', view = '' }) => {
     <div onClick={() => router.push('/application-detail')} className={`${s.item} flex flex-col `}>
       <div className={`${s.img} relative bg-info`}>
       </div>
-      <div className={`${s.desc} flex-1 border flex flex-col justify-around item-center`}>
+      <div className={`${s.desc} p-3 flex-1 border flex flex-col justify-between items-start`}>
         <div className="font_size_24 text-$37">{title}</div>
         <div className="font_14 text-$68 flex items-center justify-between">
           <div className="d-flex align-items-center">
@@ -131,8 +133,8 @@ const ApplicationCard = ({ title = '', date = '', view = '' }) => {
           </div>
           <span className="font_14 text-$68">浏览：{view}</span>
         </div>
-        {/* <div className={s.line}></div> */}
-        <div className="border-top pt-2 flex items-center justify-between c_sub_title">
+        <div className={s.line}></div>
+        <div className=" flex w-100 items-center justify-between c_sub_title">
           <span className="font_14 text-$68" >View more</span>
           <img src='/assets/2560/example/right_arrow.svg' className={`${s.arrow} relative`}>
           </img>
@@ -168,7 +170,7 @@ export default function index() {
         </div>
         <div className="col-12 p-0 d-center">
           <div className={`${s.content_2} d-flex justify-between`}>
-          <ApplicationCard_2 title="岳阳医院患者效果标题标题标题题标题标题标 标题标题"
+            <ApplicationCard_2 title="岳阳医院患者效果标题标题标题题标题标题标 标题标题"
               date="2020年7月25日"
               view="231" />
             <ApplicationCard_2 title="岳阳医院患者效果标题标题标题题标题标题标 标题标题"

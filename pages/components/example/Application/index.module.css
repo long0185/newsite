@@ -18,13 +18,14 @@
   height: 14px;
 }
 .desc {
-  padding: 0 26px;
+  /* padding: 26px; */
   /* padding-top: 36px; */
 }
 .line {
   /* margin-top: 26px;
   margin-bottom: 16px; */
   height: 1px;
+  width: 100%;
   background: #ececec;
 }
 .arrow {
@@ -51,7 +52,6 @@
 }
 .sm_img {
   width: 346px;
-  /* height: 210px; */
-  height: 100%;
+  height: 210px;
   margin-right: 13px;
 }

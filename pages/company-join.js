@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import SubNav from "./components/company/Subnav";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
-import Detail from "./components/Info/Detail";
+import s from './index.module.css'
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 const list = [
   {
     name: "Web前端开发工程师（Html5)",
@@ -99,7 +100,19 @@ const showList = list.map((item, index) => {
   }
 })
 export default function company() {
+  const [num, setNum] = useState(0);
   const router = useRouter()
+  const handleClick = (direction) => {
+    if(direction=='left'){
+      const newNum = num-1<0?0:num-1;
+      setNum(newNum)
+    }
+    if(direction=='right'){
+      const newNum = num+1>2?2:num+1;
+      setNum(newNum)
+    }
+  };
+
   return (
     <div className="">
       <Navbar />
@@ -110,39 +123,123 @@ export default function company() {
       <div className="w-100">
         <Banner img={'/assets/2560/company/title_zp.png'} />
       </div>
-      <div className="w-100 flex justify-center mb_100">
-        <table className="w_1567">
-          <thead className="h_67 bg-gray-200 text-$color border">
-            <tr className=" text-center z-10 border-1 border-$primary" style={{ borderLeft: 0, borderRight: 0 }}>
-              <th className="c_title">序号</th>
-              <th className="c_title">职位名称</th>
-              <th className="c_title">工作地点</th>
-              <th className="c_title">最低学历</th>
-              <th className="c_title">年限</th>
-              <th className="c_title">招聘人数</th>
-              <th className="c_title">职位薪资</th>
-              <th className="c_title">详细信息</th>
-            </tr>
-          </thead>
-          <tbody>
-            {list.map((item, index) => (
-              <tr key={index} className="text-center h_90 border-bottom hover:bg-white">
-                <td className="font_18 ">{index + 1}</td>
-                <td className="font_18 border-x">{item.name}</td>
-                <td className="font_18">{item.area}</td>
-                <td className="font_18 border-x">{item.agree}</td>
-                <td className="font_18">{item.rang}年</td>
-                <td className="font_18 border-x">{item.num}人</td>
-                <td className="font_18">{item.salary}K</td>
-                <td style={{ borderRight: 0 }} className="font_18 border-x">
-                  <button onClick={()=>router.push('/job-detail')} className="btn_44 bg-gray-300 text-white hover:bg-$primary">
-                    查看详情
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="w-100 flex justify-center relative">
+        <div className="w_1567 flex mb_100 overflow-hidden">
+          <motion.div
+            animate={{
+              translateX: `${33.33 * -num}%`
+            }}
+            transition={{
+              duration: 2
+            }}
+            className="w-300 flex">
+            <table className="w_1567">
+              <thead className="h_77 my-2 py-2 bg-gray-200 text-$color border">
+                <tr className="h_77 my-2 py-2 text-center z-10 border-1 border-$primary" style={{ borderLeft: 0, borderRight: 0 }}>
+                  <th className="c_title my-2">序号</th>
+                  <th className="c_title">职位名称</th>
+                  <th className="c_title">工作地点</th>
+                  <th className="c_title">最低学历</th>
+                  <th className="c_title">年限</th>
+                  <th className="c_title">招聘人数</th>
+                  <th className="c_title">职位薪资</th>
+                  <th className="c_title">详细信息</th>
+                </tr>
+              </thead>
+              <tbody>
+                {list.map((item, index) => (
+                  <tr key={index} className="text-center h_90 border-bottom hover:bg-white">
+                    <td className="font_18 ">{index + 1}</td>
+                    <td className="font_18 border-x">{item.name}</td>
+                    <td className="font_18">{item.area}</td>
+                    <td className="font_18 border-x">{item.agree}</td>
+                    <td className="font_18">{item.rang}年</td>
+                    <td className="font_18 border-x">{item.num}人</td>
+                    <td className="font_18">{item.salary}K</td>
+                    <td style={{ borderRight: 0 }} className="font_18 border-x">
+                      <button onClick={() => router.push('/job-detail')} className="btn_44 bg-gray-300 text-white hover:bg-$primary">
+                        查看详情
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <table className="w_1567">
+              <thead className="h_77 bg-gray-200 text-$color border">
+                <tr className="h_77 text-center z-10 border-1 border-$primary" style={{ borderLeft: 0, borderRight: 0 }}>
+                  <th className="c_title">序号</th>
+                  <th className="c_title">职位名称</th>
+                  <th className="c_title">工作地点</th>
+                  <th className="c_title">最低学历</th>
+                  <th className="c_title">年限</th>
+                  <th className="c_title">招聘人数</th>
+                  <th className="c_title">职位薪资</th>
+                  <th className="c_title">详细信息</th>
+                </tr>
+              </thead>
+              <tbody>
+                {list.map((item, index) => (
+                  <tr key={index} className="text-center h_90 border-bottom hover:bg-white">
+                    <td className="font_18 ">{index + 1}</td>
+                    <td className="font_18 border-x">{item.name}</td>
+                    <td className="font_18">{item.area}</td>
+                    <td className="font_18 border-x">{item.agree}</td>
+                    <td className="font_18">{item.rang}年</td>
+                    <td className="font_18 border-x">{item.num}人</td>
+                    <td className="font_18">{item.salary}K</td>
+                    <td style={{ borderRight: 0 }} className="font_18 border-x">
+                      <button onClick={() => router.push('/job-detail')} className="btn_44 bg-gray-300 text-white hover:bg-$primary">
+                        查看详情
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <table className="w_1567">
+              <thead className="h_77 bg-gray-200 text-$color border">
+                <tr className="h_77 text-center z-10 border-1 border-$primary" style={{ borderLeft: 0, borderRight: 0 }}>
+                  <th className="c_title">序号</th>
+                  <th className="c_title">职位名称</th>
+                  <th className="c_title">工作地点</th>
+                  <th className="c_title">最低学历</th>
+                  <th className="c_title">年限</th>
+                  <th className="c_title">招聘人数</th>
+                  <th className="c_title">职位薪资</th>
+                  <th className="c_title">详细信息</th>
+                </tr>
+              </thead>
+              <tbody>
+                {list.map((item, index) => (
+                  <tr key={index} className="text-center h_90 border-bottom hover:bg-white">
+                    <td className="font_18 ">{index + 1}</td>
+                    <td className="font_18 border-x">{item.name}</td>
+                    <td className="font_18">{item.area}</td>
+                    <td className="font_18 border-x">{item.agree}</td>
+                    <td className="font_18">{item.rang}年</td>
+                    <td className="font_18 border-x">{item.num}人</td>
+                    <td className="font_18">{item.salary}K</td>
+                    <td style={{ borderRight: 0 }} className="font_18 border-x">
+                      <button onClick={() => router.push('/job-detail')} className="btn_44 bg-gray-300 text-white hover:bg-$primary">
+                        查看详情
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </motion.div>
+        </div>
+        <div className={`absolute top-40 px-20 flex justify-around w-100 z-20 h-20`} >
+          <img onClick={() => handleClick('left')} className={`cursor-pointer left-32 h-100 absolute`} src='/assets/2560/home/left-arrow.svg'  ></img>
+          <img onClick={() => handleClick('right')} className={`cursor-pointer right-32 h-100 absolute`} src='/assets/2560/home/right-arrow.svg'  ></img>
+        </div>
+      </div>
+      <div className="flex mb_100 justify-center w-100 mt_118">
+        <div onClick={() => setNum(0)} className={`${s.slide} ${num == 0 ? 'bg-$primary' : 'bg-$gray'}  cursor-pointer`}></div>
+        <div onClick={() => setNum(1)} className={`${s.slide} ${num == 1 ? 'bg-$primary' : 'bg-$gray'}  mx-5 cursor-pointer`}></div>
+        <div onClick={() => setNum(2)} className={`${s.slide} ${num == 2 ? 'bg-$primary' : 'bg-$gray'}  cursor-pointer`}></div>
       </div>
     </div>
   );
