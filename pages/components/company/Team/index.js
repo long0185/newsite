@@ -228,13 +228,13 @@ export default function index() {
             transition={{
               duration: 2
             }}
-            className="w-200 flex justify-between py-5">
-            <div className="flex w_2072  justify-between">
+            className="w-200 flex justify-around py-5">
+            <div className="flex w_2072  justify-around">
               <TeamCard img_src="/assets/2560/company/gs.png" name="郭帅" badge="工学专家" title="专家顾问 / 教授、博导" desc={['上海大学机电工程与自动化学院PI', '上海机器人研究所副所长', '中国康复技术转化与产业促进专业委员会常委']} />
               <TeamCard img_src="/assets/2560/company/qianlaoshi.png" name="钱楷" badge="设计学专家" title="专家顾问 / 设计总监、文化学者、艺术家" desc={['韩国文化部高级访问学者', '韩国卡露文化高级艺术顾问', '人工智能应用场景设计与人机交互（UI/UX）设计专家', '李克强总理及多国政要世博会安保证章设计者']} />
               <TeamCard img_src="/assets/2560/company/gs.png" name="华续赟" badge="医学专家" title="专家顾问 / 教授、华山医院主任" desc={['现任中国医药教育协会康复装备发展促进中心主任委员', '中华医学会物理医学与康复学分会委员', '中国康复医学会脑血管病康复、疼痛康复、创伤康复专业委员会常委']} />
             </div>
-            <div className="flex w_2072 justify-between">
+            <div className="flex w_2072 justify-around">
               <TeamCard img_src="/assets/2560/company/gs.png" name="郭帅" badge="工学专家" title="专家顾问 / 教授、博导" desc={['上海大学机电工程与自动化学院PI', '上海机器人研究所副所长', '中国康复技术转化与产业促进专业委员会常委']} />
               <TeamCard img_src="/assets/2560/company/qianlaoshi.png" name="钱楷" badge="设计学专家" title="专家顾问 / 设计总监、文化学者、艺术家" desc={['韩国文化部高级访问学者', '韩国卡露文化高级艺术顾问', '人工智能应用场景设计与人机交互（UI/UX）设计专家', '李克强总理及多国政要世博会安保证章设计者']} />
               <TeamCard img_src="/assets/2560/company/gs.png"  name="华续赟" badge="医学专家" title="专家顾问 / 教授、华山医院主任" desc={['现任中国医药教育协会康复装备发展促进中心主任委员', '中华医学会物理医学与康复学分会委员', '中国康复医学会脑血管病康复、疼痛康复、创伤康复专业委员会常委']} />

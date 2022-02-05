@@ -5,9 +5,23 @@ import { motion } from "framer-motion";
 export default function index() {
   const [num, setNum] = useState(0);
   const [list, setList] = useState([1]);
+  const handleClick = (direction) => {
+    if(direction=='left'){
+      const newNum = num-1<0?0:num-1;
+      setNum(newNum)
+    }
+    if(direction=='right'){
+      const newNum = num+1>2?2:num+1;
+      setNum(newNum)
+    }
+  };
   return (
     <div className={`w-100 d-center flex-column mt_63`}>
-      <div className={`${s.warp} w-screen flex overflow-hidden`}>
+      <div className={`${s.warp} w-screen flex overflow-hidden relative`}>
+      <div className={`absolute top_45 pt-3 px-20 flex justify-around w-100 z-20 h-20`} >
+          <img onClick={() => handleClick('left')} className={`cursor-pointer left-32 h-100 absolute`} src='/assets/2560/home/left-arrow.svg'  ></img>
+          <img onClick={() => handleClick('right')} className={`cursor-pointer right-32 h-100 absolute`} src='/assets/2560/home/right-arrow.svg'  ></img>
+        </div>
         <motion.div
           animate={{
             translateX: `${-num * 33.333 + "%"}`,

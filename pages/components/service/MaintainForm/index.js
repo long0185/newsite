@@ -80,7 +80,7 @@ export default function index() {
           onFocus={()=>setShow(true)}
           onBlur={()=>setShow(false)}
           placeholder="请输入备注:"
-           rows={10} className={`${s.textarea} absolute top-0 bottom-0 right-0 left-0 focus:border placeholder:text-$68 placeholder:font_30 ml-2  mt-10 w-100 outline-none`} />
+           rows={10} className={`${s.textarea} absolute top-0 bottom-0 right-0 left-0 focus:border placeholder:text-$68 placeholder:font_24 ml-2  mt-10 w-100 outline-none`} />
           <span className={`${s.tips} ${show?'block':'hidden'} text-$68 absolute z-20`}>最多不超过200字</span>
         </div>
       </div>

@@ -40,7 +40,7 @@ export default function index() {
     window.addEventListener('scroll', (e)=>{
       let scrollTop  = document.documentElement.scrollTop;
       console.log('scrollTop', scrollTop);
-      if(scrollTop>600 && scrollTop<1230){
+      if(scrollTop>600 && scrollTop<1200){
         const newList = list.map(item=>{
           if(item.href=='#team'){
             return{
@@ -56,7 +56,7 @@ export default function index() {
         })
         setList(newList)
       }
-      if(scrollTop>1230 && scrollTop<1800){
+      if(scrollTop>1200 && scrollTop<1700){
         const newList = list.map(item=>{
           if(item.href=='#history'){
             return{
@@ -72,7 +72,7 @@ export default function index() {
         })
         setList(newList)
       }
-      if(scrollTop>1800 && scrollTop<2040){
+      if(scrollTop>1700 && scrollTop<1950){
         const newList = list.map(item=>{
           if(item.href=='#honor'){
             return{
@@ -88,7 +88,7 @@ export default function index() {
         })
         setList(newList)
       }
-      if(scrollTop>1800 && scrollTop<1950){
+      if(scrollTop>1950 && scrollTop<2014){
         const newList = list.map(item=>{
           if(item.href=='#unit'){
             return{
@@ -104,6 +104,22 @@ export default function index() {
         })
         setList(newList)
       }
+      // if(scrollTop>1950 && scrollTop<2040){
+      //   const newList = list.map(item=>{
+      //     if(item.href=='#unit'){
+      //       return{
+      //         ...item,
+      //         active:true
+      //       }
+      //     }else{
+      //       return {
+      //         ...item,
+      //         active:false
+      //       }
+      //     }
+      //   })
+      //   setList(newList)
+      // }
       if(scrollTop>2040){
         const newList = list.map(item=>{
           if(item.href=='#contact'){
@@ -152,13 +168,13 @@ export default function index() {
         ></img>
         <div className={`${s.banner_text} mt-5`}>
           <span className={`${s.title} px-2 py-1 ml-2`}>公司简介</span>
-          <span className={s.desc}>
+          <span className={`${s.desc} leading-10`}>
             上海金矢机器人科技有限公司是专业从事肢体康复机器人研发、生产、销售为一体的高科技公司。基于大数据、云计算、5G通讯技术，已完成下肢、上肢、认知等多款智能康复机器人研发，形成了软硬件结合的整套肢体康复解决方案。
           </span>
         </div>
         <div className={`${s.banner_text} m-3`}>
           <span className={`${s.title} py-1 px-2 ml-2`}>公司背景</span>
-          <span className={s.desc}>
+          <span className={`${s.desc} leading-10`}>
             上海金矢机器人坐落于中国(上海)自由贸易试验区临港新片区，是专业从事智能康复机器人研发、生产、销售的高新技术企业。公司研发实力雄厚，拥有由高校教授、千人学者、海归博士等组成的专业研发团队。参与科技部重点研发计划、国家自科基金、省部级机器人课题多项，拥有多项发明专利和计算机软件著作权，核心技术处于国际领先水平。金矢机器人未来目标是成为中国康复装备行业的领军企业。
           </span>
         </div>
@@ -190,7 +206,7 @@ export default function index() {
             <img className="w-100 h-100 img-fluid" src="/assets/2560/company/p_3.png" />
             <div className={`${s.yellow} text-white flex flex-col absolute z-20 items-center justify-center`}>
               <span className={`${s.big_title} font_30 font-black text-white`}>愿景</span>
-              <span className={`${s.big_title} font_24 text-white`}>科技重塑人生</span>
+              <span className={`${s.big_title} font_size_24 text-white`}>科技重塑人生</span>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@
 }
 .expert {
   margin-top: 80px;
-  margin-bottom: 187px;
+  margin-bottom: 60px;
 }
 .box{
   
@@ -43,16 +43,16 @@
   width: 229px;
 }
 .right_arrow {
-  width: 25px;
-  height: 45px;
+  width: 45px;
+  height: 65px;
   opacity: 0.8;
-  margin-left: 40px;
+  /* margin-left: 40px; */
 }
 .left_arrow {
-  width: 25px;
-  height: 45px;
+  width: 45px;
+  height: 55px;
   opacity: 0.8;
-  margin-right: 40px;
+  /* margin-right: 40px; */
 }
 
 .slide{
