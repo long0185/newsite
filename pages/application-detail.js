@@ -30,20 +30,20 @@ let _list = [
 	  id: 1,
 	  element: <div className="w-100 h-100 flex flex-col pt-5">
 		<div className="w-100 flex flex-col items-center justify-center">
-		  <span className="font_24 font-black">标题标题标题标题标题标题标题</span>
+		  <span className="font_36 font-black">标题标题标题标题标题标题标题</span>
 		  <div className="flex justify-center items-center">
 			<img src="/assets/2560/service/useguide/calendar.svg"
 			  className={`${s.icon} calendar-icon img-fluid mr-1`} ></img>
-			<span>2021年7月23日</span>
+			<span className='text-$86'>2021年7月23日</span>
 		  </div>
 		</div>
-		<div className="flex items-center px-5">
+		<div className="flex items-center px-5 text-$86">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
 		  <div className="w-50 bg-gray-600 h-96"></div>
 		</div>
-		<div className="flex items-center px-5 mt-3">
+		<div className="flex items-center px-5 mt-3 text-$86">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
@@ -56,20 +56,20 @@ let _list = [
 	  id: 2,
 	  element: <div className="w-100 h-100 flex flex-col pt-5">
 		<div className="w-100 flex flex-col items-center justify-center">
-		  <span className="font_24 font-black">标题标题标题标题标题标题标题</span>
+		  <span className="font_36 font-black">标题标题标题标题标题标题标题</span>
 		  <div className="flex justify-center items-center">
 			<img src="/assets/2560/service/useguide/calendar.svg"
 			  className={`${s.icon} calendar-icon img-fluid mr-1`} ></img>
-			<span>2021年7月23日</span>
+			<span className='text-$86'>2021年7月23日</span>
 		  </div>
 		</div>
-		<div className="flex items-center px-5">
+		<div className="flex items-center px-5 text-$86">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
 		  <div className="w-50 bg-gray-600 h-96"></div>
 		</div>
-		<div className="flex items-center px-5 mt-3">
+		<div className="flex items-center px-5 mt-3 text-$86">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3 mb-5">
@@ -82,21 +82,21 @@ let _list = [
 	  id: 3,
 	  element: <div className="w-100 h-100 flex flex-col pt-5">
 		<div className="w-100 flex flex-col items-center justify-center">
-		  <span className="font_24 font-black">标题标题标题标题标题标题标题</span>
+		  <span className="font_36 font-black">标题标题标题标题标题标题标题</span>
 		  <div className="flex justify-center items-center">
 			<img src="/assets/2560/service/useguide/calendar.svg"
 			  className={`${s.icon} calendar-icon img-fluid mr-1`} ></img>
-			<span>2021年7月23日</span>
+			<span className='text-$86'>2021年7月23日</span>
 		  </div>
 		</div>
-		<div className="flex items-center px-5">
+		<div className="flex items-center px-5 text-$68">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
 		  <div className="w-50 bg-gray-600 h-96"></div>
 		</div>
-		<div className="flex items-center px-5 mt-3">
-		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
+		<div className="flex items-center px-5 mt-3 text-$68">
+		  <span >缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
 		  <div className="w-50 bg-gray-600 h-60"></div>
