@@ -55,6 +55,7 @@ export default function index() {
   return (
     <>
       <div
+        id="about"
         className={`${s.banner} flex flex-col items-center justify-center relative`}
       >
         <img
@@ -77,12 +78,13 @@ export default function index() {
           {list.map((item, index) => (
             <a
               onClick={()=>hanleClick(item.href)}
-              className={`${item.active?'bg-$primary text-white':'text-$primary'} my-2 px-2 flex items-center text-$primary  hover:bg-$primary hover:text-white `}
+              onMouseEnter={()=>hanleClick(item.href)}
+              className={`rounded ${item.active?'bg-$primary text-white':'text-$primary'} my-2 px-2 flex items-center text-$primary  hover:bg-$primary hover:text-white `}
               href={item.href}
               key={index}
             >
               <span className={``}>●</span>
-              <span className="px-2 py-1  ">{item.name}</span>
+              <span className={`${item.active?'block':'hidden'} px-2 py-1`}>{item.name}</span>
             </a>
           ))}
         </div>
@@ -99,8 +101,8 @@ export default function index() {
           <div className={`${s.center_bottom} bg-gray-400 relative w-100`}>
             <img className="w-100 h-100 img-fluid" src="/assets/2560/company/p_3.png" />
             <div className={`${s.yellow} text-white flex flex-col absolute z-20 items-center justify-center`}>
-              <span className={`${s.big_title} font-30 font-black text-white`}>愿景</span>
-              <span className={`${s.big_title} font-24 text-white`}>科技重塑人生</span>
+              <span className={`${s.big_title} font_30 font-black text-white`}>愿景</span>
+              <span className={`${s.big_title} font_16 text-white`}>科技重塑人生</span>
             </div>
           </div>
         </div>

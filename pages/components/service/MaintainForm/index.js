@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./index.module.css";
 export default function index() {
+  const [show, setShow] = useState(false);
   return (
     <div
       className={`${s.wrap} col-12 p-0 d-flex flex-column align-items-center`}
@@ -74,9 +75,13 @@ export default function index() {
             </div>
           </div>
         </div>
-        <div className={`${s.right} flex flex-col `}>
+        <div className={`${s.right} relative `}>
           <textarea 
-          placeholder="请输入备注(最多200字)" rows={10} className={`${s.textarea} pt-5  mt-2 w-100 outline-none`} />
+          onFocus={()=>setShow(true)}
+          onBlur={()=>setShow(false)}
+          placeholder="请输入备注:"
+           rows={10} className={`${s.textarea} absolute top-0 bottom-0 right-0 left-0 focus:border placeholder:text-$68 placeholder:font_30 ml-2  mt-10 w-100 outline-none`} />
+          <span className={`${s.tips} ${show?'block':'hidden'} text-$68 absolute z-20`}>最多不超过200字</span>
         </div>
       </div>
       <div className={`col-12 text-center`}>

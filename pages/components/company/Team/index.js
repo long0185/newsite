@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./index.module.css";
 
 import Banner from "../../../components/Banner";
+import { motion } from "framer-motion";
 
 export default function index() {
+  const [num, setnum] = useState(0);
+  const handClick = (direction)=>{
+    if(direction=='left'){
+      const newNum = num-1<-1?-1:num-1;
+      console.log('newNum', newNum);
+      setnum(newNum)
+    }
+    if(direction=='right'){
+      const newNum = num+1>0?0:num+1;
+      console.log('newNum', newNum);
+      setnum(newNum)
+    }
+  }
   return (
     <div id="team" className="d-center flex-col">
       <Banner
@@ -175,100 +189,198 @@ export default function index() {
         </div>
       </div>
       <div className={`${s.expert} w-screen flex items-center justify-center`}>
-        {/* <img
-          src="/assets/2560/company/left.svg"
-          className={`${s.left_arrow} relative`}
-        ></img> */}
-        <div className="flex-1 flex justify-center">
-          <div className={`${s.expert_img_wrap} flex `}>
-            <img src="/assets/2560/company/gs.png" className="img-fluid" />
-            <div className="flex flex-col ml-3">
-              <div className="flex items-center"> <span className="font_30 font-black text-black">
-                郭帅
-              </span>
-                <span className="ml-3 px-3 py-1 bg-$primary text-white">
-                  工学专家
-                </span>
-              </div>
-              <span className="font_18 text-$37">专家顾问 / 教授、博导</span>
-              <div className="flex opacity-70 text-$86">
-                <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-                <span>上海大学机电工程与自动化学院PI</span>
-              </div>
-              <div className="flex opacity-70 text-$86">
-                <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-                <span>上海机器人研究所副所长</span>
-              </div>
-              <div className="flex opacity-70 text-$86">
-                <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-                <span>中国康复技术转化与产业促进专业委员会
-                  常委</span>
-              </div>
-
-            </div>
-          </div>
-          <div className={`${s.expert_img_wrap} mx-20 flex `}>
-            <img src="/assets/2560/company/qianlaoshi.png" className="img-fluid" />
-            <div className="flex flex-col ml-3">
-              <div className="flex items-center"> <span className="font_30 font-black text-black">
-              钱楷
-              </span>
-                <span className="ml-3 px-3 py-1 bg-$primary text-white">
-                设计学专家
-                </span>
-              </div>
-              <span className="font_18 text-$37">专家顾问 / 设计总监、文化学者、艺术家</span>
-              <div className="flex opacity-70 text-$86">
-                <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-                <span>韩国文化部高级访问学者</span>
-              </div>
-              <div className="flex opacity-70 text-$86">
-                <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-                <span> 韩国卡露文化高级艺术顾问</span>
-              </div>
-              <div className="flex opacity-70 text-$86">
-                <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-                <span>人工智能应用场景设计与人机交互（UI/UX）设计专家</span>
-              </div>
-              <div className="flex opacity-70 text-$86">
-                <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-                <span>李克强总理及多国政要世博会安保证章设计者</span>
-              </div>
-
-            </div>
-          </div>
-          <div className={`${s.expert_img_wrap} flex `}>
-            <img src="/assets/2560/company/gs.png" className="img-fluid" />
-            <div className="flex flex-col ml-3">
-              <div className="flex items-center"> <span className="font_30 font-black text-black">
-              华续赟
-              </span>
-                <span className="ml-3 px-3 py-1 bg-$primary text-white">
-                医学专家
-                </span>
-              </div>
-              <span className="font_18 text-$37">专家顾问 / 教授、华山医院主任</span>
-              <div className="flex opacity-70 text-$86">
-                <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-                <span>现任中国医药教育协会康复装备发展促进中心主任委员</span>
-              </div>
-              <div className="flex opacity-70 text-$86">
-                <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-                <span>中华医学会物理医学与康复学分会委员</span>
-              </div>
-              <div className="flex opacity-70 text-$86">
-                <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
-                <span>中国康复医学会脑血管病康复、疼痛康复、创伤康复专业委员会常委</span>
-              </div>
-
-            </div>
-          </div>
+        <div className="flex-1 pl-28 flex justify-center">
+          <img
+          onClick={()=>handClick('left')}
+            src="/assets/2560/company/left.svg"
+            className={`${s.left_arrow} relative cursor-pointer`}
+          ></img>
         </div>
+        <div className="w_2072 flex overflow-hidden">
+          <motion.div
+            animate={{
+              translateX:`${num*50}%`,
+            }}
+            transition={{
+              duration:2
+            }}
+           className="w-200 flex justify-center">
+            <div className={`${s.expert_img_wrap} flex `}>
+              <img  src="/assets/2560/company/gs.png" className="img-fluid" />
+              <div className="flex flex-col ml-3">
+                <div className="flex items-center"> <span className="font_30 font-black text-black">
+                  郭帅
+                </span>
+                  <span className="ml-3 px-3 py-1 bg-$primary text-white">
+                    工学专家
+                  </span>
+                </div>
+                <span className="font_18 text-$37">专家顾问 / 教授、博导</span>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>上海大学机电工程与自动化学院PI</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>上海机器人研究所副所长</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>中国康复技术转化与产业促进专业委员会
+                    常委</span>
+                </div>
 
-        {/* <img
-          src="/assets/2560/company/right.svg"
-          className={`${s.right_arrow} relative`}
-        ></img> */}
+              </div>
+            </div>
+            <div className={`${s.expert_img_wrap} mx-20 flex `}>
+              <img src="/assets/2560/company/qianlaoshi.png" className="img-fluid" />
+              <div className="flex flex-col ml-3">
+                <div className="flex items-center"> <span className="font_30 font-black text-black">
+                  钱楷
+                </span>
+                  <span className="ml-3 px-3 py-1 bg-$primary text-white">
+                    设计学专家
+                  </span>
+                </div>
+                <span className="font_18 text-$37">专家顾问 / 设计总监、文化学者、艺术家</span>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>韩国文化部高级访问学者</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span> 韩国卡露文化高级艺术顾问</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>人工智能应用场景设计与人机交互（UI/UX）设计专家</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>李克强总理及多国政要世博会安保证章设计者</span>
+                </div>
+
+              </div>
+            </div>
+            <div className={`${s.expert_img_wrap} flex `}>
+              <img src="/assets/2560/company/gs.png" className="img-fluid" />
+              <div className="flex flex-col ml-3">
+                <div className="flex items-center"> <span className="font_30 font-black text-black">
+                  华续赟
+                </span>
+                  <span className="ml-3 px-3 py-1 bg-$primary text-white">
+                    医学专家
+                  </span>
+                </div>
+                <span className="font_18 text-$37">专家顾问 / 教授、华山医院主任</span>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>现任中国医药教育协会康复装备发展促进中心主任委员</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>中华医学会物理医学与康复学分会委员</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>中国康复医学会脑血管病康复、疼痛康复、创伤康复专业委员会常委</span>
+                </div>
+
+              </div>
+            </div>
+            <div className={`${s.expert_img_wrap} flex `}>
+              <img src="/assets/2560/company/gs.png" className="img-fluid" />
+              <div className="flex flex-col ml-3">
+                <div className="flex items-center"> <span className="font_30 font-black text-black">
+                  郭帅
+                </span>
+                  <span className="ml-3 px-3 py-1 bg-$primary text-white">
+                    工学专家
+                  </span>
+                </div>
+                <span className="font_18 text-$37">专家顾问 / 教授、博导</span>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>上海大学机电工程与自动化学院PI</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>上海机器人研究所副所长</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>中国康复技术转化与产业促进专业委员会
+                    常委</span>
+                </div>
+
+              </div>
+            </div>
+            <div className={`${s.expert_img_wrap} mx-20 flex `}>
+              <img src="/assets/2560/company/qianlaoshi.png" className="img-fluid" />
+              <div className="flex flex-col ml-3">
+                <div className="flex items-center"> <span className="font_30 font-black text-black">
+                  钱楷
+                </span>
+                  <span className="ml-3 px-3 py-1 bg-$primary text-white">
+                    设计学专家
+                  </span>
+                </div>
+                <span className="font_18 text-$37">专家顾问 / 设计总监、文化学者、艺术家</span>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>韩国文化部高级访问学者</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span> 韩国卡露文化高级艺术顾问</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>人工智能应用场景设计与人机交互（UI/UX）设计专家</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>李克强总理及多国政要世博会安保证章设计者</span>
+                </div>
+
+              </div>
+            </div>
+            <div className={`${s.expert_img_wrap} flex `}>
+              <img src="/assets/2560/company/gs.png" className="img-fluid" />
+              <div className="flex flex-col ml-3">
+                <div className="flex items-center"> <span className="font_30 font-black text-black">
+                  华续赟
+                </span>
+                  <span className="ml-3 px-3 py-1 bg-$primary text-white">
+                    医学专家
+                  </span>
+                </div>
+                <span className="font_18 text-$37">专家顾问 / 教授、华山医院主任</span>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>现任中国医药教育协会康复装备发展促进中心主任委员</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>中华医学会物理医学与康复学分会委员</span>
+                </div>
+                <div className="flex opacity-70 text-$86">
+                  <span className="text_circle bg-gray-600 mt-2 mr-2"></span>
+                  <span>中国康复医学会脑血管病康复、疼痛康复、创伤康复专业委员会常委</span>
+                </div>
+
+              </div>
+            </div>
+          </motion.div>
+        </div>  
+
+        <div className="flex-1 flex pr-28 justify-center">
+          <img
+          onClick={()=>handClick('right')}
+            src="/assets/2560/company/right.svg"
+            className={`${s.left_arrow} relative cursor-pointer`}
+          ></img>
+        </div>
       </div>
     </div>
   );

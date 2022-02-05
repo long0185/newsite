@@ -6,19 +6,22 @@ import s from './index.module.css'
 
 const variants = {
 	left: {
-		translateX: -320,
+		translateX: -400,
 		scale: .8,
+		opacity:.7,
 		background: '#e9e9e9',
 		zIndex: 10
 	},
 	mid: {
 		translateX: 0,
 		scale: 1,
+		opacity:1,
 		background: '#fff',
 		zIndex: 1000
 	},
 	right: {
-		translateX: 320,
+		translateX: 385,
+		opacity:.7,
 		scale: .8,
 		background: '#e9e9e9',
 		zIndex: 10
@@ -79,7 +82,7 @@ const showList = _list.map((item, index) => {
 		id: index,
 		element: <div className="w-100 h-100 flex flex-col pt-5">
 			<div className="w-100 flex flex-col items-start justify-start p-5">
-				<span className="font_24 font-black mb-10">{item.name}</span>
+				<span className="font_36 font-black mb-10">{item.name}</span>
 				<div className="flex justify-center items-center mt-3">
 					<span className="font_24 font-black mr-5">职位薪资:</span>
 					<span className="font_24 font-$color">{item.salary}k</span>
@@ -139,14 +142,14 @@ export default function applicationdetail() {
 		<Navbar />
 		<div className="mt_104">
 			<div className={`${s.middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen flex items-center justify-center`}>
-				<ul className={`${s.ul} h-100 w-50`}>
-					<div className={`absolute top-40 w-100 z-20 h-20`} >
+				<ul className={`${s.ul} h-100`}>
+					<div className={`absolute top_45 w-100 z-20 h-20`} >
 						<img onClick={() => handleClick('left')} className={`${s.left_icon} cursor-pointer h-100 absolute`} src='/assets/2560/home/left-arrow.svg'  ></img>
 						<img onClick={() => handleClick('right')} className={`${s.right_icon} cursor-pointer  h-100 absolute`} src='/assets/2560/home/right-arrow.svg'  ></img>
 					</div>
 					<div className={`${s.back}  absolute w-100 flex justify-center items-center`}>
-						<button onClick={() => router.back()} className={`${s.back_btn} text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>返回列表</button>
-						<button onClick={() => router.back()} className={`${s.back_btn} text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>提交简历</button></div>
+						<button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>返回列表</button>
+						<button onClick={() => router.back()} className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>提交简历</button></div>
 
 					{
 						Array.isArray(list) && list.length > 0 && list.map((item, index) =>

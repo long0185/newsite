@@ -86,11 +86,12 @@ let _list = [
 const ApplicationCard_2 = ({ title = '', date = '', view = '' }) => {
   const router = useRouter()
   return (
-    <div onClick={()=>router.push('/application-detail')} className={`${s.item_2} flex items-start  justify-between`}>
+    <div onClick={()=>router.push('/application-detail')} 
+    className={`${s.item_2} border flex items-start  justify-between`}>
       <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
       </div>
-      <div className={``}>
-        <span className="font_size_24 text-$68">
+      <div className={`flex-1`}>
+        <span className="font_size_24 text-$37">
           {title}
         </span>
         <div className="c_sub_title d-flex align-items-center justify-content-between mt-5">
@@ -101,8 +102,8 @@ const ApplicationCard_2 = ({ title = '', date = '', view = '' }) => {
           </div>
           <span className="font_14 text-$68">浏览：{view}</span>
         </div>
-        <div className={s.line}></div>
-        <div className="mt-3 flex items-center justify-between c_sub_title">
+        {/* <div className={s.line}></div> */}
+        <div className=" border-top pt-2 mt-3 flex items-center justify-between c_sub_title">
           <span className="font_14 text-$68">View more</span>
           <img src='/assets/2560/example/right_arrow.svg' className={`${s.arrow} relative`}>
           </img>
@@ -121,7 +122,7 @@ const ApplicationCard = ({ title = '', date = '', view = '' }) => {
       <div className={`${s.img} relative bg-info`}>
       </div>
       <div className={`${s.desc} flex-1 border flex flex-col justify-around item-center`}>
-        <div className="font_size_24 text-$68">{title}</div>
+        <div className="font_size_24 text-$37">{title}</div>
         <div className="font_14 text-$68 flex items-center justify-between">
           <div className="d-flex align-items-center">
             <img src='/assets/2560/service/useguide/calendar.svg' className={`${s.svg} relative mr-2`}>
@@ -130,8 +131,8 @@ const ApplicationCard = ({ title = '', date = '', view = '' }) => {
           </div>
           <span className="font_14 text-$68">浏览：{view}</span>
         </div>
-        <div className={s.line}></div>
-        <div className=" flex items-center justify-between c_sub_title">
+        {/* <div className={s.line}></div> */}
+        <div className="border-top pt-2 flex items-center justify-between c_sub_title">
           <span className="font_14 text-$68" >View more</span>
           <img src='/assets/2560/example/right_arrow.svg' className={`${s.arrow} relative`}>
           </img>

@@ -125,17 +125,17 @@ export default function applicationdetail() {
 		<Navbar />
 		<div className="mt_104">
 		<div className={`${s.middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen flex items-center justify-center`}>
-		<ul className={`${s.ul} h-100 w-50`}>
+		<ul className={`${s.ul} h-100`}>
 			<div className={`absolute top-50 w-100 z-20 h-20`} >
 				<img onClick={() => handleClick('left')} className={`${s.left_icon} cursor-pointer h-100 absolute`} src='/assets/left-active.svg'  ></img>
 				<img onClick={() => handleClick('right')} className={`${s.right_icon} cursor-pointer  h-100 absolute`} src='/assets/right-active.svg'  ></img>
 			</div>
 			<div className={`${s.back}  absolute w-100 flex justify-center items-center`}>
-				<button onClick={()=>router.back() } className='text-$color px-5 py-1 bg-white border-1 border-$primary'>返回列表</button></div>
+				<button onClick={()=>router.back() } className='rounded text-$color px-5 py-1 bg-white border-1 border-$primary'>返回列表</button></div>
 
 			{
 				Array.isArray(list) && list.length>0 && list.map((item,index) => 
-				<motion.li key={index} className={`${s.li}`} 
+				<motion.li key={index} className={`${s.li} rounded`} 
 				style={{zIndex:`${item?.id==1?'100':'10'}`}} 
 				variants={variants} animate={index<num?'left':index>num?'right':'mid'} >{item?.element}
 				</motion.li>)

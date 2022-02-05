@@ -28,6 +28,7 @@
   }
 .ul {
 	position: relative;
+  width: 35%;
   }
 .li {
 	overflow: hidden;

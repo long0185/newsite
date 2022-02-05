@@ -26,18 +26,20 @@ const list = [
     id: 3,
     name: "专利证书",
     children: [
-      "/assets/2560/company/honor/p_1.png",
-      "/assets/2560/company/honor/p_2.png",
-      "/assets/2560/company/honor/p_3.png",
+      "/assets/2560/company/soft/2.png",
+      "/assets/2560/company/soft/3.png",
+      "/assets/2560/company/soft/4.png",
+      "/assets/2560/company/soft/5.png",
     ],
   },
   {
     id: 4,
     name: "软著证书",
     children: [
-      "/assets/2560/company/honor/p_1.png",
-      "/assets/2560/company/honor/p_2.png",
-      "/assets/2560/company/honor/p_3.png",
+      "/assets/2560/company/zhuanli/2.png",
+      "/assets/2560/company/zhuanli/3.png",
+      "/assets/2560/company/zhuanli/4.png",
+      "/assets/2560/company/zhuanli/5.png",
     ],
   },
 ];
@@ -67,7 +69,7 @@ export default function index() {
           {list
             .find((item) => item.id == index)
             .children.map((item) => (
-              <img className={`${item.includes('knowledge')?s._img:s.img} img-fluid mx-3`} src={item}></img>
+              <img className={`${item.includes('honor')?s.img:s._img} img-fluid mx-3`} src={item}></img>
             ))}
       </div>
     </div>

@@ -802,3 +802,11 @@ a:hover {
  
  }
  select::-ms-expand{ display: none; }
+ .top_45{
+   top: 45%!important;
+ }
+ 
+
+ .w_2072{
+   width: 2072px!important;
+ }
