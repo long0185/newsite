@@ -8,6 +8,11 @@ export default function index() {
   const [list, setList] = useState([1]);
   const [show, setShow] = useState(false);
   const handleShow = (bool) => {
+    if(bool){
+      document.body.style.overflowY='hidden'
+    }else{
+      document.body.style.overflowY='auto'
+    }
     setShow(bool)
   };
   const handleClick = (direction) => {

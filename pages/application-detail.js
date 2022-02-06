@@ -37,13 +37,13 @@ let _list = [
 			<span className='text-$86 my-3'>2021年7月23日</span>
 		  </div>
 		</div>
-		<div className="flex items-center px-5 text-$86">
+		<div className="flex items-center px-5 text-$86 font_size_18">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
 		  <div className="w-50 bg-gray-600 h-96"></div>
 		</div>
-		<div className="flex items-center px-5 mt-3 text-$86">
+		<div className="flex items-center px-5 mt-3 text-$86 font_size_18">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">

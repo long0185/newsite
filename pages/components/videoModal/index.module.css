@@ -1,20 +1,22 @@
 .modal{
 	z-index: 50;
 	/* padding: 160px 360px; */
+	/* z-index: 1000000; */
 }
 .container{
-	width: 1588px;
-	height: 88vh;
-	margin-left: -794px;
-	margin-top: -44vh;
+	width: 1840px;
+	height: 80vh;
+	margin-left: -920px;
+	margin-top: -40vh;
 	top: 50%;
 	left: 50%;
 	/* margin-bottom: 200px; */
 	/* height: 100%;
 	margin:160px 360px;  */
 	z-index: 70!important;
-	padding-bottom:100px ;
+	/* padding-bottom:100px ; */
 	padding-right: 140px;
+	padding-top: 100px;
 }
 .wrap{
 	padding-left:140px;
@@ -34,4 +36,8 @@
 	right: -70px;
 	height: 57px;
 	width: 57px;
+	top: 0;
+}
+.btn{
+	flex: 0 0 194px;
 }
