@@ -6,7 +6,7 @@ import s from './index.module.css'
 
 const variants = {
 	left: {
-		translateX: '-90%',
+		translateX: '-85%',
 		scale: .8,
 		background:'#e9e9e9',
 		zIndex:10
@@ -18,7 +18,7 @@ const variants = {
 		zIndex:1000
 	},
 	right: {
-		translateX: '90%',
+		translateX: '85%',
 		scale: .8,
 		background:'#e9e9e9',
 		zIndex:10
@@ -34,7 +34,7 @@ let _list = [
 		  <div className="flex justify-center items-center">
 			<img src="/assets/2560/service/useguide/calendar.svg"
 			  className={`${s.icon} calendar-icon img-fluid mr-1`} ></img>
-			<span className='text-$86'>2021年7月23日</span>
+			<span className='text-$86 my-3'>2021年7月23日</span>
 		  </div>
 		</div>
 		<div className="flex items-center px-5 text-$86">
@@ -60,7 +60,7 @@ let _list = [
 		  <div className="flex justify-center items-center">
 			<img src="/assets/2560/service/useguide/calendar.svg"
 			  className={`${s.icon} calendar-icon img-fluid mr-1`} ></img>
-			<span className='text-$86'>2021年7月23日</span>
+			<span className='text-$86 my-3'>2021年7月23日</span>
 		  </div>
 		</div>
 		<div className="flex items-center px-5 text-$86">
@@ -86,7 +86,7 @@ let _list = [
 		  <div className="flex justify-center items-center">
 			<img src="/assets/2560/service/useguide/calendar.svg"
 			  className={`${s.icon} calendar-icon img-fluid mr-1`} ></img>
-			<span className='text-$86'>2021年7月23日</span>
+			<span className='text-$86 my-3'>2021年7月23日</span>
 		  </div>
 		</div>
 		<div className="flex items-center px-5 text-$68">

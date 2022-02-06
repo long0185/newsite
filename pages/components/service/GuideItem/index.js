@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./index.module.css";
+import VideoModal from '../../videoModal'
 const list = [{
   img_src: '/assets/2560/service/useguide/irego.png',
   video_src: '/assets/2560/service/useguide/play.png'
@@ -10,11 +11,13 @@ const list = [{
   img_src: '/assets/2560/service/useguide/irego.png',
   video_src: '/assets/2560/service/useguide/play.png'
 }]
-export default function index({title,img_src=''}) {
+export default function index({title,img_src='',handleShow}) {
+
+  
   return (
     <div className='flex flex-col items-center' style={{width:'100vw'}} >
       <div className={`flex`}>
-        {list.map(item => (<div className={`${s.img_wrap}`}>
+        {list.map(item => (<div onClick={()=>handleShow(true)} className={`${s.img_wrap}`}>
           <div className={`${s.img} position-relative`}>
             <img
               className="img-fluid w-100 h-100"
@@ -42,7 +45,7 @@ export default function index({title,img_src=''}) {
         </div>))}
       </div>
       <div className={`flex mt_118`}>
-        {list.map(item => (<div className={`${s.img_wrap}`}>
+        {list.map(item => (<div onClick={()=>handleShow(true)} className={`${s.img_wrap}`}>
           <div className={`${s.img} position-relative`}>
             <img
             className="img-fluid w-100 h-100"

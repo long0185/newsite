@@ -6,7 +6,7 @@ import s from './index.module.css'
 
 const variants = {
 	left: {
-		translateX: '-90%',
+		translateX: '-85%',
 		scale: .8,
 		opacity:.7,
 		background: '#e9e9e9',
@@ -20,7 +20,7 @@ const variants = {
 		zIndex: 1000
 	},
 	right: {
-		translateX: '90%',
+		translateX: '85%',
 		opacity:.7,
 		scale: .8,
 		background: '#e9e9e9',
