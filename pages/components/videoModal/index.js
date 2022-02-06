@@ -33,7 +33,7 @@ export default function index({ list = [], handleShow }) {
 					文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代文字暂代
 				</span>
 			</div>
-			<div className={`${s.btns} flex justify-center border-top pt-16 pb-16 items-center  left-0 z-80 right-0 bottom-30`} >
+			<div className={`${s.btns} flex justify-center border-top pt-12 pb-12 items-center  left-0 z-80 right-0 bottom-30`} >
 				<button className={`${s.btn} rounded w_194 h_48 mr-2 border border-$primary`} >上一篇</button>
 				<button className={`${s.btn} rounded text-white w_194 h_48 mr-2 border bg-$primary`}>下一篇</button>
 			</div>

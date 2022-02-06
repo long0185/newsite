@@ -15,16 +15,16 @@
 	margin:160px 360px;  */
 	z-index: 70!important;
 	/* padding-bottom:100px ; */
-	padding-right: 100px;
-	padding-top: 100px;
+	padding-right: 60px;
+	padding-top: 60px;
 }
 .wrap{
-	padding-left:100px;
+	padding-left:60px;
 	padding-right: 20px;
 }
 .video{
 	/* width: 1544px; */
-	width: 100%;
+	width: 90%;
 	flex:0 0 853px;
 	/* margin: 0 141px; */
 }
