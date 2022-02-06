@@ -9,7 +9,7 @@ export default function index() {
       </div>
       <div className=" w-screen mb-32 flex items-center justify-center ">
         <div className="w_1021 h_574 ">
-          <video className="w-100 h-100" controls>
+          <video className="" controls>
             <source src="/assets/iremo.mp4" type="video/mp4" />
           </video>
         </div>
