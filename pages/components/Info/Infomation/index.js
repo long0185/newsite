@@ -124,15 +124,15 @@ export default function index() {
       {isShow && <Detail handleShow={handleShow} showList={_list} />}
       {list.map((item,index)=><div key={index}>
       <div className="flex d-center mt-14">
-      <ApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏目"
+      <ApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏"
         date="2020年7月24日"
         view="231"
       />
-      <ApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏目"
+      <ApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏"
         date="2020年7月24日"
         view="231"
       />
-      <ApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏目"
+      <ApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏"
         date="2020年7月24日"
         view="231"
       />  

@@ -149,7 +149,7 @@ export default function index() {
   const [list, setList] = useState([1]);
 
   return (
-    <div className=" borde-2 mt_118 mb_118">
+    <div className=" mt_118 mb_118">
       <div className={`${s.wrap}`}>
         <div className={`${s.content} w-100 d-center`}>
           <ApplicationCard title='华山医院临床应用' date="2020年7月24日" view="231" />
