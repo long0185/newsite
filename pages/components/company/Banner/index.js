@@ -40,6 +40,22 @@ export default function index() {
     window.addEventListener('scroll', (e)=>{
       let scrollTop  = document.documentElement.scrollTop;
       console.log('scrollTop', scrollTop);
+      if(scrollTop<600){
+        const newList = list.map(item=>{
+          if(item.href=='#about'){
+            return{
+              ...item,
+              active:true
+            }
+          }else{
+            return {
+              ...item,
+              active:false
+            }
+          }
+        })
+        setList(newList)
+      }
       if(scrollTop>600 && scrollTop<1200){
         const newList = list.map(item=>{
           if(item.href=='#team'){
@@ -72,7 +88,7 @@ export default function index() {
         })
         setList(newList)
       }
-      if(scrollTop>1700 && scrollTop<1950){
+      if(scrollTop>1700 && scrollTop<1850){
         const newList = list.map(item=>{
           if(item.href=='#honor'){
             return{
@@ -88,7 +104,7 @@ export default function index() {
         })
         setList(newList)
       }
-      if(scrollTop>1950 && scrollTop<2014){
+      if(scrollTop>1850 && scrollTop<2014){
         const newList = list.map(item=>{
           if(item.href=='#unit'){
             return{

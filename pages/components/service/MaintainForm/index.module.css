@@ -21,7 +21,7 @@
 }
 .label {
   /* font-size: 24px; */
-  font-size: 30px;
+  font-size: 28px;
   letter-spacing: 0px;
   /* color: #fafafa; */
 }
@@ -61,6 +61,9 @@
 .textarea {
   width: 210px;
   height: 540px;
+}
+.textarea::placeholder{
+  font-size: 24px;
 }
 .btn {
   margin-top: 50px;

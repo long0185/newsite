@@ -175,6 +175,20 @@ export default function index() {
             />
           </div>
         </div>
+        <div className="w-100 d-center">
+          <div className={`${s.content_2} d-flex justify-between`}>
+            <ExpertCard img_src="/assets/2560/info/expert/p_1.png" name='陈武雄' badge='医学专家'
+              desc="访谈标题访谈标题访谈标题访谈标题访谈标题"
+              date="2021年7月23日"
+              view="231"
+            />
+            <ExpertCard img_src="/assets/2560/info/expert/p_1.png" name='陈武雄' badge='医学专家'
+              desc="访谈标题访谈标题访谈标题访谈标题访谈标题"
+              date="2021年7月23日"
+              view="231"
+            />
+          </div>
+        </div>
       </div>)}
       <div className="flex justify-center items-center mb_100 mt_100">
         <button onClick={() => setList([...list, 1])} className="l_btn hover:bg-yellow-300">Show more</button>

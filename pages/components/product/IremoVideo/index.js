@@ -7,9 +7,9 @@ export default function index() {
           <img src="/assets/2560/product/iremo/iremo-logo.svg" />
         </div>
       </div>
-      <div className="col-12 w-100 mb-32 d-flex align-items-center justify-content-center ">
-        <div className="irego-video position-relative w_1021 h_574 ">
-          <video controls>
+      <div className=" w-screen mb-32 flex items-center justify-center ">
+        <div className="w_1021 h_574 ">
+          <video className="w-100 h-100" controls>
             <source src="/assets/iremo.mp4" type="video/mp4" />
           </video>
         </div>

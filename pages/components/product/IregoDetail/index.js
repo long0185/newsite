@@ -9,7 +9,7 @@ import IregoSoftware from "../IregoSoftware";
 import IregoInteract from "../IregoInteract";
 export default function IregoDetail() {
   return (
-    <div className="tab-content border" id="pills-tabContent">
+    <div className="w-100" id="pills-tabContent">
       <IregoVideo />
       <IregoAppearance />
       <IregoUsefn />

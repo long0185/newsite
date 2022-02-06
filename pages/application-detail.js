@@ -6,7 +6,7 @@ import s from './index.module.css'
 
 const variants = {
 	left: {
-		translateX: -440,
+		translateX: '-90%',
 		scale: .8,
 		background:'#e9e9e9',
 		zIndex:10
@@ -18,7 +18,7 @@ const variants = {
 		zIndex:1000
 	},
 	right: {
-		translateX: 425,
+		translateX: '90%',
 		scale: .8,
 		background:'#e9e9e9',
 		zIndex:10
@@ -130,8 +130,9 @@ export default function applicationdetail() {
 				<img onClick={() => handleClick('left')} className={`${s.left_icon} cursor-pointer h-100 absolute`} src='/assets/left-active.svg'  ></img>
 				<img onClick={() => handleClick('right')} className={`${s.right_icon} cursor-pointer  h-100 absolute`} src='/assets/right-active.svg'  ></img>
 			</div>
-			<div className={`${s.back}  absolute w-100 flex justify-center items-center`}>
-				<button onClick={()=>router.back() } className='rounded text-$color px-5 py-1 bg-white border-1 border-$primary'>返回列表</button></div>
+			<div 
+			className={`${s.back}  absolute w-100 flex justify-center items-center`}>
+				<button onClick={()=>router.back() } className={`${s.back_btn} rounded text-$color  bg-white border-1 border-$primary`}>返回列表</button></div>
 
 			{
 				Array.isArray(list) && list.length>0 && list.map((item,index) => 

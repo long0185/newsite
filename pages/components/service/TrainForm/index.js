@@ -4,11 +4,11 @@ export default function index() {
   return (
     <div className={`${s.wrap} col-12 p-0 d-center`}>
       <div className={`${s.content} d-flex flex-column align-items-start`}>
-        <div className={`${s.title}`}>
+        <div className={`${s.title} mb-1`}>
           <span className="c_title font-black">培训申请：</span>
           <span className="c_sub_title  text-$68">我们将第一时间与您取得联系</span>
         </div>
-        <div className={`${s.form}`}>
+        <div className={`${s.form} mt-1`}>
           <div className={`flex items-center `}>
             <input
               type="text"

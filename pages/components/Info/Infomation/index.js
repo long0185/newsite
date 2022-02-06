@@ -94,7 +94,7 @@ const ApplicationCard = ({ title = '', date = '', view = '' }) => {
       </div>
       <div className={`${s.desc} p-3 flex-1 border flex flex-col justify-between items-start`}>
         <div className="font_size_24 text-$37">{title}</div>
-        <div className="font_14 text-$68 flex items-center justify-between">
+        <div className="font_14 w-100 text-$68 flex items-center justify-between">
           <div className="d-flex align-items-center">
             <img src='/assets/2560/service/useguide/calendar.svg' className={`${s.svg} relative mr-2`}>
             </img>
