@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Head from "next/head";
 import { motion } from "framer-motion";
@@ -37,7 +37,7 @@ const variants = {
     },
   },
 };
-class App extends React.Component {
+class PC extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,7 +60,6 @@ class App extends React.Component {
       ],
     };
   }
-
   onLeave(origin, destination, direction) {
     console.log("onLeave", { origin, destination, direction });
     if (direction == "down") {
@@ -95,13 +94,7 @@ class App extends React.Component {
     );
 
     return (
-      <>
-      <div className="mobile:hidden App">
-        <Navbar/>
-        <MobileCarousel bgs={['/assets/mobile/home/banner_01.png','/assets/mobile/home/banner_01.png']}/>
-        <MobileContent/>
-      </div>
-        {this.state.isPC && <div className="hidden mobile:block App">
+        <div className="hidden mobile:block App">
           <Menu />
           <ReactFullpage
             scrollingSpeed={1000}
@@ -125,10 +118,34 @@ class App extends React.Component {
               </ReactFullpage.Wrapper>
             )}
           />
-        </div>}
-      </>
+        </div>
     );
   }
+}
+
+const Mobile = ()=>{
+  return (
+    <div className="mobile:hidden App">
+    <Navbar/>
+    <MobileCarousel bgs={['/assets/mobile/home/banner_01.png','/assets/mobile/home/banner_01.png']}/>
+    <MobileContent/>
+  </div>
+  )
+}
+
+function App(){
+  const [isPc, setisPc] = useState(false);
+  useEffect(()=>{
+    window.addEventListener('resize',()=>{
+      const width = document.documentElement.clientWidth;
+      const bool = width <=1080?false:true;
+      setisPc(bool)
+    })
+    return()=>window.removeEventListener('resize',()=>{})
+  },[])
+  return (
+    isPc?<PC/>:<Mobile/>
+  )
 }
 
 export default App;
