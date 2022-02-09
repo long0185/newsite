@@ -5,7 +5,7 @@ export default function product() {
   return (
     <>
       <NavBar />
-      <div className="contianer-fluid pt_104 flex items-center justify-center w-100">
+      <div className="contianer-fluid h-screen pt_104 flex items-center justify-center w-100">
         <div className="flex h-100 flex-col px-5" style={{maxWidth:'1200px'}}>
           <h1 className="text-5xl flex font-extrabold justify-center my-20">上海金矢机器人科技有限公司网站法律声明</h1>
           <div className="flex legal flex-col text-$color justify-between flex-1 text-2xl pb-5" >

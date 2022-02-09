@@ -17,18 +17,18 @@ export default function index() {
         img={"/assets/newtitle/irego/title_5.png"}
         desc={
           <>
-            <span>严格把控零配件环节，采用与世界一流品牌相同的供应链。</span>
+            <span>严格把控零配件环节，采用与世界一流品牌相同的供应链。公司在生产中推行精益求精，</span>
             <span>
-              公司在生产中推行精益求精，有效保证了产品的稳定性和可靠性。
+              有效保证了产品的稳定性和可靠性。
             </span>
           </>
         }
       />
-      <div className={`col-12 d-center  ${styles.content}`}>
+      <div className={`w-100 flex flex-wrap items-center justify-center  ${styles.content}`}>
         {list.map((item, index) => (
           <div
             key={index}
-            className={`${styles.content_item} position-relative`}
+            className={`${styles.content_item} relative`}
           >
             <img
               className={`${styles.content_item} z-10`}

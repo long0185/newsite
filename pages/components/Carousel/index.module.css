@@ -1,6 +1,6 @@
-.img {
-  /* height: 100%; */
-  /* width: 100%; */
+.m_img {
+  width: 100vw;
+  height: 1687px;
 }
 .img_wrap {
   width: 200vw;
@@ -9,6 +9,13 @@
 .icon_wrap {
   top: 36px;
   left: 120px;
+  /* left: 60px; */
+  width: 141px;
+}
+.m_icon_wrap {
+  top: 90px;
+  left: 55px;
+  /* left: 60px; */
   width: 141px;
 }
 .icon {

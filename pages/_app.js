@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
       let scale = document.documentElement.clientWidth / 2560;
       const scaleH = document.documentElement.clientHeight / 1440;
       if(document.documentElement.clientWidth<=1080){
-      //  scale = document.documentElement.clientWidth / 1080;
+       scale = document.documentElement.clientWidth / 1080;
       }
       let reset = Math.min(scale, scaleH);
       // reset = reset < 0.3 ? 0.3 : reset;

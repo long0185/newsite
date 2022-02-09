@@ -1,6 +1,33 @@
 import s from "./index.module.css";
 import React from "react";
 import Banner from "../../Banner";
+const list = [
+  {
+    img_src: '/assets/2560/product/irecog/use_svg_1.svg',
+    desc: '注意力训练'
+  },
+  {
+    img_src: '/assets/2560/product/irecog/use_svg_2.svg',
+    desc: '记忆力训练'
+  },
+  {
+    img_src: '/assets/2560/product/irecog/use_svg_3.svg',
+    desc: '执行功能训练'
+  },
+  {
+    img_src: '/assets/2560/product/irecog/use_svg_4.svg',
+    desc: '感知能力训练'
+  },
+
+  {
+    img_src: '/assets/2560/product/irecog/use_svg_5.svg',
+    desc: '任务组织能力训练'
+  },
+  {
+    img_src: '/assets/2560/product/irecog/use_svg_6.svg',
+    desc: '语言及交流能力训练'
+  },
+]
 export default function index() {
   return (
     <div id="usefn" className={`${s.wrap} mb_114`}>
@@ -13,7 +40,7 @@ export default function index() {
         <div className={`${s.content} d-flex flex-column align-items-center`}>
           <Banner
             img={"/assets/newtitle/irecog/title_1.png"}
-            styles={{marginTop:0}}
+            styles={{ marginTop: 0 }}
             desc={
               <>
                 <span>
@@ -25,7 +52,7 @@ export default function index() {
               </>
             }
           />
-          <div className="col-12 p-0 d-flex align-items-center justify-content-between ">
+          <div className="col-12 p-0 hidden mobile:flex items-center justify-between ">
             <div className={`position-relative text-center ${s.svg}`}>
               <img
                 className={s.svg}
@@ -71,6 +98,17 @@ export default function index() {
               <div className={`${s.desc} position-absolute`}>
                 语言及交流能力训练
               </div>
+            </div>
+          </div>
+          <div className="flex w-100 items-center justify-center">
+            <div className="flex items-center justify-between w_826 flex-wrap">
+              {list.map((item, index) => <div key={index} className="flex mb_43 items-start justify-center flex-col">
+                <img
+                  className={`${s.m_svg} img-fluid`}
+                  src={item.img_src}
+                />
+                <span className="font_24 w_231 text-center mt-3">{item.desc}</span>
+              </div>)}
             </div>
           </div>
         </div>

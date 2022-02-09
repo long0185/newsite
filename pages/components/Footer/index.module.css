@@ -31,3 +31,17 @@
   height: 0rem;
   bottom: -180px;
 }
+
+.m_phone{
+  width: 44px;
+  height: 44px;
+}
+.m_num{
+
+}
+
+.m_qrcode{
+  width: 174px;
+	height: 174px;
+  bottom: 50px;
+}

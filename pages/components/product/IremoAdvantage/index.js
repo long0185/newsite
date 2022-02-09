@@ -18,7 +18,7 @@ export default function index() {
           </>
         }
       />
-      <div className={`col-12 d-center  ${styles.content}`}>
+      <div className={`col-12 d-center flex-wrap  ${styles.content}`}>
         <div className={`${styles.content_item} position-relative`}>
           <img
             className={`${styles.content_item} absolute z-10`}

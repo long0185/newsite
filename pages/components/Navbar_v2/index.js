@@ -17,87 +17,87 @@ const mobileVariants = {
 const subnav = {
   product: [
     {
-      path: "/product-irego",
+      path: "/out/product-irego.html",
       domain: "product",
       name: "iReGo下肢康复机器人",
     },
     {
-      path: "/product-iremo",
+      path: "/out/product-iremo.html",
       domain: "product",
       name: "iReMo上肢康复机器人",
     },
     {
-      path: "/product-irecog",
+      path: "/out/product-irecog.html",
       domain: "product",
       name: "iReCog认知机器人",
     },
   ],
   innovate: [
     {
-      path: "/innovate-ire",
+      path: "/out/innovate-ire.html",
       domain: "innovate",
       name: "iRe+爱睿家",
     },
     {
-      path: "/innovate-lab",
+      path: "/out/innovate-lab.html",
       domain: "innovate",
       name: "联合实验室",
     },
   ],
   service: [
     {
-      path: "/service-maintain",
+      path: "/out/service-maintain.html",
       domain: "service",
       name: "维修服务",
     },
     {
-      path: "/service-guide",
+      path: "/out/service-guide.html",
       domain: "service",
       name: "使用指南 ",
     },
     {
-      path: "/service-train",
+      path: "/out/service-train.html",
       domain: "service",
       name: "培训服务 ",
     },
   ],
   example: [
     {
-      path: "/example-irego",
+      path: "/out/example-irego.html",
       domain: "expample",
       name: "iReGo临床应用",
     },
     {
-      path: "/example-iremo",
+      path: "/out/example-iremo.html",
       domain: "expample",
       name: "iReMo临床应用 ",
     },
   ],
   company: [
     {
-      path: "/company",
+      path: "/out/company.html",
       domain: "company",
       name: "关于金矢",
     },
     {
-      path: "/company-join",
+      path: "/out/company-join.html",
       domain: "company",
       name: "招贤纳士",
     },
   ],
   info: [
     {
-      path: "/info-expert",
+      path: "/out/info-expert.html",
       domain: "info",
       name: "专家访谈",
     },
     {
-      path: "/info-infomation",
+      path: "/out/info-infomation.html",
       domain: "info",
       name: "金矢快讯",
     },
     {
-      path: "/info-tip",
+      path: "/out/info-tip.html",
       domain: "info",
       name: "康复小贴士 ",
     },
@@ -120,42 +120,42 @@ const ResponsiveAppBar = () => {
     {
       name: "首页",
       domain: "/",
-      path: "/",
+      path: "/out/",
     },
     {
       name: "产品",
       domain: "/product",
-      path: "/product-irego",
+      path: "/out/product-irego.html",
       children: subnav.product,
     },
     {
       name: "创新",
       domain: "/innovate",
-      path: "/innovate-ire",
+      path: "/out/innovate-ire.html",
       children: subnav.innovate,
     },
     {
       name: "服务",
       domain: "/service",
-      path: "/service-maintain",
+      path: "/out/service-maintain.html",
       children: subnav.service,
     },
     {
       name: "案例",
       domain: "/example",
-      path: "/example-irego",
+      path: "/out/example-irego.html",
       children: subnav.example,
     },
     {
       name: "公司",
       domain: "/company",
-      path: "/company",
+      path: "/out/company.html",
       chilren: subnav.company,
     },
     {
       name: "资讯",
       domain: "/info",
-      path: "/info-expert",
+      path: "/out/info-expert.html",
       children: subnav.info,
     },
   ];

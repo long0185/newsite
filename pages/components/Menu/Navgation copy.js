@@ -63,38 +63,38 @@ const Navigation = ({ isOpen }) => (
   </motion.div>
 );
 const products = [
-  { name: "产品", link: "https://irego.cn/out/product-irego.html" },
-  { name: "iReGo下肢康复机器人", link: "https://irego.cn/out/product-irego.html" },
-  { name: "iReGo上肢康复机器人", link: "https://irego.cn/out/product-irego.html" },
-  { name: "iReCog认知机器人", link: "https://irego.cn/out/product-irego.html" },
+  { name: "产品", link: "/product-irego" },
+  { name: "iReGo下肢康复机器人", link: "/product-irego" },
+  { name: "iReGo上肢康复机器人", link: "/product-irego" },
+  { name: "iReCog认知机器人", link: "/product-irego" },
 ];
 const innovate = [
-  { name: "创新", link: "https://irego.cn/out/innovate-ire.html" },
-  { name: "iRe+爱睿家", link: "https://irego.cn/out/innovate-ire.html" },
-  { name: "联合实验室", link: "https://irego.cn/out/innovate-lab.html" },
+  { name: "创新", link: "/innovate-ire" },
+  { name: "iRe+爱睿家", link: "innovate-ire" },
+  { name: "联合实验室", link: "innovate-lab" },
 ];
 const service = [
-  { name: "服务", link: "https://irego.cn/out/serveice-maintain.html" },
-  { name: "维修服务", link: "https://irego.cn/out/serveice-maintain.html" },
-  { name: "使用指南", link: "https://irego.cn/out/service-guide.html" },
-  { name: "培训服务", link: "https://irego.cn/out/service-train.html" },
+  { name: "服务", link: "/" },
+  { name: "维修服务", link: "/serveice-maintain" },
+  { name: "使用指南", link: "/service-guide" },
+  { name: "培训服务", link: "/service-train" },
 ];
 const example = [
-  { name: "案例", link: "https://irego.cn/out/example-irego.html" },
-  { name: "iReGo临床应用", link: "https://irego.cn/out/example-irego.html" },
-  { name: "iReMo临床应", link: "https://irego.cn/out/example-iremo.html" },
+  { name: "案例", link: "/" },
+  { name: "iReGo临床应用", link: "/example-irego" },
+  { name: "iReMo临床应", link: "/example-iremo" },
 ];
 
 const company = [
-  { name: "公司", link: "https://irego.cn/out/company.html" },
-  { name: "关于金矢", link: "https://irego.cn/out/company.html" },
-  { name: "招贤纳士", link: "https://irego.cn/out/company-join.html" },
+  { name: "公司", link: "/company" },
+  { name: "关于金矢", link: "/company" },
+  { name: "招贤纳士", link: "/company-join" },
 ];
 const info = [
-  { name: "资讯", link: "https://irego.cn/out/info-expert.html" },
-  { name: "专家访谈", link: "https://irego.cn/out/info-expert.html" },
-  { name: "金矢快讯", link: "https://irego.cn/out/info-infomation.html" },
-  { name: "康复小贴士", link: "https://irego.cn/out/info-tip.html" },
+  { name: "资讯", link: "/info-expert" },
+  { name: "专家访谈", link: "/info-expert" },
+  { name: "金矢快讯", link: "/info-infomation" },
+  { name: "康复小贴士", link: "/info-tip" },
 ];
 
 export default Navigation;

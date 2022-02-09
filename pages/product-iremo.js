@@ -7,7 +7,7 @@ export default function product() {
   return (
     <>
       <NavBar />
-      <div className="contianer-fluid pt_104">
+      <div className="hidden mobile:block contianer-fluid pt_104">
         <Carousel
           imgs={[
             "/assets/2560/product/irego/thum_1.png",
@@ -20,6 +20,20 @@ export default function product() {
         />
         <IregoNav />
         <IremoDetail />
+      </div>
+      <div className="mobile:hidden contianer-fluid pt_104">
+        <Carousel
+          imgs={[
+            "/assets/2560/product/irego/thum_1.png",
+            "/assets/2560/product/irego/thum_2.png",
+          ]}
+          banners={[
+            "/assets/mobile/product/iremo/banner1.png",
+            "/assets/mobile/product/iremo/banner1.png",
+          ]}
+        />
+        <IregoNav />
+        <IremoDetail /> 
       </div>
     </>
   );

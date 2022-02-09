@@ -5,17 +5,17 @@ export default function index() {
   return (
     <div
       id="feature"
-      className={`${s.wrap} col-12 d-flex flex-column align-items-center `}
+      className={`${s.wrap} col-12 flex flex-col items-center `}
     >
       <Banner img={`/assets/2560/product/irecog/title-feathure.png`} />
-      <div className={`col-12 d-center  ${s.content}`}>
+      <div className={`col-12 flex flex-col mobile:flex-row items-center justify-center  ${s.content}`}>
         <div className={`${s.content_img}  position-relative`}>
           <img
             src={`/assets/2560/product/irecog/new_vr.png`}
             className={s.content_img}
           />
           <div
-            className={`${s.svg_wrap} position-absolute d-flex align-items-start flex-column justify-content-center`}
+            className={`${s.svg_wrap} position-absolute flex items-start flex-col justify-content-center`}
           >
             <img
               src="/assets/2560/product/irecog/vr.svg"
@@ -29,11 +29,23 @@ export default function index() {
           </div>
         </div>
         <div
-          className={`${s.content_img}  position-relative`}
+          className={`${s.content_img} flex mobile:hidden items-center justify-center`}
           style={{ background: "#303f5c" }}
         >
           <div
-            className={`${s.svg_wrap} position-absolute d-flex align-items-start flex-column justify-content-center`}
+            className={`${s.svg_wrap} hidden position-absolute mobile:flex items-center mobile:items-start flex-col justify-content-center`}
+          >
+            <img
+              src={`/assets/2560/product/irecog/know.svg`}
+              className={`${s.svg} position-relative`}
+            ></img>
+            <span className={`${s.big_title}`}>认知等级</span>
+            <span className={s.sm_title}>
+              根据认知等级，分初级、中级、高级训练。
+            </span>
+          </div>
+          <div
+            className={`mobile:hidden items-center flex  flex-col justify-center`}
           >
             <img
               src={`/assets/2560/product/irecog/know.svg`}
@@ -45,14 +57,49 @@ export default function index() {
             </span>
           </div>
         </div>
-      </div>
-      <div className={`col-12 d-center`}>
         <div
-          className={`${s.content_img}  position-relative`}
+          className={`${s.content_img} hidden mobile:block  position-relative`}
           style={{ background: "#303f5c" }}
         >
           <div
-            className={`${s.svg_wrap} position-absolute d-flex align-items-start flex-column justify-content-center`}
+            className={`${s.svg_wrap} position-absolute flex items-center flex-col justify-content-center`}
+          >
+            <img
+              src={`/assets/2560/product/irecog/know.svg`}
+              className={`${s.svg} position-relative`}
+            ></img>
+            <span className={`${s.big_title}`}>认知等级</span>
+            <span className={s.sm_title}>
+              根据认知等级，分初级、中级、高级训练。
+            </span>
+          </div>
+        </div>
+      </div> 
+
+      <div className={`col-12 flex flex-col mobile:flex-row items-center justify-center ${s.content} `}>
+        <div
+          className={`${s.content_img} flex mobile:hidden items-center justify-center  position-relative`}
+          style={{ background: "#303f5c" }}
+        >
+          <div
+            className={`${s.svg_wrap} flex items-center flex-col justify-content-center`}
+          >
+            <img
+              src={`/assets/2560/product/irecog/class.svg`}
+              className={`${s.svg} position-relative`}
+            ></img>
+            <span className={`${s.big_title}`}>沉浸感强</span>
+            <span className={s.sm_title}>
+              情景训练与日程生活结合，沉浸感强。
+            </span>
+          </div>
+        </div>
+        <div
+          className={`${s.content_img} hidden  mobile:block relative  item-center justify-center`}
+          style={{ background: "#303f5c" }}
+        >
+          <div
+            className={`${s.svg_wrap} absolute  flex items-start flex-col justify-center`}
           >
             <img
               src={`/assets/2560/product/irecog/class.svg`}
@@ -75,7 +122,7 @@ export default function index() {
             ></img>
           </div>
           <div
-            className={`${s.svg_wrap} position-absolute d-flex align-items-start flex-column justify-content-center`}
+            className={`${s.svg_wrap} position-absolute flex items-start flex-col justify-content-center`}
           >
             <img
               src={`/assets/2560/product/irecog/platform.svg`}

@@ -22,40 +22,78 @@ const variants = {
 };
 export default function Footer() {
   const [show, setShow] = useState(false);
+  const [m_show, setM_show] = useState(false);
   return (
-    <div className="hidden md:block footer w-100 d-flex align-items-center justify-content-between relative">
-      <div className="left-footer pl-16">
-        <span className="pl-3 ml-3">
-          Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved.
-          沪ICP备19033942号
-        </span>
-        <span className="mx-3">|</span>
-        <Link href={'/legal-declaration'} >
-          <span className="mr-5 cursor-pointer">法律声明</span></Link>
-      </div>
-      <div className={` h-100   right-0  absolute z-20 ${s.right} `}>
-        <div>
-          <img
-            className={` footer-img ${s.phone} absolute`}
-            src="/assets/2560/home/phone.svg"
-          />
+    <>
+      <div className="mobile:hidden bg-gray-100 pt-5 pb-2 w-screen items-center justify-around h_267 flex flex-col">
+        <div className="flex justify-around items-center w-100">
+          <div className="flex items-center pl-3">
+            <img
+              className={`${s.m_phone}`}
+              src="/assets/2560/home/phone.svg"
+            />
+            <span className={`${s.m_num} font_36 text-$86`}>咨询热线：400-120-8888</span>
+          </div>
+          <div onClick={()=>setM_show(!m_show)} className="flex items-center pr-40 relative">
+            <motion.img 
+              animate={{
+                opacity:`${m_show?'1':0}`
+              }}
+              transition={{
+                duration:2
+              }}
+            className={`${s.m_qrcode} absolute img-fluid`} src="/assets/2560/home/qrcode.png" />
+            <img
+              className={`${s.m_phone} mr-2`}
+              src="/assets/2560/home/weixin.svg"
+            />
+            <span className={`${s.m_num} font_36 text-$86 `}>公众号</span>
+          </div>
         </div>
-        <span className={`${s.num} `}>咨询热线：400-120-8888</span>
-        <div className="">
-          <img
-            src="/assets/2560/home/weixin.svg"
-            onMouseEnter={() => setShow(true)}
-            onMouseLeave={() => setShow(false)}
-            className={`${s.wx} footer-img cursor-pointer absolute`}
-          ></img>
+        <div className="flex w-100 flex-col justify-center items-center">
+          <span className="font_size_24 text-$86 text-center">
+            Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. 沪ICP备19033942号
+          </span>
+          <span className="font_size_24 text-$86">
+            法律声明   |   金矢机器人云平台
+          </span>
         </div>
+
       </div>
-      <motion.img
-        variants={variants}
-        animate={show ? "show" : "hidden"}
-        src="/assets/2560/home/qrcode.png"
-        className={` absolute right-3 z-10 ${s.qrcode} `}
-      ></motion.img>
-    </div>
+      <div className="hidden mobile:flex footer w-100 items-center justify-between relative">
+        <div className="left-footer pl-16">
+          <span className="pl-3 ml-3">
+            Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved.
+            沪ICP备19033942号
+          </span>
+          <span className="mx-3">|</span>
+          <Link href={'/legal-declaration'} >
+            <span className="mr-5 cursor-pointer">法律声明</span></Link>
+        </div>
+        <div className={` h-100   right-0  absolute z-20 ${s.right} `}>
+          <div>
+            <img
+              className={` footer-img ${s.phone} absolute`}
+              src="/assets/2560/home/phone.svg"
+            />
+          </div>
+          <span className={`${s.num} `}>咨询热线：400-120-8888</span>
+          <div className="">
+            <img
+              src="/assets/2560/home/weixin.svg"
+              onMouseEnter={() => setShow(true)}
+              onMouseLeave={() => setShow(false)}
+              className={`${s.wx} footer-img cursor-pointer absolute`}
+            ></img>
+          </div>
+        </div>
+        <motion.img
+          variants={variants}
+          animate={show ? "show" : "hidden"}
+          src="/assets/2560/home/qrcode.png"
+          className={` absolute right-3 z-10 ${s.qrcode} `}
+        ></motion.img>
+      </div>
+    </>
   );
 }

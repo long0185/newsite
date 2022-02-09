@@ -1,7 +1,7 @@
 const path = require("path");
 const publicpath = path.resolve(__dirname, "public");
 module.exports = {
-  assetPrefix: ".",
+  // assetPrefix: ".",
   images: {
     loader: "akamai",
     path: "/",

@@ -1,13 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Carousel from "./components/Home/Carousel";
+
 import SecondBanner from "./components/Home/SecondBanner";
 import ThirdBanner from "./components/Home/ThirdBanner";
 import Modal from "./components/Modal";
 import s from "./index.module.css";
+import Navbar from './components/Navbar'
+import MobileCarousel from "./components/MobileCarousel";
+import MobileContent from "./components/MobileContent";
+
 // NOTE: if using fullpage extensions/plugins put them here and pass it as props.
 // This is no longer required for the scrollOverflow option.
 const pluginWrapper = () => {
@@ -37,6 +41,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isPC:true,
       sectionsColor: [],
       num: 0,
       fullpages: [
@@ -90,31 +95,38 @@ class App extends React.Component {
     );
 
     return (
-      <div className="App">
-        <Menu />
-        <ReactFullpage
-          scrollingSpeed={1000}
-          easingcss3={`ease-in-out`}
-          loopHorizontal={false}
-          pluginWrapper={pluginWrapper}
-          onLeave={this.onLeave.bind(this)}
-          sectionsColor={this.state.sectionsColor}
-          render={(comp) => (
-            <ReactFullpage.Wrapper>
-              {fullpages.map((item, index) => (
-                <motion.div
-                  key={item.id}
-                  className={`section ${s.banner_item} `}
-                  animate={this.state.num != item.id ? "visible" : "hidden"}
-                  variants={variants}
-                >
-                  {item.element}
-                </motion.div>
-              ))}
-            </ReactFullpage.Wrapper>
-          )}
-        />
+      <>
+      <div className="mobile:hidden App">
+        <Navbar/>
+        <MobileCarousel bgs={['/assets/mobile/home/banner_01.png','/assets/mobile/home/banner_01.png']}/>
+        <MobileContent/>
       </div>
+        {this.state.isPC && <div className="hidden mobile:block App">
+          <Menu />
+          <ReactFullpage
+            scrollingSpeed={1000}
+            easingcss3={`ease-in-out`}
+            loopHorizontal={false}
+            pluginWrapper={pluginWrapper}
+            onLeave={this.onLeave.bind(this)}
+            sectionsColor={this.state.sectionsColor}
+            render={(comp) => (
+              <ReactFullpage.Wrapper>
+                {fullpages.map((item, index) => (
+                  <motion.div
+                    key={item.id}
+                    className={`section ${s.banner_item} `}
+                    animate={this.state.num != item.id ? "visible" : "hidden"}
+                    variants={variants}
+                  >
+                    {item.element}
+                  </motion.div>
+                ))}
+              </ReactFullpage.Wrapper>
+            )}
+          />
+        </div>}
+      </>
     );
   }
 }

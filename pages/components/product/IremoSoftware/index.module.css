@@ -11,6 +11,15 @@
   width: 1262px;
   border: 7px solid #ccc;
 }
+.m_game {
+  height: 301px;
+  width: 949px;
+  border: 7px solid #ccc;
+}
+.m_game_img_2{
+  width: 369px;
+	height: 369px;
+}
 .game_img {
   width: 492px;
   height: 491px;
@@ -37,4 +46,12 @@
 .wrap {
   flex: 0 0 2181px;
   height: 415px;
+}
+.m_game_img{
+  width: 489px;
+	height: 340px;
+}
+
+.desc{
+  bottom: -55px;
 }

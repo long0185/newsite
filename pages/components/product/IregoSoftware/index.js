@@ -52,14 +52,18 @@ export default function index() {
   return (
     <div
       id="software"
-      className="product-software col-lg-12 d-flex justify-content-center flex-column"
+      className="product-software w-100 flex justify-center items-center flex-col"
     >
       <Banner
         img={"/assets/newtitle/irego/title_3.png"}
         desc="通过游戏进行训练，增加趣味性。结合VR实现虚拟现实场景，增加训练的本体感和灵活度"
       />
-
-      <div className="software-content w-100 flex items-center justify-center relative">
+      <div className="mobile:hidden flex justify-between flex-wrap w_1000 h_1063">
+          {list.map((item,index)=><div className="relative">
+              <img src={item.img_src} className={s.m_game_img}></img>
+          </div>)}
+      </div>
+      <div className="hidden software-content w-100 mobile:flex items-center justify-center relative">
         <div className="flex-1 flex items-center justify-center z-10 bg-$gray border h_505 opacity-50 left-0 ">
           <img
             src="/assets/2560/home/left-arrow.svg"

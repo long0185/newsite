@@ -13,7 +13,15 @@
 .wrap {
   padding-bottom: 118px;
 }
-.interact {
+#interact {
   background-image: url("/assets/2560/gray-bg.jpeg");
   background-size: cover;
+}
+.m_big_img{
+  width: 909px;
+	height: 512px;
+}
+.m_sm_img{
+  width: 450px;
+	height: 264px;
 }

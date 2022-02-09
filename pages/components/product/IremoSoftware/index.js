@@ -52,7 +52,7 @@ export default function index() {
   return (
     <div
       id="software"
-      className="product-software w-100 d-flex justify-content-center flex-column"
+      className="product-software w-100 flex items-center justify-content-center flex-column"
     >
       <Banner
         img={"/assets/newtitle/iremo/title_3.png"}
@@ -70,7 +70,12 @@ export default function index() {
       <div className={`w-100 text-center mb_43`}>
         <span className={`${styles.subtitle}`}>平面康复训练游戏</span>
       </div>
-      <div className="iremo-software-content w-100 flex items-center justify-center relative">
+      <div className="mobile:hidden flex justify-between flex-wrap w_1000 h_1063">
+          {list.map((item,index)=><div className="relative">
+              <img src={item.img_src} className={s.m_game_img}></img>
+          </div>)}
+      </div>
+      <div className="hidden iremo-software-content w-100 mobile:flex items-center justify-center relative">
         <div className="flex-1 flex items-center justify-center z-10 bg-$gray border h_415 opacity-50 left-0 ">
           <img
             src="/assets/2560/home/left-arrow.svg"
@@ -108,26 +113,11 @@ export default function index() {
           />
         </div>
       </div>
-      {/* <div className="software-content w-100 d-center">
-        <div className="col-1"></div>
-        <img
-          src="/assets/2560/product/iremo/game-mirror.png"
-          className="col-3 position-relative w_726 h_413"
-        ></img>
-        <img
-          src="/assets/2560/product/iremo/game-ball.png"
-          className="col-3 w_726 h_413 relative"
-        ></img>
-        <img
-          src="/assets/2560/product/iremo/game-write.png"
-          className="col-3 w_726 h_413 relative"
-        ></img>
-        <div className="col-1"></div>
-      </div> */}
-      <div className={`col-12 text-center ${styles.subtitle_wrap}`}>
+
+      <div className={`w-100 text-center ${styles.subtitle_wrap}`}>
         <span className={`${styles.subtitle}`}>空间康复训练游戏</span>
       </div>
-      <div className="col-12 d-center">
+      <div className="w-100 hidden mobile:flex items-center justify-center">
         <div className={`${styles.game} d-center relative`}>
           <img
             src="/assets/2560/product/iremo/game_1.png"
@@ -152,6 +142,34 @@ export default function index() {
               水果采摘（肩肘关机活动度训练）
             </span>
             <span className="pr-8 font_21">喝水ADL（日常生活能力训练）</span>
+          </div>
+        </div>
+      </div>
+      <div className="mobile:hidden flex items-center justify-center">
+      <div className={`${styles.m_game} flex items-center justify-around relative`}>
+          <img
+            src="/assets/2560/product/iremo/game_1.png"
+            className={`${styles.m_game_img_2} relative`}
+          ></img>
+          <div className={`${styles.sm_img_wrap} absolute d-flex`}>
+            <img
+              src="/assets/2560/product/iremo/sm_img_2.png"
+              className={`${styles.sm_img_1} relative`}
+            ></img>
+            <img
+              src="/assets/2560/product/iremo/sm_img_1.png"
+              className={`${styles.sm_img_2} relative`}
+            ></img>
+          </div>
+          <img
+            src="/assets/2560/product/iremo/s_bottom_img_1.png"
+            className={`${styles.m_game_img_2} relative`}
+          ></img>
+          <div className={`${s.desc} absolute  flex justify-around w-100 `}>
+            <span className=" pl-8 font_18 text-$37">
+              水果采摘（肩肘关机活动度训练）
+            </span>
+            <span className="pr-8 font_18 text-$37">喝水ADL（日常生活能力训练）</span>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ const MenuItem = ({ i, path, isTitle }) => {
       <div
         className={`${s.text_placeholder} my-2 ${isTitle ? "text-3xl" : ""}`}
       >
-        {i}
+        <a href={path}>{i}</a>
       </div>
     </li>
   );
