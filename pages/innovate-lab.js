@@ -7,7 +7,7 @@ export default function innovatelab() {
   return (
     <div>
       <Navbar />
-      <div className="w-100 pt_104">
+      <div className="w-100 pt_104 ">
         <img src="/assets/2560/Innovate/banner.png" className="hidden mobile:block img-fluid h_786 w-100"></img>
         <img src="/assets/mobile/innovate/banner.png" className="mobile:hidden img-fluid h_1236 w-100"></img>
         <div className="hidden w-100  lab_bg mobile:flex flex-col items-center">
@@ -94,7 +94,7 @@ export default function innovatelab() {
             </div>
           </div>
         </div>
-        <div className="mobile:hidden lab_bg flex flex-col items-center">
+        <div className="mobile:hidden lab_bg flex flex-col items-center pb_104">
           <div className="lab-title-wrap bg-white flex items-center justify-center">
             <img className="img-fluid lab-title-img " src="/assets/2560/Innovate/title-lab.png"></img>
           </div>

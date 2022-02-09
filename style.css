@@ -782,6 +782,9 @@ a:hover {
     .mb_43{
       margin-bottom: 43px;
     }
+    .pb_43{
+      padding-bottom: 43px;
+    }
     .font_size_24{
       font-size: 24px;
     }
@@ -988,6 +991,9 @@ width: 971px;
 .m-lab-img{
   width: 237px;
 	height: 239px;
+}
+.pb_80{
+  padding-bottom: 80px;
 }
 
 
