@@ -61,18 +61,28 @@
 }
 ._label {
   font-size: 24px;
+  width: 170px;
 }
 .input_1 {
   margin-top: 22px;
 }
 .input_item {
-  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 80%;
   border-radius: 0px !important;
+  font-size: 24px;
+}
+.info_1 {
+  width: 808px;
+  height: 298px;
+  padding-top: 56px;
+  padding-left: 70px;
+  padding-right: 48px;
 }
 .info_2 {
   width: 808px;
   height: 298px;
-  padding-top: 56px;
+  padding-top: 66px;
   padding-left: 70px;
   padding-right: 48px;
 }

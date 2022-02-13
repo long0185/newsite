@@ -7,7 +7,7 @@ export default function index() {
     <div className={`${s.wrap} hidden mobile:flex flex-col items-center`}>
       <img
         src="/assets/2560/Innovate/title_img_3.png"
-        className={`${s.top_img} position-relative  mr-20`}
+        className={`${s.top_img} relative  mr-20`}
       />
       <span className={`${s.text} text-center mt-3 ml-16`}>
         iReCog可以为下肢iReGo提供虚拟现实的增配功能，
@@ -17,7 +17,7 @@ export default function index() {
     <div className={`${s.m_wrap} border mobile:hidden flex flex-col items-center`}>
     <img
       src="/assets/mobile/innovate/title_2.png"
-      className={`${s.m_top_img} position-relative mr-4`}
+      className={`${s.m_top_img} relative mr-4`}
     ></img>
     <span className={`${s.m_text} text-center mt-3 font_24 ml-16`}>
     iReCog可以为上肢iReMo提供虚拟现实的增配功能，

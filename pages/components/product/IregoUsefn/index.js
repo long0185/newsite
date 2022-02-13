@@ -6,11 +6,11 @@ export default function index() {
     <div id="usefn" className="fun-detail flex flex-col justify-center  ">
       <Banner img={"/assets/newtitle/irego/title_2.png"} />
       <div className="hidden mobile:flex content items-center justify-center w-100 mb_100">
-        <div className="d-center flex-column pt-5 bg-white use-fun-item align-item-center">
+        <div className="d-center flex-col pt-5 bg-white use-fun-item ">
           <div className="flex flex-col practise items-center ">
             <span className="text-3xl font-black mt-2">行走训练</span>
             <img
-              className="img-fluid practise-img"
+              className="practise-img"
               src="/assets/2560/product/irego/line-img_1.png"
             />
             <div className="py-3 flex justify-around w-100">
@@ -40,7 +40,7 @@ export default function index() {
               </div>
             </div>
             <div className="practise-small-img flex jusify-centent-center">
-              <div className="position-relative smimg-wrap">
+              <div className="relative smimg-wrap">
                 <img
                   className="smimg-wrap"
                   src="/assets/2560/product/irego/use_1.png"
@@ -49,7 +49,7 @@ export default function index() {
                   图1
                 </div>
               </div>
-              <div className="position-relative smimg-wrap">
+              <div className="relative smimg-wrap">
                 <img
                   className="smimg-wrap"
                   src="/assets/2560/product/irego/sm-img_1.png"
@@ -58,7 +58,7 @@ export default function index() {
                   图2
                 </div>
               </div>
-              <div className="position-relative smimg-wrap">
+              <div className="relative smimg-wrap">
                 <img
                   className="smimg-wrap"
                   src="/assets/2560/product/irego/sm-img_3.png"
@@ -67,7 +67,7 @@ export default function index() {
                   图3
                 </div>
               </div>
-              <div className="position-relative smimg-wrap">
+              <div className="relative smimg-wrap">
                 <img
                   className="smimg-wrap"
                   src="/assets/2560/product/irego/sm-img_4.png"
@@ -79,11 +79,11 @@ export default function index() {
             </div>
           </div>
         </div>
-        <div className="d-center flex-column pt-5 bg-white use-fun-item align-item-center">
-          <div className=" flex flex-column practise items-center">
+        <div className="d-center flex-col pt-5 bg-white use-fun-item">
+          <div className=" flex flex-col practise items-center">
             <span className="text-3xl font-black mt-2">坐站训练</span>
             <img
-              className="img-fluid practise-img"
+              className="practise-img"
               src="/assets/2560/product/irego/line-img_2.png"
             />
             <div className="py-3 flex justify-around w-100">
@@ -103,7 +103,7 @@ export default function index() {
               </div>
             </div>
             <div className="practise-small-img flex jusify-centent-center">
-              <div className="position-relative smimg-wrap">
+              <div className="relative smimg-wrap">
                 <img
                   className="smimg-wrap"
                   src="/assets/2560/product/irego/use_5.png"
@@ -112,7 +112,7 @@ export default function index() {
                   图1
                 </div>
               </div>
-              <div className="position-relative smimg-wrap">
+              <div className="relative smimg-wrap">
                 <img
                   className="smimg-wrap"
                   src="/assets/2560/product/irego/sm-img_6.png"
@@ -124,11 +124,11 @@ export default function index() {
             </div>
           </div>
         </div>
-        <div className="d-center flex-column pt-5 bg-white use-fun-item align-item-center">
-          <div className=" flex flex-column practise items-center">
+        <div className="d-center flex-col pt-5 bg-white use-fun-item ">
+          <div className=" flex flex-col practise items-center">
             <span className="text-3xl font-black mt-2">平衡训练</span>
             <img
-              className="img-fluid practise-img"
+              className="practise-img"
               src="/assets/2560/product/irego/line-img_3.png"
             />
             <div className="py-3 flex justify-around w-100">
@@ -146,7 +146,7 @@ export default function index() {
               </div>
             </div>
             <div className="practise-small-img flex jusify-centent-center">
-              <div className="position-relative smimg-wrap">
+              <div className="relative smimg-wrap">
                 <img
                   className="smimg-wrap"
                   src="/assets/2560/product/irego/use_7.png"
@@ -155,7 +155,7 @@ export default function index() {
                   图1
                 </div>
               </div>
-              <div className="position-relative smimg-wrap">
+              <div className="relative smimg-wrap">
                 <img
                   className="smimg-wrap"
                   src="/assets/2560/product/irego/sm-img_8.png"
@@ -173,7 +173,7 @@ export default function index() {
           <div className="flex flex-col practise items-center ">
             <span className="font_43 font-black">行走训练</span>
             <img
-              className="img-fluid m-practise-img"
+              className=" m-practise-img"
               src="/assets/2560/product/irego/line-img_1.png"
             />
             <div className="mt_63 mb_43  flex justify-around w_582">
@@ -205,34 +205,34 @@ export default function index() {
             <div className="flex jusify-center">
               <div className="relative m-smimg-wrap">
                 <img
-                  className="m-smimg-wrap img-fluid"
+                  className="m-smimg-wrap "
                   src="/assets/2560/product/irego/use_1.png"
                 />
                 <div className="m-sm_img_desc font_18 absolute bg-gray-300 text-gray-500">
                   图1
                 </div>
               </div>
-              <div className="position-relative m-smimg-wrap">
+              <div className="relative m-smimg-wrap">
                 <img
-                  className="m-smimg-wrap img-fluid"
+                  className="m-smimg-wrap "
                   src="/assets/2560/product/irego/sm-img_1.png"
                 />
                 <div className="m-sm_img_desc font_18 absolute bg-gray-300 text-gray-500">
                   图2
                 </div>
               </div>
-              <div className="position-relative m-smimg-wrap">
+              <div className="relative m-smimg-wrap">
                 <img
-                  className="m-smimg-wrap img-fluid"
+                  className="m-smimg-wrap "
                   src="/assets/2560/product/irego/sm-img_3.png"
                 />
                 <div className="m-sm_img_desc font_18 absolute bg-gray-300 text-gray-500">
                   图3
                 </div>
               </div>
-              <div className="position-relative m-smimg-wrap">
+              <div className="relative m-smimg-wrap">
                 <img
-                  className="m-smimg-wrap img-fluid"
+                  className="m-smimg-wrap "
                   src="/assets/2560/product/irego/sm-img_4.png"
                 />
                 <div className="m-sm_img_desc font_18 absolute bg-gray-300 text-gray-500">
@@ -246,7 +246,7 @@ export default function index() {
           <div className=" flex flex-col practise items-center">
             <span className="font_43 font-black">坐站训练</span>
             <img
-              className="img-fluid m-practise-img"
+              className=" m-practise-img"
               src="/assets/2560/product/irego/line-img_2.png"
             />
             <div className="mt_63 mb_43 flex justify-around w_582">
@@ -266,18 +266,18 @@ export default function index() {
               </div>
             </div>
             <div className="practise-small-img flex jusify-centent-center">
-              <div className="position-relative w_425 h_265">
+              <div className="relative w_425 h_265">
                 <img
-                  className="w_425 h_265 img-fluid"
+                  className="w_425 h_265 "
                   src="/assets/2560/product/irego/use_5.png"
                 />
                 <div className="m-sm_img_desc absolute bg-gray-300 text-gray-500">
                   图1
                 </div>
               </div>
-              <div className="position-relative w_425 h_265">
+              <div className="relative w_425 h_265">
                 <img
-                  className="w_425 h_265 img-fluid"
+                  className="w_425 h_265 "
                   src="/assets/2560/product/irego/sm-img_6.png"
                 />
                 <div className="m-sm_img_desc absolute bg-gray-300 text-gray-500">
@@ -291,7 +291,7 @@ export default function index() {
           <div className=" flex flex-col practise items-center">
             <span className="font_43 font-black">平衡训练</span>
             <img
-              className="img-fluid m-practise-img"
+              className=" m-practise-img"
               src="/assets/2560/product/irego/line-img_3.png"
             />
             <div className="mt_63 mb_43 flex justify-around w_582">
@@ -311,18 +311,18 @@ export default function index() {
               </div>
             </div>
             <div className="practise-small-img flex jusify-centent-center">
-              <div className="position-relative w_425 h_265">
+              <div className="relative w_425 h_265">
                 <img
-                  className="w_425 h_265 img-fluid"
+                  className="w_425 h_265 "
                   src="/assets/2560/product/irego/use_7.png"
                 />
                 <div className="m-sm_img_desc absolute bg-gray-300 text-gray-500">
                   图1
                 </div>
               </div>
-              <div className="position-relative w_425 h_265">
+              <div className="relative w_425 h_265">
                 <img
-                  className="w_425 h_265 img-fluid"
+                  className="w_425 h_265 "
                   src="/assets/2560/product/irego/sm-img_8.png"
                 />
                 <div className="m-sm_img_desc absolute bg-gray-300 text-gray-500">

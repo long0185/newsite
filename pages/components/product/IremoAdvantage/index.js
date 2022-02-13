@@ -5,7 +5,7 @@ export default function index() {
   return (
     <div
       id="advantage"
-      className={`${styles.wrap} col-12 d-flex flex-column align-items-center`}
+      className={`${styles.wrap} w-100 flex flex-col items-center`}
     >
       <Banner
         img={"/assets/newtitle/iremo/title_5.png"}
@@ -18,8 +18,8 @@ export default function index() {
           </>
         }
       />
-      <div className={`col-12 d-center flex-wrap  ${styles.content}`}>
-        <div className={`${styles.content_item} position-relative`}>
+      <div className={`w-100 d-center flex-wrap  ${styles.content}`}>
+        <div className={`${styles.content_item} relative`}>
           <img
             className={`${styles.content_item} absolute z-10`}
             src="/assets/2560/product/iremo/product_1.png"
@@ -39,7 +39,7 @@ export default function index() {
             <span className={`${styles.desc_text_4}`}>摆的位移量</span>
           </div>
         </div>
-        <div className={`${styles.content_item} position-relative`}>
+        <div className={`${styles.content_item} relative`}>
           <img
             className={`${styles.content_item}`}
             src={`/assets/2560/product/iremo/product_2.png`}
@@ -59,7 +59,7 @@ export default function index() {
             <span className={`${styles.desc_text_4}`}>摆的位移量</span>
           </div>
         </div>
-        <div className={`${styles.content_item} position-relative`}>
+        <div className={`${styles.content_item} relative`}>
           <img
             className={`${styles.content_item}`}
             src="/assets/2560/product/iremo/product_3.png"
@@ -79,7 +79,7 @@ export default function index() {
             <span className={`${styles.desc_text_4}`}>摆的位移量</span>
           </div>
         </div>
-        <div className={`${styles.content_item} position-relative`}>
+        <div className={`${styles.content_item} relative`}>
           <img
             className={`${styles.content_item}`}
             src={`/assets/2560/product/iremo/product_4.png`}

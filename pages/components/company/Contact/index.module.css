@@ -18,6 +18,15 @@
   background-image: url("/assets/2560/company/grey_bg.png");
   background-size: cover;
 }
+.m_item{
+  width: 973px;
+	/* height: 438px; */
+  padding-left: 76px;
+  padding-top: 43px;
+  padding-bottom: 43px;
+  background-image: url("/assets/2560/company/grey_bg.png");
+  background-size: cover;
+}
 .item_1 {
   width: 770px;
   padding: 0 43px;
@@ -29,9 +38,17 @@
   width: 352px;
   height: 50px;
 }
+.m_img {
+  width: 462px;
+  height: 67px;
+}
 .location {
   width: 42px;
   height: 58px;
+}
+.m_location {
+  width: 53px;
+  height: 76px;
 }
 .address {
   font-size: 16px;
@@ -44,4 +61,47 @@
   flex: 0 0 193px;
   height: 35px;
   line-height: 35px;
+}
+.m_header{
+  height: 34px;
+}
+.m_sm_input{
+  width: 431px;
+	height: 93px;
+	border-radius: 20px;
+}
+.m_sm_input::placeholder{
+  font-size: 30px;
+}
+.m_lg_input{
+  width: 894px;
+	height: 93px;
+	border-radius: 20px;
+}
+.m_lg_input::placeholder{
+  font-size: 30px;
+}
+.m_textarea{
+  width: 894px;
+	height: 289px;
+	border-radius: 20px;
+}
+.m_textarea_item{
+  font-size: 30px;
+}
+.m_textarea_item::placeholder{
+  font-size: 30px;
+  color:#868686;
+}
+
+.m_content{
+  width: 973px;
+	height: 876px;
+	box-shadow: 0px 11px 23px 0px 
+		rgba(1, 1, 1, 0.2);
+}
+
+.bg{
+  background-image: url("/assets/mobile/company/desc/contact_bg.png");
+  background-size: cover;
 }

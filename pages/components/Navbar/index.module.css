@@ -16,6 +16,7 @@
 }
 .m_ul{
   /* transform: translateX(100%); */
+  width: 90%;
 }
 .m_bottom{
   width: 531px;

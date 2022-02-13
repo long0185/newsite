@@ -80,8 +80,8 @@ const _list = [
 const showList = _list.map((item, index) => {
 	return {
 		id: index,
-		element: <div className="w-100 h-100 flex flex-col pt-5">
-			<div className="w-100 flex flex-col items-start justify-start p-5">
+		element: <div className="w-100 h-100 flex flex-col pt-10">
+			<div className="w-100 flex flex-col items-start justify-start p-10">
 				<span className="font_36 font-black mb-10">{item.name}</span>
 				<div className="flex justify-center items-center mt-3">
 					<span className="font_size_18 font-black mr-5">职位薪资:</span>
@@ -141,7 +141,22 @@ export default function applicationdetail() {
 	return <div>
 		<Navbar />
 		<div className="mt_104">
-			<div className={`${s.middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen flex items-center justify-center`}>
+			<div className={`mobile:hidden flex`}>
+			<ul className={`${s.ul} h-100`}>
+					<div className={`${s.back}  absolute w-100 flex justify-center items-center`}>
+						<button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>返回列表</button>
+						<button onClick={() => router.back()} className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>提交简历</button></div>
+
+					{
+						Array.isArray(list) && list.length > 0 && list.map((item, index) =>
+							<motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`}
+								style={{ zIndex: `${item?.id == 1 ? '100' : '10'}` }}
+								variants={variants} animate={index < num ? 'left' : index > num ? 'right' : 'mid'} >{item?.element}
+							</motion.li>)
+					}
+				</ul>	
+			</div>
+			<div className={`${s.middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen hidden mobile:flex items-center justify-center`}>
 				<ul className={`${s.ul} h-100`}>
 					<div className={`absolute top_45 w-100 z-20 h-20`} >
 						<img onClick={() => handleClick('left')} className={`${s.left_icon} cursor-pointer h-100 absolute`} src='/assets/2560/home/left-arrow.svg'  ></img>

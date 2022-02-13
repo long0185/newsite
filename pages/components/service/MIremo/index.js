@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import s from "./index.module.css";
-import GuideItem from '../GuideItem'
+import MGuideItem from '../MGuideItem'
 import { motion } from "framer-motion";
 import VideoModal from '../../videoModal'
 export default function index() {
@@ -8,6 +8,11 @@ export default function index() {
   const [list, setList] = useState([1]);
   const [show, setShow] = useState(false);
   const handleShow = (bool) => {
+    if(bool){
+      document.body.style.overflowY='hidden'
+    }else{
+      document.body.style.overflowY='auto'
+    }
     setShow(bool)
   };
   const handleClick = (direction) => {
@@ -22,13 +27,9 @@ export default function index() {
   };
   return (
     <>
-    {show && <VideoModal list={[]} handleShow={handleShow}/>}
+      {show && <VideoModal list={[]} handleShow={handleShow}/>}
     <div className={`w-100 d-center flex-col mt_63`}>
-      <div className={`${s.warp} w-screen flex overflow-hidden relative`}>
-      <div className={`absolute top_45 pt-3 px-20 flex justify-around w-100 z-20 h-20`} >
-          <img onClick={() => handleClick('left')} className={`cursor-pointer left-32 h-100 absolute`} src='/assets/2560/home/left-arrow.svg'  ></img>
-          <img onClick={() => handleClick('right')} className={`cursor-pointer right-32 h-100 absolute`} src='/assets/2560/home/right-arrow.svg'  ></img>
-        </div>
+      <div className={`${s.warp} w-screen flex overflow-hidden relative`}> 
         <motion.div
           animate={{
             translateX: `${-num * 33.333 + "%"}`,
@@ -37,9 +38,9 @@ export default function index() {
             duration: 2
           }}
           className={`${s.item_wrap} flex justify-center `}>
-          <GuideItem handleShow={handleShow} img_src='/assets/2560/example/iremo.png' title={'iReMo操作指南 康复计划制定1'} />
-          <GuideItem handleShow={handleShow} img_src='' title={'iReMo操作指南 康复计划制定2'} />
-          <GuideItem handleShow={handleShow} img_src='' title={'iReMo操作指南 康复计划制定3'} />
+          <MGuideItem handleShow={handleShow} img_src="/assets/2560/example/iremo.png" title={'iReMo操作指南 康复计划制定1'} />
+          <MGuideItem handleShow={handleShow} img_src="/assets/2560/example/iremo.png" title={'iReMo操作指南 康复计划制定2'} />
+          <MGuideItem handleShow={handleShow} img_src="/assets/2560/example/iremo.png" title={'iReMo操作指南 康复计划制定3'} />
         </motion.div>
       </div>
 
@@ -52,4 +53,3 @@ export default function index() {
     </>
   );
 }
-

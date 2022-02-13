@@ -5,9 +5,9 @@ export default function index() {
   return (
     <div
       id="quality"
-      className={`${styles.wrap} col-12 d-flex flex-column align-items-center`}
+      className={`${styles.wrap} w-100 flex flex-col items-center`}
     >
-      <div className={`col-12 d-center flex-column ${styles.title}`}>
+      <div className={`w-100 d-center flex-col ${styles.title}`}>
         <Banner
           img={"/assets/2560/product/irego/title-quality.png"}
           classes="text-white"
@@ -51,25 +51,25 @@ export default function index() {
         </div>
       </div>
 
-      <div className={`col-12 hidden mobile:flex items-center justify-center  ${styles.content}`}>
+      <div className={`w-100 hidden mobile:flex items-center justify-center  ${styles.content}`}>
         <div className={`${styles.item_wrap_1} text-center`}>
           <img
             src="/assets/2560/product/iremo/certificate_1.png"
-            className={`${styles.content_item_1} position-relative`}
+            className={`${styles.content_item_1} relative`}
           ></img>
           <span className={`${styles.desc}`}>医疗器械注册证</span>
         </div>
         <div className={`${styles.item_wrap_2} text-center`}>
           <img
             src="/assets/2560/product/iremo/certificate_2.png"
-            className={`${styles.content_item_2} position-relative`}
+            className={`${styles.content_item_2} relative`}
           ></img>
           <span className={`${styles.desc}`}>医疗器械生产许可证</span>
         </div>
         <div className={`${styles.item_wrap_3} text-center`}>
           <img
             src="/assets/2560/product/iremo/certificate_3.png"
-            className={`${styles.content_item_3} position-relative`}
+            className={`${styles.content_item_3} relative`}
           ></img>
           <span className={`${styles.desc}`}>手指外骨骼康复机器人专利</span>
         </div>

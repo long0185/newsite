@@ -31,13 +31,13 @@ const list = [
 export default function index() {
   return (
     <div id="usefn" className={`${s.wrap} mb_114`}>
-      <div className="product-title irego-title col-12 d-flex align-items-center justify-content-center">
-        <div className="position-relative ">
+      <div className="product-title irego-title w-100 flex items-center justify-center">
+        <div className="relative ">
           <img className="img-fluid" src="/assets/2560/product/irecog/irecog.svg" />
         </div>
       </div>
-      <div className="col-12 w-100 d-flex align-items-center justify-content-center ">
-        <div className={`${s.content} d-flex flex-column align-items-center`}>
+      <div className="w-100 w-100 flex items-center justify-center ">
+        <div className={`${s.content} flex flex-col items-center`}>
           <Banner
             img={"/assets/newtitle/irecog/title_1.png"}
             styles={{ marginTop: 0 }}
@@ -52,55 +52,55 @@ export default function index() {
               </>
             }
           />
-          <div className="col-12 p-0 hidden mobile:flex items-center justify-between ">
-            <div className={`position-relative text-center ${s.svg}`}>
+          <div className="w-100 p-0 hidden mobile:flex items-center justify-between ">
+            <div className={`relative text-center ${s.svg}`}>
               <img
                 className={s.svg}
                 src="/assets/2560/product/irecog/use_svg_1.svg"
               />
-              <div className={`${s.desc} position-absolute`}>注意力训练</div>
+              <div className={`${s.desc} absolute`}>注意力训练</div>
             </div>
-            <div className={`position-relative text-center ${s.svg}`}>
+            <div className={`relative text-center ${s.svg}`}>
               <img
                 className={`${s.svg}`}
                 src="/assets/2560/product/irecog/use_svg_2.svg"
               />
-              <div className={`${s.desc} position-absolute`}>记忆力训练</div>
+              <div className={`${s.desc} absolute`}>记忆力训练</div>
             </div>
-            <div className={`position-relative ${s.svg} text-center`}>
+            <div className={`relative ${s.svg} text-center`}>
               <img
                 className={s.svg}
                 src={`/assets/2560/product/irecog/use_svg_3.svg`}
               />
-              <div className={`${s.desc} position-absolute`}>执行功能训练</div>
+              <div className={`${s.desc} absolute`}>执行功能训练</div>
             </div>
-            <div className={`position-relative ${s.svg} text-center`}>
+            <div className={`relative ${s.svg} text-center`}>
               <img
                 className={s.svg}
                 src={`/assets/2560/product/irecog/use_svg_4.svg`}
               />
-              <div className={`${s.desc} position-absolute`}>感知能力训练</div>
+              <div className={`${s.desc} absolute`}>感知能力训练</div>
             </div>
-            <div className={`position-relative ${s.svg} text-center`}>
+            <div className={`relative ${s.svg} text-center`}>
               <img
                 className={s.svg}
                 src={`/assets/2560/product/irecog/use_svg_5.svg`}
               />
-              <div className={`${s.desc} position-absolute`}>
+              <div className={`${s.desc} absolute`}>
                 任务组织能力训练
               </div>
             </div>
-            <div className={`position-relative ${s.svg} text-center`}>
+            <div className={`relative ${s.svg} text-center`}>
               <img
                 className={s.svg}
                 src={`/assets/2560/product/irecog/use_svg_6.svg`}
               />
-              <div className={`${s.desc} position-absolute`}>
+              <div className={`${s.desc} absolute`}>
                 语言及交流能力训练
               </div>
             </div>
           </div>
-          <div className="flex w-100 items-center justify-center">
+          <div className="flex mobile:hidden w-100 items-center justify-center">
             <div className="flex items-center justify-between w_826 flex-wrap">
               {list.map((item, index) => <div key={index} className="flex mb_43 items-start justify-center flex-col">
                 <img

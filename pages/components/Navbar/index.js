@@ -1,6 +1,5 @@
 import * as React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import s from "./index.module.css";
@@ -150,7 +149,7 @@ const ResponsiveAppBar = () => {
       name: "公司",
       domain: "/company",
       path: "/company",
-      chilren: subnav.company,
+      children: subnav.company,
     },
     {
       name: "资讯",
@@ -161,28 +160,33 @@ const ResponsiveAppBar = () => {
   ];
 
   let { pathname, push } = useRouter();
-  console.log("pathname", pathname);
+  // console.log("pathname", pathname);
   const [state, setState] = React.useState({ scrollTop: 0 });
 
   return (
     <div
-      className="  navbar fixed top-0 z-50 w-100 p-0 flex flex-col nav-wrap"
+      className="fixed top-0 z-50 w-100 p-0 flex flex-col nav-wrap"
       onMouseLeave={leave}
     >
       <nav
-        className={`navbar flex z-20 w-100 p-0 ${isOpen ? "border-bottom" : ""
+        className={`flex navbar z-20 w-100 py-1 relative items-center justify-between ${isOpen ? "border-bottom" : ""
           } `}
       >
-        <div className="block mobile:hidden relative ml-5 w-20 h-20">
+        <div className="block mobile:hidden relative ml-16 h-14 w-14">
           <img onClick={() => setM_open(!m_open)} className="w-100 h-100 img-fluid" src="/assets/2560/menu.svg" />
         </div>
         <img
           onClick={() => push('/')}
           src="/assets/2560/home/logo.svg"
-          className="navbar-brand relative img-fluid cursor-pointer"
+          className="hidden mobile:block navbar-brand relative img-fluid cursor-pointer"
+        ></img>
+        <img
+          onClick={() => push('/')}
+          src="/assets/2560/home/logo.svg"
+          className="mobile:hidden m_logo ml-20 relative cursor-pointer"
         ></img>
         <ul
-          className={`hidden navbar-nav mobile:flex flex-row justify-center pl-5`}
+          className={`hidden  mobile:flex flex-row justify-center pl-5`}
         >
           {navBar.map((item) => (
             <li
@@ -197,7 +201,7 @@ const ResponsiveAppBar = () => {
                       enter(item.domain);
                     }
                   }}
-                  className={`nav-link cursor-pointer nav_link font_24  ${pathname.split("-")[0] == item.domain ? "active" : ""
+                  className={`nav-link cursor-pointer nav_link font_24 ${pathname.split("-")[0] == item.domain ? "active" : ""
                     }`}
                 >
                   {item.name}
@@ -213,46 +217,44 @@ const ResponsiveAppBar = () => {
           style={{ backgroundColor: 'rgba(0,0,0,.8)' }}
         >
           <motion.ul
-            // variants={mobileVariants}
-            // animate={`${m_open?'open':'close'}`} 
-            className={`${s.m_ul} absolute opacity-100 top-0 left-0 overflow-y-auto bg-white z-20 navbar-nav border pt_110 mobile_navbar mobile:hidden flex flex-col  w-9/12 justify-center`}>
+            className={`${s.m_ul} absolute opacity-100 top-0 left-0 overflow-y-auto bg-white z-20 border pt_110 mobile_navbar mobile:hidden flex flex-col  justify-center`}>
             <li onClick={()=>{
                 console.log('close');
                 setM_open(!m_open)
-        }} className={`${s.close_icon} absolute z-20 top-0 z-100 right-0`}>
+        }} className={`${s.close_icon} absolute z-20 top-0 z-100 right-0 `}>
               <img onClick={()=>
                 console.log('close')} 
                 src="/assets/2560/home/close.svg" 
-              className="h_104 w_104 img-fluid p-4"></img>
+              className="h-20 w-20 img-fluid p-4 ml-5"></img>
             </li>
-            <li className={`${s.m_top} justify-center items-center z-10 absolute top-0 flex border-bottom w-100`}>
+            <li className={`${s.m_top} justify-center items-center z-10 absolute border-bottom top-0 flex w-100`}>
               <img
                 onClick={() => push('/')}
                 src="/assets/2560/home/logo.svg"
-                className="navbar-brand relative img-fluid cursor-pointer"
+                className="m_logo relative img-fluid cursor-pointer mr-"
               ></img>
             </li>
             {navBar.map((item) => (
               <li key={item.path} className={`relative mt_110 ml_110 pr_110 `}>
                 {item.path == "/" ? (
                   <Link href={item.path}>
-                    <span className="font_36">{item.name}</span>
+                    <span className="font_36 text-$37">{item.name}</span>
                   </Link>
                 ) : (
                   <Disclosure>
                     {({ open }) => (
                       <>
-                        <Disclosure.Button className="flex justify-between w-full rounded-lg focus-visible:ring focus-visible:ring-opacity-75">
-                          <span className="font_36">{item.name}</span>
+                        <Disclosure.Button className="flex justify-between w-full rounded-lg focus-visible:ring focus-visible:ring-opacity-75 bottom">
+                          <span className="font_36 text-$37">{item.name}</span>
                           <ChevronUpIcon
                             className={`${open ? 'transform rotate-180' : 'rotate-90'
-                              } h-20`}
+                              } h-20 opacity-50`}
                           />
                         </Disclosure.Button>
                         {Array.isArray(item.children) && item.children.map((ele, i) =>
-                          <Disclosure.Panel key={i} className={`${i == 0 ? 'border-top' : i == item.children.length - 1 ? 'border-bottom pb-10' : ''} pt-10 text-$37 pl-10`}>
+                          <Disclosure.Panel key={i} className={`${i == 0 ? 'border-top' : i == item.children.length - 1 ? 'border-bottom pb-16' : ''} pt-16 text-$37 pl-10`}>
                             <Link href={ele.path}>
-                              <span className="pl-10 font_30">{ele.name}</span>
+                              <span className="pl-10 font_size_30 text-$68">{ele.name}</span>
                             </Link>
                           </Disclosure.Panel>
                         )}
@@ -269,31 +271,43 @@ const ResponsiveAppBar = () => {
               className={`${s.m_phone}`}
               src="/assets/2560/home/phone.svg"
             />
-            <span className={`${s.m_num} text-$86`}>咨询热线：400-120-8888</span>
+            <span className={`${s.m_num} font_30 text-$86`}>咨询热线：400-120-8888</span>
               </div>
               <div className={`${s.m_bottom} mt-10 flex items-center justify-center`}>
               <img
               className={`${s.m_phone} mr-2`}
               src="/assets/2560/home/cart.svg"
             />
-            <span className={`${s.m_num} text-$86 ml-2 `}>金矢天猫商城</span>
+            <span className={`${s.m_num} font_30 text-$86 ml-2 `}>金矢天猫商城</span>
               </div>
             </li>
           </motion.ul>
           
         </motion.div>
 
-        <div className="navbar-right flex justify-around">
-          <div className="relative">
+        <div className=" mobile:hidden flex pr-16 justify-around items-center">
+        <img
+              src="/assets/2560/home/share.svg"
+              className="w_53 h_53 mr-16"
+              alt=""
+            />
             <img
               src="/assets/2560/home/cart.svg"
+              alt=""
+              className="w_65"
+            />
+        </div>
+        <div className="navbar-right hidden mobile:flex justify-around">
+          <div className="relative">
+            <img
+              src="/assets/2560/home/share.svg"
               className="img-fluid"
               alt=""
             />
           </div>
           <div className="relative cart ml-5">
             <img
-              src="/assets/2560/home/share.svg"
+              src="/assets/2560/home/cart.svg"
               alt=""
               className="img-fluid"
             />
@@ -311,7 +325,7 @@ const ResponsiveAppBar = () => {
               <Link href={item.path} key={item.path + item.index}>
                 <div className="">
                   <span
-                    className={`nav-link cursor-pointer hover:bg-$primary hover:text-white ${item.path == pathname ? "main_bg" : ""
+                    className={`nav-link cursor-pointer hover:bg-$primary hover:text-white mx-2 ${item.path == pathname ? "main_bg" : ""
                       } `}
                   >
                     {item.name}

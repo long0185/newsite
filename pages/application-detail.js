@@ -28,7 +28,7 @@ const variants = {
 let _list = [
 	{
 	  id: 1,
-	  element: <div className="w-100 h-100 flex flex-col pt-5">
+	  element: <div className="w-100 h-100 flex flex-col pt-10 px-16">
 		<div className="w-100 flex flex-col items-center justify-center">
 		  <span className="font_36 font-black">标题标题标题标题标题标题标题</span>
 		  <div className="flex justify-center items-center">
@@ -37,24 +37,24 @@ let _list = [
 			<span className='text-$86 my-3'>2021年7月23日</span>
 		  </div>
 		</div>
-		<div className="flex items-center px-5 text-$86 font_size_18">
+		<div className="flex items-center text-$86 font_size_18">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
-		  <div className="w-50 bg-gray-600 h-96"></div>
+		  <div className="w-50 bg-gray-600 h-96 border w-9/12"></div>
 		</div>
-		<div className="flex items-center px-5 mt-3 text-$86 font_size_18">
+		<div className="flex items-center mt-3 text-$86 font_size_18">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
-		  <div className="w-50 bg-gray-600 h-60"></div>
+		  <div className="w-50 bg-gray-600 h-96 w-9/12"></div>
 		</div>
 		<div></div>
 	  </div>
 	},
 	{
 	  id: 2,
-	  element: <div className="w-100 h-100 flex flex-col pt-5">
+	  element: <div className="w-100 h-100 flex flex-col pt-5 px-16">
 		<div className="w-100 flex flex-col items-center justify-center">
 		  <span className="font_36 font-black">标题标题标题标题标题标题标题</span>
 		  <div className="flex justify-center items-center">
@@ -63,24 +63,24 @@ let _list = [
 			<span className='text-$86 my-3'>2021年7月23日</span>
 		  </div>
 		</div>
-		<div className="flex items-center px-5 text-$86">
+		<div className="flex items-center  text-$86">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
-		  <div className="w-50 bg-gray-600 h-96"></div>
+		  <div className="w-50 bg-gray-600 h-96 w-9/12"></div>
 		</div>
-		<div className="flex items-center px-5 mt-3 text-$86">
+		<div className="flex items-center mt-3 text-$86">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3 mb-5">
-		  <div className="w-50 bg-gray-600 h-60"></div>
+		  <div className="w-50 bg-gray-600 h-96 w-9/12"></div>
 		</div>
 		<div></div>
 	  </div>
 	},
 	{
 	  id: 3,
-	  element: <div className="w-100 h-100 flex flex-col pt-5">
+	  element: <div className="w-100 h-100 flex flex-col pt-5 px-16">
 		<div className="w-100 flex flex-col items-center justify-center">
 		  <span className="font_36 font-black">标题标题标题标题标题标题标题</span>
 		  <div className="flex justify-center items-center">
@@ -89,17 +89,17 @@ let _list = [
 			<span className='text-$86 my-3'>2021年7月23日</span>
 		  </div>
 		</div>
-		<div className="flex items-center px-5 text-$68">
+		<div className="flex items-center text-$68">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
-		  <div className="w-50 bg-gray-600 h-96"></div>
+		  <div className="w-50 bg-gray-600 h-96 w-9/12"></div>
 		</div>
-		<div className="flex items-center px-5 mt-3 text-$68">
+		<div className="flex items-center mt-3 text-$68">
 		  <span >缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
-		  <div className="w-50 bg-gray-600 h-60"></div>
+		  <div className="w-50 bg-gray-600 h-96 w-9/12"></div>
 		</div>
 		<div></div>
 	  </div>
@@ -124,7 +124,7 @@ export default function applicationdetail() {
 	return <div>
 		<Navbar />
 		<div className="mt_104">
-		<div className={`${s.middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen flex items-center justify-center`}>
+		<div className={`${s.middle} bg-gray-300 opacity-100 pt_100 pb_100 z-10 w-screen flex items-center justify-center`}>
 		<ul className={`${s.ul} h-100`}>
 			<div className={`absolute top_45 w-100 z-20 h-20`} >
 				<img onClick={() => handleClick('left')} className={`${s.left_icon} cursor-pointer h-100 absolute`} src='/assets/left-active.svg'  ></img>
@@ -132,7 +132,7 @@ export default function applicationdetail() {
 			</div>
 			<div 
 			className={`${s.back}  absolute w-100 flex justify-center items-center`}>
-				<button onClick={()=>router.back() } className={`${s.back_btn} rounded text-$color  bg-white border-1 border-$primary`}>返回列表</button></div>
+				<button onClick={()=>router.back() } className={`${s.back_btn} mb_100 rounded  bg-$white text-$37 border border-$primary`}>返回列表</button></div>
 
 			{
 				Array.isArray(list) && list.length>0 && list.map((item,index) => 

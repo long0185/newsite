@@ -34,7 +34,7 @@ export default function Footer() {
             />
             <span className={`${s.m_num} font_36 text-$86`}>咨询热线：400-120-8888</span>
           </div>
-          <div onClick={()=>setM_show(!m_show)} className="flex items-center pr-40 relative">
+          <div onClick={()=>setM_show(!m_show)} className="flex items-center pr-12  relative">
             <motion.img 
               animate={{
                 opacity:`${m_show?'1':0}`
@@ -54,9 +54,18 @@ export default function Footer() {
           <span className="font_size_24 text-$86 text-center">
             Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. 沪ICP备19033942号
           </span>
-          <span className="font_size_24 text-$86">
-            法律声明   |   金矢机器人云平台
-          </span>
+         <div className="flex font_size_24 text-$8 mt-3">
+         <a href="/legal-declaration" className="font_size_24 text-$86">
+            法律声明
+          </a>
+          <span className="mx-16">|</span>
+          <a href="https://www.irego.cn/monitor/#/Login" target={'_blank'} className="font_size_24 text-$86">
+          金矢机器人云平台
+          </a>
+          <span className="mx-16">|</span>
+          <a href="#" className="font_size_24 text-$86">
+           后台登录
+          </a></div> 
         </div>
 
       </div>
@@ -68,7 +77,16 @@ export default function Footer() {
           </span>
           <span className="mx-3">|</span>
           <Link href={'/legal-declaration'} >
-            <span className="mr-5 cursor-pointer">法律声明</span></Link>
+            <span className="mr-3 cursor-pointer">法律声明</span>
+          </Link>
+          <span className="mx-3">|</span>
+          <Link href={'https://www.irego.cn/monitor/#/Login'} >
+            <span className="mr-3 cursor-pointer">金矢机器人云平台</span>
+          </Link>
+          <span className="mx-3">|</span>
+          <Link href={'https://www.irego.cn/monitor/#/Login'} >
+            <span className="mr-3 cursor-pointer">后台登录</span>
+          </Link>
         </div>
         <div className={` h-100   right-0  absolute z-20 ${s.right} `}>
           <div>

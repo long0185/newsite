@@ -54,3 +54,31 @@
 .item_wrap {
   margin-bottom: 200px;
 }
+.m_item{
+
+}
+
+.m_left{
+  width: 100px;
+  background: transparent;
+  border-left: 1px white solid;
+  left: 101px;
+}
+.m_line_wrap{
+  top: 323px;
+  left: 0;
+  height: 780px;
+  width: 100%;
+}
+.m_line_item{
+  left: -9px;
+}
+
+
+@media screen and (min-width: 1080px) { 
+  .history_wrap{
+    align-items: inherit;
+  }
+
+}
+

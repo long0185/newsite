@@ -23,3 +23,48 @@
 .label {
   width: 60px;
 }
+
+.m_wrap{
+  background-image: url("/assets/2560/service/train/balck_bg.png");
+  background-size: cover;
+  width: 1080px;
+	height: 1138px;
+  padding-top: 92px;
+}
+.m_content{
+  width: 974px;
+	height: 876px;
+	box-shadow: 0px 11px 23px 0px 
+		rgba(1, 1, 1, 0.2);
+}
+.m_header{
+  height: 34px;
+}
+.m_sm_input{
+  width: 431px;
+	height: 93px;
+	border-radius: 20px;
+}
+.m_sm_input::placeholder{
+  font-size: 30px;
+}
+.m_lg_input{
+  width: 894px;
+	height: 93px;
+	border-radius: 20px;
+}
+.m_lg_input::placeholder{
+  font-size: 30px;
+}
+.m_textarea{
+  width: 894px;
+	height: 289px;
+	border-radius: 20px;
+}
+.m_textarea_item{
+  font-size: 30px;
+}
+.m_textarea_item::placeholder{
+  font-size: 30px;
+  color:#868686;
+}

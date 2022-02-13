@@ -4,8 +4,8 @@ import s from "./index.module.css";
 export default function index() {
   const [show, setShow] = useState(false);
   return (
-    <div className={`${s.wrap} col-12 p-0 flex flex-col items-center`}>
-      {/* <img src='/assets/2560/service/maintain/title.png' className={`${s.img} position-relative`}>
+    <div className={`${s.wrap} w-100 p-0 flex flex-col items-center`}>
+      {/* <img src='/assets/2560/service/maintain/title.png' className={`${s.img} relative`}>
       </img> */}
       <Banner img={"/assets/2560/service/maintain/title.png"} />
       <div className="mobile:hidden w-100 flex flex-col items-center justify-center ">
@@ -116,7 +116,7 @@ export default function index() {
             <span className={`${s.label} font-extrabold`}>联系人信息</span>
             <span className={`${s.line}`}></span>
             <div
-              className={`input-group input-group-lg flex  align-items-end ${s.input_1}`}
+              className={`input-group input-group-lg flex justify-between ${s.input_1}`}
             >
               <span
                 className={`${s._label} text-$68  w-25`}
@@ -132,7 +132,7 @@ export default function index() {
               />
             </div>
             <div
-              className={`input-group input-group-lg flex  align-items-end ${s.input_1}`}
+              className={`input-group input-group-lg flex justify-between ${s.input_1}`}
             >
               <span
                 className={`${s._label} text-$68 w-25`}
@@ -152,7 +152,7 @@ export default function index() {
             <span className={`${s.label} font-extrabold`}>预约详情</span>
             <span className={`${s.line}`}></span>
             <div
-              className={`input-group input-group-lg flex  align-items-end ${s.input_1}`}
+              className={`input-group input-group-lg flex  jusity-between ${s.input_1}`}
             >
               <span
                 className={`${s._label} text-$68 w-25`}
@@ -162,8 +162,8 @@ export default function index() {
               </span>
               <select
                 id="select"
-                className={`${s.input_item} flex-1 border-none border-bottom`}
-                aria-label="Sizing example input"
+                className={`${s.input_item} border-bottom`}
+                aria-label="Sizing example input text-center"
                 aria-describedby="inputGroup-sizing-lg"
               >
                 <option value="irego"></option>
@@ -173,7 +173,7 @@ export default function index() {
               </select>
             </div>
             <div
-              className={`input-group input-group-lg flex  align-items-end ${s.input_1}`}
+              className={`input-group input-group-lg flex  justify-between ${s.input_1}`}
             >
               <span
                 className={`${s._label} w-25 text-$68`}
@@ -207,7 +207,7 @@ export default function index() {
           </span>
         </div>
       </div>
-      <div className={`col-12 hidden  mobile:flex text-center`}>
+      <div className={`w-100 hidden  mobile:flex text-center justify-center`}>
         <button className={`${s.btn} hover:bg-yellow-400 `}>提交</button>
       </div>
     </div>

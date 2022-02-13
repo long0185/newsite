@@ -136,9 +136,12 @@ const Mobile = ()=>{
 function App(){
   const [isPc, setisPc] = useState(false);
   useEffect(()=>{
+    let width = document.documentElement.clientWidth;
+    let bool = width <=1080?false:true;
+    setisPc(bool) 
     window.addEventListener('resize',()=>{
-      const width = document.documentElement.clientWidth;
-      const bool = width <=1080?false:true;
+       width = document.documentElement.clientWidth;
+       bool = width <=1080?false:true;
       setisPc(bool)
     })
     return()=>window.removeEventListener('resize',()=>{})

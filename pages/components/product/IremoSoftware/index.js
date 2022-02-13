@@ -52,7 +52,7 @@ export default function index() {
   return (
     <div
       id="software"
-      className="product-software w-100 flex items-center justify-content-center flex-column"
+      className="product-software w-100 flex items-center justify-center flex-col"
     >
       <Banner
         img={"/assets/newtitle/iremo/title_3.png"}
@@ -95,14 +95,12 @@ export default function index() {
           >
             {list.map(item =>
                <div key={item.id} className=" flex-1 h-100 h_415 relative">
-              <img className="w-100 h-100 img-fluid absolute z-10"
+              <img className="w-100 h-100  absolute z-10"
                 src={item.img_src} alt="" />
               <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
                 <span className=" top-8 bg-black  text-center py-3 w-100">{item.text}</span>
               </div>
             </div>)}
-
-
           </motion.div>
         </div>
         <div className="flex-1 flex items-center justify-center z-10 bg-$gray border h_415 opacity-50 right-0">
@@ -123,7 +121,7 @@ export default function index() {
             src="/assets/2560/product/iremo/game_1.png"
             className={`${styles.game_img} relative`}
           ></img>
-          <div className={`${styles.sm_img_wrap} absolute d-flex`}>
+          <div className={`${styles.sm_img_wrap} absolute flex`}>
             <img
               src="/assets/2560/product/iremo/sm_img_2.png"
               className={`${styles.sm_img_1} relative`}
@@ -151,7 +149,7 @@ export default function index() {
             src="/assets/2560/product/iremo/game_1.png"
             className={`${styles.m_game_img_2} relative`}
           ></img>
-          <div className={`${styles.sm_img_wrap} absolute d-flex`}>
+          <div className={`${styles.sm_img_wrap} absolute flex`}>
             <img
               src="/assets/2560/product/iremo/sm_img_2.png"
               className={`${styles.sm_img_1} relative`}

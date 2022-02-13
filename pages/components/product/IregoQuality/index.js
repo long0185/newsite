@@ -5,7 +5,7 @@ export default function index() {
   return (
     <div
       id="quality"
-      className={`${styles.wrap} col-12 d-flex flex-column align-items-center`}
+      className={`${styles.wrap} w-100 flex flex-col items-center`}
     >
       <Banner
         img={`/assets/newtitle/irego/title_6.png`}
@@ -52,21 +52,21 @@ export default function index() {
       <div className={`w-100 hidden mobile:flex items-center justify-center ${styles.content}`}>
         <div className={`${styles.item_wrap_1} text-center`}>
           <img
-            className={`${styles.content_item_1} position-relative`}
+            className={`${styles.content_item_1} relative`}
             src="/assets/2560/product/irego/cerficate_3.png"
           ></img>
           <span className={`${styles.desc}`}>医疗器械注册证</span>
         </div>
         <div className={`${styles.item_wrap_2} text-center`}>
           <img
-            className={`${styles.content_item_2} position-relative`}
+            className={`${styles.content_item_2} relative`}
             src="/assets/2560/product/irego/certificate_2.png"
           ></img>
-          <span className={`${styles.desc}`}>医疗器械生产许可证</span>
+          <span className={`${styles.desc} text-center w-100`}>医疗器械生产许可证</span>
         </div>
         <div className={`${styles.item_wrap_3} text-center`}>
           <img
-            className={`${styles.content_item_3} position-relative`}
+            className={`${styles.content_item_3} relative`}
             src="/assets/2560/product/irego/certificate_3.png"
           ></img>
           <span className={`${styles.desc}`}>

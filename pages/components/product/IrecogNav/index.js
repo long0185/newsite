@@ -30,7 +30,7 @@ export default function IregoNav() {
   return (
     <>
       <ul
-        className="irego-nav nav w-100 hidden  nav-pills mobile:flex justify-center bg-white"
+        className="irego-nav  w-100 hidden  nav-pills mobile:flex justify-center bg-white"
         id="pills-tab"
         role="tablist"
       >
@@ -39,6 +39,7 @@ export default function IregoNav() {
             <a
               onMouseEnter={() => enter(item.href)}
               className={`nav-link p-0 ${href == item.href ? "active" : ""}`}
+              style={{paddingTop:0,paddingBottom:0}}
               href={item.href}
             >
               {item.name}

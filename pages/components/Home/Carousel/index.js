@@ -139,7 +139,7 @@ const Example = () => {
           )}
         </div>
       </div>
-      <div className={`absolute col-12  ${s.bar_wrap} flex justify-center`}>
+      <div className={`absolute w-100  ${s.bar_wrap} flex justify-center`}>
         <span className={`${s.bar}`}>
           <motion.div
             className="h-100 w-0 bg-$primary"

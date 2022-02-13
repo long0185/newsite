@@ -28,7 +28,7 @@ export default function index() {
   return (
     <>
       {show && <VideoModal list={[]} handleShow={handleShow}/>}
-    <div className={`w-100 d-center flex-column mt_63`}>
+    <div className={`w-100 d-center flex-col mt_63`}>
       <div className={`${s.warp} w-screen flex overflow-hidden relative`}> 
         <motion.div
           animate={{

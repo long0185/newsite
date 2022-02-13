@@ -5,14 +5,14 @@
   margin-bottom: 40px;
 }
 .ceo {
-  width: 419px;
-  height: 447px;
+  width: 640px;
+  height: 260px;
   box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
   border-radius: 6px;
 }
 .img {
-  width: 229px;
-  height: 215px;
+  width: 208px;
+  height: 196px;
   /* border: solid 3px #e9e5e4; */
 }
 .manager {
@@ -25,7 +25,7 @@
   padding: 0 129px;
 }
 .expert {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   margin-bottom: 60px;
 }
 .box{
@@ -35,11 +35,11 @@
   width: 667px;
   padding: 28px;
   /* height: 286px; */
-  box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
+  box-shadow: 0px 5px 10px 0px rgba(1, 1, 1, 0.2);
   border-radius: 6px;
 }
 .expert_img{
-  height: 215px;
+  height: 229px;
   width: 229px;
 }
 .right_arrow {
@@ -58,4 +58,14 @@
 .slide{
   width: 125px;
 	height: 3px;
+}
+.teamer{
+  width: 506px;
+	height: 260px;
+	box-shadow: 0px 15px 30px 0px 
+		rgba(1, 1, 1, 0.2);
+	border-radius: 6px;
+}
+.point{
+  font-size: 30px;
 }

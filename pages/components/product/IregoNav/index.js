@@ -49,12 +49,13 @@ export default function IregoNav() {
   ];
   return (
     <>
-      <ul className="irego-nav  nav w-100  nav-pills hidden  mobile:flex justify-center bg-white">
+      <ul className="irego-nav   w-100  nav-pills hidden  mobile:flex justify-center bg-white">
         {list.map((item) => (
           <li key={item.href} className="nav-item" role="presentation">
             <a
               onMouseEnter={() => enter(item.href)}
               className={`nav-link p-0 ${href == item.href ? "active" : ""}`}
+              style={{paddingTop:0,paddingBottom:0}}
               href={item.href}
             >
               {item.name}

@@ -17,16 +17,7 @@ export default function info() {
             aria-labelledby="pills-home-tab"
           >
             <Expert />
-          </div>
-          <div
-            className="tab-pane fade"
-            id="pills-profile"
-            role="tabpanel"
-            aria-labelledby="pills-profile-tab"
-          >
-            <Infomation />
-          </div>
-         
+          </div> 
         </div>
       </div>
     </>

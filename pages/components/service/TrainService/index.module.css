@@ -1,4 +1,3 @@
-@media screen and (min-width: 768px) {
   .img {
     height: 62px;
     width: 405px;
@@ -14,7 +13,6 @@
     border-radius: 6px;
     margin: 0 18px;
     padding-right: 52px;
-    /* background-image: url("../../../../public/assets/2560/service/train/white.png"); */
     background-size: cover;
   }
   .item_2 {
@@ -60,11 +58,38 @@
     font-size: 24px;
     color: #363737;
   }
-}
 .train_wrap{
   margin-top: 93px;
   background-image: url('/assets/2560/service/train/gril.png');
 	width: 1831px;
 	height: 317px;
   background-size: cover;
+}
+.m_item{
+  width: 979px;
+	/* height: 234px; */
+  padding: 47px 76px;
+	box-shadow: 0px 11px 23px 0px 
+		rgba(1, 1, 1, 0.2);
+	border-radius: 6px;
+}
+.m_svg_img{
+  width: 130px;
+	height: 132px;
+}
+.m_train{
+  padding: 94px 100px;
+  width: 100%;
+	height: 460px;
+	/* box-shadow: 0px 11px 23px 0px 
+		rgba(1, 1, 1, 0.2); */
+	/* border-radius: 6px; */
+	/* border: solid 1px #9b9b9b; */
+  background-image: url('/assets/mobile/service/train/bg.png');
+  background-size: cover;
+  background-position: center;
+}
+.bottom{
+  height: 1138px;
+  background: #000;
 }

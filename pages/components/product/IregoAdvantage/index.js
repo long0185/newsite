@@ -11,7 +11,7 @@ export default function index() {
   return (
     <div
       id="advantage"
-      className={`${styles.wrap} col-12 d-flex flex-column align-items-center`}
+      className={`${styles.wrap} w-100 flex flex-col items-center`}
     >
       <Banner
         img={"/assets/newtitle/irego/title_5.png"}

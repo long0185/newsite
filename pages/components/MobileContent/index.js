@@ -97,7 +97,7 @@ export default function index() {
 			<div className="flex flex-col flex-1 pl-3 justify-between">
 				<div className={`relative flex-1 border`}>
 					<motion.img
-						className="img-fluid h-100 w-100"
+						className=" h-100 w-100"
 						src="/assets/2560/home/example-area.png"
 						whileHover={{ scale: 1.02, transition: { duration: 0.5 } }}
 						whileTap={{ scale: 1, transition: { duration: 0.5 } }}
@@ -106,7 +106,7 @@ export default function index() {
 				</div>
 				<div className={`relative my-3 flex-1`}>
 					<motion.img
-						className="img-fluid w-100 h-100"
+						className=" w-100 h-100"
 						src="/assets/2560/home/example-personal.png"
 						whileHover={{ scale: 1.02, transition: { duration: 0.5 } }}
 						whileTap={{ scale: 1, transition: { duration: 0.5 } }}
@@ -115,7 +115,7 @@ export default function index() {
 				</div>
 				<div className={`relative flex-1`}>
 					<motion.img
-						className="img-fluid w-100 h-100"
+						className=" w-100 h-100"
 						src="/assets/2560/home/example-his.png"
 						whileHover={{ scale: 1.02, transition: { duration: 0.5 } }}
 						whileTap={{ scale: 1, transition: { duration: 0.5 } }}

@@ -3,7 +3,7 @@ import React from "react";
 export default function ProductSubnav() {
   return (
     <ul
-      className="product-subnav nav w-100 nav-pills d-flex justify-content-center align-items-center"
+      className="product-subnav nav w-100 nav-pills flex justify-center align-center"
       id="pills-tab"
       role="tablist"
     >

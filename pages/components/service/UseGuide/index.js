@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import s from "./index.module.css";
 import M_Irego from "../MIrego";
+import M_Iremo from "../MIremo";
 import Iremo from "../Iremo";
 import Irego from "../Irego";
 export default function index() {
@@ -10,7 +11,7 @@ export default function index() {
       <div
         className={`${s.wrap}   mobile:hidden flex mt_63 justify-center flex-col  mb_118`}
       >
-        <ul className="nav w-100 nav-pills align-items-center flex justify-center items-center">
+        <ul className="nav w-100 nav-pills  flex justify-center items-center">
           <li className={`d-center mx-3`} onClick={() => setIndex(1)}>
             <span
               className={`${s.m_link} ${
@@ -40,14 +41,14 @@ export default function index() {
             role="tabpanel"
             aria-labelledby="honor-tab"
           >
-            {index == 1 ? <M_Irego /> : <M_Irego />}
+            {index == 1 ? <M_Irego /> : <M_Iremo />}
           </div>
         </div>
       </div>
       <div
         className={`${s.wrap} hidden  mobile:flex mt_63 justify-center flex-col  mb_118`}
       >
-        <ul className="nav w-100 nav-pills align-items-center flex justify-center items-center">
+        <ul className="nav w-100 nav-pills  flex justify-center items-center">
           <li className={`d-center mx-3`} onClick={() => setIndex(1)}>
             <span
               className={`${s.link} ${

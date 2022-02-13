@@ -1,9 +1,9 @@
-import Image from "next/image";
 import React, { useState } from "react";
 import s from "./index.module.css";
 import Detail from "../Detail";
-import { list } from "postcss";
 import { useRouter } from "next/router";
+import { MApplicationCard } from "../../example/Application";
+
 
 let _list=[
 	{
@@ -95,7 +95,7 @@ const ApplicationCard = ({ title = '', date = '', view = '' }) => {
       <div className={`${s.desc} p-3 flex-1 border flex flex-col justify-between items-start`}>
         <div className="font_size_24 text-$37">{title}</div>
         <div className="font_14 w-100 text-$68 flex items-center justify-between">
-          <div className="d-flex align-items-center">
+          <div className="flex items-center">
             <img src='/assets/2560/service/useguide/calendar.svg' className={`${s.svg} relative mr-2`}>
             </img>
             <span>{date}</span>
@@ -120,8 +120,45 @@ export default function index() {
     setIsShow(bool)
   }
   return (
-    <div className={`${s.content} `}>
-      {isShow && <Detail handleShow={handleShow} showList={_list} />}
+    <>
+    <div className={` mobile:hidden w-100`}>
+    <div className={`${s.m_wrap} mt_63 mb_43 flex flex-wrap justify-between`}>
+    <MApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏"
+        date="2020年7月24日"
+        view="231"
+      /> 
+      <MApplicationCard title="第21届中国国际高新技术成果交易会"
+        date="2020年7月24日"
+        view="231"
+      /> 
+      <MApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏"
+        date="2020年7月24日"
+        view="231"
+      /> 
+      <MApplicationCard title="第21届中国国际高新技术成果交易会"
+        date="2020年7月24日"
+        view="231"
+      /> <MApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏"
+      date="2020年7月24日"
+      view="231"
+    /> 
+    <MApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏"
+      date="2020年7月24日"
+      view="231"
+    /> 
+    <div className="w-100 flex items-center justify-center mb_100 mt_63">
+          <div className="flex">
+            <button
+              onClick={() => setList([...list, 1])}
+              className="m_bottom_btn hover:bg-yellow-300"
+            >
+              Show more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className={`${s.content} hidden mobile:block `}>
       {list.map((item,index)=><div key={index}>
       <div className="flex d-center mt-14">
       <ApplicationCard title="金矢机器人王志勇总经理携iReGo亮相创赢未来栏"
@@ -157,5 +194,7 @@ export default function index() {
         <button onClick={()=>setList([...list,1])} className="l_btn hover:bg-yellow-300">Show more</button>
       </div>
     </div>
+    </>
+
   );
 }

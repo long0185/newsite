@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import SubNav from "./components/company/Subnav";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import s from './index.module.css'
@@ -148,14 +147,45 @@ export default function company() {
   return (
     <div className="">
       <Navbar />
-      <SubNav />
-      <div className="w-100 h_865 relative">
+      {/* <SubNav /> */}
+      <div className="w-100 hidden mobile:block h_865 relative">
         <img className="w-100 h-100" src="/assets/2560/company/zp.png"></img>
+      </div>
+      <div className="w-100  mobile:hidden h_1236 relative">
+        <img className="w-100 h-100" src="/assets/mobile/company/job/banner.png"></img>
       </div>
       <div className="w-100">
         <Banner img={'/assets/2560/company/title_zp.png'} />
       </div>
-      <div className="w-100 flex justify-center relative">
+      <div className="w-100 mobile:hidden flex flex-col items-center">
+        {list.map((item,index)=>
+        <div key={index} className={`${s.m_job_item} flex flex-col justify-around mb_43`}>
+          <div className="flex justify-between">
+            <span className="font_30 text-$37">{item.name}</span><span className="font_size_30 text-$primary">{item.salary}k</span>
+          </div>
+          <div className="font_size_24 text-$86 w_425 flex items-center justify-between">
+            <span>{item.area}</span><span>{item.agree}</span><span>{item.rang}年</span><span>{item.num}</span>
+          </div>
+        </div>
+        )}
+        <div className="w-100 flex items-center justify-center mb_100 mt_100">
+          <div className="flex">
+          <button
+              onClick={() => {}}
+              className="m_l_btn text-$37 border-1 border-$primary hover:bg-yellow-300 mr-3"
+            >
+              表单下载
+            </button>
+            <button
+              onClick={() => {}}
+              className="m_l_btn bg-$primary text-white hover:bg-yellow-300 ml-3"
+            >
+              Show more
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="w-100 hidden  mobile:flex justify-center relative">
         <div className="w_1567 flex mb_100 overflow-hidden">
           <motion.div
             animate={{
@@ -268,7 +298,7 @@ export default function company() {
           <img onClick={() => handleClick('right')} className={`cursor-pointer right-32 h-100 absolute`} src='/assets/2560/home/right-arrow.svg'  ></img>
         </div>
       </div>
-      <div className="flex mb_100 justify-center w-100 mt_118">
+      <div className="hidden mobile:flex mb_100 justify-center w-100 mt_118">
         <div onClick={() => setNum(0)} className={`${s.slide} ${num == 0 ? 'bg-$primary' : 'bg-$gray'}  cursor-pointer`}></div>
         <div onClick={() => setNum(1)} className={`${s.slide} ${num == 1 ? 'bg-$primary' : 'bg-$gray'}  mx-5 cursor-pointer`}></div>
         <div onClick={() => setNum(2)} className={`${s.slide} ${num == 2 ? 'bg-$primary' : 'bg-$gray'}  cursor-pointer`}></div>

@@ -32,7 +32,7 @@ const Example = ({bgs=[]}) => {
       </motion.div>
       <div className={`absolute w-100  ${s.bar_wrap} flex justify-center`}>
 		  {bgs.map((ele,i)=>
-		  <span className={`${s.bar}`}>
+		  <span key={i} className={`${s.bar}`}>
           <motion.div
             className="h-100 w-0 bg-$primary"
             animate={{ width: `${num == i ? "100%" : 0}` }}

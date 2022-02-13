@@ -69,3 +69,12 @@
   width: 125px;
 	height: 3px;
 }
+
+.m_job_item{
+	width: 979px;
+	height: 195px;
+	box-shadow: 0px 11px 23px 0px 
+		rgba(1, 1, 1, 0.2);
+	border-radius: 6px;
+	padding: 43px;
+}
