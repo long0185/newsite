@@ -8,12 +8,12 @@ let list = [
   {
   img_src:'/assets/2560/product/irego/dog.png',
   id:1,
-  text:'酷跑猫'
+  text:'汪汪天使'
 },
 {
   img_src:'/assets/2560/product/irego/forest.png',
   id:2,
-  text:'酷跑猫'
+  text:'梦幻森林'
 },
 {
   img_src:'/assets/2560/product/irego/run-cat.png',
@@ -23,12 +23,12 @@ let list = [
 {
   img_src:'/assets/2560/product/irego/dog.png',
   id:4,
-  text:'酷跑猫'
+  text:'汪汪天使'
 },
 {
   img_src:'/assets/2560/product/irego/forest.png',
   id:5,
-  text:'酷跑猫'
+  text:'梦幻森林'
 },
 {
   img_src:'/assets/2560/product/irego/run-cat.png',
@@ -59,8 +59,11 @@ export default function index() {
         desc="通过游戏进行训练，增加趣味性。结合VR实现虚拟现实场景，增加训练的本体感和灵活度"
       />
       <div className="mobile:hidden flex justify-between flex-wrap w_1000 h_1063">
-          {list.map((item,index)=><div className="relative">
-              <img src={item.img_src} className={s.m_game_img}></img>
+          {list.map((item,index)=><div className={`${s.m_game_img} relative`} key={index}>
+              <img src={item.img_src} className={`w-100 h-100 absolute`}></img>
+              <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
+               <span className=" top-8 bg-black  text-center py-3 w-100">{item.text}</span>
+            </div> 
           </div>)}
       </div>
       <div className="hidden software-content w-100 mobile:flex items-center justify-center relative">

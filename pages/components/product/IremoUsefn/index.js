@@ -126,9 +126,9 @@ export default function index() {
       </div>
       <div className="mobile:hidden content d-center flex-col  w-100 mb_100">
         {list.map((item, index) => (
-          <div className="d-center mb_43 flex-col bg-white m_use-fun-item items-center">
+          <div className="flex pt_43 mb_43 flex-col bg-white m_use-fun-item items-center justify-start">
             <div className="flex flex-col practise items-center ">
-              <span className="font_43 font-black mb-5">{item.title}</span>
+              <span className="font_43 font-black mb_43">{item.title}</span>
               <img
                 className="img-fluid w_676 h_592"
                 src={item.img_src}
@@ -138,7 +138,7 @@ export default function index() {
               </div>
               <div className="practise-small-img flex jusify-centent-center">
                 {item.sm_imgs.map((ele, i) =>
-                  <div className="relative w_425 h_265">
+                  <div className="relative w_425 h_265 mr-1">
                     <img
                       className="w_425 h_265 img-fluid"
                       src={ele}

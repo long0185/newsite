@@ -1,5 +1,8 @@
 .wrap {
-  background-image: url("../../../../public/assets/2560/Innovate/bg_1.png");
+  background-image: url("/assets/2560/Innovate/bg_1.png");
+  background-size: 100% 100%;
+  background-position: center center;
+  overflow: auto;
 }
 .title_img {
   height: 68px;
@@ -18,7 +21,7 @@
 .text {
   width: 799px;
   /* height: 359px; */
-  margin-left: 92px;
+  /* margin-left: 92px; */
 }
 .title_1 {
   font-size: 24px;

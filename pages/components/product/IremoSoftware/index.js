@@ -70,9 +70,12 @@ export default function index() {
       <div className={`w-100 text-center mb_43`}>
         <span className={`${styles.subtitle}`}>平面康复训练游戏</span>
       </div>
-      <div className="mobile:hidden flex justify-between flex-wrap w_1000 h_1063">
-          {list.map((item,index)=><div className="relative">
-              <img src={item.img_src} className={s.m_game_img}></img>
+      <div className="mobile:hidden flex justify-between flex-wrap w_1000 h_878">
+          {list.map((item,index)=><div key={index} className={`relative ${s.m_game_img}`}>
+              <img src={item.img_src} className={`${s.m_game_img} absolute`}></img>
+              <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
+               <span className=" top-8 bg-black  text-center py-3 w-100">{item.text}</span>
+            </div> 
           </div>)}
       </div>
       <div className="hidden iremo-software-content w-100 mobile:flex items-center justify-center relative">

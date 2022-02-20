@@ -11,10 +11,14 @@ export default function index() {
       className={`${s.wrap} flex relative flex-col justify-between items-center bg-white `}
     >
       <Menu />
-      <div className={`${s.innovate} flex justify-center`}>
-        <div className={`${s.innovate_1} relative bg-gray-400`}>
+      <div className={`${s.innovate} flex flex-col mobile:flex-row justify-center px-1`}>
+        <div className={`${s.innovate_1} flex-1 bg-gray-400 mr-2 relative hover:bg-$primary`}>
           {/* <img layout="fill" src={innovate_1} /> */}
-          <div className={`${s.innovate_btn} absolute`}>合作案例 · 实施中</div>
+          <div className={`${s.innovate_btn} absolute bottom-2 left-2 `}>合作案例 · 实施中</div>
+        </div>
+        <div className={`${s.innovate_1} flex-1 bg-gray-400 ml-2 relative hover:bg-$primary`}>
+          {/* <img layout="fill" src={innovate_1} /> */}
+          <div className={`${s.innovate_btn} absolute bottom-2 left-2`}>合作案例 · 实施中</div>
         </div>
       </div>
       <div className={`${s.news} flex justify-center`}>

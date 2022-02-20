@@ -325,7 +325,7 @@ const ResponsiveAppBar = () => {
               <Link href={item.path} key={item.path + item.index}>
                 <div className="">
                   <span
-                    className={`nav-link cursor-pointer hover:bg-$primary hover:text-white mx-2 ${item.path == pathname ? "main_bg" : ""
+                    className={`nav-link cursor-pointer hover:bg-$primary hover:text-white mx-5 ${item.path == pathname ? "main_bg" : ""
                       } `}
                   >
                     {item.name}

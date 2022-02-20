@@ -51,7 +51,7 @@ export default function IregoNav() {
     <>
       <ul className="irego-nav   w-100  nav-pills hidden  mobile:flex justify-center bg-white">
         {list.map((item) => (
-          <li key={item.href} className="nav-item" role="presentation">
+          <li key={item.href} className="nav-item " role="presentation">
             <a
               onMouseEnter={() => enter(item.href)}
               className={`nav-link p-0 ${href == item.href ? "active" : ""}`}
@@ -67,10 +67,10 @@ export default function IregoNav() {
           <div className="flex mt_54 items-center w_894 flex-wrap">
           {list.map((item) => (
           <div key={item.href} 
-          className={`nav-item ${s.nav_item} mx-2 mb-10 flex items-center justify-center ${href == item.href ? "bg-$primary text-white" : ""}`} role="presentation">
+          className={`nav-item ${s.nav_item} mx-2 mb-4 flex items-center justify-center ${href == item.href ? "bg-$primary text-white" : "text-$37 border-$af bg-$fa"}`} role="presentation">
             <a
               onMouseEnter={() => enter(item.href)}
-              className={`${href == item.href ? "text-white" : ""}  p-0`}
+              className={`${href == item.href ? "text-white" : ""}  p-0 font_size_30`}
               href={item.href}
             >
               {item.name}

@@ -9,7 +9,7 @@ import IremoQuality from "../IremoQuality";
 
 export default function index() {
   return (
-    <div className="tab-content border-top" id="pills-tabContent">
+    <div className="tab-content border-pc-top" id="pills-tabContent">
       <IremoVideo />
       <IremoApperance />
       <IremoUsefn />

@@ -35,7 +35,7 @@ export default function index() {
          <img
          key={index}
          src={item}
-         className={`${s.m_img} img-fluid bg-$f4 relative hover:bg-white `}
+         className={`${s.m_img} ${index%3==2?'border-right':''} ${index>14?'border-bottom':''} border-left border-top img-fluid bg-$f4 relative hover:bg-white `}
        ></img> 
         )}
 

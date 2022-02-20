@@ -17,7 +17,9 @@ module.exports = {
         $86:'#868686',
         $37:'#373737',
         $ec:'#ececec',
-        $f4:'#f4f4f4'
+        $f4:'#f4f4f4',
+        $af:'#afafaf',
+        $fa:'#fafafa'
       },
       pointerEvents: ["hover", "focus"],
     },

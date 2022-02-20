@@ -19,7 +19,7 @@ export default function index({title,img_src='',handleShow}) {
         {list.map(item => (<div onClick={()=>handleShow(true)} className={`${s.img_wrap}`}>
           <div className={`${s.img} relative`}>
             <img
-              className="img-fluid w-100 h-100"
+              className="w-100 h-100"
               src={img_src}
             />
             <div className={`absolute ${s.sm_img_wrap}`}>

@@ -14,7 +14,7 @@ export default function index() {
         <ul className="nav w-100 nav-pills  flex justify-center items-center">
           <li className={`d-center mx-3`} onClick={() => setIndex(1)}>
             <span
-              className={`${s.m_link} ${
+              className={`${s.m_link} px-4 ${
                 index == 1 ? s.active : ""
               } flex items-center justify-center`}
             >

@@ -23,15 +23,15 @@ export default function index() {
           }
         />
       </div>
-      <div className={`w-100  mobile:hidden flex-col items-center justify-center ${styles.content}`}>
+      <div className={`w-100 flex  mobile:hidden flex-col items-center justify-center ${styles.content}`}>
         <div className={`${styles.item_wrap_2} flex items-center justify-center flex-col text-center`}>
           <img
-            className={`${styles.content_item_2} img-fluid`}
+            className={`${styles.m_content_item_2} img-fluid`}
             src="/assets/2560/product/iremo/certificate_2.png"
           ></img>
           <span className={`${styles.desc}`}>医疗器械生产许可证</span>
         </div>
-        <div className="flex items-start justify-around mt-5">
+        <div className={`flex items-start justify-between mt-5 ${styles.m_content_item_2}`}>
           <div className={`text-center`}>
             <img
               className={`${styles.content_item_1} img-fluid`}

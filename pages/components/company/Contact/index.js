@@ -18,7 +18,7 @@ export default function index() {
           ></img>
           <div className={`flex flex-col ${s.address}`}>
             <span>技术服务热线：（021）31076003</span>
-            <span>研发中心：上海市宝山区上大路99号</span>
+            <span>研发中心：上海市宝山区环上大科技园 1号基地21号楼7层</span>
             <span>
               生产中心：中国（上海）自由贸易试验区临港新片区新杨公路1566号12号楼301室
             </span>
@@ -36,7 +36,7 @@ export default function index() {
           ></img>
           <div className={`flex flex-col ${s.address}`}>
             <span className="font_24">技术服务热线：（021）31076003</span>
-            <span className="font_24">研发中心：上海市宝山区上大路99号</span>
+            <span className="font_24">研发中心：上海市宝山区环上大科技园 1号基地21号楼7层</span>
             <span className="font_24">
               生产中心：中国（上海）自由贸易试验区临港新片区新杨公路1566号12号楼301室
             </span>
@@ -58,7 +58,11 @@ export default function index() {
               </div>
               {/* <textarea className={`${s.m_textarea}`} name="" id="" cols="30" rows="10"></textarea> */}
           </div>
+          
       </div>
+      <div className={`w-100 mobile:hidden flex text-center justify-center`}>
+            <button className={`m-sub-btn bg-$primary hover:bg-yellow-400 `}>提交</button>
+          </div>
         <div className={`${s.item} hidden mobile:flex flex-col mr-3 justify-center`}>
           <div>
             <span className="c_title font_24 font-black">咨询请留下您的信息</span>
@@ -86,11 +90,12 @@ export default function index() {
               placeholder="备注："
             />
           </div>
-          <div className="mt-3 w-100  flex items-center justify-center ">
+          <div className="mt-3 w-100 hidden   mobile:flex items-center justify-center ">
             <button className={`${s.btn} flex items-center justify-center mr-5 hover:bg-yellow-300 rounded bg-$primary text-white`}>
               立即提交
             </button>
           </div>
+          
         </div>
       </div>
     </div>

@@ -5,10 +5,10 @@ export default function product() {
   return (
     <>
       <NavBar />
-      <div className="contianer-fluid h-screen pt_104 flex items-center justify-center w-100">
+      <div className="contianer-fluid mobile:h-screen pt_104 flex items-center justify-center w-100">
         <div className="flex h-100 flex-col px-5" style={{maxWidth:'1600px'}}>
           <h1 className="text-4xl flex font-extrabold justify-center my-20">上海金矢机器人科技有限公司网站法律声明</h1>
-          <div className="flex legal flex-col text-$color justify-between flex-1 font_30 pb-5" >
+          <div className="flex legal flex-col text-$color justify-between flex-1 font_30 pb-5 px-3" >
             <p>为了规范网站管理，依法保障本网站所有者的合法权利，上海金矢机器人科技有限公司特作出以下法律声明。本法律声明阐述之条款和条件适用于所有访问和使用金矢机器人官方网站的个人或机构。</p>
             <p>1.本网站为金矢机器人公司的官方网站，任何访问和使用本网站的个人或机构必须遵守有关法律法规，不得借助本网站的传播能力，从事非法活动。</p>
             <p>2.本网站的一切内容都是为了更好地服务受众，本网站不保证所有信息、文本、图形、链接及其它项目的绝对准确性和完整性，内容仅供访问者访问了解金矢机器人品牌，本网站对因使用本网站内容而产生的相关后果不承担任何商业和法律责任。</p>
@@ -29,7 +29,6 @@ export default function product() {
           </div>
         </div>
       </div>
-
     </>
   );
 }

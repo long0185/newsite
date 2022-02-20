@@ -77,16 +77,17 @@ export default function Footer() {
           </span>
           <span className="mx-3">|</span>
           <Link href={'/legal-declaration'} >
-            <span className="mr-3 cursor-pointer">法律声明</span>
+            <span className="mx-3 cursor-pointer">法律声明</span>
           </Link>
           <span className="mx-3">|</span>
           <Link href={'https://www.irego.cn/monitor/#/Login'} >
-            <span className="mr-3 cursor-pointer">金矢机器人云平台</span>
+            <span className="mx-3 cursor-pointer">金矢机器人云平台</span>
           </Link>
           <span className="mx-3">|</span>
           <Link href={'https://www.irego.cn/monitor/#/Login'} >
-            <span className="mr-3 cursor-pointer">后台登录</span>
+            <span className="mx-3 cursor-pointer">后台登录</span>
           </Link>
+          <span className="mx-3">|</span>
         </div>
         <div className={` h-100   right-0  absolute z-20 ${s.right} `}>
           <div>

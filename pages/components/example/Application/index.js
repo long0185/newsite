@@ -143,7 +143,7 @@ const ApplicationCard = ({ title = "", date = "", view = "" }) => {
 };
 
 export default function index() {
-  const [list, setList] = useState([1]);
+  const [list, setList] = useState([1,2,3,4]);
 
   return (
     <>
@@ -202,42 +202,19 @@ export default function index() {
             />
           </div>
         </div>
-        {list.map((item, index) => (
-          <>
-            <div key={index} className="w-100 p-0 d-center">
-              <div className={`${s.content_2} flex justify-between`}>
-                <ApplicationCard_2
+        <div className="w-100 p-0 d-center">
+              <div className={`${s.content_2} flex justify-center flex-wrap `}>
+              {list.map((item, index) => <ApplicationCard_2
                   title="岳阳医院患者效果标题标题标题题标题标题标 标题标题"
                   date="2020年7月25日"
                   view="231"
-                />
-                <ApplicationCard_2
-                  title="岳阳医院患者效果标题标题标题题标题标题标 标题标题"
-                  date="2020年7月25日"
-                  view="231"
-                />
+                /> )}
               </div>
-            </div>
-            <div className="w-100 p-0 d-center">
-              <div className={`${s.content_2} flex justify-between`}>
-                <ApplicationCard_2
-                  title="岳阳医院患者效果标题标题标题题标题标题标 标题标题"
-                  date="2020年7月25日"
-                  view="231"
-                />
-                <ApplicationCard_2
-                  title="岳阳医院患者效果标题标题标题题标题标题标 标题标题"
-                  date="2020年7月25日"
-                  view="231"
-                />
               </div>
-            </div>
-          </>
-        ))}
         <div className="w-100 flex items-center justify-center mt_100">
           <div className="flex">
             <button
-              onClick={() => setList([...list, 1])}
+              onClick={() => setList([...list, 1,2])}
               className="l_btn hover:bg-yellow-300"
             >
               Show more

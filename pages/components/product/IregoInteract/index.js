@@ -9,9 +9,9 @@ export default function index() {
     >
       <Banner img={"/assets/newtitle/irego/title_4.png"}></Banner>
       <div className="p-0 flex w_1978 flex-col mobile:flex-row items-center mobile:items-start justify-between">
-        <div className="flex flex-col ">
-          <span className="font_43 interact-big-title font-black ">医生端</span>
-          <span className="font_size_36 h-28 text-white interact-sm-title">
+        <div className="flex flex-col">
+          <span className="font_43 interact-big-title font-black">医生端</span>
+          <span className="font_size_24 mobile:h-28 text-white interact-sm-title">
             远程训练计划的制定,查看训练报告,为医生提供更加智能化、精准化的工作平台。
           </span>
           <img
@@ -19,9 +19,9 @@ export default function index() {
             src="/assets/2560/product/irego/doctor.png"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mt-3 mobile:0">
           <span className="font_43 interact-big-title font-black">用户端</span>
-          <span className="font_size_36 h-28 text-white interact-sm-title">
+          <span className="font_size_24 mobile:h-28 text-white interact-sm-title">
             及时训,无需医生陪伴,训练中采集和存储数据,完成后自动生成报告,为患者提供更优质可靠的康复训练数据。
           </span>
           <img
@@ -39,7 +39,7 @@ export default function index() {
           <span className="font_43 interact-big-title font-black mb-4">人性化设计</span>
           <div className="w-100 flex flex-col mobile:flex-row justify-between">
             <div className="flex items-center mb-3 mobile:mb-0 m_w_910 ">
-              <div className="p-0 text-center h-100 ">
+              <div className="p-0 text-center h-100">
                 <img
                   className="relative h-100 block"
                   src="/assets/2560/product/irego/interact_1.png"
@@ -48,7 +48,7 @@ export default function index() {
                   骨盆宽度可调
                 </span>
               </div>
-              <div className="p-0 h-100 text-center">
+              <div className="p-0 h-100 text-center ml-0 mobile:ml-1">
                 <img
                   className="block h-100 relative "
                   src="/assets/2560/product/irego/interact_2.png"
@@ -59,14 +59,14 @@ export default function index() {
               </div>
             </div>
             <div className="flex items-center mb-3 mobile:mb-0 m_w_910">
-              <div className="p-0 text-center h-100 ">
+              <div className="p-0 text-center h-100 ml-0 mobile:ml-1 ">
                 <img
                   className="block relative h-100"
                   src="/assets/2560/product/irego/interact_3.png"
                 ></img>
                 <span className="friendly-span block text-white mt-3">扫脸登录</span>
               </div>
-              <div className="p-0 text-center h-100">
+              <div className="p-0 text-center h-100 ml-0 mobile:ml-1">
                 <img
                   className="relative h-100"
                   src="/assets/2560/product/irego/user-friendly_4.png"

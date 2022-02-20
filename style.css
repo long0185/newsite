@@ -521,6 +521,7 @@ main {
   width: 67px;
   height: 43px;
   line-height: 43px;
+  font-size: 20px;
   text-align: center;
 }
 .main_bg {
@@ -645,6 +646,12 @@ img{
 .w_910 {
   width: 910px;
 }
+.w_880{
+  width: 880px!important;
+}
+.w_375{
+  width: 375px;
+}
 .h_424 {
   height: 424px !important;
 }
@@ -656,6 +663,9 @@ img{
 }
 .w_567 {
   width: 567px !important;
+}
+.h_878{
+  height: 878px;
 }
 .h_454 {
   height: 454px !important;
@@ -731,6 +741,9 @@ img{
 .pb_200 {
   padding-bottom: 200px !important;
 }
+.pb_63{
+  padding-bottom: 63px;
+}
 .calendar-icon {
   width: 15px;
   height: 15px;
@@ -771,10 +784,6 @@ img{
   width: 257px;
   height: 56px;
   border-radius: 3px;
-  background-color: #caa95c;
-  border: none;
-  color: #fff;
-  font-size: 21px;
 }
 .h_67 {
   height: 67px;
@@ -810,11 +819,7 @@ img{
 .font_size_24 {
   font-size: 24px;
 }
-.legal > p {
-  line-height: 30px;
-  /* margin: 5px 0; */
-  font-size: 16px;
-}
+
 .w_193 {
   height: 193px !important;
 }
@@ -840,16 +845,20 @@ img{
   background-size: 30px;
   background-position-x: right;
 }
+.font_size_20{
+  font-size: 20px;
+}
 #m-select {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   outline: none;
   border: none;
+  /* border-bottom: 1px solid #ccc; */
   background: url("/assets/2560/service/train/pull.svg") no-repeat scroll 90%
     center transparent;
-  padding-bottom: 12px;
-  background-size: 60px;
+  padding-bottom: 6px;
+  background-size: 45px;
   background-position-x: right;
 }
 select::-ms-expand {
@@ -954,7 +963,11 @@ li.nav-item {
 }
 .m_use-fun-item {
   width: 1008px;
-  height: 1476px;
+  height: 1276px;
+}
+.m_use-fun-item_1 {
+  width: 1008px;
+  height: 1426px;
 }
 .font_43 {
   font-size: 43px;
@@ -1203,13 +1216,49 @@ li.nav-item {
 .border-top{
   border-top: 1px solid #ccc;
 }
-
-
+.border-left{
+  border-left: 1px solid #ccc;
+}
+.border-right{
+  border-right: 1px solid #ccc;
+}
+.w_561{
+  width: 561px;
+}
+.pt_43{
+  padding-top: 43px;
+}
 .interact-sm-title{
   width: 902px;
 }
-
+.m-sub-btn{
+    margin-top: 50px;
+    width: 375px;
+    height: 91px;
+    border-radius: 15px;
+    border: solid 2px #caa95c;
+    border: none;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 43px;
+}
+.legal > p {
+  line-height: 50px;
+  /* margin: 5px 0; */
+  font-size: 24px;
+}
+.w-30{
+  width: 30%!important;
+}
 @media screen and (min-width: 1080px) {
+  .border-pc-top{
+    border-top: 1px solid #ececec;
+  }
+  .legal > p {
+    line-height: 30px;
+    /* margin: 5px 0; */
+    font-size: 20px;
+  }
   .w_1978 {
     width: 1978px;
   }

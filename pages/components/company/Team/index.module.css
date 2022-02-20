@@ -15,15 +15,23 @@
   height: 196px;
   /* border: solid 3px #e9e5e4; */
 }
+.m_img{
+  width: 280px;
+	height: 287px;
+}
 .manager {
   width: 286px;
   height: 447px;
   box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
   border-radius: 6px;
 }
-.wrap {
-  padding: 0 129px;
+
+@media screen and (min-width: 1080px){
+  .wrap {
+    padding: 0 129px;
+  }
 }
+
 .expert {
   /* margin-top: 80px; */
   margin-bottom: 60px;
@@ -62,10 +70,29 @@
 .teamer{
   width: 506px;
 	height: 260px;
-	box-shadow: 0px 15px 30px 0px 
+	box-shadow: 0px 15px 12px 0px 
 		rgba(1, 1, 1, 0.2);
 	border-radius: 6px;
 }
 .point{
   font-size: 30px;
+}
+
+.m_ceo{
+  width: 962px;
+	height: 360px;
+	box-shadow: 0px 15px 12px 0px 
+		rgba(1, 1, 1, 0.2);
+	border-radius: 6px;
+}
+.m_teamer{
+  width: 468px;
+	height: 716px;
+	box-shadow: 0px 15px 15px 0px 
+		rgba(1, 1, 1, 0.2);
+	border-radius: 6px;
+}
+.m_img{
+  width: 400px;
+	height: 400px;
 }

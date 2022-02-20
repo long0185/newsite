@@ -2,8 +2,9 @@
   width: 100vw;
   height: 1311px;
   background-image: url("/assets/2560/Innovate/new_iremo.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  overflow: auto;
 }
 .top_img {
   margin-top: 80px;
@@ -20,7 +21,6 @@
   height: 1094px;
   background-image: url("/assets/mobile/innovate/bg_2.png");
   background-size: cover;
-  background-origin: content-box;
   background-repeat: no-repeat;
 }
 .m_top_img {

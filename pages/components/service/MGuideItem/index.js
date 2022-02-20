@@ -21,15 +21,13 @@ const list = [{
   video_src: '/assets/2560/service/useguide/play.png'
 }]
 export default function index({title,img_src='',handleShow}) {
-
-  
   return (
     <div className='flex flex-col items-center' style={{width:'100vw'}} >
-      <div className={`flex flex-wrap w_1100 items-center justify-around`}>
-        {list.map((item,index) => (<div key={index} onClick={()=>handleShow(true)} className={`${s.img_wrap} mt-32`}>
+      <div className={`flex flex-wrap w_1100 items-center justify-center pb_43`}>
+        {list.map((item,index) => (<div key={index} onClick={()=>handleShow(true)} className={`${s.img_wrap} mt_63 mx-3`}>
           <div className={`${s.img} relative`}>
             <img
-              className="img-fluid w-100 h-100"
+              className=" w-100 h-100"
               src={img_src}
             />
             <div className={`absolute ${s.sm_img_wrap}`}>

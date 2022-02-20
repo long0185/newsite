@@ -16,10 +16,10 @@ export default function index() {
             <span className={`${s.label} text-$37 font_30`}>联系人信息</span>
             <span className={`${s.m_line}`}></span>
             <div
-              className={`input-group input-group-lg flex  align-items-end ${s.input_1}`}
+              className={`input-group input-group-lg flex items-end ${s.input_1} border-bottom`}
             >
               <span
-                className={`${s._label} text-$68  w-25 font_24`}
+                className={`${s._label} text-$68  w-30 font_24`}
                 id="inputGroup-sizing-lg"
               >
                 联系人
@@ -32,13 +32,29 @@ export default function index() {
               />
             </div>
             <div
-              className={`input-group input-group-lg flex  align-items-end ${s.input_1}`}
+              className={`input-group input-group-lg flex  items-end border-bottom ${s.input_1}`}
             >
               <span
-                className={`${s._label} text-$68 w-25`}
+                className={`${s._label} text-$68 w-30`}
                 id="inputGroup-sizing-lg"
               >
                 联系地址
+              </span>
+              <input
+                type="text"
+                className={`${s.input_item} form-control border-none border-bottom`}
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg"
+              />
+            </div>
+            <div
+              className={`input-group input-group-lg flex  items-end border-bottom ${s.input_1}`}
+            >
+              <span
+                className={`${s._label} text-$68 w-30`}
+                id="inputGroup-sizing-lg"
+              >
+                联系电话
               </span>
               <input
                 type="text"
@@ -52,31 +68,30 @@ export default function index() {
             <span className={`${s.label} font_30 text-$37`}>预约详情</span>
             <span className={`${s.line}`}></span>
             <div
-              className={`input-group input-group-lg flex  align-items-end ${s.input_1}`}
+              className={`input-group input-group-lg flex items-end border-bottom ${s.input_1}`}
             >
               <span
-                className={`${s._label} text-$68 w-25`}
+                className={`${s._label} text-$68 w-30`}
                 id="inputGroup-sizing-lg"
               >
                 选择产品
               </span>
               <select
                 id="m-select"
-                className={`${s.input_item} flex-1 border-none border-bottom`}
+                className={`${s.input_item}`}
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-lg"
               >
-                <option value="irego"></option>
                 <option value="irego">irego</option>
                 <option value="irego">iremo</option>
                 <option value="irego">irecog</option>
               </select>
             </div>
             <div
-              className={`input-group input-group-lg flex  align-items-end ${s.input_1}`}
+              className={`input-group input-group-lg flex items-end border-bottom ${s.input_1}`}
             >
               <span
-                className={`${s._label} w-25 text-$68`}
+                className={`${s._label} w-30 text-$68`}
                 id="inputGroup-sizing-lg"
               >
                 意向上门时间
@@ -110,13 +125,13 @@ export default function index() {
           <button className={`${s.m_btn} bg-$primary hover:bg-yellow-400 `}>提交</button>
         </div>
       </div>
-      <div className={`${s.content} hidden  mobile:flex  pt-3 pl-5  `}>
-        <div>
-          <div className={`${s.info_1} flex flex-col`}>
+      <div className={`${s.content} hidden items-center justify-between  mobile:flex`}>
+        <div className={`${s.left} flex flex-col h-100`}>
+          <div className={`${s.info_1} flex flex-col mb_43 justify-around items-start w-100`}>
             <span className={`${s.label} font-extrabold`}>联系人信息</span>
             <span className={`${s.line}`}></span>
             <div
-              className={`input-group input-group-lg flex justify-between ${s.input_1}`}
+              className={`input-group border-bottom w-100 input-group-lg flex justify-between ${s.input_1}`}
             >
               <span
                 className={`${s._label} text-$68  w-25`}
@@ -126,13 +141,13 @@ export default function index() {
               </span>
               <input
                 type="text"
-                className={`${s.input_item} form-control border-none border-bottom`}
+                className={`${s.input_item} form-control border-none `}
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-lg"
               />
             </div>
             <div
-              className={`input-group input-group-lg flex justify-between ${s.input_1}`}
+              className={`input-group input-group-lg flex justify-between w-100 ${s.input_1} border-bottom`}
             >
               <span
                 className={`${s._label} text-$68 w-25`}
@@ -142,17 +157,33 @@ export default function index() {
               </span>
               <input
                 type="text"
-                className={`${s.input_item} form-control border-none border-bottom`}
+                className={`${s.input_item} form-control border-none `}
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg"
+              />
+            </div>
+            <div
+              className={`input-group input-group-lg flex justify-between w-100 ${s.input_1} border-bottom`}
+            >
+              <span
+                className={`${s._label} text-$68 w-25`}
+                id="inputGroup-sizing-lg"
+              >
+                联系电话
+              </span>
+              <input
+                type="text"
+                className={`${s.input_item} form-control border-none `}
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-lg"
               />
             </div>
           </div>
-          <div className={`${s.info_2} flex flex-col`}>
+          <div className={`${s.info_2} flex flex-col justify-center items-start`}>
             <span className={`${s.label} font-extrabold`}>预约详情</span>
             <span className={`${s.line}`}></span>
             <div
-              className={`input-group input-group-lg flex  jusity-between ${s.input_1}`}
+              className={`input-group input-group-lg flex w-100 jusity-between ${s.input_1} border-bottom`}
             >
               <span
                 className={`${s._label} text-$68 w-25`}
@@ -162,18 +193,17 @@ export default function index() {
               </span>
               <select
                 id="select"
-                className={`${s.input_item} border-bottom`}
+                className={`${s.input_item}`}
                 aria-label="Sizing example input text-center"
                 aria-describedby="inputGroup-sizing-lg"
               >
-                <option value="irego"></option>
                 <option value="irego">irego</option>
                 <option value="iremo">iremo</option>
                 <option value="irecog">irecog</option>
               </select>
             </div>
             <div
-              className={`input-group input-group-lg flex  justify-between ${s.input_1}`}
+              className={`input-group input-group-lg w-100 flex  justify-between ${s.input_1} border-bottom`}
             >
               <span
                 className={`${s._label} w-25 text-$68`}
@@ -183,20 +213,20 @@ export default function index() {
               </span>
               <input
                 type="text"
-                className={`${s.input_item} form-control border-none border-bottom`}
+                className={`${s.input_item} form-control border-none`}
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-lg"
               />
             </div>
           </div>
         </div>
-        <div className={`${s.right} relative `}>
+        <div className={`${s.right} h-100 relative border `}>
           <textarea
             onFocus={() => setShow(true)}
             onBlur={() => setShow(false)}
             placeholder="请输入备注："
             rows={10}
-            className={`${s.textarea} font_30 absolute top-0 bottom-0 right-0 left-0 focus:border placeholder:text-$68 placeholder:font_24 ml-2  mt-10 w-100 outline-none`}
+            className={`${s.textarea} w-100 h-100 font_30  focus:border placeholder:text-$68 placeholder:font_24 outline-none`}
           />
           <span
             className={`${s.tips} ${

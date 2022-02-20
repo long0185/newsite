@@ -27,9 +27,10 @@
 }
 .title {
   width: 492px;
-  height: 126px;
-  padding-top: 30px;
-  padding-left: 28px;
+  /* height: 166px; */
+  /* padding-top: 30px;
+  padding-left: 28px; */
+  padding: 28px;
 }
 .big_title {
   font-size: 26px;

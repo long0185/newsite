@@ -30,6 +30,24 @@ const expert_list = [
     date:'2021年7月23日',
     view:231
   },
+  {
+    name: "陈武雄",
+    title: "医学专家",
+    sub_title: "专家顾问 / 康复医学主任",
+    desc: "访谈标题访谈标题访谈标题访谈标题访谈标题",
+    img_src: "/assets/2560/info/expert/p_1.png",
+    date:'2021年7月23日',
+    view:231
+  },
+  {
+    name: "陈武雄",
+    title: "医学专家",
+    sub_title: "专家顾问 / 康复医学主任",
+    desc: "访谈标题访谈标题访谈标题访谈标题访谈标题",
+    img_src: "/assets/2560/info/expert/p_1.png",
+    date:'2021年7月23日',
+    view:231
+  },
 ];
 export const MExpercard = ({key=null,img_src = "",
 name = "",

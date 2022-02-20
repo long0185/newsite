@@ -22,8 +22,14 @@
 .content {
 }
 .content_item {
-  width: 395px;
-  height: 499px;
+  width: 455px;
+  height: 510px;
+}
+@media screen and (min-width: 1080px){
+  .content_item {
+    width: 395px;
+    height: 499px;
+  }
 }
 
 .modal {

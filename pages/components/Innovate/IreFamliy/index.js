@@ -12,7 +12,7 @@ export default function index() {
           src="/assets/2560/Innovate/ire_logo.png"
           className={`${s.img_wrap} relative`}
         />
-        <div className={`${s.text} flex flex-col`}>
+        <div className={`${s.text} flex justify-center flex-col mt-16 mobile:mt-0 mobile:ml-16`}>
           <span className={`font_30 font-extrabold block`}>“爱睿家”</span>
           <span className={`${s.line} block`}></span>
           <span className={`${s.desc} leading-10`}>

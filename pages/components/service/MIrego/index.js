@@ -28,7 +28,7 @@ export default function index() {
   return (
     <>
       {show && <VideoModal list={[]} handleShow={handleShow}/>}
-    <div className={`w-100 d-center flex-col mt_63`}>
+    <div className={`w-100 d-center flex-col`}>
       <div className={`${s.warp} w-screen flex overflow-hidden relative`}> 
         <motion.div
           animate={{
@@ -44,7 +44,7 @@ export default function index() {
         </motion.div>
       </div>
 
-      <div className="flex mt_118">
+      <div className="flex mt_100">
         <div onClick={() => setNum(0)} className={`${s.slide} ${num == 0 ? 'bg-$primary' : 'bg-$gray'}  cursor-pointer`}></div>
         <div onClick={() => setNum(1)} className={`${s.slide} ${num == 1 ? 'bg-$primary' : 'bg-$gray'}  mx-5 cursor-pointer`}></div>
         <div onClick={() => setNum(2)} className={`${s.slide} ${num == 2 ? 'bg-$primary' : 'bg-$gray'}  cursor-pointer`}></div>

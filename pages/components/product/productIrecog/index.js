@@ -22,8 +22,8 @@ export default function ProductIRego() {
             "/assets/2560/product/irego/thum_2.png",
           ]}
           banners={[
-            "/assets/mobile/product/irego/banner_01.png",
-            "/assets/mobile/product/irego/banner_01.png",
+            "/assets/mobile/product/irecog/banner_01.png",
+            "/assets/mobile/product/irecog/banner_01.png",
           ]}
         />
       </div>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-import Head from "next/head";
 import { motion } from "framer-motion";
 import Carousel from "./components/Home/Carousel";
 
@@ -95,6 +94,20 @@ class PC extends React.Component {
 
     return (
         <div className="hidden mobile:block App">
+          {/* <motion.div
+            className={`${s.modal} fixed flex items-center justify-center bottom-0 top-0 left-0 right-0 border bg-gray-200`}
+            animate={{
+              scale:5,
+              opacity:0,
+              display:"none"
+            }}
+            transition={{
+              delay:3,
+              duration:.8,
+            }}
+          >
+            <Modal/>
+          </motion.div> */}
           <Menu />
           <ReactFullpage
             scrollingSpeed={1000}

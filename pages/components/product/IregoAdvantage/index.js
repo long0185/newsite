@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
 import Banner from "../../Banner";
+import { motion } from "framer-motion";
 const list = [
   "/assets/2560/product/irego/advantage_1.png",
   "/assets/2560/product/irego/product_2.png",
@@ -8,8 +9,25 @@ const list = [
   "/assets/2560/product/irego/product_4.png",
 ];
 export default function index() {
+  // const [isAnimate, setIsAnimate] = useState(false);
+  const dom = useRef();
+  // const bindHandleScroll = () =>{
+  //   const height = document.body.clientHeight;
+  //   const top = dom.current.getBoundingClientRect().top;
+  //   console.log('top', top,height)
+  //   if(top>=0 && top<=height ){
+  //     setIsAnimate(true) 
+  //   }else{
+  //     setIsAnimate(false)
+  //   }
+  // }
+  // useEffect(() => {
+  //   window.addEventListener('scroll',bindHandleScroll)
+  //   return () => window.removeEventListener('scroll',bindHandleScroll)
+  // }, []);
   return (
     <div
+      ref={dom}
       id="advantage"
       className={`${styles.wrap} w-100 flex flex-col items-center`}
     >
@@ -26,7 +44,7 @@ export default function index() {
       />
       <div className={`w-100 flex flex-wrap items-center justify-center  ${styles.content}`}>
         {list.map((item, index) => (
-          <div
+          <motion.div
             key={index}
             className={`${styles.content_item} relative`}
           >
@@ -48,7 +66,7 @@ export default function index() {
               </span>
               <span className={`${styles.desc_text_4}`}>摆的位移量</span>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

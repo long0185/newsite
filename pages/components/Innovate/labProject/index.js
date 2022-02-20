@@ -39,7 +39,7 @@ export default function index() {
             className="w-100 h-100 absolute z-10"
           />
           <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
-            <span className=" top-8 bg-black  text-center py-3 w-100">
+            <span className=" top-8 font_size_24 bg-black  text-center py-3 w-100">
               {item.desc}
             </span>
           </div>
