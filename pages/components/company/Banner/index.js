@@ -205,7 +205,7 @@ export default function index() {
           src="/assets/2560/company/sec.png"
           className={`${s.banner_img} relative mt_118`}
         ></img>
-        <div className={`${s.m_banner_text} mt-5`}>
+        <div className={`${s.m_banner_text} mt-16`}>
           <span className={`${s.title} px-2 py-1 ml-2 font_30`}>公司简介</span>
           <span className={`${s.desc} leading-loose font_30`}>
             上海金矢机器人科技有限公司是专业从事肢体康复机器人研发、生产、销售为一体的高科技公司。基于大数据、云计算、5G通讯技术，已完成下肢、上肢、认知等多款智能康复机器人研发，形成了软硬件结合的整套肢体康复解决方案。

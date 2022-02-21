@@ -79,16 +79,19 @@
 }
 
 .m_ceo{
-  width: 962px;
-	height: 360px;
-	box-shadow: 0px 15px 12px 0px 
+  width: 942px;
+	/* height: 360px; */
+  padding: 18px;
+  margin: 0 20px;
+  margin-top: 63px;
+	box-shadow: 3px 15px 18px 7px 
 		rgba(1, 1, 1, 0.2);
 	border-radius: 6px;
 }
 .m_teamer{
   width: 468px;
 	height: 716px;
-	box-shadow: 0px 15px 15px 0px 
+	box-shadow: 3px 15px 15px 7px 
 		rgba(1, 1, 1, 0.2);
 	border-radius: 6px;
 }

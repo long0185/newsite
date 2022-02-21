@@ -10,16 +10,16 @@ export default function index() {
       <Banner img={"/assets/2560/service/maintain/title.png"} />
       <div className="mobile:hidden w-100 flex flex-col items-center justify-center ">
         <div
-          className={`${s.m_content} h_1474 flex flex-col items-center justify-between`}
+          className={`${s.m_content} flex flex-col items-center justify-between`}
         >
           <div className={`${s.m_info_1} flex flex-col`}>
-            <span className={`${s.label} text-$37 font_30`}>联系人信息</span>
+            <span className={`${s.label} text-$37 font_36`}>联系人信息</span>
             <span className={`${s.m_line}`}></span>
             <div
               className={`input-group input-group-lg flex items-end ${s.input_1} border-bottom`}
             >
               <span
-                className={`${s._label} text-$68  w-30 font_24`}
+                className={`${s._label} text-$68 w-30 font_30`}
                 id="inputGroup-sizing-lg"
               >
                 联系人
@@ -65,7 +65,7 @@ export default function index() {
             </div>
           </div>
           <div className={`${s.m_info_2} flex flex-col`}>
-            <span className={`${s.label} font_30 text-$37`}>预约详情</span>
+            <span className={`${s.label} font_36 text-$37`}>预约详情</span>
             <span className={`${s.line}`}></span>
             <div
               className={`input-group input-group-lg flex items-end border-bottom ${s.input_1}`}
@@ -115,7 +115,7 @@ export default function index() {
             <span
               className={`${s.m_tips} ${
                 show ? "block" : "hidden"
-              } text-$68 absolute z-20`}
+              } text-$68 absolute z-20 font_size_24`}
             >
               最多不超过200字
             </span>

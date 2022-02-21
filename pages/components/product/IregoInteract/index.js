@@ -5,7 +5,7 @@ export default function index() {
   return (
     <div
       id="interact"
-      className={`bg_coffee  adavantageImga flex flex-col items-center justify-center`}
+      className={`bg_coffee flex flex-col items-center justify-center`}
     >
       <Banner img={"/assets/newtitle/irego/title_4.png"}></Banner>
       <div className="p-0 flex w_1978 flex-col mobile:flex-row items-center mobile:items-start justify-between">
@@ -41,16 +41,24 @@ export default function index() {
             <div className="flex items-center mb-3 mobile:mb-0 m_w_910 ">
               <div className="p-0 text-center h-100">
                 <img
-                  className="relative h-100 block"
+                  className="relative hidden h-100 mobile:block"
                   src="/assets/2560/product/irego/interact_1.png"
                 ></img>
-                <span className="friendly-span  block  text-white mt-3">
+                <img
+                  className="relative mobile:hidden"
+                  src="/assets/2560/product/irego/interact_1.png"
+                ></img>
+                <span className="friendly-span block  text-white mt-3">
                   骨盆宽度可调
                 </span>
               </div>
               <div className="p-0 h-100 text-center ml-0 mobile:ml-1">
                 <img
-                  className="block h-100 relative "
+                  className="hidden mobile:block relative h-100 "
+                  src="/assets/2560/product/irego/interact_2.png"
+                ></img>
+                <img
+                  className="block relative mobile:hidden"
                   src="/assets/2560/product/irego/interact_2.png"
                 ></img>
                 <span className="friendly-span block text-white mt-3">
@@ -68,7 +76,7 @@ export default function index() {
               </div>
               <div className="p-0 text-center h-100 ml-0 mobile:ml-1">
                 <img
-                  className="relative h-100"
+                  className="relative block h-100"
                   src="/assets/2560/product/irego/user-friendly_4.png"
                 ></img>
                 <span className="friendly-span block text-white mt-3">扫脸登录</span>

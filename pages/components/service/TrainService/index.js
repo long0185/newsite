@@ -11,19 +11,19 @@ const list = [
   },
   {
     id:2,
-    img_src:'/assets/2560/service/train/zj_train.svg',
+    img_src:'/assets/2560/service/train/jz_train.svg',
     title:'公司集中培训:',
     desc:'由研发人员、产品经理、临床治疗师组成讲师团队，定期举办培训班，为用户讲解原理，临床应用及新技术进展，系统化提高专业技术水平。'
   },
   {
     id:3,
-    img_src:'/assets/2560/service/train/zj_train.svg',
+    img_src:'/assets/2560/service/train/lc_train.svg',
     title:'联合临床培训:',
     desc:'与全国各治疗领域领衔专家，联合开展系列培训课程，针对临床应用，深度讲解，深入临床一线实践，提高临床操作水准。'
   },
   {
     id:4,
-    img_src:'/assets/2560/service/train/zj_train.svg',
+    img_src:'/assets/2560/service/train/learn_train.svg',
     title:'学术沙龙:',
     desc:'与用户单位共同开办学术沙龙，邀请专家、资深临床治疗师，协助用户单位成为地区标杆，扩展影响力。'
   },
