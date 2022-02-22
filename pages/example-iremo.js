@@ -9,7 +9,7 @@ const ExpampleIrego = () => {
         <div className="h_147 w-100 mobile:hidden flex justify-center items-center">
           <a
             className="font_36 text-$37 h_91 w_375 bg-white border-1 border-$primary flex items-center justify-center mr-4 rounded-lg"
-            href=""
+            href="/example-irego"
           >
             iReGo临床应用
           </a>
@@ -27,7 +27,7 @@ const ExpampleIrego = () => {
         />
         <img
           className=" mobile:hidden h_1236 w-100 img-fluid"
-          src="/assets/mobile/example/banner.png"
+          src="/assets/mobile/example/example.jpeg"
           alt=""
         />
       </div>

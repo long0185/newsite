@@ -122,7 +122,7 @@ const MangerCard = ({ img_src = "", name = "", title = "", desc = [] }) => {
   return (
     <>
       <div
-        className={`${s.m_teamer} mobile:hidden pt-7 flex flex-col justify-around items-center mb_43 mx-3`}
+        className={`${s.m_teamer} mobile:hidden pt-7 flex flex-col items-center mb_43 mx-3`}
       >
         <img src={img_src} className={`${s.m_img} relative`}></img>
         <div className="flex flex-col items-start w_400 px-3 flex-1 ">
@@ -131,7 +131,7 @@ const MangerCard = ({ img_src = "", name = "", title = "", desc = [] }) => {
           {desc.map((item, index) => (
             <span
               key={index}
-              className="span-point relative font_size_30 text-$86 pl-4 my-1"
+              className="m-span-point relative font_size_24 text-$86 pl-4 my-1"
             >
               {item}
             </span>
@@ -201,6 +201,7 @@ export default function index() {
           />
         ))}
       </div>
+      <div className="font_36 flex items-center">专家团队</div>
       <div
         className={`${s.expert} hidden w-screen mobile:flex items-center justify-center`}
       >
@@ -317,28 +318,29 @@ export default function index() {
             }}
             className="w-200 flex flex-col justify-around py-5"
           >
-            <div
+            <div>
+              <div
               className={`mobile:hidden ${s.m_ceo} flex items-center justify-around mb_43`}
             >
               <img
                 src="/assets/2560/company/gs.png"
-                className={`${s.m_img} relative`}
+                className={`${s.expert_m_img} relative`}
               ></img>
-              <div className="flex flex-col items-start w_561 px-3 py-3 pt-6 h-100 ">
+              <div className="flex flex-col items-start self-start flex-1 px-3 h-100 ">
                 <div className="flex items-center">
-                <span className="font_36 font-black mb-1">郭帅</span>
+                <span className="font_30 font-black mb-1">郭帅</span>
                 <span className="ml-3 font_size_30 px-3 py-1 bg-$primary text-white">工学专家</span>
                 </div>
                 <span className="font_30 text-$37 mb-1">
                 专家顾问 / 教授、博导
                 </span>
-                <span className="span-point relative font_size_30 text-$86 pl-3">
+                <span className="m-span-point relative font_size_24 text-$86 pl-3">
                 上海大学机电工程与自动化学院PI
                 </span>
-                <span className="span-point relative font_size_30 text-$86 pl-3">
+                <span className="m-span-point relative font_size_24 text-$86 pl-3">
                 上海机器人研究所副所长
                 </span>
-                <span className="span-point relative font_size_30 text-$86 pl-3">
+                <span className="m-span-point relative font_size_24 text-$86 pl-3">
                 中国康复技术转化与产业促进专业委员会
                 </span>
               </div>
@@ -348,9 +350,9 @@ export default function index() {
             >
               <img
                 src="/assets/2560/company/qianlaoshi.png"
-                className={`${s.m_img} relative`}
+                className={`${s.expert_m_img} relative`}
               ></img>
-              <div className="flex flex-col items-start w_561 px-3 py-3 pt-6 h-100 ">
+              <div className="flex flex-col flex-1 items-start px-3 h-100 ">
                 <div className="flex items-center">
                 <span className="font_30 font-black mb-1">钱楷</span>
                 <span className="ml-3 px-3 py-1 bg-$primary text-white">设计学专家</span>
@@ -358,18 +360,16 @@ export default function index() {
                 <span className="font_size_30 text-$37 mb-1">
                 专家顾问 / 设计总监、文化学者、艺术家
                 </span>
-                <span className="span-point relative font_size_30 text-$86 pl-3">
+                <span className="m-span-point relative font_size_24 text-$86 pl-3">
                 韩国文化部高级访问学者
                 </span>
-                <span className="span-point relative font_size_30 text-$86 pl-3">
+                <span className="m-span-point relative font_size_24 text-$86 pl-3">
                 韩国卡露文化高级艺术顾问
                 </span>
-                <span className="span-point relative font_size_30 text-$86 pl-3">
-                人工智能应用场景设计与人机交互（UI/UX）设计专家
-                </span>
-                <span className="span-point relative font_size_30 text-$86 pl-3">
+                <span className="m-span-point relative break-words font_size_24 text-$86 pl-3">人工智能应用场景设计与人机交互（UI/UX）设计专家</span>
+                {/* <span className="m-span-point relative font_size_24 text-$86 pl-3">
                 李克强总理及多国政要世博会安保证章设计者
-                </span>
+                </span> */}
               </div>
             </div>
             <div
@@ -377,9 +377,9 @@ export default function index() {
             >
               <img
                 src="/assets/2560/company/hxy.png"
-                className={`${s.m_img} relative`}
+                className={`${s.expert_m_img} relative`}
               ></img>
-              <div className="flex flex-col items-start w_561 px-3 py-3 pt-6 h-100 ">
+              <div className="flex flex-col flex-1 items-start px-3 h-100 ">
                 <div className="flex items-center">
                 <span className="font_30 font-black mb-1">华续赟</span>
                 <span className="ml-3 px-3 py-1 bg-$primary text-white">医学专家</span>
@@ -387,21 +387,22 @@ export default function index() {
                 <span className="font_size_30 text-$37 mb-1">
                 副教授 / 副主任医师、硕导
                 </span>
-                <span className="span-point relative font_size_30 text-$86 pl-3">
+                <span className="m-span-point relative font_size_24 text-$86 pl-3">
                 上海中医药大学附属岳阳医院骨伤研究所PI
                 </span>
-                <span className="span-point relative font_size_30 text-$86 pl-3">
+                <span className="m-span-point relative font_size_24 text-$86 pl-3">
                 中医智能康复教育部工程研究中心青年PI
                 </span>
-                <span className="span-point relative font_size_30 text-$86 pl-3">
-                中国康复医学会脑功能检测与调控专委会全国委员&青年工作组副组长
+                <span className="m-span-point relative font_size_24 text-$86 pl-3">
+                中国康复医学会脑功能检测与调控专委会全国委员
                 </span> 
               </div>
+            </div>
             </div>
           </motion.div>
         </div>
       </div>
-      <div className="w-100 justify-center flex mb_100">
+      <div className="w-100 justify-center mt-10 mobile:m-0 flex mb_100">
         <div
           onClick={() => setnum(-1)}
           className={`${s.slide} ${

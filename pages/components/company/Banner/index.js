@@ -262,7 +262,7 @@ export default function index() {
                 className={`${s.m_yellow} text-white flex flex-col absolute z-20 items-center justify-center`}
               >
                 <span
-                  className={`${s.big_title} font_size_30 text-white`}
+                  className={`${s.big_title} font_size_30 font-black text-white`}
                 >
                   愿景
                 </span>

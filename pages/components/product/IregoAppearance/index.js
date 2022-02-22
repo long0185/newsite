@@ -13,28 +13,28 @@ export default function index() {
             <span className="font_size_24 text-white">扁平式风格，简洁易懂</span>
           </div>
         </div>
-        <div className="relative w_910 h_375 mt_40">
+        <div className="relative w_910 h_375 mt_20">
           <img src={"/assets/2560/product/irego/detail_3.png"} />
           <div className={`absolute flex flex-col ${s.text_2} h-100`}>
             <span className="font_48 text-white font-extrabold">智能摇杆</span>
             <span className="font_size_24 text-white">双智能摇杆，满足不同患侧需求，减轻高难度运动风险</span>
           </div>
         </div>
-        <div className="relative w_910 h_375 mt_40">
+        <div className="relative w_910 h_375 mt_20">
           <img src={"/assets/2560/product/irego/detail_5.png"} />
           <div className={`absolute flex flex-col ${s.text_1} h-100`}>
             <span className="font_48 text-white font-extrabold">急停按钮</span>
             <span className="font_size_24 text-white">保证训练过程更加安全</span>
           </div>
         </div>
-        <div className="relative w_910 h_375 mt_40">
+        <div className="relative w_910 h_375 mt_20">
           <img src={"/assets/2560/product/irego/detail_2.png"} />
           <div className={`absolute flex flex-col ${s.text_2} h-100`}>
             <span className="font_48 text-white font-extrabold">全自由度骨盆支撑机构</span>
             <span className="font_size_24 text-white">提供所需减重力的同时，满足骨盆运动的需求</span>
           </div>
         </div>
-        <div className="relative w_910 h_375 mt_40">
+        <div className="relative w_910 h_375 mt_20">
           <img src={"/assets/2560/product/irego/detail_4.png"} />
           <div className={`absolute flex flex-col ${s.text_1} h-100`}>
             <span className="font_48 text-white font-extrabold">便携腰带</span>

@@ -183,6 +183,7 @@ export default function company() {
       <div className="w-100 mobile:hidden flex flex-col items-center">
         {list.map((item, index) => (
           <div
+          onClick={() => router.push("/job-detail")}
             key={index}
             className={`${s.m_job_item} flex flex-col justify-around mb_43`}
           >

@@ -7,7 +7,7 @@ export default function index({ children, classes = "" }) {
       <div className={`hidden mobile:flex w-980 text-center  flex-col ${classes}`}>
         {children}
       </div>
-      <div className={` mobile:hidden flex w_740 text-center  flex-col ${classes}`}>
+      <div className={` mobile:hidden flex w_740 text-center font_size_24 flex-col ${classes}`}>
         {children}
       </div>
     </div>

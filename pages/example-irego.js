@@ -15,7 +15,7 @@ const ExpampleIrego = () => {
           </a>
           <a
             className="font_36 text-$37 h_91 w_375 bg-white border-1 border-$primary   flex items-center justify-center ml-4 rounded-lg"
-            href=""
+            href="/example-iremo"
           >
             iReMo临床应用
           </a>

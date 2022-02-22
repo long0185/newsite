@@ -24,6 +24,30 @@ const variants = {
 		zIndex:10
 	}
 }
+const m_variants = {
+	left: {
+		translateX: '-85%',
+		scale: .8,
+		opacity:0,
+		background:'#e9e9e9',
+		zIndex:10
+	},
+	mid: {
+		translateX: 0,
+		scale: 1,
+		opacity:1,
+		background:'#fff',
+		zIndex:1000
+	},
+	right: {
+		translateX: '85%',
+		opacity:0,
+		scale: .8,
+		background:'#e9e9e9',
+		zIndex:10
+	}
+}
+
 
 let _list = [
 	{
@@ -37,13 +61,13 @@ let _list = [
 			<span className='text-$86 my-3'>2021年7月23日</span>
 		  </div>
 		</div>
-		<div className="flex items-center text-$86 font_size_18">
+		<div className="flex items-center text-$86 detail_desc">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
 		  <div className="w-50 bg-gray-600 h-96 border w-9/12"></div>
 		</div>
-		<div className="flex items-center mt-3 text-$86 font_size_18">
+		<div className="flex items-center mt-3 text-$86 detail_desc">
 		  <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
 		</div>
 		<div className="flex justify-center mt-3">
@@ -124,7 +148,7 @@ export default function applicationdetail() {
 	return <div>
 		<Navbar />
 		<div className="mt_104">
-		<div className={`${s.middle} bg-gray-300 opacity-100 pt_100 pb_100 z-10 w-screen flex items-center justify-center`}>
+		<div className={`${s.middle} bg-gray-300 opacity-100 pt_100 pb_100 z-10 w-screen hidden mobile:flex items-center justify-center`}>
 		<ul className={`${s.ul} h-100`}>
 			<div className={`absolute top_45 w-100 z-20 h-20`} >
 				<img onClick={() => handleClick('left')} className={`${s.left_icon} cursor-pointer h-100 absolute`} src='/assets/left-active.svg'  ></img>
@@ -139,6 +163,21 @@ export default function applicationdetail() {
 				<motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`} 
 				style={{zIndex:`${item?.id==1?'100':'10'}`}} 
 				variants={variants} animate={index<num?'left':index>num?'right':'mid'} >{item?.element}
+				</motion.li>)
+			}
+		</ul>
+	</div>	
+	<div className={`${s.m_middle} bg-gray-300 opacity-100 pt_100 pb_100 z-10 w-screen flex  mobile:hidden items-center justify-center`}>
+		<ul className={`${s.m_ul}  h-100`}>
+			<div 
+			className={`${s.back}  absolute w-100 flex justify-center items-center`}>
+				<button onClick={()=>router.back() } className={`${s.back_btn} mb_100 rounded  bg-$white text-$37 border border-$primary`}>返回列表</button></div>
+
+			{
+				Array.isArray(list) && list.length>0 && list.map((item,index) => 
+				<motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`} 
+				style={{zIndex:`${item?.id==1?'100':'10'}`}} 
+				variants={m_variants} animate={index<num?'left':index>num?'right':'mid'} >{item?.element}
 				</motion.li>)
 			}
 		</ul>

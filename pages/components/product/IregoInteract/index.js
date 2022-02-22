@@ -11,7 +11,7 @@ export default function index() {
       <div className="p-0 flex w_1978 flex-col mobile:flex-row items-center mobile:items-start justify-between">
         <div className="flex flex-col">
           <span className="font_43 interact-big-title font-black">医生端</span>
-          <span className="font_size_24 mobile:h-28 text-white interact-sm-title">
+          <span className="font_size_24 text-white interact-sm-title">
             远程训练计划的制定,查看训练报告,为医生提供更加智能化、精准化的工作平台。
           </span>
           <img
@@ -19,9 +19,9 @@ export default function index() {
             src="/assets/2560/product/irego/doctor.png"
           />
         </div>
-        <div className="flex flex-col mt-3 mobile:0">
+        <div className="flex flex-col mt-3 mobile:mt-0">
           <span className="font_43 interact-big-title font-black">用户端</span>
-          <span className="font_size_24 mobile:h-28 text-white interact-sm-title">
+          <span className="font_size_24 text-white interact-sm-title">
             及时训,无需医生陪伴,训练中采集和存储数据,完成后自动生成报告,为患者提供更优质可靠的康复训练数据。
           </span>
           <img

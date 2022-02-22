@@ -14,21 +14,21 @@ export default function index() {
             <span className="font_size_30 text-white">双智能摇杆，满足不同患侧需求，减轻高难度运动风险</span>
           </div>
         </div>
-        <div className="relative w_910 h_375 mt_40">
+        <div className="relative w_910 h_375 mt_20">
           <img src={"/assets/2560/product/iremo/detail_3.png"} />
           <div className={`absolute flex flex-col h-100 ${s.text_2}`}>
             <span className="font_48 text-white font-extrabold">急停按钮</span>
             <span className="font_size_30 text-white">手动急停按钮，让患者更放心</span>
           </div>
         </div>
-        <div className="relative w_910 h_375 mt_40">
+        <div className="relative w_910 h_375 mt_20">
           <img src={"/assets/mobile/product/iremo/detail_3.png"} />
           <div className={`absolute ${s.text_1} h-100 flex flex-col`}>
             <span className="font_48 text-white font-extrabold">六自由度机械臂</span>
             <span className="font_size_30 text-white">精心设计的安全护具，穿戴方便，固定快速</span>
           </div>
         </div>
-        <div className="relative w_910 h_375 mt_40">
+        <div className="relative w_910 h_375 mt_20">
           <img src={"/assets/mobile/product/iremo/detail_4.png"} />
           <div className={`absolute ${s.text_2} h-100 flex flex-col`}>
             <span className="font_48 text-white font-extrabold">四轮固定</span>
