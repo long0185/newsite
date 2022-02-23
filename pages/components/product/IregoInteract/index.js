@@ -79,7 +79,7 @@ export default function index() {
                   className="relative block h-100"
                   src="/assets/2560/product/irego/user-friendly_4.png"
                 ></img>
-                <span className="friendly-span block text-white mt-3">扫脸登录</span>
+                <span className="friendly-span block text-white mt-3">语音鼓励、情感交流</span>
               </div>
             </div>
           </div>

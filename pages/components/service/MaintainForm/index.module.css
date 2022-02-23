@@ -29,7 +29,7 @@
 
 }
 .m_info_2 {
-  margin-top: 30px;
+  margin-top: 43px;
   width: 976px;
   height: 586px;
   padding: 40px;
@@ -42,10 +42,11 @@
 		rgba(1, 1, 1, 0.1);
 }
 .m_right {
-  margin-top: 20px;
+  margin-top: 43px;
   width: 976px;
   height: 517px;
   padding: 40px;
+  border-radius: 8px;
   /* padding-top: 41px;
   padding-left: 41px;
   padding-right: 48px; */
@@ -66,7 +67,6 @@
 }
 .m_line {
   height: 8px;
-  margin-top: 24px;
   background-color: #ececec;
 }
 ._label {

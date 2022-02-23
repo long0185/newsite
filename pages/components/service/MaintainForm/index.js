@@ -8,7 +8,7 @@ export default function index() {
       {/* <img src='/assets/2560/service/maintain/title.png' className={`${s.img} relative`}>
       </img> */}
       <Banner img={"/assets/2560/service/maintain/title.png"} />
-      <div className="mobile:hidden w-100 flex flex-col items-center justify-center ">
+      <div className="mobile:hidden border w-100 flex flex-col items-center justify-center ">
         <div
           className={`${s.m_content} flex flex-col items-center justify-between`}
         >
@@ -66,7 +66,7 @@ export default function index() {
           </div>
           <div className={`${s.m_info_2} flex flex-col`}>
             <span className={`${s.label} font_36 text-$37`}>预约详情</span>
-            <span className={`${s.line}`}></span>
+            <span className={`${s.m_line}`}></span>
             <div
               className={`input-group input-group-lg flex items-end border-bottom ${s.input_1}`}
             >

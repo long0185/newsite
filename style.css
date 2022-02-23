@@ -1270,6 +1270,10 @@ li.nav-item {
   font-size: 24px;
 }
 @media screen and (min-width: 1080px) {
+  .interact-top-img {
+    width: 910px;
+    height: 432px;
+  }
   .detail_desc{
     font-size: 18px;
   }

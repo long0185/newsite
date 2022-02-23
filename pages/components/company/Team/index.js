@@ -125,7 +125,7 @@ const MangerCard = ({ img_src = "", name = "", title = "", desc = [] }) => {
         className={`${s.m_teamer} mobile:hidden pt-7 flex flex-col items-center mb_43 mx-3`}
       >
         <img src={img_src} className={`${s.m_img} relative`}></img>
-        <div className="flex flex-col items-start w_400 px-3 flex-1 ">
+        <div className="flex flex-col items-start w_400 pt-3 flex-1 ">
           <span className="font_36 font-black">{name}</span>
           <span className="font_size_30 text-$37">{title}</span>
           {desc.map((item, index) => (
@@ -326,7 +326,7 @@ export default function index() {
                 src="/assets/2560/company/gs.png"
                 className={`${s.expert_m_img} relative`}
               ></img>
-              <div className="flex flex-col items-start self-start flex-1 px-3 h-100 ">
+              <div className="flex flex-col items-start self-start flex-1 ml-3 px-3 h-100 ">
                 <div className="flex items-center">
                 <span className="font_30 font-black mb-1">郭帅</span>
                 <span className="ml-3 font_size_30 px-3 py-1 bg-$primary text-white">工学专家</span>
@@ -352,7 +352,7 @@ export default function index() {
                 src="/assets/2560/company/qianlaoshi.png"
                 className={`${s.expert_m_img} relative`}
               ></img>
-              <div className="flex flex-col flex-1 items-start px-3 h-100 ">
+              <div className="flex flex-col flex-1 items-start px-3 ml-3 h-100 ">
                 <div className="flex items-center">
                 <span className="font_30 font-black mb-1">钱楷</span>
                 <span className="ml-3 px-3 py-1 bg-$primary text-white">设计学专家</span>
@@ -379,7 +379,7 @@ export default function index() {
                 src="/assets/2560/company/hxy.png"
                 className={`${s.expert_m_img} relative`}
               ></img>
-              <div className="flex flex-col flex-1 items-start px-3 h-100 ">
+              <div className="flex flex-col flex-1 items-start px-3 ml-3 h-100 ">
                 <div className="flex items-center">
                 <span className="font_30 font-black mb-1">华续赟</span>
                 <span className="ml-3 px-3 py-1 bg-$primary text-white">医学专家</span>

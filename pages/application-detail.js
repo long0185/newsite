@@ -167,11 +167,11 @@ export default function applicationdetail() {
 			}
 		</ul>
 	</div>	
-	<div className={`${s.m_middle} bg-gray-300 opacity-100 pt_100 pb_100 z-10 w-screen flex  mobile:hidden items-center justify-center`}>
+	<div className={`${s.m_middle} bg-gray-300 opacity-100 pt_100 pb_200 z-10 w-screen flex  mobile:hidden items-center justify-center`}>
 		<ul className={`${s.m_ul}  h-100`}>
 			<div 
 			className={`${s.back}  absolute w-100 flex justify-center items-center`}>
-				<button onClick={()=>router.back() } className={`${s.back_btn} mb_100 rounded  bg-$white text-$37 border border-$primary`}>返回列表</button></div>
+				<button onClick={()=>router.back() } className={`${s.back_btn} rounded  bg-$white text-$37 border border-$primary`}>返回列表</button></div>
 
 			{
 				Array.isArray(list) && list.length>0 && list.map((item,index) => 

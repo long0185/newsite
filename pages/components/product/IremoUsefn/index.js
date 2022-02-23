@@ -35,9 +35,9 @@ export default function index() {
     >
       <Banner img={"/assets/newtitle/iremo/title_2.png"} desc="上肢康复运动训练器是一款智能康复机器人。其通过多种训练模式与运动模式，帮助因大脑神经、脊柱、肌肉及骨骼疾病而导致的上肢运动功能障碍的患者，提高上肢关节活动度、增强上肢肌力、帮助患肢失去的功能实现恢复。" />
       <div className="content hidden mobile:flex items-center justify-center w-100 mb_100">
-        <div className="d-center flex-col pt-5 bg-white use-fun-item align-item-center">
+        <div className="d-center flex-col pt-5 bg-white use-fun-item ">
           <div className=" flex flex-col practise items-center">
-            <span className="text-3xl font-black ">关节训练</span>
+            <span className="text-3xl mt-2 font-black ">关节训练</span>
             <img
               src="/assets/2560/product/iremo/line-img_1.png"
               className="w_567 h_454 mt-24"
@@ -50,7 +50,7 @@ export default function index() {
                 </span>
               </div>
             </div>
-            <div className="practise-small-img flex jusify-centent-center">
+            <div className="practise-small-img flex jusify-center">
               <img
                 className="relative smimg-wrap img-fluid"
                 src="/assets/2560/product/iremo/use_1.png"
@@ -65,9 +65,9 @@ export default function index() {
             </div>
           </div>
         </div>
-        <div className="d-center flex-col pt-5 bg-white use-fun-item align-item-center">
+        <div className="d-center flex-col pt-5 bg-white use-fun-item">
           <div className=" flex flex-col practise items-center">
-            <span className="text-3xl font-black">轨迹训练</span>
+            <span className="text-3xl  mt-2 font-black">轨迹训练</span>
             <img
               src="/assets/2560/product/iremo/line-img_2.png"
               className="w_567 h_454 mt-24"
@@ -80,7 +80,7 @@ export default function index() {
                 </span>
               </div>
             </div>
-            <div className="practise-small-img flex jusify-centent-center">
+            <div className="practise-small-img flex jusify-center">
               <img
                 className="relative smimg-wrap img-fluid"
                 src="/assets/2560/product/iremo/use_3.png"
@@ -95,9 +95,9 @@ export default function index() {
             </div>
           </div>
         </div>
-        <div className="d-center flex-col pt-5 bg-white use-fun-item align-item-center">
+        <div className="d-center flex-col pt-5 bg-white use-fun-item ">
           <div className=" flex flex-col practise items-center">
-            <span className="text-3xl font-black ">ADL训练</span>
+            <span className="text-3xl mt-2 font-black ">ADL训练</span>
             <img
               src="/assets/2560/product/iremo/line-img_3.png"
               className="w_567 h_454 mt-24"
@@ -110,7 +110,7 @@ export default function index() {
                 </span>
               </div>
             </div>
-            <div className="practise-small-img flex jusify-centent-center">
+            <div className="practise-small-img flex jusify-center">
               <img
                 className="relative smimg-wrap img-fluid"
                 src="/assets/2560/product/iremo/use_5.png"

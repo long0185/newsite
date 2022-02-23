@@ -223,7 +223,7 @@ export default function applicationdetail() {
           <ul className={`${s.m_ul} h-100`}>
  
             <div
-              className={`${s.back}  absolute w-100 flex justify-center items-center`}
+              className={`${s.back}   absolute w-100 flex justify-center items-center`}
             >
               <button
                 onClick={() => router.back()}
