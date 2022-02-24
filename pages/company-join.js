@@ -373,8 +373,8 @@ export default function company() {
           ></div>
         </div>
       </div>
-      <div className="w-100 flex flex-col items-center justify-center mb_100">
-        <div className="mobile:hidden mb_100">
+      <div className="w-100 flex flex-col items-center justify-center mb_43">
+        <div className="mobile:hidden mb_43">
           <button
             onClick={() => {}}
             className="m_l_btn font_size_30  text-$37 border-1 border border-$primary hover:bg-yellow-300 mr-3"
@@ -388,7 +388,7 @@ export default function company() {
             投递简历
           </button>
         </div>
-        <div className="mobile:flex mb_100 hidden">
+        <div className="mobile:flex mb_43 hidden">
           <button
             onClick={() => {}}
             className="l_btn  text-$37 border border-$primary  bg-white hover:bg-yellow-300 mr-3"
@@ -402,7 +402,7 @@ export default function company() {
             投递简历
           </button>
         </div>
-        <span className="">简历投递邮箱：myq@ga-robot.com</span>
+        <span className="font_size_24">简历投递邮箱：myq@ga-robot.com</span>
       </div>
     </div>
   );

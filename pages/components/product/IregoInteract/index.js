@@ -41,7 +41,7 @@ export default function index() {
             <div className="flex items-center mb-3 mobile:mb-0 m_w_910 ">
               <div className="p-0 text-center">
                 <img
-                  className="relative hidden mobile:block"
+                  className="relative hidden mobile:block h_432"
                   src="/assets/2560/product/irego/interact_1.png"
                 ></img>
                 <img
@@ -54,7 +54,7 @@ export default function index() {
               </div>
               <div className="p-0 text-center ml-0 mobile:ml-1">
                 <img
-                  className="hidden mobile:block relative "
+                  className="hidden mobile:block relative h_432 "
                   src="/assets/2560/product/irego/interact_2.png"
                 ></img>
                 <img
@@ -69,7 +69,7 @@ export default function index() {
             <div className="flex items-center mb-3 mobile:mb-0 m_w_910">
               <div className="p-0 text-center ml-0 mobile:ml-1 ">
                 <img
-                  className="hidden mobile:block relative h-100"
+                  className="hidden mobile:block relative h_432"
                   src="/assets/2560/product/irego/interact_3.png"
                 ></img>
                 <img
@@ -80,7 +80,7 @@ export default function index() {
               </div>
               <div className="p-0 text-center ml-0 mobile:ml-1">
                 <img
-                  className="relative hidden mobile:block h-100"
+                  className="relative hidden mobile:block h_432"
                   src="/assets/2560/product/irego/user-friendly_4.png"
                 ></img>
                 <img

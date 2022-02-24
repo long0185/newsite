@@ -166,11 +166,11 @@ export default function index() {
             src="/assets/2560/product/iremo/s_bottom_img_1.png"
             className={`${styles.m_game_img_2} relative`}
           ></img>
-          <div className={`${s.desc} absolute  flex justify-around w-100 `}>
-            <span className=" pl-8 font_18 text-$37">
+          <div className={`${s.m_desc} absolute flex justify-around w-100 `}>
+            <span className=" pl-2 font_18 text-$37">
               水果采摘（肩肘关机活动度训练）
             </span>
-            <span className="pr-8 font_18 text-$37">喝水ADL（日常生活能力训练）</span>
+            <span className="pr-2 font_18 text-$37">喝水ADL（日常生活能力训练）</span>
           </div>
         </div>
       </div>

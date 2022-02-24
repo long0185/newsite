@@ -239,7 +239,7 @@ export default function applicationdetail() {
                 提交简历
               </button>
             </div>
-        <span className="mt-3">简历投递邮箱：myq@ga-robot.com</span>
+        <span className="mt-7">简历投递邮箱：myq@ga-robot.com</span>
             </div>
 
             {Array.isArray(list) &&
