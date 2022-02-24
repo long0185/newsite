@@ -1226,6 +1226,12 @@ li.nav-item {
 .m_logo{
     width: 280px;
 }
+.h_432{
+  height: 432px!important;
+}
+.h_400{
+  height: 400px;
+}
 .w_65{
   width: 65px;
 }

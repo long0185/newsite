@@ -223,9 +223,10 @@ export default function applicationdetail() {
           <ul className={`${s.m_ul} h-100`}>
  
             <div
-              className={`${s.back}   absolute w-100 flex justify-center items-center`}
+              className={`${s.back}   absolute w-100 flex flex-col justify-center items-center`}
             >
-              <button
+            <div className="w-100 flex justify-center items-center " >
+            <button
                 onClick={() => router.back()}
                 className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}
               >
@@ -237,6 +238,8 @@ export default function applicationdetail() {
               >
                 提交简历
               </button>
+            </div>
+        <span className="mt-3">简历投递邮箱：myq@ga-robot.com</span>
             </div>
 
             {Array.isArray(list) &&
@@ -270,10 +273,12 @@ export default function applicationdetail() {
                 src="/assets/2560/home/right-arrow.svg"
               ></img>
             </div>
+            
             <div
-              className={`${s.back}  absolute w-100 flex justify-center items-center`}
+              className={`${s.back}  absolute w-100 flex flex-col justify-center items-center`}
             >
-              <button
+             <div>
+             <button
                 onClick={() => router.back()}
                 className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}
               >
@@ -285,6 +290,8 @@ export default function applicationdetail() {
               >
                 提交简历
               </button>
+             </div>
+              <span className="mt-5">简历投递邮箱：myq@ga-robot.com</span>
             </div>
 
             {Array.isArray(list) &&

@@ -12,11 +12,11 @@ export default function index() {
         <div
           className={`${s.m_content} flex flex-col items-center justify-between`}
         >
-          <div className={`${s.m_info_1} flex flex-col`}>
+          <div className={`${s.m_info_1} justify-around flex flex-col`}>
             <span className={`${s.label} text-$37 font_36`}>联系人信息</span>
-            <span className={`${s.m_line}`}></span>
+            <span className={`${s.m_line} mt-2`}></span>
             <div
-              className={`input-group input-group-lg flex items-end ${s.input_1} border-bottom`}
+              className={`  flex items-center  ${s.input_1} border-bottom`}
             >
               <span
                 className={`${s._label} text-$68 w-30 font_30`}
@@ -32,7 +32,7 @@ export default function index() {
               />
             </div>
             <div
-              className={`input-group input-group-lg flex  items-end border-bottom ${s.input_1}`}
+              className={` flex  items-center border-bottom ${s.input_1}`}
             >
               <span
                 className={`${s._label} text-$68 w-30`}
@@ -48,7 +48,7 @@ export default function index() {
               />
             </div>
             <div
-              className={`input-group input-group-lg flex  items-end border-bottom ${s.input_1}`}
+              className={`input-group input-group-lg flex  items-center border-bottom ${s.input_1}`}
             >
               <span
                 className={`${s._label} text-$68 w-30`}
@@ -66,9 +66,9 @@ export default function index() {
           </div>
           <div className={`${s.m_info_2} flex flex-col`}>
             <span className={`${s.label} font_36 text-$37`}>预约详情</span>
-            <span className={`${s.m_line}`}></span>
+            <span className={`${s.m_line} mt-2`}></span>
             <div
-              className={`input-group input-group-lg flex items-end border-bottom ${s.input_1}`}
+              className={`input-group input-group-lg flex items-center border-bottom ${s.input_1}`}
             >
               <span
                 className={`${s._label} text-$68 w-30`}
@@ -88,7 +88,7 @@ export default function index() {
               </select>
             </div>
             <div
-              className={`input-group input-group-lg flex items-end border-bottom ${s.input_1}`}
+              className={`input-group input-group-lg flex items-center border-bottom ${s.input_1}`}
             >
               <span
                 className={`${s._label} w-30 text-$68`}
@@ -125,13 +125,13 @@ export default function index() {
           <button className={`${s.m_btn} bg-$primary hover:bg-yellow-400 `}>提交</button>
         </div>
       </div>
-      <div className={`${s.content} hidden items-center justify-between  mobile:flex`}>
-        <div className={`${s.left} flex flex-col h-100`}>
-          <div className={`${s.info_1} flex flex-col mb_43 justify-around items-start w-100`}>
+      <div className={`${s.content} hidden justify-between  mobile:flex`}>
+        <div className={`${s.left} flex flex-col`}>
+          <div className={`${s.info_1} flex flex-col mb_43 items-start w-100`}>
             <span className={`${s.label} font-extrabold`}>联系人信息</span>
-            <span className={`${s.line}`}></span>
+            <span className={`${s.line} mt-2`}></span>
             <div
-              className={`input-group border-bottom w-100 input-group-lg flex justify-between ${s.input_1}`}
+              className={` border-bottom w-100 flex items-center justify-between ${s.input_1}`}
             >
               <span
                 className={`${s._label} text-$68  w-25`}
@@ -147,7 +147,7 @@ export default function index() {
               />
             </div>
             <div
-              className={`input-group input-group-lg flex justify-between w-100 ${s.input_1} border-bottom`}
+              className={`items-center flex justify-between w-100 ${s.input_1} border-bottom`}
             >
               <span
                 className={`${s._label} text-$68 w-25`}
@@ -163,7 +163,7 @@ export default function index() {
               />
             </div>
             <div
-              className={`input-group input-group-lg flex justify-between w-100 ${s.input_1} border-bottom`}
+              className={`items-center flex justify-between w-100 ${s.input_1} border-bottom`}
             >
               <span
                 className={`${s._label} text-$68 w-25`}
@@ -183,7 +183,7 @@ export default function index() {
             <span className={`${s.label} font-extrabold`}>预约详情</span>
             <span className={`${s.line}`}></span>
             <div
-              className={`input-group input-group-lg flex w-100 jusity-between ${s.input_1} border-bottom`}
+              className={`items-center flex w-100 jusity-between ${s.input_1} border-bottom`}
             >
               <span
                 className={`${s._label} text-$68 w-25`}
@@ -203,7 +203,7 @@ export default function index() {
               </select>
             </div>
             <div
-              className={`input-group input-group-lg w-100 flex  justify-between ${s.input_1} border-bottom`}
+              className={`items-center w-100 flex  justify-between ${s.input_1} border-bottom`}
             >
               <span
                 className={`${s._label} w-25 text-$68`}
@@ -220,7 +220,7 @@ export default function index() {
             </div>
           </div>
         </div>
-        <div className={`${s.right} h-100 relative border `}>
+        <div className={`${s.right} relative border `}>
           <textarea
             onFocus={() => setShow(true)}
             onBlur={() => setShow(false)}

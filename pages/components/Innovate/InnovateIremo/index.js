@@ -14,7 +14,7 @@ export default function index() {
         增加患者贴近现实的训练方案，让患者更快的回归生活，让治疗师更便捷的提供治疗
       </span>
     </div>
-    <div className={`${s.m_wrap} border mobile:hidden flex flex-col items-center`}>
+    <div className={`${s.m_wrap} mobile:hidden flex flex-col items-center`}>
     <img
       src="/assets/mobile/innovate/title_2.png"
       className={`${s.m_top_img} relative mr-4`}

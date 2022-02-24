@@ -391,18 +391,18 @@ export default function company() {
         <div className="mobile:flex mb_100 hidden">
           <button
             onClick={() => {}}
-            className="l_btn font_size_30 text-$37 border border-$primary  bg-white hover:bg-yellow-300 mr-3"
+            className="l_btn  text-$37 border border-$primary  bg-white hover:bg-yellow-300 mr-3"
           >
             表单下载
           </button>
           <button
             onClick={() => {}}
-            className="l_btn font_size_30 bg-$primary text-white hover:bg-yellow-300 ml-3"
+            className="l_btn  bg-$primary text-white hover:bg-yellow-300 ml-3"
           >
             投递简历
           </button>
         </div>
-        <span className="font_size_30">简历投递邮箱：myq@ga-robot.com</span>
+        <span className="">简历投递邮箱：myq@ga-robot.com</span>
       </div>
     </div>
   );

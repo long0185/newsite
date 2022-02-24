@@ -15,7 +15,7 @@ export default function index() {
             远程训练计划的制定,查看训练报告,为医生提供更加智能化、精准化的工作平台。
           </span>
           <img
-            className="interact-top-img"
+            className="interact-top-img img-fluid"
             src="/assets/2560/product/irego/doctor.png"
           />
         </div>

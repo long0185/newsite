@@ -215,7 +215,7 @@ export default function index() {
           <div className="flex">
             <button
               onClick={() => setList([...list, 1,2])}
-              className="l_btn hover:bg-yellow-300"
+              className="l_btn bg-$primary text-white hover:bg-yellow-300"
             >
               Show more
             </button>
