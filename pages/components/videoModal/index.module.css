@@ -3,6 +3,21 @@
 	/* padding: 160px 360px; */
 	/* z-index: 1000000; */
 }
+.m_modal{
+	z-index: 50;
+	top: 104px;
+}
+.m_content{
+	width: 979px;
+	height: 1484px;
+	border-radius: 25px;
+	box-shadow: 0px 11px 23px 0px 
+		rgba(1, 1, 1, 0.2);
+}
+.m_btn_wrap{
+	width: 979px;
+	height: 91px;
+}
 .container{
 	width: 1840px;
 	height: 90vh;
@@ -44,4 +59,27 @@
 .btns{
 	margin-left: 100px;
 	height: 140px;
+}
+.m_vieo_wrap{
+	width: 901px;
+	height: 500px;
+}
+.m_desc{
+	padding: 0 80px;
+}
+.m_img{
+	width: 664px;
+	height: 402px;
+}
+.m_btn_1{
+	width: 375px;
+	height: 91px;
+	border-radius: 15px;
+	border: solid 2px #caa95c;
+}
+.m_btn_2{
+	width: 281px;
+	height: 91px;
+	border-radius: 15px;
+	border: solid 2px #caa95c;
 }

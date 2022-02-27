@@ -330,7 +330,7 @@ export default function index() {
         <div className="flex justify-center items-center mb_100 mt_100">
           <button
             onClick={() => setList([...list, 1])}
-            className="l_btn hover:bg-yellow-300"
+            className="l_btn text-white bg-$primary hover:bg-yellow-300"
           >
             Show more
           </button>

@@ -1,12 +1,38 @@
-import React from "react";
+import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { useInViewport } from "react-in-viewport";
 import Banner from "../../Banner";
 
+export const up_variants = {
+	enter: {
+		translateY: 0,
+    opacity:1,
+    transition:{
+      duration:1
+    }
+	},
+  leave: {
+		translateY: 200,
+    opacity:0,
+    transition:{
+      duration:1
+    }
+	},
+}
+
+
 export default function index() {
+  const myRef = useRef();
+  const {
+    inViewport,
+  } = useInViewport(
+    myRef
+  );
   return (
     <div id="usefn" className="fun-detail flex flex-col justify-center  ">
       <Banner img={"/assets/newtitle/irego/title_2.png"} />
-      <div className="hidden mobile:flex content items-center justify-center w-100 mb_100">
-        <div className="d-center flex-col pt-5 bg-white use-fun-item ">
+      <div ref={myRef} className="hidden mobile:flex content items-center justify-center w-100 mb_100">
+        <motion.div variants={up_variants} animate={`${inViewport?'enter':'leave'}`} className="d-center flex-col pt-5 bg-white use-fun-item ">
           <div className="flex flex-col practise items-center ">
             <span className="text-3xl font-black mt-2">行走训练</span>
             <img
@@ -78,8 +104,8 @@ export default function index() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="d-center flex-col pt-5 bg-white use-fun-item">
+        </motion.div>
+        <motion.div variants={up_variants} animate={`${inViewport?'enter':'leave'}`} className="d-center flex-col pt-5 bg-white use-fun-item">
           <div className=" flex flex-col practise items-center">
             <span className="text-3xl font-black mt-2">坐站训练</span>
             <img
@@ -123,8 +149,8 @@ export default function index() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="d-center flex-col pt-5 bg-white use-fun-item ">
+        </motion.div>
+        <motion.div variants={up_variants} animate={`${inViewport?'enter':'leave'}`} className="d-center flex-col pt-5 bg-white use-fun-item ">
           <div className=" flex flex-col practise items-center">
             <span className="text-3xl font-black mt-2">平衡训练</span>
             <img
@@ -166,7 +192,7 @@ export default function index() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="mobile:hidden content d-center flex-col  w-100 mb_100">
         <div className="flex flex-col bg-white m_use-fun-item_1 items-center justify-start">

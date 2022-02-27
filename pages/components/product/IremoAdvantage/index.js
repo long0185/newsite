@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./index.module.css";
 import Banner from "../../Banner";
+import { useInViewport } from "react-in-viewport";
+import { motion } from "framer-motion";
+import { up_variants } from "../IregoUsefn";
 export default function index() {
+  const myRef = useRef();
+  const {
+    inViewport,
+  } = useInViewport(
+    myRef
+  );
   return (
     <div
       id="advantage"
@@ -18,7 +27,7 @@ export default function index() {
           </>
         }
       />
-      <div className={`w-100 d-center flex-wrap  ${styles.content}`}>
+      <motion.div ref={myRef} variants={up_variants} animate={`${inViewport?'enter':'leave'}`} className={`w-100 d-center flex-wrap  ${styles.content}`}>
         <div className={`${styles.content_item} relative`}>
           <img
             className={`${styles.content_item} absolute z-10`}
@@ -99,7 +108,7 @@ export default function index() {
             <span className={`${styles.desc_text_4}`}>摆的位移量</span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

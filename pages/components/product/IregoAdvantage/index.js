@@ -2,33 +2,25 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
 import Banner from "../../Banner";
 import { motion } from "framer-motion";
+import { useInViewport } from "react-in-viewport";
+import { up_variants } from "../IregoUsefn";
 const list = [
   "/assets/2560/product/irego/advantage_1.png",
   "/assets/2560/product/irego/product_2.png",
   "/assets/2560/product/irego/product_3.png",
   "/assets/2560/product/irego/product_4.png",
 ];
-export default function index() {
-  // const [isAnimate, setIsAnimate] = useState(false);
-  const dom = useRef();
-  // const bindHandleScroll = () =>{
-  //   const height = document.body.clientHeight;
-  //   const top = dom.current.getBoundingClientRect().top;
-  //   console.log('top', top,height)
-  //   if(top>=0 && top<=height ){
-  //     setIsAnimate(true) 
-  //   }else{
-  //     setIsAnimate(false)
-  //   }
-  // }
-  // useEffect(() => {
-  //   window.addEventListener('scroll',bindHandleScroll)
-  //   return () => window.removeEventListener('scroll',bindHandleScroll)
-  // }, []);
+export default function index() {  const dom = useRef();
+  const myRef = useRef();
+  const {
+    inViewport,
+  } = useInViewport(
+    myRef
+  );
   return (
     <div
-      ref={dom}
       id="advantage"
+      ref={myRef}
       className={`${styles.wrap} w-100 flex flex-col items-center`}
     >
       <Banner
@@ -42,7 +34,7 @@ export default function index() {
           </>
         }
       />
-      <div className={`w-100 flex flex-wrap items-center justify-center  ${styles.content}`}>
+      <motion.div variants={up_variants} animate={`${inViewport?'enter':'leave'}`} className={`w-100 flex flex-wrap items-center justify-center  ${styles.content}`}>
         {list.map((item, index) => (
           <motion.div
             key={index}
@@ -68,7 +60,7 @@ export default function index() {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

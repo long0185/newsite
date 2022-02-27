@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 import s from "./index.module.css";
 import Banner from "../../Banner";
+import { useInViewport } from "react-in-viewport";
+import { motion } from "framer-motion";
+import { l_variants, r_variants } from "../IregoAppearance";
 export default function index() {
+  const myRef = useRef();
+  const { inViewport } = useInViewport(myRef);
   return (
     <div
       id="feature"
+      ref={myRef}
       className={`${s.wrap} w-100 flex flex-col items-center `}
     >
       <Banner img={`/assets/2560/product/irecog/title-feathure.png`} />
-      <div className={`w-100 flex flex-col mobile:flex-row items-center justify-center  ${s.content}`}>
-        <div className={`${s.content_img}  relative`}>
+      <div
+        className={`w-100 flex flex-col mobile:flex-row items-center justify-center  ${s.content}`}
+      >
+        <motion.div
+          variants={l_variants}
+          animate={`${inViewport ? "enter" : "leave"}`}
+          className={`${s.content_img}  relative`}
+        >
           <img
             src={`/assets/2560/product/irecog/new_vr.png`}
             className={s.content_img}
@@ -27,7 +39,7 @@ export default function index() {
             </span>
             <span className={s.sm_title}>实现多中心医护实时交互</span>
           </div>
-        </div>
+        </motion.div>
         <div
           className={`${s.content_img} flex mobile:hidden items-center justify-center`}
           style={{ background: "#303f5c" }}
@@ -57,7 +69,8 @@ export default function index() {
             </span>
           </div>
         </div>
-        <div
+        <motion.div variants={r_variants}
+        animate={`${inViewport?'enter':'leave'}`}
           className={`${s.content_img} hidden mobile:block  relative`}
           style={{ background: "#303f5c" }}
         >
@@ -73,12 +86,15 @@ export default function index() {
               根据认知等级，分初级、中级、高级训练。
             </span>
           </div>
-        </div>
-      </div> 
+        </motion.div>
+      </div>
 
-      <div className={`w-100 flex flex-col mobile:flex-row items-center justify-center ${s.content} `}>
-        
-        <div
+      <div
+        className={`w-100 flex flex-col mobile:flex-row items-center justify-center ${s.content} `}
+      >
+        <motion.div
+          variants={l_variants}
+          animate={`${inViewport ? "enter" : "leave"}`}
           className={`${s.content_img} hidden  mobile:block relative  item-center justify-center`}
           style={{ background: "#303f5c" }}
         >
@@ -94,8 +110,10 @@ export default function index() {
               情景训练与日程生活结合，沉浸感强。
             </span>
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          variants={r_variants}
+          animate={`${inViewport ? "enter" : "leave"}`}
           className={`${s.content_img}  relative`}
           style={{ background: "#fff" }}
         >
@@ -118,7 +136,7 @@ export default function index() {
             </span>
             <span className={s.sm_title_4}>提供安全可靠的康复数据社区。</span>
           </div>
-        </div>
+        </motion.div>
         <div
           className={`${s.content_img} flex mobile:hidden items-center justify-center  relative`}
           style={{ background: "#303f5c" }}
