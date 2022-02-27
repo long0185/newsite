@@ -262,7 +262,7 @@ export default function index() {
           </div>
         </div>
       </div>
-      <div className="hidden mobile:block">
+      <div className="hidden mobile:block mt_63">
         {list.map((item, index) => (
           <div key={index}>
             <div className="w-100 d-center">
