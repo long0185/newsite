@@ -11,10 +11,64 @@ export const up_variants = {
       duration:1
     }
 	},
+  enter_1: {
+		translateY: 0,
+    opacity:1,
+    transition:{
+      duration:1
+    }
+	},
+  enter_2: {
+		translateY: 0,
+    opacity:1,
+    transition:{
+      delay:.3,
+      duration:1
+    }
+	},
+  enter_3: {
+		translateY: 0,
+    opacity:1,
+    transition:{
+      delay:.6,
+      duration:1
+    }
+	},
+  enter_4: {
+		translateY: 0,
+    opacity:1,
+    transition:{
+      delay:1.2,
+      duration:1
+    }
+	},
   leave: {
 		translateY: 200,
     opacity:0,
     transition:{
+      duration:1
+    }
+	},
+  leave_1: {
+		translateY: 200,
+    opacity:0,
+    transition:{
+      duration:1
+    }
+	},
+  leave_2: {
+		translateY: 200,
+    opacity:0,
+    transition:{
+      delay:0.3,
+      duration:1
+    }
+	},
+  leave_3: {
+		translateY: 200,
+    opacity:0,
+    transition:{
+      delay:0.6,
       duration:1
     }
 	},
@@ -32,7 +86,7 @@ export default function index() {
     <div id="usefn" className="fun-detail flex flex-col justify-center  ">
       <Banner img={"/assets/newtitle/irego/title_2.png"} />
       <div ref={myRef} className="hidden mobile:flex content items-center justify-center w-100 mb_100">
-        <motion.div variants={up_variants} animate={`${inViewport?'enter':'leave'}`} className="d-center flex-col pt-5 bg-white use-fun-item ">
+        <motion.div variants={up_variants} animate={`${inViewport?'enter_1':'leave'}`} className="d-center flex-col pt-5 bg-white use-fun-item ">
           <div className="flex flex-col practise items-center ">
             <span className="text-3xl font-black mt-2">行走训练</span>
             <img
@@ -105,7 +159,7 @@ export default function index() {
             </div>
           </div>
         </motion.div>
-        <motion.div variants={up_variants} animate={`${inViewport?'enter':'leave'}`} className="d-center flex-col pt-5 bg-white use-fun-item">
+        <motion.div variants={up_variants} animate={`${inViewport?'enter_2':'leave'}`} className="d-center flex-col pt-5 bg-white use-fun-item">
           <div className=" flex flex-col practise items-center">
             <span className="text-3xl font-black mt-2">坐站训练</span>
             <img
@@ -150,7 +204,7 @@ export default function index() {
             </div>
           </div>
         </motion.div>
-        <motion.div variants={up_variants} animate={`${inViewport?'enter':'leave'}`} className="d-center flex-col pt-5 bg-white use-fun-item ">
+        <motion.div variants={up_variants} animate={`${inViewport?'enter_3':'leave'}`} className="d-center flex-col pt-5 bg-white use-fun-item ">
           <div className=" flex flex-col practise items-center">
             <span className="text-3xl font-black mt-2">平衡训练</span>
             <img

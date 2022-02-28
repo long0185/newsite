@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import s from "./index.module.css";
 const list = [{
@@ -11,12 +12,12 @@ const list = [{
   video_src: '/assets/2560/service/useguide/play.png'
 }]
 export default function index({title,img_src='',handleShow}) {
-
+  const router = useRouter()
   
   return (
-    <div className='flex flex-col items-center' style={{width:'100vw'}} >
+    <div  className='flex flex-col items-center' style={{width:'100vw'}} >
       <div className={`flex`}>
-        {list.map(item => (<div onClick={()=>handleShow(true)} className={`${s.img_wrap}`}>
+        {list.map(item => (<div onClick={()=>router.push('guidedetail')} className={`${s.img_wrap}`}>
           <div className={`${s.img} relative`}>
             <img
               className="w-100 h-100"
@@ -44,7 +45,7 @@ export default function index({title,img_src='',handleShow}) {
         </div>))}
       </div>
       <div className={`flex mt_118`}>
-        {list.map(item => (<div onClick={()=>handleShow(true)} className={`${s.img_wrap}`}>
+        {list.map(item => (<div onClick={()=>router.push('guidedetail')} className={`${s.img_wrap}`}>
           <div className={`${s.img} relative`}>
             <img
             className="img-fluid w-100 h-100"

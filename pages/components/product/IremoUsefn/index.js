@@ -43,8 +43,8 @@ export default function index() {
       className="fun-detail col-lg-12 flex flex-col items-center justify-center"
     >
       <Banner img={"/assets/newtitle/iremo/title_2.png"} desc="上肢康复运动训练器是一款智能康复机器人。其通过多种训练模式与运动模式，帮助因大脑神经、脊柱、肌肉及骨骼疾病而导致的上肢运动功能障碍的患者，提高上肢关节活动度、增强上肢肌力、帮助患肢失去的功能实现恢复。" />
-      <motion.div variants={up_variants} animate={`${inViewport?'enter':'leave'}`} ref={myRef} className="content hidden mobile:flex items-center justify-center w-100 mb_100">
-        <div className="d-center py-3 flex-col justify-center bg-white use-fun-item ">
+      <div  ref={myRef} className="content hidden mobile:flex items-center justify-center w-100 mb_100">
+        <motion.div variants={up_variants} animate={`${inViewport?'enter_1':'leave'}`} className="d-center py-3 flex-col justify-center bg-white use-fun-item ">
           <div className=" flex flex-col justify-around practise items-center">
             <span className="text-3xl mt-2 font-black ">关节训练</span>
             <img
@@ -73,8 +73,8 @@ export default function index() {
               多种平面康复游戏
             </div>
           </div>
-        </div>
-        <div className="d-center py-3 flex-col justify-center bg-white use-fun-item">
+        </motion.div>
+        <motion.div variants={up_variants} animate={`${inViewport?'enter_2':'leave'}`} className="d-center py-3 flex-col justify-center bg-white use-fun-item">
           <div className=" flex flex-col justify-around practise items-center">
             <span className="text-3xl  mt-2 font-black">轨迹训练</span>
             <img
@@ -103,8 +103,8 @@ export default function index() {
               镜像轨迹游戏
             </div>
           </div>
-        </div>
-        <div className="d-center py-3 flex-col justify-center bg-white use-fun-item ">
+        </motion.div>
+        <motion.div variants={up_variants} animate={`${inViewport?'enter_3':'leave'}`} className="d-center py-3 flex-col justify-center bg-white use-fun-item ">
           <div className=" flex flex-col practise justify-around items-center">
             <span className="text-3xl mt-2 font-black ">ADL训练</span>
             <img
@@ -131,8 +131,8 @@ export default function index() {
             </div>
             <div className="mt-3 bg-gray-200 px-2 text-gray-500">喝水游戏</div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
       <div className="mobile:hidden content d-center flex-col  w-100 mb_100">
         {list.map((item, index) => (
           <div className="flex pt_43 mb_43 flex-col bg-white m_use-fun-item items-center justify-start">

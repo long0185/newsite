@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import s from "./index.module.css";
 import VideoModal from '../../videoModal'
+import { useRouter } from "next/router";
 const list = [{
   img_src: '/assets/2560/service/useguide/irego.png',
   video_src: '/assets/2560/service/useguide/play.png'
@@ -21,10 +22,11 @@ const list = [{
   video_src: '/assets/2560/service/useguide/play.png'
 }]
 export default function index({title,img_src='',handleShow}) {
+  const router = useRouter()
   return (
     <div className='flex flex-col items-center' style={{width:'100vw'}} >
       <div className={`flex flex-wrap w_1100 items-center justify-center pb_43`}>
-        {list.map((item,index) => (<div key={index} onClick={()=>handleShow(true)} className={`${s.img_wrap} mt_63 mx-3`}>
+        {list.map((item,index) => (<div key={index} onClick={()=>router.push('guidedetail')} className={`${s.img_wrap} mt_63 mx-3`}>
           <div className={`${s.img} relative`}>
             <img
               className=" w-100 h-100"
