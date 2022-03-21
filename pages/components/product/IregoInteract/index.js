@@ -36,7 +36,9 @@ export default function index() {
       </div>
       <div className="flex justify-center items-center mb_118 w-100">
         <div className="flex flex-col w_1978 ">
-          <span className="font_43 interact-big-title font-black mb-4">人性化设计</span>
+          <span className="font_43 interact-big-title font-black mb-4">
+            人性化设计
+          </span>
           <div className="w-100 flex flex-col mobile:flex-row justify-between">
             <div className="flex items-center mb-3 mobile:mb-0 m_w_910 ">
               <div className="p-0 text-center">
@@ -76,7 +78,9 @@ export default function index() {
                   className="mobile:hidden relative h_400"
                   src="/assets/2560/product/irego/interact_3.png"
                 ></img>
-                <span className="friendly-span block text-white mt-3">扫脸登录</span>
+                <span className="friendly-span block text-white mt-3">
+                  扫脸登录
+                </span>
               </div>
               <div className="p-0 text-center ml-0 mobile:ml-1">
                 <img
@@ -87,7 +91,9 @@ export default function index() {
                   className="relative mobile:hidden h_400"
                   src="/assets/2560/product/irego/user-friendly_4.png"
                 ></img>
-                <span className="friendly-span block text-white mt-3">语音鼓励、情感交流</span>
+                <span className="friendly-span block text-white mt-3">
+                  语音鼓励、情感交流
+                </span>
               </div>
             </div>
           </div>

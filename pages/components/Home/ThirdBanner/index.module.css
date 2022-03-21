@@ -16,7 +16,7 @@
   width: 52px;
   height: 40px;
 }
-.innovate{
+.innovate {
   width: 2262px;
 }
 .innovate_1 {
@@ -32,7 +32,8 @@
   margin-bottom: 135px;
 }
 .innovate_btn {
-  width: 150px;
+  padding: 0 15px;
+  /* width: 150px; */
   height: 53px;
   text-align: center;
   line-height: 53px;

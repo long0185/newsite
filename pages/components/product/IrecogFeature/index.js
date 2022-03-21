@@ -69,8 +69,9 @@ export default function index() {
             </span>
           </div>
         </div>
-        <motion.div variants={r_variants}
-        animate={`${inViewport?'enter':'leave'}`}
+        <motion.div
+          variants={r_variants}
+          animate={`${inViewport ? "enter" : "leave"}`}
           className={`${s.content_img} hidden mobile:block  relative`}
           style={{ background: "#303f5c" }}
         >
