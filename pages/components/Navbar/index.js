@@ -160,7 +160,7 @@ const ResponsiveAppBar = () => {
   ];
 
   let { pathname, push } = useRouter();
-  // console.log("pathname", pathname);
+  console.log("pathname", pathname);
   const [state, setState] = React.useState({ scrollTop: 0 });
 
   return (

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import s from "./index.module.css";
 
@@ -127,37 +127,19 @@ const showList = _list.map((item, index) => {
             <span className="detail_desc font-black">岗位职责:</span>
           </div>
           <div className="flex justify-center items-start flex-col mt-3 detail_desc">
-            <p>
-              1.
-              本科以上学历，具有2年以上相关工作经验，根据产品设计需求，实现、维护及优化WEB前端页面和业务功能
-            </p>
-            <p>
-              2.
-              负责公司移动端，PC端产品研发，有实际移动平台web前端开发和HTML5实践工作经验
-            </p>
-            <p>
-              3. 根据产品需求负责完成开发和调试工作，深入解析代码,
-              提升代码执行效率
-            </p>
+            <p>1. 本科以上学历，具有2年以上相关工作经验，根据产品设计需求，实现、维护及优化WEB前端页面和业务功能</p>
+            <p>2. 负责公司移动端，PC端产品研发，有实际移动平台web前端开发和HTML5实践工作经验</p>
+            <p>3. 根据产品需求负责完成开发和调试工作，深入解析代码, 提升代码执行效率</p>
           </div>
           <div className="flex justify-center items-center mt-3">
             <span className="detail_desc font-black">技能要求:</span>
           </div>
           <div className="flex justify-center items-start flex-col mt-3 detail_desc">
-            <p>
-              1.有扎实的javascript基础（作用域，继承，闭包，面向对象设计等）
-            </p>
-            <p>
-              2.熟悉Vue、React等框架，具有Vue实际项目经验，（熟悉Echarts，element-ui等可视化组件者优先考虑）
-            </p>
-            <p>
-              3.根据产品需求负责完成开发和调试工作，深入解析代码,
-              提升代码执行效率
-            </p>
+            <p>1.有扎实的javascript基础（作用域，继承，闭包，面向对象设计等）</p>
+            <p>2.熟悉Vue、React等框架，具有Vue实际项目经验，（熟悉Echarts，element-ui等可视化组件者优先考虑）</p>
+            <p>3.根据产品需求负责完成开发和调试工作，深入解析代码, 提升代码执行效率</p>
             <p>4.熟悉各主流浏览器和移动端的兼容性情况及调试方法</p>
-            <p>
-              5.有良好的团队合作能力，主动性强，执行能力强，具备良好的问题定位分析能力
-            </p>
+            <p>5.有良好的团队合作能力，主动性强，执行能力强，具备良好的问题定位分析能力</p>
           </div>
         </div>
       </div>
@@ -167,8 +149,29 @@ const showList = _list.map((item, index) => {
 
 export default function applicationdetail() {
   const router = useRouter();
-  const [list, setList] = useState(showList);
+  const [list, setList] = useState([]);
   const [num, setNum] = useState(1);
+  const [index, setIndex] = useState(0);
+  const { query } = router;
+  const { page, id } = query;
+  useEffect(() => {
+    fetch(`/web/tableInfo/${page}`, {
+      headers: { Accept: "application/json" },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        if (res.code == 200 && Array.isArray(res.value) && res.value.length > 0) {
+          let val = res.value || [];
+          val = val.sort((a, b) => a.OrderNu - b.OrderNu);
+          const _item = val.find((item) => item.id == id);
+          const index = val.findIndex((item) => item.id == id);
+          setIndex(index);
+          setList(val);
+        }
+      });
+  }, [page]);
   const handleClick = (direction) => {
     if (direction == "left") {
       const newNum = num - 1 <= 0 ? 0 : num - 1;
@@ -179,132 +182,184 @@ export default function applicationdetail() {
       setNum(newNum);
     }
   };
+  console.log("list", list);
+  console.log("index", index);
   return (
     <div>
       <Navbar />
       <div className="mt_104">
         <div className={`mobile:hidden flex`}>
           <ul className={`${s.ul} h-100`}>
-            <div
-              className={`${s.back}  absolute w-100 flex justify-center items-center`}
-            >
-              <button
-                onClick={() => router.back()}
-                className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}
-              >
+            <div className={`${s.back}  absolute w-100 flex justify-center items-center`}>
+              <button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>
                 返回列表
               </button>
-              <button
-                onClick={() => router.back()}
-                className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}
-              >
+              <button onClick={() => router.back()} className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>
                 提交简历
               </button>
             </div>
 
             {Array.isArray(list) &&
-              list.length > 0 &&
-              list.map((item, index) => (
-                <motion.li
-                  key={index}
-                  className={`${s.li} rounded-xl shadow-2xl`}
-                  style={{ zIndex: `${item?.id == 1 ? "100" : "10"}` }}
-                  variants={variants}
-                  animate={index < num ? "left" : index > num ? "right" : "mid"}
-                >
-                  {item?.element}
+              list.map((item, idx) => (
+                <motion.li key={item.id} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == id ? "100" : "10"}` }} variants={variants} animate={idx < index ? "left" : index > index ? "right" : "mid"}>
+                  <div className="w-100 h-100 flex flex-col pt-10">
+                    <div className="w-100 flex flex-col items-start justify-start p-10">
+                      <span className="font_36 font-black mb-10">{item.Name}</span>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">职位薪资:</span>
+                        <span className="detail_desc font-$color">{item.Money}</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">工作年限:</span>
+                        <span className="detail_desc font-$color">{item.Time}年</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">招聘人数:</span>
+                        <span className="detail_desc font-$color">{item.Number}</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">工作地点</span>
+                        <span className="detail_desc font-$color">{item.Place}</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black">岗位职责:</span>
+                      </div>
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                        {item.Descrip.split("\n").map((ele, idx) => (
+                          <p key={idx}>{ele}</p>
+                        ))}
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black">技能要求:</span>
+                      </div>
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                        {item.Skills.split("\n").map((ele, idx) => (
+                          <p key={idx}>{ele}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </motion.li>
               ))}
           </ul>
         </div>
-				<div
-          className={`${s.m_middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen flex  mobile:hidden items-center justify-center`}
-        >
+        <div className={`${s.m_middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen flex  mobile:hidden items-center justify-center`}>
           <ul className={`${s.m_ul} h-100`}>
- 
-            <div
-              className={`${s.back}   absolute w-100 flex flex-col justify-center items-center`}
-            >
-            <div className="w-100 flex justify-center items-center " >
-            <button
-                onClick={() => router.back()}
-                className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}
-              >
-                返回列表
-              </button>
-              <button
-                onClick={() => router.back()}
-                className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}
-              >
-                提交简历
-              </button>
+            <div className={`${s.back}   absolute w-100 flex flex-col justify-center items-center`}>
+              <div className="w-100 flex justify-center items-center ">
+                <button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>
+                  返回列表
+                </button>
+                <button onClick={() => router.back()} className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>
+                  提交简历
+                </button>
+              </div>
+              <span className="mt-7">简历投递邮箱：zhaopin@ga-robot.com</span>
             </div>
-        <span className="mt-7">简历投递邮箱：myq@ga-robot.com</span>
-            </div>
-
             {Array.isArray(list) &&
-              list.length > 0 &&
-              list.map((item, index) => (
-                <motion.li
-                  key={index}
-                  className={`${s.li} rounded-xl shadow-2xl`}
-                  style={{ zIndex: `${item?.id == 1 ? "100" : "10"}` }}
-                  variants={m_variants}
-                  animate={index < num ? "left" : index > num ? "right" : "mid"}
-                >
-                  {item?.element}
+              list.map((item, idx) => (
+                <motion.li key={item.id} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == id ? "100" : "10"}` }} variants={m_variants} animate={idx < index ? "left" : idx > index ? "right" : "mid"}>
+                  <div className="w-100 h-100 flex flex-col pt-10">
+                    <div className="w-100 flex flex-col items-start justify-start p-10">
+                      <span className="font_36 font-black mb-10">{item.Name}</span>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">职位薪资:</span>
+                        <span className="detail_desc font-$color">{item.Money}</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">工作年限:</span>
+                        <span className="detail_desc font-$color">{item.Time}年</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">招聘人数:</span>
+                        <span className="detail_desc font-$color">{item.Number}</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">工作地点</span>
+                        <span className="detail_desc font-$color">{item.Place}</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black">岗位职责:</span>
+                      </div>
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                        {item.Descrip.split("\n").map((ele, idx) => (
+                          <p key={idx}>{ele}</p>
+                        ))}
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black">技能要求:</span>
+                      </div>
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                        {item.Skills.split("\n").map((ele, idx) => (
+                          <p key={idx}>{ele}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </motion.li>
               ))}
           </ul>
         </div>
-        <div
-          className={`${s.middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen hidden mobile:flex items-center justify-center`}
-        >
+        <div className={`${s.middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen hidden mobile:flex items-center justify-center`}>
           <ul className={`${s.ul} h-100`}>
             <div className={`absolute top_45 w-100 z-20 h-20`}>
-              <img
-                onClick={() => handleClick("left")}
-                className={`${s.left_icon} cursor-pointer h-100 absolute`}
-                src="/assets/2560/home/left-arrow.svg"
-              ></img>
-              <img
-                onClick={() => handleClick("right")}
-                className={`${s.right_icon} cursor-pointer  h-100 absolute`}
-                src="/assets/2560/home/right-arrow.svg"
-              ></img>
+              <img onClick={() => handleClick("left")} className={`${s.left_icon} cursor-pointer h-100 absolute`} src="/assets/2560/home/left-arrow.svg"></img>
+              <img onClick={() => handleClick("right")} className={`${s.right_icon} cursor-pointer  h-100 absolute`} src="/assets/2560/home/right-arrow.svg"></img>
             </div>
-            
-            <div
-              className={`${s.back}  absolute w-100 flex flex-col justify-center items-center`}
-            >
-             <div>
-             <button
-                onClick={() => router.back()}
-                className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}
-              >
-                返回列表
-              </button>
-              <button
-                onClick={() => router.back()}
-                className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}
-              >
-                提交简历
-              </button>
-             </div>
-              <span className="mt-5">简历投递邮箱：myq@ga-robot.com</span>
+
+            <div className={`${s.back}  absolute w-100 flex flex-col justify-center items-center`}>
+              <div>
+                <button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>
+                  返回列表
+                </button>
+                <button onClick={() => router.back()} className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>
+                  提交简历
+                </button>
+              </div>
+              <span className="mt-5">zhaopin@ga-robot.com</span>
             </div>
 
             {Array.isArray(list) &&
               list.length > 0 &&
               list.map((item, index) => (
-                <motion.li
-                  key={index}
-                  className={`${s.li} rounded-xl shadow-2xl`}
-                  style={{ zIndex: `${item?.id == 1 ? "100" : "10"}` }}
-                  variants={variants}
-                  animate={index < num ? "left" : index > num ? "right" : "mid"}
-                >
-                  {item?.element}
+                <motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == 1 ? "100" : "10"}` }} variants={variants} animate={index < num ? "left" : index > num ? "right" : "mid"}>
+                  <div className="w-100 h-100 flex flex-col pt-10">
+                    <div className="w-100 flex flex-col items-start justify-start p-10">
+                      <span className="font_36 font-black mb-10">{item.Name}</span>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">职位薪资:</span>
+                        <span className="detail_desc font-$color">{item.Money}</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">工作年限:</span>
+                        <span className="detail_desc font-$color">{item.Time}年</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">招聘人数:</span>
+                        <span className="detail_desc font-$color">{item.Number}</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black mr-5">工作地点</span>
+                        <span className="detail_desc font-$color">{item.Place}</span>
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black">岗位职责:</span>
+                      </div>
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                        {item.Descrip.split("\n").map((ele, idx) => (
+                          <p key={idx}>{ele}</p>
+                        ))}
+                      </div>
+                      <div className="flex justify-center items-center mt-3">
+                        <span className="detail_desc font-black">技能要求:</span>
+                      </div>
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                        {item.Skills.split("\n").map((ele, idx) => (
+                          <p key={idx}>{ele}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </motion.li>
               ))}
           </ul>

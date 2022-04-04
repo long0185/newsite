@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import s from "./index.module.css";
-import axios from "axios";
+import draftToHtml from "draftjs-to-html";
+import dayjs from "dayjs";
 
 const variants = {
   left: {
@@ -134,29 +135,49 @@ let _list = [
 ];
 
 export default function applicationdetail() {
+  const ref = useRef();
   const router = useRouter();
-  const [list, setList] = useState([_list[_list.length - 1], ..._list, _list[0]]);
+  const [list, setList] = useState([]);
   const [num, setNum] = useState(1);
+  const [html, setHtml] = useState("");
+  const [item, setItem] = useState(null);
+  const [index, setIndex] = useState(0);
+  const { query } = router;
+  const { page, id } = query;
   useEffect(() => {
-    fetch("/web/tableInfo/app", {
+    fetch(`/web/tableInfo/${page}`, {
       headers: { Accept: "application/json" },
     })
       .then((res) => {
-        console.log("res", res);
         return res.json();
       })
-      .then((data) => {
-        console.log("data", data);
+      .then((res) => {
+        if (res.code == 200 && Array.isArray(res.value) && res.value.length > 0) {
+          let val = res.value || [];
+          val = val.sort((a, b) => a.OrderNu - b.OrderNu);
+          const _item = val.find((item) => item.id == id);
+          const index = val.findIndex((item) => item.id == id);
+          setIndex(index);
+          setItem(_item);
+          setList(val);
+        }
       });
-  }, []);
+  }, [page]);
+  React.useEffect(() => {
+    async function getList() {
+      fetch(`/web/SingleInfo/${page}?id=${id}`);
+    }
+    getList();
+  }, [id]);
   const handleClick = (direction) => {
     if (direction == "left") {
-      const newNum = num - 1 <= 0 ? 0 : num - 1;
-      setNum(newNum);
+      const newNum = index - 1 <= 0 ? 0 : index - 1;
+      setIndex(newNum);
+      const newItem = list[newNum];
     }
     if (direction == "right") {
-      const newNum = num + 1 >= list.length - 1 ? list.length - 1 : num + 1;
-      setNum(newNum);
+      const newNum = index + 1 >= list.length - 1 ? list.length - 1 : index + 1;
+      setIndex(newNum);
     }
   };
   return (
@@ -177,9 +198,19 @@ export default function applicationdetail() {
 
             {Array.isArray(list) &&
               list.length > 0 &&
-              list.map((item, index) => (
-                <motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == 1 ? "100" : "10"}` }} variants={variants} animate={index < num ? "left" : index > num ? "right" : "mid"}>
-                  {item?.element}
+              list.map((item, idx) => (
+                <motion.li key={item.id} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == id ? "100" : "10"}` }} variants={variants} animate={idx < index ? "left" : idx > index ? "right" : "mid"}>
+                  <div className="w-100 h-100 flex flex-col pt-5 px-16">
+                    <div className="w-100 flex flex-col items-center justify-center">
+                      <span className="font_36 font-black">{item.Title}</span>
+                      <div className="flex justify-center items-center">
+                        <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.icon} calendar-icon img-fluid mr-1`}></img>
+                        <span className="text-$86 my-3">{dayjs(item.Time).format("YYYY-DD-MM")}</span>
+                        <span className="text-$86 my-3 ml-5">浏览:{item.views}</span>
+                      </div>
+                    </div>
+                    <div dangerouslySetInnerHTML={{ __html: draftToHtml(JSON.parse(item.Detail)) }}></div>
+                  </div>
                 </motion.li>
               ))}
           </ul>
@@ -194,9 +225,18 @@ export default function applicationdetail() {
 
             {Array.isArray(list) &&
               list.length > 0 &&
-              list.map((item, index) => (
-                <motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == 1 ? "100" : "10"}` }} variants={m_variants} animate={index < num ? "left" : index > num ? "right" : "mid"}>
-                  {item?.element}
+              list.map((item, idx) => (
+                <motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == 1 ? "100" : "10"}` }} variants={m_variants} animate={idx < index ? "left" : idx > index ? "right" : "mid"}>
+                  <div className="w-100 h-100 flex flex-col pt-5 px-16">
+                    <div className="w-100 flex flex-col items-center justify-center">
+                      <span className="font_36 font-black">{item.Title}</span>
+                      <div className="flex justify-center items-center">
+                        <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.icon} calendar-icon img-fluid mr-1`}></img>
+                        <span className="text-$86 my-3">{item.Time}</span>
+                      </div>
+                    </div>
+                    <div dangerouslySetInnerHTML={{ __html: draftToHtml(JSON.parse(item.Detail)) }}></div>
+                  </div>
                 </motion.li>
               ))}
           </ul>

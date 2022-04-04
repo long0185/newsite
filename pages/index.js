@@ -7,7 +7,7 @@ import SecondBanner from "./components/Home/SecondBanner";
 import ThirdBanner from "./components/Home/ThirdBanner";
 import Modal from "./components/Modal";
 import s from "./index.module.css";
-import Navbar from './components/Navbar'
+import Navbar from "./components/Navbar";
 import MobileCarousel from "./components/MobileCarousel";
 import MobileContent from "./components/MobileContent";
 
@@ -40,7 +40,7 @@ class PC extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isPC:true,
+      isPC: true,
       sectionsColor: [],
       num: 0,
       fullpages: [
@@ -93,8 +93,8 @@ class PC extends React.Component {
     );
 
     return (
-        <div className="hidden mobile:block App">
-          {/* <motion.div
+      <div className="hidden mobile:block App">
+        {/* <motion.div
             className={`${s.modal} fixed flex items-center justify-center bottom-0 top-0 left-0 right-0 border bg-gray-200`}
             animate={{
               scale:5,
@@ -108,60 +108,55 @@ class PC extends React.Component {
           >
             <Modal/>
           </motion.div> */}
-          <Menu />
-          <ReactFullpage
-            scrollingSpeed={1000}
-            easingcss3={`ease-in-out`}
-            loopHorizontal={false}
-            pluginWrapper={pluginWrapper}
-            onLeave={this.onLeave.bind(this)}
-            sectionsColor={this.state.sectionsColor}
-            render={(comp) => (
-              <ReactFullpage.Wrapper>
-                {fullpages.map((item, index) => (
-                  <motion.div
-                    key={item.id}
-                    className={`section ${s.banner_item} `}
-                    animate={this.state.num != item.id ? "visible" : "hidden"}
-                    variants={variants}
-                  >
-                    {item.element}
-                  </motion.div>
-                ))}
-              </ReactFullpage.Wrapper>
-            )}
-          />
-        </div>
+        <Menu />
+        <ReactFullpage
+          scrollingSpeed={1000}
+          easingcss3={`ease-in-out`}
+          loopHorizontal={false}
+          pluginWrapper={pluginWrapper}
+          onLeave={this.onLeave.bind(this)}
+          sectionsColor={this.state.sectionsColor}
+          render={(comp) => (
+            <ReactFullpage.Wrapper>
+              {fullpages.map((item, index) => (
+                <motion.div key={item.id} className={`section ${s.banner_item} `} animate={this.state.num != item.id ? "visible" : "hidden"} variants={variants}>
+                  {item.element}
+                </motion.div>
+              ))}
+            </ReactFullpage.Wrapper>
+          )}
+        />
+      </div>
     );
   }
 }
 
-const Mobile = ()=>{
+const Mobile = () => {
   return (
     <div className="mobile:hidden App">
-    <Navbar/>
-    <MobileCarousel bgs={['/assets/mobile/home/banner_01.png','/assets/mobile/home/banner_01.png']}/>
-    <MobileContent/>
-  </div>
-  )
-}
+      <Navbar />
+      <MobileCarousel />
+      <MobileContent />
+    </div>
+  );
+};
 
-function App(){
+function App() {
   const [isPc, setisPc] = useState(false);
-  useEffect(()=>{
+  const [list, setList] = useState([]);
+  useEffect(() => {
     let width = document.documentElement.clientWidth;
-    let bool = width <=1080?false:true;
-    setisPc(bool) 
-    window.addEventListener('resize',()=>{
-       width = document.documentElement.clientWidth;
-       bool = width <=1080?false:true;
-      setisPc(bool)
-    })
-    return()=>window.removeEventListener('resize',()=>{})
-  },[])
-  return (
-    isPc?<PC/>:<Mobile/>
-  )
+    let bool = width <= 1080 ? false : true;
+    setisPc(bool);
+    window.addEventListener("resize", () => {
+      width = document.documentElement.clientWidth;
+      bool = width <= 1080 ? false : true;
+      setisPc(bool);
+    });
+    return () => window.removeEventListener("resize", () => {});
+  }, []);
+
+  return isPc ? <PC list={list} /> : <Mobile />;
 }
 
 export default App;

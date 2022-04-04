@@ -1,31 +1,28 @@
 import React from "react";
 import Carousel from "../../Carousel";
 export default function ProductIRego() {
+  const [list, setList] = React.useState([]);
+  React.useEffect(() => {
+    async function getList() {
+      fetch("/web/tableInfo/banirecog")
+        .then((res) => res.json())
+        .then((res) => {
+          if (res.code == 200 && Array.isArray(res.value) && res.value.length > 0) {
+            let val = res.value;
+            val = val.sort((a, b) => a.OrderNu - b.OrderNu);
+            setList(val);
+          }
+        });
+    }
+    getList();
+  }, []);
   return (
     <>
       <div className="w-100 hidden mobile:block relative product-banner">
-        <Carousel
-          imgs={[
-            "/assets/2560/product/irego/thum_1.png",
-            "/assets/2560/product/irego/thum_2.png",
-          ]}
-          banners={[
-            "/assets/2560/product/irecog/banner1.png",
-            "/assets/2560/product/irecog/banner1.png",
-          ]}
-        />
+        <Carousel list={list} />
       </div>
       <div className="mobile:hidden">
-        <Carousel
-          imgs={[
-            "/assets/2560/product/irego/thum_1.png",
-            "/assets/2560/product/irego/thum_2.png",
-          ]}
-          banners={[
-            "/assets/mobile/product/irecog/banner_01.png",
-            "/assets/mobile/product/irecog/banner_01.png",
-          ]}
-        />
+        <Carousel list={list} />
       </div>
     </>
   );

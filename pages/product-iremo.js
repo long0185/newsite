@@ -4,36 +4,33 @@ import IremoDetail from "./components/product/IremoDetail";
 import NavBar from "./components/Navbar";
 import Carousel from "./components/Carousel";
 export default function product() {
+  const [list, setList] = React.useState([]);
+  React.useEffect(() => {
+    async function getList() {
+      fetch("/web/tableInfo/baniremo")
+        .then((res) => res.json())
+        .then((res) => {
+          if (res.code == 200 && Array.isArray(res.value) && res.value.length > 0) {
+            let val = res.value;
+            val = val.sort((a, b) => a.OrderNu - b.OrderNu);
+            setList(val);
+          }
+        });
+    }
+    getList();
+  }, []);
   return (
     <>
       <NavBar />
       <div className="hidden mobile:block contianer-fluid pt_104">
-        <Carousel
-          imgs={[
-            "/assets/2560/product/irego/thum_1.png",
-            "/assets/2560/product/irego/thum_2.png",
-          ]}
-          banners={[
-            "/assets/2560/product/iremo/banner1.png",
-            "/assets/2560/product/iremo/banner1.png",
-          ]}
-        />
+        <Carousel list={list} />
         <IregoNav />
         <IremoDetail />
       </div>
       <div className="mobile:hidden contianer-fluid pt_104">
-        <Carousel
-          imgs={[
-            "/assets/2560/product/irego/thum_1.png",
-            "/assets/2560/product/irego/thum_2.png",
-          ]}
-          banners={[
-            "/assets/mobile/product/iremo/banner1.png",
-            "/assets/mobile/product/iremo/banner1.png",
-          ]}
-        />
+        <Carousel list={list} />
         <IregoNav />
-        <IremoDetail /> 
+        <IremoDetail />
       </div>
     </>
   );

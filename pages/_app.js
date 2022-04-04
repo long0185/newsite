@@ -8,18 +8,16 @@ export default function MyApp({ Component, pageProps }) {
     function setRem() {
       let scale = document.documentElement.clientWidth / 2560;
       const scaleH = document.documentElement.clientHeight / 1440;
-      if(document.documentElement.clientWidth<=1080){
-       scale = document.documentElement.clientWidth / 1080;
+      if (document.documentElement.clientWidth <= 1080) {
+        scale = document.documentElement.clientWidth / 1080;
       }
       let reset = Math.min(scale, scaleH);
-      // reset = reset < 0.3 ? 0.3 : reset;
-      console.log('reset', reset);
+      console.log("reset", reset);
       document.documentElement.style.fontSize = baseSize * reset + "px";
     }
     setRem();
     window.addEventListener("resize", setRem);
-    return () =>
-      window.removeEventListener("resize", () => console.log("clear"));
+    return () => window.removeEventListener("resize", () => console.log("clear"));
   });
   return (
     <Layout>

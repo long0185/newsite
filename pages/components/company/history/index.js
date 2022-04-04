@@ -8,11 +8,25 @@ export default function index() {
     { id: 2017, value: "2017", active: false },
     { id: 2018, value: "2018", active: false },
     { id: 2019, value: "2019", active: false },
-    { id: 2020, value: "2020", active: true },
-    { id: 2021, value: "2021", active: false },
+    { id: 2020, value: "2020", active: false },
+    { id: 2021, value: "2021", active: true },
     { id: 2022, value: "2022", active: false },
   ]);
-
+  const [list, setList] = useState([]);
+  React.useEffect(() => {
+    async function getList() {
+      fetch("/web/tableInfo/list")
+        .then((res) => res.json())
+        .then((res) => {
+          if (res.code == 200 && Array.isArray(res.value) && res.value.length > 0) {
+            let val = res.value;
+            val = val.sort((a, b) => a.OrderNu - b.OrderNu);
+            setList(val);
+          }
+        });
+    }
+    getList();
+  }, []);
   const handleClick = (id) => {
     const newYears = years.map((item) => {
       if (id == item.id) {
@@ -47,14 +61,30 @@ export default function index() {
         <div className={`hidden mobile:flex ${s.item} items-center justify-center relative`}>
           <div className={`${s.line} absolute`}></div>
           {years.map((item) => (
-            <div onClick={() => handleClick(item.id)} key={item.id} className="flex flex-col items-center relative mx-5">
+            <div onClick={() => handleClick(item.id)} key={item.id} className="flex flex-col items-center relative mx-5 cursor-pointer">
               <span className={`${s.year} ${item.active ? "text-$primary" : ""} mb-2`}>{item.value}</span>
               <span className={`${s.point} ${item.active ? s.active : ""}`}></span>
             </div>
           ))}
         </div>
         <div className={`${s.history_wrap} w-100 flex flex-col mobile:flex-row items-end pr-20 mobile:pr-0 justify-center`}>
-          <div className={`${s.history_item} flex flex-col`}>
+          {list
+            .filter((item) => item.Year == "2021")
+            .map((ele) => (
+              <div key={ele.id} className={`${s.history_item} flex flex-col mr-5`}>
+                <div className={`${s.img} relative bg-$gray`}>
+                  <img src={ele.Imageurl} alt="" />
+                </div>
+                <div className={`${s.img_title} flex-1 flex flex-col bg-$white`}>
+                  <span className={s.sub_title}>{ele.Title}</span>
+                  <div className={`flex items-center`}>
+                    <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.icon} relative  mr-2`}></img>
+                    <span className="c_sub_title text-$86 mt-1">{ele.Time}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          {/* <div className={`${s.history_item} flex flex-col`}>
             <div className={`${s.img} relative bg-$gray`}></div>
             <div className={`${s.img_title} flex-1 flex flex-col bg-$white`}>
               <span className={s.sub_title}>在上海中医药大学附属岳阳中西医结合医院进行临床测试</span>
@@ -83,7 +113,7 @@ export default function index() {
                 <span className="c_sub_title text-$86 mt-1">{years.find((item) => item.active == true).id}年7月23日</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
