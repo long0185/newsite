@@ -182,8 +182,7 @@ export default function applicationdetail() {
       setNum(newNum);
     }
   };
-  console.log("list", list);
-  console.log("index", index);
+
   return (
     <div>
       <Navbar />
@@ -203,7 +202,7 @@ export default function applicationdetail() {
               list.map((item, idx) => (
                 <motion.li key={item.id} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == id ? "100" : "10"}` }} variants={variants} animate={idx < index ? "left" : index > index ? "right" : "mid"}>
                   <div className="w-100 h-100 flex flex-col pt-10">
-                    <div className="w-100 flex flex-col items-start justify-start p-10">
+                    <div className="w-100 flex flex-col items-start justify-start p-10 text-$37">
                       <span className="font_36 font-black mb-10">{item.Name}</span>
                       <div className="flex justify-center items-center mt-3">
                         <span className="detail_desc font-black mr-5">职位薪资:</span>
@@ -224,7 +223,7 @@ export default function applicationdetail() {
                       <div className="flex justify-center items-center mt-3">
                         <span className="detail_desc font-black">岗位职责:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
                         {item.Descrip.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
@@ -232,7 +231,7 @@ export default function applicationdetail() {
                       <div className="flex justify-center items-center mt-3">
                         <span className="detail_desc font-black">技能要求:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
                         {item.Skills.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
@@ -260,7 +259,7 @@ export default function applicationdetail() {
               list.map((item, idx) => (
                 <motion.li key={item.id} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == id ? "100" : "10"}` }} variants={m_variants} animate={idx < index ? "left" : idx > index ? "right" : "mid"}>
                   <div className="w-100 h-100 flex flex-col pt-10">
-                    <div className="w-100 flex flex-col items-start justify-start p-10">
+                    <div className="w-100 flex flex-col items-start justify-start p-10 text-$37">
                       <span className="font_36 font-black mb-10">{item.Name}</span>
                       <div className="flex justify-center items-center mt-3">
                         <span className="detail_desc font-black mr-5">职位薪资:</span>
@@ -281,7 +280,7 @@ export default function applicationdetail() {
                       <div className="flex justify-center items-center mt-3">
                         <span className="detail_desc font-black">岗位职责:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
                         {item.Descrip.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
@@ -289,7 +288,7 @@ export default function applicationdetail() {
                       <div className="flex justify-center items-center mt-3">
                         <span className="detail_desc font-black">技能要求:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
                         {item.Skills.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
@@ -324,7 +323,7 @@ export default function applicationdetail() {
               list.map((item, index) => (
                 <motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == 1 ? "100" : "10"}` }} variants={variants} animate={index < num ? "left" : index > num ? "right" : "mid"}>
                   <div className="w-100 h-100 flex flex-col pt-10">
-                    <div className="w-100 flex flex-col items-start justify-start p-10">
+                    <div className="w-100 flex flex-col items-start justify-start p-10 text-$37">
                       <span className="font_36 font-black mb-10">{item.Name}</span>
                       <div className="flex justify-center items-center mt-3">
                         <span className="detail_desc font-black mr-5">职位薪资:</span>
@@ -345,7 +344,7 @@ export default function applicationdetail() {
                       <div className="flex justify-center items-center mt-3">
                         <span className="detail_desc font-black">岗位职责:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
                         {item.Descrip.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
@@ -353,7 +352,7 @@ export default function applicationdetail() {
                       <div className="flex justify-center items-center mt-3">
                         <span className="detail_desc font-black">技能要求:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
                         {item.Skills.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}

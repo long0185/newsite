@@ -1,5 +1,5 @@
 import React from "react";
-import IregoNav from "./components/product/IregoNav";
+import IremoNav from "./components/product/IremoNav";
 import IremoDetail from "./components/product/IremoDetail";
 import NavBar from "./components/Navbar";
 import Carousel from "./components/Carousel";
@@ -23,13 +23,13 @@ export default function product() {
     <>
       <NavBar />
       <div className="hidden mobile:block contianer-fluid pt_104">
-        <Carousel list={list} />
-        <IregoNav />
+        {list.length > 0 && <Carousel list={list} />}
+        <IremoNav />
         <IremoDetail />
       </div>
       <div className="mobile:hidden contianer-fluid pt_104">
         <Carousel list={list} />
-        <IregoNav />
+        <IremoNav />
         <IremoDetail />
       </div>
     </>

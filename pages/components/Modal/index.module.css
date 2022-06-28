@@ -1,7 +1,7 @@
 /* prettire-ignore */
 .container {
   /* prettier-ignore */
-  width: 600PX;
+  width: 800PX;
   /* prettier-ignore */
   height: 600PX;
   position: relative;
@@ -30,9 +30,10 @@
   /* prettier-ignore */
   width: 400PX;
   /* prettier-ignore */
-  height: 40PX;
-  right: 980px;
-  transform: translateY(200px);
-  margin-top: 400px;
+  /* height: 40PX; */
+  /* right: 980px; */
+  /* transform: translateY(360px); */
+  /* margin-top: 20px; */
   opacity: 0;
+  margin-right: 20px;
 }

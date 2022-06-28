@@ -17,6 +17,7 @@ export default function index() {
         });
     }
     getList();
+    return () => {};
   }, []);
   React.useEffect(() => {
     async function getList() {
@@ -30,6 +31,7 @@ export default function index() {
         });
     }
     getList();
+    return () => {};
   }, []);
   return (
     <>

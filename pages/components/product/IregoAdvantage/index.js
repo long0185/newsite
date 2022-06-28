@@ -4,7 +4,12 @@ import Banner from "../../Banner";
 import { motion } from "framer-motion";
 import { useInViewport } from "react-in-viewport";
 import { up_variants } from "../IregoUsefn";
-const list = ["/assets/2560/product/irego/advantage_1.png", "/assets/2560/product/irego/product_2.png", "/assets/2560/product/irego/product_3.png", "/assets/2560/product/irego/product_4.png"];
+const list = [
+  { png: "/assets/2560/product/irego/advantage_1.png", desc: "悬挂底盘可适应地面不平的场景运动，可搭建不同的机构是实现不同的功能" },
+  { png: "/assets/2560/product/irego/product_2.png", desc: "骨盆四连杆装置通过简易的弹簧连杆装置设计，有效地实现骨盆横摆的自由度" },
+  { png: "/assets/2560/product/irego/product_3.png", desc: "意图识别装置加载了灵敏的传感器，将患者作用在机器上的力信号变成控制信号" },
+  { png: "/assets/2560/product/irego/product_4.png", desc: "仓库货架有序排列，合理的仓库管理，保证货源质量和数量，从而保证生产需求" },
+];
 export default function index() {
   const dom = useRef();
   const myRef = useRef();
@@ -35,12 +40,9 @@ export default function index() {
       <motion.div variants={isPc ? up_variants : {}} animate={`${inViewport ? "enter" : "leave"}`} className={`w-100 flex flex-wrap items-center justify-center  ${styles.content}`}>
         {list.map((item, index) => (
           <motion.div key={index} className={`${styles.content_item} relative`}>
-            <img className={`${styles.content_item} z-10`} src={item} />
-            <div className={`w-100 h-100 ${styles.modal} flex flex-col items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute cursor-pointer z-30`}>
-              <span className={`${styles.desc_text_1} `}>骨盆四连杆装置通过简易的弹簧设计，</span>
-              <span className={`${styles.desc_text_2}`}>有效地实现骨盆横摆的自由度，</span>
-              <span className={`${styles.desc_text_3}`}>可根据不同程度的患者情况自由调节横</span>
-              <span className={`${styles.desc_text_4}`}>摆的位移量</span>
+            <img className={`${styles.content_item} z-10`} src={item.png} />
+            <div className={`w-100 h-100 ${styles.modal} px-6 font_size_24 flex flex-col items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute  z-30`}>
+              <span className={`${styles.desc_text_1} `}>{item.desc}</span>
             </div>
           </motion.div>
         ))}

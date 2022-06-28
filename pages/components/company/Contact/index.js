@@ -51,7 +51,7 @@ export default function index() {
           <div className={`flex flex-col ${s.address}`}>
             <span>技术服务热线：（021）31076003</span>
             <span>研发中心：上海市宝山区环上大科技园 1号基地21号楼7层</span>
-            <span>生产中心：中国（上海）自由贸易试验区临港新片区新杨公路1566号12号楼301室</span>
+            <span>生产中心：中国（上海）自由贸易试验区临港新片区新杨公路1566号12号楼</span>
             <span>公司网址：www.ga-robot.com</span>
           </div>
         </motion.div>
@@ -61,7 +61,7 @@ export default function index() {
           <div className={`flex flex-col ${s.address}`}>
             <span className="font_24">技术服务热线：（021）31076003</span>
             <span className="font_24">研发中心：上海市宝山区环上大科技园 1号基地21号楼7层</span>
-            <span className="font_24">生产中心：中国（上海）自由贸易试验区临港新片区新杨公路1566号12号楼301室</span>
+            <span className="font_24">生产中心：中国（上海）自由贸易试验区临港新片区新杨公路1566号12号楼</span>
             <span className="font_24">公司网址：www.ga-robot.com</span>
           </div>
         </div>

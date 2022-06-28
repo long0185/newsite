@@ -18,9 +18,7 @@ export default function ProductIRego() {
   }, []);
   return (
     <>
-      <div className="w-100 hidden mobile:block relative product-banner">
-        <Carousel list={list} />
-      </div>
+      <div className="w-100 hidden mobile:block relative product-banner">{list.length > 0 && <Carousel list={list} />}</div>
       <div className="mobile:hidden">
         <Carousel list={list} />
       </div>

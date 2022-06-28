@@ -20,9 +20,9 @@
 }
 .line {
   width: 2073px;
-  height: 1px;
+  height: 2px;
   background-color: #c0c0c0;
-  bottom: 9px;
+  bottom: 8px;
 }
 .active {
   background-color: #caa95c;

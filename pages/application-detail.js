@@ -144,6 +144,7 @@ export default function applicationdetail() {
   const [index, setIndex] = useState(0);
   const { query } = router;
   const { page, id } = query;
+  const [_id, set_id] = useState(id);
   useEffect(() => {
     fetch(`/web/tableInfo/${page}`, {
       headers: { Accept: "application/json" },
@@ -165,19 +166,26 @@ export default function applicationdetail() {
   }, [page]);
   React.useEffect(() => {
     async function getList() {
-      fetch(`/web/SingleInfo/${page}?id=${id}`);
+      fetch(`/web/SingleInfo/${page}?id=${_id}`);
     }
     getList();
-  }, [id]);
+  }, [_id]);
   const handleClick = (direction) => {
     if (direction == "left") {
       const newNum = index - 1 <= 0 ? 0 : index - 1;
       setIndex(newNum);
       const newItem = list[newNum];
+      if (newItem && newItem.id) {
+        set_id(newItem.id);
+      }
     }
     if (direction == "right") {
       const newNum = index + 1 >= list.length - 1 ? list.length - 1 : index + 1;
       setIndex(newNum);
+      const newItem = list[newNum];
+      if (newItem && newItem.id) {
+        set_id(newItem.id);
+      }
     }
   };
   return (
@@ -200,16 +208,16 @@ export default function applicationdetail() {
               list.length > 0 &&
               list.map((item, idx) => (
                 <motion.li key={item.id} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == id ? "100" : "10"}` }} variants={variants} animate={idx < index ? "left" : idx > index ? "right" : "mid"}>
-                  <div className="w-100 h-100 flex flex-col pt-5 px-16">
+                  <div className="w-100 h-100 flex flex-col pt-16 px-16">
                     <div className="w-100 flex flex-col items-center justify-center">
-                      <span className="font_36 font-black">{item.Title}</span>
+                      <span className="font_36 font-black text-$37">{item.Title}</span>
                       <div className="flex justify-center items-center">
                         <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.icon} calendar-icon img-fluid mr-1`}></img>
                         <span className="text-$86 my-3">{dayjs(item.Time).format("YYYY-DD-MM")}</span>
                         <span className="text-$86 my-3 ml-5">浏览:{item.views}</span>
                       </div>
                     </div>
-                    <div dangerouslySetInnerHTML={{ __html: draftToHtml(JSON.parse(item.Detail)) }}></div>
+                    <div className="text-$68" dangerouslySetInnerHTML={{ __html: draftToHtml(JSON.parse(item.Detail)) }}></div>
                   </div>
                 </motion.li>
               ))}
@@ -227,15 +235,15 @@ export default function applicationdetail() {
               list.length > 0 &&
               list.map((item, idx) => (
                 <motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == 1 ? "100" : "10"}` }} variants={m_variants} animate={idx < index ? "left" : idx > index ? "right" : "mid"}>
-                  <div className="w-100 h-100 flex flex-col pt-5 px-16">
+                  <div className="w-100 h-100 flex flex-col pt-16 px-16">
                     <div className="w-100 flex flex-col items-center justify-center">
-                      <span className="font_36 font-black">{item.Title}</span>
+                      <span className="font_36 font-black text-$37">{item.Title}</span>
                       <div className="flex justify-center items-center">
                         <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.icon} calendar-icon img-fluid mr-1`}></img>
                         <span className="text-$86 my-3">{item.Time}</span>
                       </div>
                     </div>
-                    <div dangerouslySetInnerHTML={{ __html: draftToHtml(JSON.parse(item.Detail)) }}></div>
+                    <div className="text-$68" dangerouslySetInnerHTML={{ __html: draftToHtml(JSON.parse(item.Detail)) }}></div>
                   </div>
                 </motion.li>
               ))}

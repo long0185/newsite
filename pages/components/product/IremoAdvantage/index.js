@@ -33,38 +33,26 @@ export default function index() {
       <motion.div ref={myRef} variants={isPc ? up_variants : {}} animate={`${inViewport ? "enter" : "leave"}`} className={`w-100 d-center flex-wrap  ${styles.content}`}>
         <div className={`${styles.content_item} relative`}>
           <img className={`${styles.content_item} absolute z-10`} src="/assets/2560/product/iremo/product_1.png" />
-          <div className={`flex flex-col items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute cursor-pointer z-30 ${styles.modal}`}>
-            <span className={`${styles.desc_text_1} `}>骨盆四连杆装置通过简易的弹簧设计，</span>
-            <span className={`${styles.desc_text_2}`}>有效地实现骨盆横摆的自由度，</span>
-            <span className={`${styles.desc_text_3}`}>可根据不同程度的患者情况自由调节横</span>
-            <span className={`${styles.desc_text_4}`}>摆的位移量</span>
+          <div className={`flex flex-col px-6 items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute z-30 ${styles.modal}`}>
+            <span className={`${styles.desc_text_1} font_size_24 `}>工作人员专心致志的焊接每一个线束，保证产品的质量</span>
           </div>
         </div>
         <div className={`${styles.content_item} relative`}>
           <img className={`${styles.content_item}`} src={`/assets/2560/product/iremo/product_2.png`} />
-          <div className={`flex flex-col items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute cursor-pointer z-30 ${styles.modal}`}>
-            <span className={`${styles.desc_text_1}`}>骨盆四连杆装置通过简易的弹簧设计，</span>
-            <span className={`${styles.desc_text_2}`}>有效地实现骨盆横摆的自由度，</span>
-            <span className={`${styles.desc_text_3}`}>可根据不同程度的患者情况自由调节横</span>
-            <span className={`${styles.desc_text_4}`}>摆的位移量</span>
+          <div className={`flex px-6 flex-col items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute z-30 ${styles.modal}`}>
+            <span className={`${styles.desc_text_1} font_size_24`}>小批量的末端生产，保证产品生产的互换性</span>
           </div>
         </div>
         <div className={`${styles.content_item} relative`}>
           <img className={`${styles.content_item}`} src="/assets/2560/product/iremo/product_3.png" />
-          <div className={`flex flex-col items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute cursor-pointer z-30 ${styles.modal}`}>
-            <span className={`${styles.desc_text_1}`}>骨盆四连杆装置通过简易的弹簧设计，</span>
-            <span className={`${styles.desc_text_2}`}>有效地实现骨盆横摆的自由度，</span>
-            <span className={`${styles.desc_text_3}`}>可根据不同程度的患者情况自由调节横</span>
-            <span className={`${styles.desc_text_4}`}>摆的位移量</span>
+          <div className={`flex flex-col px-6 items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute z-30 ${styles.modal}`}>
+            <span className={`${styles.desc_text_1} font_size_24`}>合理规划的模块化生产，有助于产品的后期维护</span>
           </div>
         </div>
         <div className={`${styles.content_item} relative`}>
           <img className={`${styles.content_item}`} src={`/assets/2560/product/iremo/product_4.png`} />
-          <div className={`flex flex-col items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute cursor-pointer z-30 ${styles.modal}`}>
-            <span className={`${styles.desc_text_1}`}>骨盆四连杆装置通过简易的弹簧设计，</span>
-            <span className={`${styles.desc_text_2}`}>有效地实现骨盆横摆的自由度，</span>
-            <span className={`${styles.desc_text_3}`}>可根据不同程度的患者情况自由调节横</span>
-            <span className={`${styles.desc_text_4}`}>摆的位移量</span>
+          <div className={`flex px-6 flex-col items-center justify-center bg-$primary opacity-10 text-transparent hover:text-white hover:bg-$primary hover:opacity-90 absolute z-30 ${styles.modal}`}>
+            <span className={`${styles.desc_text_1} font_size_24`}>整齐的电气装置既便于后期的维修，也有利整体的美观</span>
           </div>
         </div>
       </motion.div>

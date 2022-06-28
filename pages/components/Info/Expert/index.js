@@ -202,6 +202,7 @@ export default function index() {
             let val = res.value;
             val = val.sort((a, b) => a.OrderNu - b.OrderNu);
             setList(val);
+            // setList([...val, ...val, ...val, ...val, ...val]);
           }
         });
     }
@@ -221,11 +222,11 @@ export default function index() {
           </div>
         </div> */}
       </div>
-      <div className="hidden mobile:block mt_63 pb_43">
+      <div className="hidden  items-center justify-center px-20 mobile:flex flex-wrap  pb_86">
         {list.map((item, index) => (
           <div key={item.id}>
-            <div className="w-100 d-center">
-              <div className={`${s.content_2} flex  justify-between`}>
+            <div className="w-100 d-center mt_43">
+              <div className={`${s.content_2} mt_43 flex  justify-between`}>
                 <ExpertCard item={item} />
               </div>
             </div>

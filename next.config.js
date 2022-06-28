@@ -2,7 +2,7 @@ const path = require("path");
 const publicpath = path.resolve(__dirname, "public");
 module.exports = {
   // assetPrefix: ".",
-  // basePath: "/out",
+  basePath: "/out",
   images: {
     loader: "akamai",
     path: "/",
@@ -15,7 +15,7 @@ module.exports = {
       fallback: [
         {
           source: "/web/:slug*",
-          destination: "http://www.ga-robot.com:8088/web/:slug*",
+          destination: "https://www.irego.cn/web/:slug*",
         },
       ],
     };

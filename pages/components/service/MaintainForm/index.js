@@ -39,7 +39,7 @@ export default function index() {
     <div className={`${s.wrap} w-100 p-0 flex flex-col items-center`}>
       {/* <img src='/assets/2560/service/maintain/title.png' className={`${s.img} relative`}>
       </img> */}
-      <Banner img={"/assets/2560/service/maintain/title.png"} />
+      <Banner img={"/assets/value_add.png"} />
       <div className="mobile:hidden border w-100 flex flex-col items-center justify-center ">
         <div className={`${s.m_content} flex flex-col items-center justify-between`}>
           <div className={`${s.m_info_1} justify-around flex flex-col`}>
@@ -144,8 +144,8 @@ export default function index() {
         </div>
       </div>
       <div className={`w-100 hidden  mobile:flex text-center justify-center`}>
-        <button onClick={handleSubmit} className={`${s.btn} hover:bg-yellow-400 `}>
-          提交
+        <button onClick={handleSubmit} className={`${s.btn} hover:bg-yellow-400 nav-link`}>
+          立即提交
         </button>
       </div>
     </div>

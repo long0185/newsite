@@ -10,6 +10,7 @@ import s from "./index.module.css";
 import Navbar from "./components/Navbar";
 import MobileCarousel from "./components/MobileCarousel";
 import MobileContent from "./components/MobileContent";
+import ContactUs from "./components/ContactUs";
 
 // NOTE: if using fullpage extensions/plugins put them here and pass it as props.
 // This is no longer required for the scrollOverflow option.
@@ -71,7 +72,6 @@ class PC extends React.Component {
         num: state.num - 1,
       }));
     }
-    console.log("this.state.num", this.state.num);
   }
 
   render() {
@@ -94,20 +94,25 @@ class PC extends React.Component {
 
     return (
       <div className="hidden mobile:block App">
-        {/* <motion.div
-            className={`${s.modal} fixed flex items-center justify-center bottom-0 top-0 left-0 right-0 border bg-gray-200`}
-            animate={{
-              scale:5,
-              opacity:0,
-              display:"none"
-            }}
-            transition={{
-              delay:3,
-              duration:.8,
-            }}
-          >
-            <Modal/>
-          </motion.div> */}
+        <ContactUs />
+        <motion.div
+          className={`${s.modal} fixed flex items-center justify-center bottom-0 top-0 left-0 right-0 border bg-gray-200`}
+          animate={{
+            scale: [1, 2, 3, 4, 6],
+            opacity: [1, 1, 1, 0.9, 0],
+            transitionEnd: {
+              display: "none",
+            },
+          }}
+          transition={{
+            times: [0, 0.2, 0.5, 0.8, 1],
+            delay: 3.6,
+            duration: 0.3,
+            ease: "linear",
+          }}
+        >
+          <Modal />
+        </motion.div>
         <Menu />
         <ReactFullpage
           scrollingSpeed={1000}
@@ -133,7 +138,8 @@ class PC extends React.Component {
 
 const Mobile = () => {
   return (
-    <div className="mobile:hidden App">
+    <div className="App">
+      <ContactUs />
       <Navbar />
       <MobileCarousel />
       <MobileContent />

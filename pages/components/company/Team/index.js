@@ -164,20 +164,20 @@ export default function index() {
           <Carousel className="mt-5" showStatus={false} swipeable={true} emulateTouch showArrows={false}>
             <div className="flex flex-col pb-5 items-center">
               {ExpertList.map((item) => (
-                <TeamCard item={item} />
+                <TeamCard key={item.id} item={item} />
               ))}
             </div>
             <div className="flex flex-col pb-5 items-center">
               {ExpertList.map((item) => (
-                <TeamCard item={item} />
+                <TeamCard key={item.id} item={item} />
               ))}
             </div>
           </Carousel>
         </div>
       </div>
       <div className="w-100 justify-center hidden   mobile:flex mb_100">
-        <div onClick={() => setnum(-1)} className={`${s.slide} ${num == -1 ? "bg-$primary" : "bg-$gray"}  cursor-pointer`}></div>
-        <div onClick={() => setnum(0)} className={`${s.slide} ${num == 0 ? "bg-$primary" : "bg-$gray"}  mx-5 cursor-pointer`}></div>
+        <div onClick={() => setnum(-1)} className={`${s.slide} ${num == -1 ? "bg-$gray" : "bg-$primary"}  cursor-pointer`}></div>
+        <div onClick={() => setnum(0)} className={`${s.slide} ${num == 0 ? "bg-$gray" : "bg-$primary"}  mx-5 cursor-pointer`}></div>
       </div>
     </div>
   );

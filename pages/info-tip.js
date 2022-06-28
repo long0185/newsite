@@ -6,7 +6,7 @@ export default function info() {
   return (
     <>
       <NavBar />
-      <div className="mt_104">
+      <div className="mt_104 min_height">
         <Banner />
         <TipCard />
       </div>

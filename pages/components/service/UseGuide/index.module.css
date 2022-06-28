@@ -11,10 +11,11 @@
   height: 340px;
 }
 .link {
-  width: 162px;
-  height: 46px;
-  border-radius: 23px;
+  width: 262px;
+  height: 60px;
+  border-radius: 33px;
   border: solid 1px #ccc;
+  font-size: 26px;
 }
 .m_link {
   width: 340px;

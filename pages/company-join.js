@@ -112,18 +112,18 @@ export default function company() {
       </div>
       <div className="w-100 flex flex-col items-center justify-center mb_43">
         <div className="mobile:hidden mb_43">
-          <button onClick={() => {}} className="m_l_btn font_size_30  text-$37 border-1 border border-$primary hover:bg-yellow-300 mr-3">
+          {/* <button onClick={() => {}} className="m_l_btn font_size_30  text-$37 border-1 border border-$primary hover:bg-yellow-300 mr-3 ">
             表单下载
-          </button>
+          </button> */}
           <button onClick={() => {}} className="m_l_btn font_size_30 bg-$primary text-white hover:bg-yellow-300 ml-3">
             投递简历
           </button>
         </div>
         <div className="mobile:flex mb_43 hidden">
-          <button onClick={() => {}} className="l_btn  text-$37 border border-$primary  bg-white hover:bg-yellow-300 mr-3">
+          {/* <button onClick={() => {}} className="l_btn  text-$37 border border-$primary  bg-white hover:bg-yellow-300 mr-3 nav-link">
             表单下载
-          </button>
-          <button onClick={() => {}} className="l_btn  bg-$primary text-white hover:bg-yellow-300 ml-3">
+          </button> */}
+          <button onClick={() => {}} className="l_btn  bg-$primary text-white hover:bg-yellow-300 ml-3 nav-link">
             投递简历
           </button>
         </div>

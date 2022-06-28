@@ -7,17 +7,12 @@ export default function info() {
   return (
     <>
       <NavBar />
-      <div className="mt_104">
+      <div className="mt_104 min_height">
         <Banner />
-        <div className="tab-content border" id="pills-tabContent">
-          <div
-            className="tab-pane fade show active "
-            id="pills-home"
-            role="tabpanel"
-            aria-labelledby="pills-home-tab"
-          >
+        <div className="tab-content" id="pills-tabContent">
+          <div className="tab-pane fade show active " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             <Expert />
-          </div> 
+          </div>
         </div>
       </div>
     </>

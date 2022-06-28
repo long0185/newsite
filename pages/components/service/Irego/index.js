@@ -45,10 +45,10 @@ export default function index() {
   };
   return (
     <>
-      <div className={`w-100 d-center flex-col mt_63`}>
-        <div className={`${s.warp} w-screen flex justify-center overflow-hidden relative`}>
+      <div className={`w-100 d-center flex-col `}>
+        <div className={`${s.warp} w-screen flex justify-center overflow-hidden relative flex-wrap px-0 mobile:px-10`}>
           {list.map((item) => (
-            <div key={item.id} className="flex ">
+            <div key={item.id} className="flex mt_63 ">
               <div onClick={() => router.push(`guidedetail?page=guide&id=${item.id}`)} className={`${s.img_wrap}`}>
                 <div className={`${s.img} relative`}>
                   <img className=" w-100 h-100" src={item.Imageurl} />

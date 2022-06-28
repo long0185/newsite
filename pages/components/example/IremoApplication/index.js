@@ -59,7 +59,7 @@ const ApplicationCard_2 = ({ title = "", date = "", view = "" }) => {
 export const MApplicationCard = ({ item }) => {
   const router = useRouter();
   return (
-    <div onClick={() => router.push(`/application-detail?page=appmo&id=${item.id}`)} className={`${s.m_item_1} flex flex-col mb_43 `}>
+    <div onClick={() => router.push(`/application-detail?page=appmo&id=${item.id}`)} className={`${s.m_item_1}  flex flex-col mb_43 `}>
       <img className={`${s.m_img} relative `} src={item.Imageurl}></img>
       <div className={`py-3 px-5 flex-1 border flex flex-col justify-between items-start`}>
         <div className="font_size_24 text-$37">{item.Title}</div>
@@ -83,7 +83,7 @@ export const MApplicationCard = ({ item }) => {
 const ApplicationCard = ({ item }) => {
   const router = useRouter();
   return (
-    <div onClick={() => router.push(`/application-detail?page=appmo&id=${item.id}`)} className={`${s.item} flex flex-col `}>
+    <div onClick={() => router.push(`/application-detail?page=appmo&id=${item.id}`)} className={`${s.item} mt_43 flex flex-col `}>
       <img className={`${s.img} relative `} src={item.Imageurl} />
       <div className={`p-3 px-7 flex-1 border flex flex-col justify-between items-start`}>
         <div className="font_size_24 text-$37">{item.Title}</div>
@@ -115,6 +115,7 @@ export default function index() {
             let val = res.value;
             val = val.sort((a, b) => a.OrderNu - b.OrderNu);
             setList(val);
+            // setList([...val, ...val, ...val, ...val, ...val]);
           }
         });
     }
@@ -143,9 +144,9 @@ export default function index() {
           </div>
         </div> */}
       </div>
-      <div className=" mt_118 mb_118 hidden mobile:block">
-        <div className={`${s.wrap}`}>
-          <div className={`${s.content} w-100 d-center flex-wrap`}>
+      <div className=" mt_43 pb_86 hidden mobile:block">
+        <div className={`${s.wrap} flex items-center justify-center`}>
+          <div className={`${s.content} w-100 flex items-center justify-center flex-wrap px-0 mobile:px-10 `}>
             {list.map((item) => (
               <ApplicationCard key={item.id} item={item} />
             ))}

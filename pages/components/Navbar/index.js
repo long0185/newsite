@@ -5,6 +5,7 @@ import { ChevronUpIcon } from "@heroicons/react/solid";
 import s from "./index.module.css";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+
 const variants = {
   open: { translateY: "6.3rem", transition: { duration: 0.5 } },
   closed: { translateY: 0, transition: { duration: 0.5 } },
@@ -14,6 +15,12 @@ const mobileVariants = {
   close: { translateX: "0", transition: { duration: 0.5 } },
 };
 const subnav = {
+  home: [
+    {
+      path: "/",
+      domin: "home",
+    },
+  ],
   product: [
     {
       path: "/product-irego",
@@ -47,7 +54,7 @@ const subnav = {
     {
       path: "/service-maintain",
       domain: "service",
-      name: "维修服务",
+      name: "增值服务",
     },
     {
       path: "/service-guide",
@@ -57,7 +64,7 @@ const subnav = {
     {
       path: "/service-train",
       domain: "service",
-      name: "培训服务 ",
+      name: "市场支持 ",
     },
   ],
   example: [
@@ -86,15 +93,16 @@ const subnav = {
   ],
   info: [
     {
-      path: "/info-expert",
-      domain: "info",
-      name: "专家访谈",
-    },
-    {
       path: "/info-infomation",
       domain: "info",
       name: "金矢快讯",
     },
+    // {
+    //   path: "/info-expert",
+    //   domain: "info",
+    //   name: "专家访谈",
+    // },
+
     {
       path: "/info-tip",
       domain: "info",
@@ -108,8 +116,16 @@ const ResponsiveAppBar = () => {
   const [m_open, setM_open] = React.useState(false);
   const enter = (domain = "") => {
     const _domain = domain.replace("/", "");
-    setNavkey(_domain);
-    setisOpen(true);
+    console.log("_domain: ", _domain);
+    console.log("navkey", navkey);
+    if (_domain == navkey) {
+      setisOpen(false);
+    } else if (_domain == "home") {
+      setNavkey(_domain);
+    } else {
+      setNavkey(_domain);
+      setisOpen(true);
+    }
   };
   const leave = (id) => {
     setisOpen(false);
@@ -118,7 +134,7 @@ const ResponsiveAppBar = () => {
   const navBar = [
     {
       name: "首页",
-      domain: "/",
+      domain: "/home",
       path: "/",
     },
     {
@@ -152,7 +168,7 @@ const ResponsiveAppBar = () => {
       children: subnav.company,
     },
     {
-      name: "资讯",
+      name: "爱睿家论坛",
       domain: "/info",
       path: "/info-expert",
       children: subnav.info,
@@ -160,11 +176,11 @@ const ResponsiveAppBar = () => {
   ];
 
   let { pathname, push } = useRouter();
-  console.log("pathname", pathname);
+  // console.log("pathname", pathname);
   const [state, setState] = React.useState({ scrollTop: 0 });
 
   return (
-    <div className="fixed top-0 z-50 w-100 p-0 flex flex-col nav-wrap" onMouseLeave={leave}>
+    <div className="fixed top-0 z-50 w-100 p-0 flex flex-col nav-wrap">
       <nav className={`flex navbar z-20 w-100 py-1 relative items-center justify-between ${isOpen ? "border-bottom" : ""} `}>
         <div className="block mobile:hidden relative ml-16 h-14 w-14">
           <img onClick={() => setM_open(!m_open)} className="w-100 h-100 img-fluid" src="/assets/2560/menu.svg" />
@@ -174,18 +190,16 @@ const ResponsiveAppBar = () => {
         <ul className={`hidden  mobile:flex flex-row justify-center pl-5`}>
           {navBar.map((item) => (
             <li key={item.path} className={`relative  h-100 navbar_li ${pathname.split("-")[0] == item.domain ? "active" : ""} `}>
-              <Link href={item.path}>
-                <span
-                  onMouseEnter={() => {
-                    if (item.path != "/") {
-                      enter(item.domain);
-                    }
-                  }}
-                  className={`nav-link cursor-pointer nav_link font_24 ${pathname.split("-")[0] == item.domain ? "active" : ""}`}
-                >
-                  {item.name}
-                </span>
-              </Link>
+              {/* <Link href={item.path}> */}
+              <span
+                onClick={() => {
+                  enter(item.domain);
+                }}
+                className={`nav-link cursor-pointer font_size_24 ${pathname.split("-")[0] == item.domain ? "active" : ""}`}
+              >
+                {item.name}
+              </span>
+              {/* </Link> */}
             </li>
           ))}
         </ul>
@@ -193,7 +207,6 @@ const ResponsiveAppBar = () => {
           <motion.ul className={`${s.m_ul} absolute opacity-100 top-0 left-0 overflow-y-auto bg-white z-20 border pt_110 mobile_navbar mobile:hidden flex flex-col  justify-center`}>
             <li
               onClick={() => {
-                console.log("close");
                 setM_open(!m_open);
               }}
               className={`${s.close_icon} absolute z-20 top-0 z-100 right-0 `}
@@ -232,41 +245,46 @@ const ResponsiveAppBar = () => {
               </li>
             ))}
             <li className="ml-110 pl_110 pr_110 h_517 mt_110 bg-gray-100 w-100 flex flex-col items-center">
-              <div className={`${s.m_bottom} mt-20 flex items-center justify-center`}>
+              <div className={`${s.m_bottom} mt_110 flex items-center justify-center`}>
                 <img className={`${s.m_phone}`} src="/assets/2560/home/phone.svg" />
                 <span className={`${s.m_num} font_30 text-$86`}>咨询热线：400-120-8888</span>
               </div>
-              <div className={`${s.m_bottom} mt-10 flex items-center justify-center`}>
+              {/* <div className={`${s.m_bottom} mt-10 flex items-center justify-center`}>
                 <img className={`${s.m_phone} mr-2`} src="/assets/2560/home/cart.svg" />
                 <span className={`${s.m_num} font_30 text-$86 ml-2 `}>金矢天猫商城</span>
-              </div>
+              </div> */}
             </li>
           </motion.ul>
         </motion.div>
 
         <div className=" mobile:hidden flex pr-16 justify-around items-center">
           <img src="/assets/2560/home/share.svg" className="w_53 h_53 mr-16" alt="" />
-          <img src="/assets/2560/home/cart.svg" alt="" className="w_65" />
+          {/* <img src="/assets/2560/home/cart.svg" alt="" className="w_65" /> */}
         </div>
         <div className="navbar-right hidden mobile:flex justify-around">
           <div className="relative">
             <img src="/assets/2560/home/share.svg" className="img-fluid" alt="" />
           </div>
-          <div className="relative cart ml-5">
+          {/* <div className="relative cart ml-5">
             <img src="/assets/2560/home/cart.svg" alt="" className="img-fluid" />
-          </div>
+          </div> */}
         </div>
       </nav>
       <motion.nav className="hidden sub-navbar w-screen mobile:flex items-center absolute bg-white  justify-center z-10 border" animate={isOpen ? "open" : "closed"} variants={variants}>
         {navkey &&
           subnav[navkey].map((item, index) => {
-            return (
-              <Link href={item.path} key={item.path + item.index}>
-                <div className="">
-                  <span className={`nav-link cursor-pointer hover:bg-$primary hover:text-white mx-5 ${item.path == pathname ? "main_bg" : ""} `}>{item.name}</span>
-                </div>
-              </Link>
-            );
+            if (item.path == "/") {
+              push("/");
+              return null;
+            } else {
+              return (
+                <Link href={item.path} key={item.path + item.index}>
+                  <div className="">
+                    <span className={`nav-link cursor-pointer hover:bg-$primary hover:text-white mx-5 ${item.path == pathname ? "main_bg" : ""} `}>{item.name}</span>
+                  </div>
+                </Link>
+              );
+            }
           })}
       </motion.nav>
     </div>

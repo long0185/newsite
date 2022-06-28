@@ -65,8 +65,8 @@ export default function index() {
       <Navbar />
       <div className="mt_104">
         <div className={`${s.m_modal} bg-$gray mobile:hidden flex flex-col items-center`}>
-          <div className={`${s.m_content} mt_63 bg-white flex flex-col items-center`}>
-            <span className="font_36 mt-10 font-extrabold">{item?.Title}</span>
+          <div className={`${s.m_content} mt_63 bg-white flex flex-col items-center text-$37`}>
+            <span className="font_36 mt-10 font-extrabold text-$37">{item?.Title}</span>
             <div className="flex justify-between items-center mt-6 text-$37">
               <div className="flex items-center mr-8">
                 <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.icon} calendar-icon img-fluid mr-1`}></img>
@@ -81,7 +81,7 @@ export default function index() {
                 {item?.Videourl && <source src={item?.Videourl} type="video/mp4" />}
               </video>
             </div>
-            {item?.Detail && <div className="mt-5" dangerouslySetInnerHTML={{ __html: draftToHtml(JSON.parse(item?.Detail)) }}></div>}
+            {item?.Detail && <div className="mt-5 text-$68" dangerouslySetInnerHTML={{ __html: draftToHtml(JSON.parse(item?.Detail)) }}></div>}
           </div>
           <div className={`${s.m_btn_wrap} mt_100 flex justify-between mb_100 `}>
             <button onClick={() => router.back()} className={`${s.m_btn_1} text-white font_size_30  bg-$primary`}>
@@ -102,13 +102,13 @@ export default function index() {
               <img src="/assets/2560/service/useguide/close.png" className="img-fluid w-100 h-100" />
             </div>
             <div className={`${s.wrap} w-100 flex-1 items-center flex flex-col mb_43 overflow-auto`}>
-              <span className="font_36 mb_43 font-extrabold mb_43">{item?.Title}</span>
+              <span className="font_36 mb_43 font-extrabold mb_43 text-$37">{item?.Title}</span>
               <div className={`${s.video} mb_43 border flex items-center justify-center`}>
                 <video className="w-100 h-100" controls>
                   {item?.Videourl && <source src={item?.Videourl} type="video/mp4" />}
                 </video>
               </div>
-              {item?.Detail && <div className="mt-5" dangerouslySetInnerHTML={{ __html: draftToHtml(JSON.parse(item?.Detail)) }}></div>}
+              {item?.Detail && <div className="mt-5 text-$68" dangerouslySetInnerHTML={{ __html: draftToHtml(JSON.parse(item?.Detail)) }}></div>}
             </div>
             <div className={`${s.btns} flex justify-center  border-top items-center  left-0 z-80 right-0 bottom-30`}>
               <button onClick={() => router.back()} className={`${s.btn} text-white h_48 w_194 mr-2  bg-$primary`}>

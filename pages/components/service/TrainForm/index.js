@@ -39,7 +39,7 @@ export default function index() {
       <div className={`${s.m_wrap} w-100 mobile:hidden flex items-center justify-center`}>
         <div className={`${s.m_content} flex flex-col items-center justify-center bg-$ec`}>
           <div className={`${s.m_header} mb_43 flex justify-between items-center w_894`}>
-            <span className="font_36 text-$37">培训申请：</span>
+            <span className="font_36 text-$37">服务申请：</span>
             <span className="font_30 text-$86">我们将第一时间与您取得联系</span>
           </div>
           <div className="flex justify-between w_894 mb_30">
@@ -65,16 +65,16 @@ export default function index() {
       <div className={`${s.wrap} hidden mobile:flex w-100 p-0 items-center justify-center`}>
         <div className={`${s.content} flex flex-col items-start`}>
           <div className={`${s.title} mb-1`}>
-            <span className="c_title font-black">培训申请：</span>
-            <span className="c_sub_title  text-$68">我们将第一时间与您取得联系</span>
+            <span className="c_title font_size_24 font-black">服务申请：</span>
+            <span className="c_sub_title  text-$68 font_size_14">我们将第一时间与您取得联系</span>
           </div>
           <div className={`${s.form} mt-1`}>
             <div className={`flex items-center `}>
-              <input type="text" value={Name} name="Name" onChange={(e) => setName(e.target.value)} className="sm_input mr-3 pl-3 rounded" placeholder="姓名：" />
-              <input type="text" name="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} className="sm_input mr-3 pl-3 rounded" placeholder="电话：" />
-              <input type="text" name="mail" value={mail} onChange={(e) => setmail(e.target.value)} className="sm_input pl-3 mr-3 rounded" placeholder="邮箱：" />
-              <input type="text" name="Comment" value={Comment} onChange={(e) => setComment(e.target.value)} className="md_input pl-3 mr-3 rounded" placeholder="备注：" />
-              <button onSubmit={handleSubmit} className="hover:bg-yellow-400 rounded sm_input bg-$primary flex items-center justify-center  text-white">
+              <input type="text" value={Name} name="Name" onChange={(e) => setName(e.target.value)} className=" sm_input mr-3 pl-3 rounded" placeholder="姓名：" />
+              <input type="text" name="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} className=" sm_input mr-3 pl-3 rounded" placeholder="电话：" />
+              <input type="text" name="mail" value={mail} onChange={(e) => setmail(e.target.value)} className=" sm_input pl-3 mr-3 rounded" placeholder="邮箱：" />
+              <input type="text" name="Comment" value={Comment} onChange={(e) => setComment(e.target.value)} className="  md_input pl-3 mr-3 rounded" placeholder="备注：" />
+              <button onSubmit={handleSubmit} className="  hover:bg-yellow-400 rounded sm_input bg-$primary flex items-center justify-center  text-white">
                 立即提交
               </button>
             </div>

@@ -47,7 +47,7 @@ const subnav = {
     {
       path: "/out/service-maintain.html",
       domain: "service",
-      name: "维修服务",
+      name: "增值服务",
     },
     {
       path: "/out/service-guide.html",
@@ -57,7 +57,7 @@ const subnav = {
     {
       path: "/out/service-train.html",
       domain: "service",
-      name: "培训服务 ",
+      name: "市场支持 ",
     },
   ],
   example: [

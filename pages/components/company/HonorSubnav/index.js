@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import s from "./index.module.css";
 
-export const baseUrl = "http://www.ga-robot.com:8088";
+export const baseUrl = "https://www.irego.cn";
 export const getImgUrl = (name) => baseUrl + "/web/picgure/" + name + ".jpeg";
 
 const list = [
@@ -41,15 +41,19 @@ export default function index() {
       <div className={`${s.wrap} hidden  mobile:flex justify-center`}>
         {list
           .find((item) => item.id == index)
-          .children.map((item) => (
-            <img className={`${item.includes("honor") ? s.img : s._img} img-fluid mx-3`} src={item}></img>
+          .children.map((item, idx) => (
+            <div key={idx} className={`${item.includes("honor") ? s.m_img : s._m_img}`}>
+              <img key={idx} className={`img-fluid mx-3`} src={item}></img>
+            </div>
           ))}
       </div>
       <div className={`w-100 mobile:hidden flex justify-center flex-wrap items-center`}>
         {list
           .find((item) => item.id == index)
-          .children.map((item) => (
-            <img className={`${item.includes("honor") ? s.m_img : s._m_img} img-fluid mb-2 mx-2 `} src={item}></img>
+          .children.map((item, idx) => (
+            <div key={idx} className={`${item.includes("honor") ? s.m_img : s._m_img}`}>
+              <img className={` img-fluid mb-2 mx-2 `} src={item}></img>
+            </div>
           ))}
       </div>
     </div>

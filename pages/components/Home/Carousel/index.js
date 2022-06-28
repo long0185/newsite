@@ -20,7 +20,7 @@ const Example = () => {
       setNum((num) => (num + 1) % list.length);
     }, 5000);
     return () => clearTimeout(ref.current);
-  }, [num]);
+  }, [num, list.length]);
   React.useEffect(() => {
     async function getList() {
       fetch("/web/tableInfo/homeone")
@@ -67,10 +67,10 @@ const Example = () => {
   return (
     <div className="relative overflow-hidden w-100 h-100">
       <Navbar />
-      <motion.div style={{ height: "100%", width: `${100 * list.length}%` }} className={` flex relative`} animate={{ marginLeft: `${-100 * num}vw` }} transition={{ duration: 2 }}>
+      <motion.div style={{ height: "100%", width: `${100 * list.length}%` }} className={` flex relative`} animate={{ marginLeft: `${-100 * num}vw` }} transition={{ duration: 1 }}>
         {list.map((item, index) => (
           <div key={item.id} className={`${s.img} relative`}>
-            <img className={`${s.img} absolute`} src={item.ImageUrl} />
+            <img className={`${s.img} absolute`} src={item.ImageUrl} style={{ objectFit: "cover" }} />
             <motion.div className={`w-2 h-2 absolute ${index % 2 == 1 ? s.title_wrap_1 : s.title_wrap}`} variants={variants} animate={`${num == index ? "toTop" : "reset"}`}>
               <div className={`${s.title_text} relative`}>
                 <img className={s.title_text} src={item.textImageUrl} />

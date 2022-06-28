@@ -125,6 +125,7 @@ export default function index() {
             let val = res.value;
             val = val.sort((a, b) => a.OrderNu - b.OrderNu);
             setList(val);
+            // setList([...val, ...val, ...val, ...val, ...val]);
           }
         });
     }
@@ -149,9 +150,9 @@ export default function index() {
           </div> */}
         </div>
       </div>
-      <div className={`${s.content}  hidden mobile:flex flex-wrap justify-center mb_43 `}>
+      <div className={`${s.content} mt_43  hidden mobile:flex flex-wrap justify-center pb_86 `}>
         {list.map((item, index) => (
-          <div className="flex d-center mt-14">
+          <div className="flex d-center mt_43">
             <ApplicationCard page="News" item={item} />
           </div>
         ))}

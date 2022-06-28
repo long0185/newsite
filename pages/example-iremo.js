@@ -4,7 +4,7 @@ import IremoApplication from "./components/example/IremoApplication";
 import NavBar from "./components/Navbar";
 const ExpampleIrego = () => {
   return (
-    <div>
+    <div className="min_height">
       <NavBar />
       <div className="w-screen mt_104">
         <div className="h_147 w-100 mobile:hidden flex justify-center items-center">

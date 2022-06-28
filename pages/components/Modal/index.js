@@ -29,7 +29,7 @@ const App = () => {
             className={`${s.wrap}`}
             animate={{
               translateX: 230,
-              translateY: 230,
+              translateY: 235,
             }}
             transition={{
               duration: 1,
@@ -38,7 +38,7 @@ const App = () => {
               repeatDelay: 1,
             }}
           >
-            <img src={svg_1}  />
+            <img src={svg_1} />
           </motion.div>
         </div>
         <div className={`${s.content}`} style={{ justifyContent: "flex-end" }}>
@@ -46,7 +46,7 @@ const App = () => {
             className={`${s.wrap}`}
             animate={{
               translateX: -230,
-              translateY: 230,
+              translateY: 235,
             }}
             transition={{
               duration: 1,
@@ -54,7 +54,7 @@ const App = () => {
               repeatDelay: 1,
             }}
           >
-            <img src={svg_2}  />
+            <img src={svg_2} />
           </motion.div>
         </div>
         <div className={`${s.content}`}>
@@ -68,7 +68,7 @@ const App = () => {
               repeatDelay: 1,
             }}
           >
-            <img src={svg_3}  />
+            <img src={svg_3} />
           </motion.div>
         </div>
         <div className={`${s.content}`} style={{ justifyContent: "flex-end" }}>
@@ -82,14 +82,18 @@ const App = () => {
               repeatDelay: 1,
             }}
           >
-            <img src={svg_4}  />
+            <img src={svg_4} />
           </motion.div>
         </div>
       </motion.div>
       <motion.div
-        className={`${s.text} absolute mr-24`}
+        className={`${s.text} absolute`}
+        style={{
+          translateY: 300,
+          opacity: 0,
+        }}
         animate={{
-          translateY: '-15.3rem',
+          translateY: 4,
           opacity: 1,
         }}
         transition={{
@@ -97,7 +101,7 @@ const App = () => {
           delay: 2,
         }}
       >
-        <img  src={svg_5} />
+        <img src={svg_5} />
       </motion.div>
     </>
   );

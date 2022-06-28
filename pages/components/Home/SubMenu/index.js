@@ -5,9 +5,7 @@ import s from "./index.module.css";
 import Image from "next/image";
 export default function index() {
   const [toggle, setToggle] = useState(false);
-  const handleClick = () => {
-    console.log("bo");
-  };
+  const handleClick = () => {};
 
   return (
     <div className={`${s.menu} flex items-center justify-between absolute`}>

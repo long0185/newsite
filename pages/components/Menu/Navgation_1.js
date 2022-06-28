@@ -19,7 +19,7 @@ const variants = {
 
 const Navigation = ({ isOpen }) => (
   <motion.div
-    className={`${s.ul} bg-white 
+    className={`${s.ul} bg-white
     flex items-start justify-center`}
     variants={variants}
   >
@@ -75,9 +75,9 @@ const innovate = [
 ];
 const service = [
   { name: "服务", link: "https://irego.cn/out/serveice-maintain.html" },
-  { name: "维修服务", link: "https://irego.cn/out/serveice-maintain.html" },
+  { name: "增值服务", link: "https://irego.cn/out/serveice-maintain.html" },
   { name: "使用指南", link: "https://irego.cn/out/service-guide.html" },
-  { name: "培训服务", link: "https://irego.cn/out/service-train.html" },
+  { name: "市场支持", link: "https://irego.cn/out/service-train.html" },
 ];
 const example = [
   { name: "案例", link: "https://irego.cn/out/example-irego.html" },

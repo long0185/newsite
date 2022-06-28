@@ -4,7 +4,6 @@ import IregoDetail from "./components/product/IregoDetail";
 import NavBar from "./components/Navbar";
 import Carousel from "./components/Carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel as MyCarousel } from "react-responsive-carousel";
 export default function product() {
   const [list, setList] = React.useState([]);
   React.useEffect(() => {
@@ -25,7 +24,7 @@ export default function product() {
     <div>
       <NavBar />
       <div className="hidden mobile:block contianer-fluid pt_104">
-        <Carousel list={list} />
+        {list.length > 0 && <Carousel list={list} />}
         {/* <MyCarousel autoPlay={true} interval={2000} infiniteLoop={true} showIndicators={false} showArrows={false} showStatus={false}>
           <div>
             <img className={``} src={`/assets/2560/product/irego/banner01.png`} alt="" />

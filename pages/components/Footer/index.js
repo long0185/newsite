@@ -74,17 +74,10 @@ export default function Footer() {
           <a href={"https://www.irego.cn/monitor/#/Login"} target="_blank">
             <span className="mx-3 cursor-pointer">金矢机器人云平台</span>
           </a>
-          <span className="mx-3">|</span>
-          <a href={"http://www.irego.cn/weblogin"} target="_blank">
-            <span className="mx-3 cursor-pointer">后台登录</span>
-          </a>
-          <span className="mx-3">|</span>
         </div>
         <div className={` h-100   right-0  absolute z-20 ${s.right} `}>
-          <div>
-            <img className={` footer-img ${s.phone} absolute`} src="/assets/2560/home/phone.svg" />
-          </div>
-          <span className={`${s.num} `}>咨询热线：400-120-8888</span>
+          <img className={` footer-img ${s.phone} absolute`} src="/assets/2560/home/phone.svg" />
+          <span className={`${s.num} ml-2 mobile:ml-5`}>咨询热线：400-120-8888</span>
           <div className="">
             <img src="/assets/2560/home/weixin.svg" onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)} className={`${s.wx} footer-img cursor-pointer absolute`}></img>
           </div>

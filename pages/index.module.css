@@ -50,7 +50,7 @@
 .img {
 	width: 100%;
   }
-  
+
 .left_icon{
 	top: 0;
 	left:-120px;
@@ -71,7 +71,7 @@
 	font-size: 30px;
 }
 .detail_btn{
-  
+
 }
 .slide{
   width: 125px;
@@ -81,16 +81,18 @@
 .m_job_item{
 	width: 979px;
 	height: 195px;
-	box-shadow: 0px 11px 23px 0px 
+	box-shadow: 0px 11px 23px 0px
 		rgba(1, 1, 1, 0.2);
 	border-radius: 6px;
 	padding: 43px;
 }
 .modal{
 	z-index: 999;
+	padding-left: 230px;
 	display: flex;
 	align-items: center;
 	justify-items: center;
+	scale: 1;
 	/* background-color: rgb(212, 212, 130); */
 }
 

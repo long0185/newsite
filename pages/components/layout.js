@@ -2,9 +2,17 @@ import Footer from "../components/Footer";
 import Head from "next/head";
 import ToTop from "./ToTop";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 export default function Layout({ children }) {
   const { pathname } = useRouter();
-  console.log("pathname", pathname);
+  useEffect(() => {
+    var userAgent = navigator.userAgent;
+    var isOpera = userAgent.indexOf("Opera") > -1;
+    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera;
+    if (isIE) {
+      alert("请使用Chrome、Edge、Firefox等浏览器进行访问");
+    }
+  });
   return (
     <>
       <Head>

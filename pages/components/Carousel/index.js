@@ -9,13 +9,17 @@ const swipePower = (offset, velocity) => {
 };
 
 const Example = ({ list = [] }) => {
-  const [num, setNum] = useState(1);
+  const [num, setNum] = useState(0);
   const ref = React.useRef(null);
   React.useEffect(() => {
     clearTimeout(ref.current);
     ref.current = setTimeout(() => {
-      setNum((num) => (num + 1) % list.length);
-    }, 5000);
+      if (list.length > 0) {
+        console.log("list.length", list.length);
+        console.log("num", num);
+        setNum((num) => (num + 1) % list.length);
+      }
+    }, 3000);
     return () => clearTimeout(ref.current);
   }, [num]);
   const handleClick = (direction) => {
@@ -32,7 +36,7 @@ const Example = ({ list = [] }) => {
 
   return (
     <div className="relative overflow-hidden">
-      <motion.div className={` flex relative`} style={{ width: `${list.length * 100}vw` }} animate={{ marginLeft: `${-100 * num}vw` }} transition={{ duration: 2 }}>
+      <motion.div className={` flex relative`} style={{ width: `${list.length * 100}vw` }} animate={{ marginLeft: `${-100 * num}vw` }} transition={{ duration: 1 }}>
         {list.map((item, index) => (
           <div key={index} className={`w-screen h_1687 h_786 overflow-hidden relative bg-info`}>
             <img className={`hidden mobile:block w-screen h_786 img-fluid`} src={item.ImageUrl} />

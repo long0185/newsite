@@ -12,7 +12,6 @@ export default function MyApp({ Component, pageProps }) {
         scale = document.documentElement.clientWidth / 1080;
       }
       let reset = Math.min(scale, scaleH);
-      console.log("reset", reset);
       document.documentElement.style.fontSize = baseSize * reset + "px";
     }
     setRem();
