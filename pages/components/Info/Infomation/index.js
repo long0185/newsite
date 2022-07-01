@@ -94,7 +94,7 @@ const ApplicationCard = ({ item, page }) => {
   return (
     <div onClick={() => router.push(`/application-detail?page=${page}&id=${item.id}`)} className={`${s.item} flex flex-col `}>
       <img src={item.Imageurl} className={`${s.img} relative bg-info`}></img>
-      <div className={`${s.desc} p-3 flex-1 border flex flex-col justify-between items-start`}>
+      <div className={`${s.desc} p-3 px-7 flex-1 border flex flex-col justify-between items-start`}>
         <div className="font_size_24 text-$37">{item.Title}</div>
         <div className="font_14 w-100 text-$68 flex items-center justify-between">
           <div className="flex items-center">

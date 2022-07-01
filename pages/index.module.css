@@ -14,7 +14,7 @@
 .m_middle {
 	overflow: hidden;
 	z-index: 10;
-  height: 90vh;
+  height: 89vh;
 	transform-style: preserve-3d;
 	perspective: 800px;
 	margin: 0 auto;
@@ -64,7 +64,7 @@
 	bottom: -120px;
 }
 .back_btn{
-  /* width: 193px; */
+  width: 193px;
   flex: 0 0 375px;
   height: 91px;
   border-radius: 15px;
@@ -101,6 +101,6 @@
 		flex: 0 0 213px;
 		height: 47px;
 		font-size: 16px;
-		border-radius: 0px;
+		border-radius: 3px;
 	}
 }

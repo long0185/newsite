@@ -94,6 +94,13 @@ export default function index() {
             <span className="font_size_24 text-white">精心设计的安全护具，穿戴方便，固定快速</span>
           </div>
         </div>
+        <div className="relative w_910 h_375 mt_20">
+          <img src={"/assets/2560/product/irego/detail_6.png"} />
+          <div className={`absolute flex flex-col ${s.text_2} h-100`}>
+            <span className="font_48 text-white font-extrabold">悬挂驱动机构</span>
+            <span className="font_size_24 text-white">适应不平整地面的运动，具有减震效果</span>
+          </div>
+        </div>
       </div>
       <div className="appearance-detail w-100 hidden mobile:flex items-center justify-center">
         <motion.div variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} className="relative img-wrap">
@@ -128,7 +135,30 @@ export default function index() {
           </div>
         </motion.div>
       </div>
-      <div className="appearance-detail appearance-detail-last w-100 hidden mobile:flex items-center justify-center">
+      <div className="appearance-detail w-100 hidden mobile:flex items-center justify-center">
+        <motion.div variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} className="relative img-wrap">
+          <img src={"/assets/2560/product/irego/detail_5.png"} />
+          <div className="absolute appearance-text_5 flex flex-col">
+            <span>急停按钮</span>
+            <span>保证训练过程更加安全</span>
+          </div>
+        </motion.div>
+        <motion.div variants={r_variants} animate={`${inViewport ? "enter" : "leave"}`} className="relative img-wrap">
+          <img src={"/assets/2560/product/irego/detail_6.png"} />
+          <div className="absolute appearance-text_3 flex flex-col">
+            <span>悬挂驱动机构</span>
+            <span>适应不平整地面的运动，具有减震效果</span>
+          </div>
+        </motion.div>
+      </div>
+      {/* <div className="appearance-detail  w-100 hidden mobile:flex items-center justify-center">
+        <motion.div variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} className="relative img-wrap">
+          <img src={"/assets/2560/product/irego/detail_5.png"} />
+          <div className="absolute appearance-text_5 flex flex-col">
+            <span>急停按钮</span>
+            <span>保证训练过程更加安全</span>
+          </div>
+        </motion.div>
         <motion.div variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} className="relative img-wrap">
           <img src={"/assets/2560/product/irego/detail_5.png"} />
           <div className="absolute appearance-text_5 flex flex-col">
@@ -137,7 +167,7 @@ export default function index() {
           </div>
         </motion.div>
         <div className="relative img-wrap"></div>
-      </div>
+      </div> */}
     </div>
   );
 }

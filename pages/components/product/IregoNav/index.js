@@ -42,10 +42,6 @@ export default function IregoNav() {
       href: "/out/example-irego",
       name: "应用案例",
     },
-    {
-      href: "/out/service-guide",
-      name: "使用指南",
-    },
   ];
   return (
     <>

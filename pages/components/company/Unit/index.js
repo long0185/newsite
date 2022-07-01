@@ -42,7 +42,7 @@ export default function index() {
       <Banner img={"/assets/2560/company/title_unit.png"} />
       <div className={`${s.m_img_wrap} flex mobile:hidden flex-wrap mb_100`}>
         {list.map((item, index) => (
-          <img key={index} src={item} className={`${s.m_img} ${index % 3 == 2 ? "border-right" : ""} ${index > 14 ? "border-bottom" : ""} border-left border-top img-fluid bg-$f4 relative hover:bg-white `}></img>
+          <img key={index} src={item.Imageurl} className={`${s.m_img} ${index % 3 == 2 ? "border-right" : ""} ${index > 14 ? "border-bottom" : ""} border-left border-top img-fluid bg-$f4 relative hover:bg-white `}></img>
         ))}
       </div>
       <div className="hidden mobile:flex">

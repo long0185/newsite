@@ -65,7 +65,7 @@ export default function company() {
         ))}
       </div>
       <div className="w-100 hidden  mobile:flex justify-center relative">
-        <div className="w_1567 flex mb_100 overflow-hidden">
+        <div className="w_1567 flex overflow-hidden mb-14">
           <motion.div
             animate={{
               translateX: `${33.33 * -num}%`,
@@ -115,17 +115,21 @@ export default function company() {
           {/* <button onClick={() => {}} className="m_l_btn font_size_30  text-$37 border-1 border border-$primary hover:bg-yellow-300 mr-3 ">
             表单下载
           </button> */}
-          <button onClick={() => {}} className="m_l_btn font_size_30 bg-$primary text-white hover:bg-yellow-300 ml-3">
-            投递简历
-          </button>
+          <a href="https://jobs.51job.com/all/co5284121.html" target="_blank">
+            <button onClick={() => {}} className="m_l_btn font_size_30 bg-$primary text-white hover:bg-yellow-300 ml-3">
+              投递简历
+            </button>
+          </a>
         </div>
         <div className="mobile:flex mb_43 hidden">
           {/* <button onClick={() => {}} className="l_btn  text-$37 border border-$primary  bg-white hover:bg-yellow-300 mr-3 nav-link">
             表单下载
           </button> */}
-          <button onClick={() => {}} className="l_btn  bg-$primary text-white hover:bg-yellow-300 ml-3 nav-link">
-            投递简历
-          </button>
+          <a href="https://jobs.51job.com/all/co5284121.html" target="_blank">
+            <button onClick={() => {}} className="l_btn  bg-$primary text-white hover:bg-yellow-300 ml-3 rounded">
+              投递简历
+            </button>
+          </a>
         </div>
         <span className="font_size_24">简历投递邮箱：zhaopin@ga-robot.com</span>
       </div>

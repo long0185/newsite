@@ -50,7 +50,7 @@ export default function index() {
       <div id="ibmcom-home" className={`w-100 p-0 ${s.wrap} indexNews flex justify-center items-center flex-col relative`}>
         <div id="particles-js" className="absolute top-0 bottom-0 left-0 right-0 z-10"></div>
         <div className={`${s.m_left} mobile:hidden top-0 bottom-0 absolute`}>
-          <div className={`${s.m_line_wrap} absolute`}>
+          <div className={`${s.m_line_wrap} absolute`} style={{ zIndex: 10000 }}>
             {years.map((item, index) => (
               <div onClick={() => handleClick(item.id)} key={item.id} style={{ top: `${80 * index}px` }} className={`${s.m_line_item} w-100 flex absolute items-center justify-between`}>
                 <span className={`${s.point}`}></span>
@@ -78,7 +78,7 @@ export default function index() {
                   <div className={`${s.img} relative bg-$gray`}>
                     <img src={ele.Imageurl} className="w-100 h-100" alt="" />
                   </div>
-                  <div className={`${s.img_title} flex-1 flex flex-col bg-$white`}>
+                  <div className={`${s.img_title} flex-1 flex flex-col bg-$white justify-between`}>
                     <span className={s.sub_title}>{ele.Title}</span>
                     <div className={`flex items-center`}>
                       <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.icon} relative  mr-2`}></img>

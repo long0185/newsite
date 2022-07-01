@@ -56,11 +56,11 @@ const subnav = {
       domain: "service",
       name: "增值服务",
     },
-    {
-      path: "/service-guide",
-      domain: "service",
-      name: "使用指南 ",
-    },
+    // {
+    //   path: "/service-guide",
+    //   domain: "service",
+    //   name: "使用指南 ",
+    // },
     {
       path: "/service-train",
       domain: "service",
@@ -258,13 +258,11 @@ const ResponsiveAppBar = () => {
         </motion.div>
 
         <div className=" mobile:hidden flex pr-16 justify-around items-center">
-          <img src="/assets/2560/home/share.svg" className="w_53 h_53 mr-16" alt="" />
+          {/* <img src="/assets/2560/home/share.svg" className="w_53 h_53 mr-16" alt="" /> */}
           {/* <img src="/assets/2560/home/cart.svg" alt="" className="w_65" /> */}
         </div>
         <div className="navbar-right hidden mobile:flex justify-around">
-          <div className="relative">
-            <img src="/assets/2560/home/share.svg" className="img-fluid" alt="" />
-          </div>
+          <div className="relative">{/* <img src="/assets/2560/home/share.svg" className="img-fluid" alt="" /> */}</div>
           {/* <div className="relative cart ml-5">
             <img src="/assets/2560/home/cart.svg" alt="" className="img-fluid" />
           </div> */}

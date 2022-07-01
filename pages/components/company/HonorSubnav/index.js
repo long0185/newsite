@@ -43,7 +43,7 @@ export default function index() {
           .find((item) => item.id == index)
           .children.map((item, idx) => (
             <div key={idx} className={`${item.includes("honor") ? s.m_img : s._m_img}`}>
-              <img key={idx} className={`img-fluid mx-3`} src={item}></img>
+              <img key={idx} className={`img-fluid `} src={item}></img>
             </div>
           ))}
       </div>

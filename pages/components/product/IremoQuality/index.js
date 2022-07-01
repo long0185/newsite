@@ -21,7 +21,7 @@ export default function index() {
           <img className={`${styles.m_content_item_2} img-fluid`} src="/assets/2560/product/iremo/certificate_2.png"></img>
           <span className={`${styles.desc}`}>医疗器械生产许可证</span>
         </div> */}
-        <div className={`flex items-start justify-between mt-5 ${styles.m_content_item_2}`}>
+        <div className={`flex items-center justify-center mt-5 ${styles.m_content_item_2}`}>
           <div className={`text-center`}>
             <img className={`${styles.content_item_1} img-fluid`} src="/assets/2560/product/iremo/certificate_1.png"></img>
             <span className={`${styles.desc}`}>医疗器械注册证</span>

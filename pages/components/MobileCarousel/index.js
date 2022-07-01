@@ -31,7 +31,7 @@ const Example = ({ bgs = [] }) => {
         {list.map((item, index) => (
           <div key={item.id} className="relative">
             <div className="absolute w-100 justify-center items-center top-60 flex flex-col">
-              <img className={`${s.textImge}`} src={item.textImageUrl} alt="" />
+              <img className={`${s.textImge}`} src={item.mTextImageUrl} alt="" />
               <a className={`${s.btnImg} mt-6`} href={item.link} target="_blank">
                 <img src={item.btnImageUrl} alt="" />
               </a>

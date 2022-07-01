@@ -76,7 +76,7 @@ const innovate = [
 const service = [
   { name: "服务", link: "https://irego.cn/out/serveice-maintain.html" },
   { name: "增值服务", link: "https://irego.cn/out/serveice-maintain.html" },
-  { name: "使用指南", link: "https://irego.cn/out/service-guide.html" },
+  // { name: "使用指南", link: "https://irego.cn/out/service-guide.html" },
   { name: "市场支持", link: "https://irego.cn/out/service-train.html" },
 ];
 const example = [

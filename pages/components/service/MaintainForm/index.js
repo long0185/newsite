@@ -144,7 +144,7 @@ export default function index() {
         </div>
       </div>
       <div className={`w-100 hidden  mobile:flex text-center justify-center`}>
-        <button onClick={handleSubmit} className={`${s.btn} hover:bg-yellow-400 nav-link`}>
+        <button onClick={handleSubmit} className={`${s.btn} hover:bg-yellow-400 `}>
           立即提交
         </button>
       </div>

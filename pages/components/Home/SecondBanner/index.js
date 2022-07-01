@@ -55,7 +55,7 @@ export default function index() {
             <div className={`${s.innovate_btn} absolute`}>{(list[1] || {}).btnName || "创新技术"}</div>
           </a>
         </div>
-        <div className={`${s.news_1} cursor-pointer relative`}>
+        <div className={`${s.news_1} cursor-pointer relative`} style={{ transform: "scaleX(1.02)" }}>
           <a href={(list[0] || {}).link}>
             <motion.img className="img-fluid" src={(list[0] || {}).ImageUrl || "/assets/2560/home/innovate.png"} whileHover={{ scale: 1.02, transition: { duration: 0.5 } }} whileTap={{ scale: 1, transition: { duration: 0.5 } }} />
             <div className={`${s.innovate_btn} absolute`}>{(list[0] || {}).btnName || "创新技术"}</div>

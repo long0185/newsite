@@ -193,9 +193,9 @@ export default function applicationdetail() {
               <button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>
                 返回列表
               </button>
-              <button onClick={() => router.back()} className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>
-                提交简历
-              </button>
+              <a href="https://jobs.51job.com/all/co5284121.html">
+                <button className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>提交简历</button>
+              </a>
             </div>
 
             {Array.isArray(list) &&
@@ -249,9 +249,9 @@ export default function applicationdetail() {
                 <button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>
                   返回列表
                 </button>
-                <button onClick={() => router.back()} className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>
-                  提交简历
-                </button>
+                <a href="https://jobs.51job.com/all/co5284121.html" className={`${s.back_btn}`}>
+                  <button className={`${s.back_btn} w-100 rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>提交简历</button>
+                </a>
               </div>
               <span className="mt-7">简历投递邮箱：zhaopin@ga-robot.com</span>
             </div>
@@ -311,9 +311,9 @@ export default function applicationdetail() {
                 <button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>
                   返回列表
                 </button>
-                <button onClick={() => router.back()} className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>
-                  提交简历
-                </button>
+                <a href="https://jobs.51job.com/all/co5284121.html">
+                  <button className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>投递简历</button>
+                </a>
               </div>
               <span className="mt-5">zhaopin@ga-robot.com</span>
             </div>

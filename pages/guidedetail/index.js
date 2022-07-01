@@ -95,7 +95,7 @@ export default function index() {
             </button>
           </div>
         </div>
-        <div className={`${s.modal} border hidden mobile:flex flex-col items-center`}>
+        <div className={`${s.modal} border hidden mobile:flex  flex-col items-center`}>
           <div className="z-60  bg-$color opacity-70"></div>
           <div className={`${s.container}  flex flex-col justify-between   opacity-100 bg-white `}>
             <div onClick={() => router.back()} className={`${s.close} cursor-pointer absolute`}>

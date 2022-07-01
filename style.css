@@ -231,7 +231,7 @@ a:hover {
 }
 .fun-detail .content .use-fun-item .practise {
   width: 671px;
-  height: 846px;
+  height: 886px;
 }
 .use-fun-item .title {
   width: 120px;
@@ -246,7 +246,7 @@ a:hover {
 }
 .practise-img {
   width: 425px;
-  height: 494px;
+  height: 534px;
   margin-top: 68px;
 }
 .practise-step span {
@@ -524,10 +524,10 @@ main {
 .m-sm_img_desc {
   left: 50%;
   margin-left: -26px;
-  bottom: -60px;
+  bottom: -50px;
   width: 67px;
-  height: 43px;
-  line-height: 43px;
+  /* height: 43px;
+  line-height: 43px; */
   font-size: 20px;
   text-align: center;
 }
@@ -818,8 +818,8 @@ img {
   height: 56px !important;
 }
 .l_btn {
-  /* width: 257px; */
-  /* height: 56px; */
+  width: 257px;
+  height: 56px;
   border-radius: 3px;
 }
 .h_67 {
@@ -1365,6 +1365,7 @@ li.nav-item {
   /* height: 580px; */
   /* width: 550px; */
   padding:36px  42px;
+  padding-bottom: 55px;
 }
 .m_contact-box{
 padding: 63px 78px;
@@ -1439,4 +1440,24 @@ padding: 63px 78px;
 }
 .w_45{
   width: 45px;
+}
+.h_120{
+  height: 120px;
+}
+.mt_86{
+  margin-top: 86px;
+}
+
+#app-detail img{
+  display: inline!important;
+  margin:10px 0;
+}
+.w_4200{
+  width: 4200px;
+}
+.carousel-slider{
+  padding-bottom: 60px;
+}
+.control-dots{
+  bottom: -60px;
 }

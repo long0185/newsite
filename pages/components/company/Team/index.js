@@ -20,7 +20,7 @@ export const renderType = (type) => {
 };
 const TeamCard = ({ item }) => {
   return (
-    <div className={`${s.expert_img_wrap} flex items-center  `}>
+    <div className={`${s.expert_img_wrap} flex items-center my-2 mobile:my-0 mx-0 mobile:mx-4 `}>
       <img src={item.Imageurl} className={`${s.expert_img}`} />
       <div className="flex flex-col ml-3 self-start">
         <div className="flex items-center">
@@ -30,7 +30,7 @@ const TeamCard = ({ item }) => {
         <span className="font_18 text-$37 text-left">{item.Title}</span>
         {item.Content.split("\n").map((ele, index) => (
           <div key={index} className="flex  text-$86">
-            <span className="span-point relative font_16 text-$86 pl-4 my-1">{ele}</span>
+            <span className="text-left relative font_16 text-$86 mobile:my-0 my-1">{ele}</span>
           </div>
         ))}
       </div>
@@ -46,7 +46,7 @@ const MangerCard = ({ img_src = "", name = "", title = "", desc = "" }) => {
           <span className="font_36 font-black">{name}</span>
           <span className="font_size_30 text-$37">{title}</span>
           {desc.split("\n").map((item, index) => (
-            <span key={index} className="m-span-point relative font_size_24 text-$86 pl-4 my-1">
+            <span key={index} className=" relative font_size_24 text-$86  my-1">
               {item}
             </span>
           ))}
@@ -58,7 +58,7 @@ const MangerCard = ({ img_src = "", name = "", title = "", desc = "" }) => {
           <span className="font_30 font-black">{name}</span>
           <span className="font_size_20 text-$37">{title}</span>
           {desc.split("\n").map((item, index) => (
-            <span key={index} className="span-point relative font_16 text-$86 pl-4 my-1">
+            <span key={index} className="relative font_16 text-$86  my-1">
               {item}
             </span>
           ))}
@@ -71,6 +71,7 @@ export default function index() {
   const [num, setnum] = useState(0);
   const [list, setList] = useState([]);
   const [ExpertList, setExpertList] = useState([]);
+  const [list2, setList2] = useState([]);
   React.useEffect(() => {
     async function getList() {
       fetch("/web/tableInfo/company")
@@ -93,6 +94,10 @@ export default function index() {
           if (res.code == 200 && Array.isArray(res.value) && res.value.length > 0) {
             let val = res.value;
             val = val.sort((a, b) => a.OrderNu - b.OrderNu);
+            var _val = val.splice(0, 3);
+            console.log("_val: ", _val);
+            console.log("val", val);
+            setList2(_val);
             setExpertList(val);
           }
         });
@@ -143,13 +148,8 @@ export default function index() {
             }}
             className="w-200 flex justify-around py-5"
           >
-            <div className="flex flex-column mobile:flex-row w_2100  justify-between px-4">
-              {ExpertList.map((item) => (
-                <TeamCard item={item} />
-              ))}
-            </div>
-            <div className="flex w_2100 justify-between px-4">
-              {ExpertList.map((item) => (
+            <div className="flex flex-column mobile:flex-row px-4">
+              {[...list2, ...ExpertList].map((item) => (
                 <TeamCard item={item} />
               ))}
             </div>
@@ -163,7 +163,7 @@ export default function index() {
         <div className="w-100 mt-5 flex overflow-hidden">
           <Carousel className="mt-5" showStatus={false} swipeable={true} emulateTouch showArrows={false}>
             <div className="flex flex-col pb-5 items-center">
-              {ExpertList.map((item) => (
+              {list2.map((item) => (
                 <TeamCard key={item.id} item={item} />
               ))}
             </div>
@@ -176,8 +176,8 @@ export default function index() {
         </div>
       </div>
       <div className="w-100 justify-center hidden   mobile:flex mb_100">
-        <div onClick={() => setnum(-1)} className={`${s.slide} ${num == -1 ? "bg-$gray" : "bg-$primary"}  cursor-pointer`}></div>
-        <div onClick={() => setnum(0)} className={`${s.slide} ${num == 0 ? "bg-$gray" : "bg-$primary"}  mx-5 cursor-pointer`}></div>
+        <div onClick={() => setnum(0)} className={`${s.slide} ${num == -1 ? "bg-$gray" : "bg-$primary"}  cursor-pointer`}></div>
+        <div onClick={() => setnum(-1)} className={`${s.slide} ${num == 0 ? "bg-$gray" : "bg-$primary"}  mx-5 cursor-pointer`}></div>
       </div>
     </div>
   );

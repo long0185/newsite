@@ -48,7 +48,7 @@ export default function index() {
   return (
     <>
       <div className="block mobile:hidden">
-        <div style={{ left: "50%", transform: "translateX(-50%)", bottom: 10 }} onClick={() => setShowForm(true)} className={`fixed z-10 h_89 w_972  text-white font_size_14 flex items-center justify-center`}>
+        <div style={{ left: "50%", transform: "translateX(-50%)", bottom: 100 }} onClick={() => setShowForm(true)} className={`fixed z-10 h_89 w_972  text-white font_size_14 flex items-center justify-center`}>
           <button style={{ left: 0 }} className="w_353 absolute font_size_30 bg-$primary h_89">
             联系我们>>
           </button>
@@ -144,7 +144,7 @@ export default function index() {
             <input className="h_47 pl-2 w-100 rounded" name="mail" value={mail} placeholder="* 邮箱地址" onChange={(e) => setmail(e.target.value)} type="text" />
           </div>
           <div className="mt-3 w-100 ">
-            <textarea className="w-100 pl-2 h-82  rounded outline-none" name="Comment" value={Comment} placeholder="* 内容（字数在一百字以内)" onChange={(e) => setComment(e.target.value)} />
+            <textarea className="w-100 pl-2 h_120  rounded outline-none" name="Comment" value={Comment} placeholder="* 内容（字数在一百字以内)" onChange={(e) => setComment(e.target.value)} />
           </div>
           <div className="mt-3 flex justify-between">
             <span className="text-white font_size_14">*为必填项</span>

@@ -57,9 +57,9 @@ export default function Footer() {
               金矢机器人云平台
             </a>
             <span className="mx-16">|</span>
-            <a href="#" className="font_size_24 text-$86">
+            {/* <a href="#" className="font_size_24 text-$86">
               后台登录
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
