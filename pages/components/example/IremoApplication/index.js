@@ -123,26 +123,19 @@ export default function index() {
   }, []);
   return (
     <>
-      <div className="w-100 mt_90 mobile:hidden flex flex-col items-center justify-center">
-        <div className={`${s.m_wrap} mb_43 flex  justify-center flex-col`}>
+      {/* <div className="w-100 mt_90 mobile:hidden flex flex-col items-center justify-center">
+        <div className={`${s.m_wrap} mb_43 flex flex-wrap justify-between `}>
           {list.map((item) => (
             <MApplicationCard key={item.id} item={item} />
           ))}
         </div>
-        {/* <div className={`${s.box} w-100 flex-col items-center justify-center`}>
-          {list.map((item, index) => (
-            <div key={index} className="flex flex-col items-center justify-center">
-              <MApplicationCard_2 title="岳阳医院患者效果标题标题标题题标题标题标 标题标题" date="2020年7月25日" view="231" />
-            </div>
+      </div> */}
+      <div className="w-100 mt_90 mobile:hidden flex flex-col items-center justify-center">
+        <div className={`${s.m_wrap} mt_63 mb_43 flex flex-wrap justify-between w-100 `}>
+          {list.map((item) => (
+            <MApplicationCard key={item.id} item={item} />
           ))}
         </div>
-        <div className="w-100 flex items-center justify-center mb_100 mt_100">
-          <div className="flex">
-            <button onClick={() => setList([...list, 1])} className="m_bottom_btn hover:bg-yellow-300">
-              Show more
-            </button>
-          </div>
-        </div> */}
       </div>
       <div className=" mt_43 pb_86 hidden mobile:block">
         <div className={`${s.wrap} flex items-center justify-center`}>

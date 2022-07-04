@@ -59,16 +59,16 @@ const ApplicationCard_2 = ({ title = "", date = "", view = "" }) => {
 export const MApplicationCard = ({ item, page }) => {
   const router = useRouter();
   return (
-    <div onClick={() => router.push(`/application-detail?page=${page || "app"}&id=${item.id}`)} className={`${s.m_item_1} flex flex-col mb_43 `}>
+    <div onClick={() => router.push(`/application-detail?page=${page || "app"}&id=${item.id}`)} className={`${s.m_item_1}  flex flex-col mb_43  `}>
       <img className={`${s.m_img} relative `} src={item.Imageurl}></img>
       <div className={`py-3 px-5 flex-1 border flex flex-col justify-between items-start`}>
-        <div className="font_size_24 text-$37">{item.Title}</div>
+        <div className="w-100 font_size_24 text-$37 overflow-hidden text-ellipsis whitespace-nowrap ">{item.Title}</div>
         <div className="font_20 text-$68 w-100 flex items-center justify-between">
           <div className="flex items-center">
             <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.svg} relative mr-2`}></img>
             <span>{dayjs(item.Time).format("YYYY-MM-DD")}</span>
           </div>
-          <span className="font_20 text-$68">浏览：{item.Views}</span>
+          <span className="font_20 text-$68">浏览：{item.views}</span>
         </div>
         <div className={s.line}></div>
         <div className=" flex w-100 items-center justify-between c_sub_title">
@@ -124,25 +124,11 @@ export default function index() {
   return (
     <>
       <div className="w-100 mt_90 mobile:hidden flex flex-col items-center justify-center">
-        <div className={`${s.m_wrap} mb_43 flex  justify-center flex-col`}>
+        <div className={`${s.m_wrap} mb_43 flex  justify-between flex-wrap `}>
           {list.map((item) => (
             <MApplicationCard key={item.id} item={item} />
           ))}
         </div>
-        {/* <div className={`${s.box} w-100 flex-col items-center justify-center`}>
-          {list.map((item, index) => (
-            <div key={index} className="flex flex-col items-center justify-center">
-              <MApplicationCard_2 title="岳阳医院患者效果标题标题标题题标题标题标 标题标题" date="2020年7月25日" view="231" />
-            </div>
-          ))}
-        </div>
-        <div className="w-100 flex items-center justify-center mb_100 mt_100">
-          <div className="flex">
-            <button onClick={() => setList([...list, 1])} className="m_bottom_btn hover:bg-yellow-300">
-              Show more
-            </button>
-          </div>
-        </div> */}
       </div>
       <div className=" mt_43 pb_86 hidden mobile:block">
         <div className={`${s.wrap}`}>

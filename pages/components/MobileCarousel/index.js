@@ -27,7 +27,7 @@ const Example = ({ bgs = [] }) => {
 
   return (
     <div className={`${s.wrap} relative overflow-hidden w-100 mt_104`}>
-      <Carousel showStatus={false} swipeable={true} emulateTouch showArrows={false}>
+      <Carousel showStatus={false} swipeable={false} showArrows={true}>
         {list.map((item, index) => (
           <div key={item.id} className="relative">
             <div className="absolute w-100 justify-center items-center top-60 flex flex-col">

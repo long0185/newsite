@@ -30,7 +30,7 @@ const TeamCard = ({ item }) => {
         <span className="font_18 text-$37 text-left">{item.Title}</span>
         {item.Content.split("\n").map((ele, index) => (
           <div key={index} className="flex  text-$86">
-            <span className="text-left relative font_16 text-$86 mobile:my-0 my-1">{ele}</span>
+            <span className="text-left relative font_size_24 text-$86 mobile:my-0 my-1">{ele}</span>
           </div>
         ))}
       </div>

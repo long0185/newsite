@@ -186,7 +186,7 @@ const ResponsiveAppBar = () => {
           <img onClick={() => setM_open(!m_open)} className="w-100 h-100 img-fluid" src="/assets/2560/menu.svg" />
         </div>
         <img onClick={() => push("/")} src="/assets/2560/home/logo.svg" className="hidden mobile:block navbar-brand relative img-fluid cursor-pointer"></img>
-        <img onClick={() => push("/")} src="/assets/2560/home/logo.svg" className="mobile:hidden m_logo ml-20 relative cursor-pointer"></img>
+        <img onClick={() => push("/")} src="/assets/2560/home/logo.svg" className="mobile:hidden m_logo  relative cursor-pointer"></img>
         <ul className={`hidden  mobile:flex flex-row justify-center pl-5`}>
           {navBar.map((item) => (
             <li key={item.path} className={`relative  h-100 navbar_li ${pathname.split("-")[0] == item.domain ? "active" : ""} `}>
@@ -262,7 +262,9 @@ const ResponsiveAppBar = () => {
           {/* <img src="/assets/2560/home/cart.svg" alt="" className="w_65" /> */}
         </div>
         <div className="navbar-right hidden mobile:flex justify-around">
-          <div className="relative">{/* <img src="/assets/2560/home/share.svg" className="img-fluid" alt="" /> */}</div>
+          <div className="relative opacity-0">
+            <img src="/assets/2560/home/share.svg" className="img-fluid" alt="" />
+          </div>
           {/* <div className="relative cart ml-5">
             <img src="/assets/2560/home/cart.svg" alt="" className="img-fluid" />
           </div> */}

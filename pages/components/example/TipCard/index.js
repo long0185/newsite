@@ -62,13 +62,13 @@ export const MApplicationCard = ({ item, page }) => {
     <div onClick={() => router.push(`/application-detail?page=${page || "app"}&id=${item.id}`)} className={`${s.m_item_1} flex flex-col mb_43 `}>
       <img className={`${s.m_img} relative `} src={item.Imageurl}></img>
       <div className={`py-3 px-5 flex-1 border flex flex-col justify-between items-start`}>
-        <div className="font_size_24 text-$37">{item.Title}</div>
+        <div className="font_size_24 text-$37 w-100 text-ellipsis overflow-hidden whitespace-nowrap">{item.Title}</div>
         <div className="font_20 text-$68 w-100 flex items-center justify-between">
           <div className="flex items-center">
             <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.svg} relative mr-2`}></img>
             <span>{dayjs(item.Time).format("YYYY-MM-DD")}</span>
           </div>
-          <span className="font_20 text-$68">浏览：{item.Views}</span>
+          <span className="font_20 text-$68">浏览：{item.views}</span>
         </div>
         <div className={s.line}></div>
         <div className=" flex w-100 items-center justify-between c_sub_title">
@@ -123,7 +123,7 @@ export default function index() {
   return (
     <>
       <div className="w-100 mt_90 mobile:hidden flex flex-col items-center justify-center">
-        <div className={`${s.m_wrap} mb_43 flex  justify-center flex-col`}>
+        <div className={`${s.m_wrap} mt_63 mb_43 flex flex-wrap justify-between `}>
           {list.map((item) => (
             <MApplicationCard page="health" key={item.id} item={item} />
           ))}

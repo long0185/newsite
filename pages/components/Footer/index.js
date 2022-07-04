@@ -49,14 +49,14 @@ export default function Footer() {
         <div className="flex w-100 flex-col justify-center items-center">
           <span className="font_size_24 text-$86 text-center">Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. 沪ICP备19033942号</span>
           <div className="flex font_size_24 text-$8 mt-3">
-            <a href="/legal-declaration" className="font_size_24 text-$86">
+            <a href="out/legal-declaration" className="font_size_24 text-$86">
               法律声明
             </a>
             <span className="mx-16">|</span>
             <a href="https://www.irego.cn/monitor/#/Login" target={"_blank"} className="font_size_24 text-$86">
               金矢机器人云平台
             </a>
-            <span className="mx-16">|</span>
+            {/* <span className="mx-16">|</span> */}
             {/* <a href="#" className="font_size_24 text-$86">
               后台登录
             </a> */}
@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="left-footer pl-16">
           <span className="pl-3 ml-3">Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. 沪ICP备19033942号</span>
           <span className="mx-3">|</span>
-          <Link href={"/legal-declaration"}>
+          <Link href={"/out/legal-declaration"}>
             <span className="mx-3 cursor-pointer">法律声明</span>
           </Link>
           <span className="mx-3">|</span>

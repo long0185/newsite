@@ -125,7 +125,6 @@ export default function index() {
             let val = res.value;
             val = val.sort((a, b) => a.OrderNu - b.OrderNu);
             setList(val);
-            // setList([...val, ...val, ...val, ...val, ...val]);
           }
         });
     }
@@ -137,17 +136,10 @@ export default function index() {
   return (
     <>
       <div className={` mobile:hidden w-100`}>
-        <div className={`${s.m_wrap} mt_63 mb_43 flex flex-wrap justify-center`}>
+        <div className={`${s.m_wrap} mt_63 mb_43 flex flex-wrap justify-between`}>
           {list.map((item) => (
             <MApplicationCard page="News" item={item} />
           ))}
-          {/* <div className="w-100 flex items-center justify-center mb_100 mt_63">
-            <div className="flex">
-              <button onClick={() => setList([...list, 1])} className="m_bottom_btn hover:bg-yellow-300">
-                Show more
-              </button>
-            </div>
-          </div> */}
         </div>
       </div>
       <div className={`${s.content} mt_43  hidden mobile:flex flex-wrap justify-center pb_86 `}>
