@@ -1461,3 +1461,6 @@ padding: 63px 78px;
 .control-dots{
   bottom: -60px;
 }
+.mw_2100{
+  max-width: 2100px!important;
+}

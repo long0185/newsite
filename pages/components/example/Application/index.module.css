@@ -35,10 +35,10 @@
 }
 
 .item_2 {
-  margin: 0 23px;
-  margin-bottom: 43px;
+  margin-left: 23px;
+  margin-right: 23px;
   padding: 27px;
-  width: 915px;
+  width: 908px;
   padding-bottom: 23px;
   /* height: 267px; */
   box-shadow: 0px 15px 30px 0px rgba(1, 1, 1, 0.2);
@@ -54,7 +54,7 @@
 }
 
 .m_wrap{
-  padding: 0 44px;
+  padding: 0 20px;
   /* width: 980px;
   height: 423px; */
 }

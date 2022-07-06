@@ -30,22 +30,24 @@ const MApplicationCard_2 = ({ title = "", date = "", view = "" }) => {
   );
 };
 
-const ApplicationCard_2 = ({ title = "", date = "", view = "" }) => {
+export const ApplicationCard_2 = ({ item }) => {
   const router = useRouter();
   return (
-    <div onClick={() => router.push("/application-detail")} className={`${s.item_2} flex items-start  justify-between`}>
-      <div className={`${s.sm_img} relative bg-gray-400 border-2`}></div>
-      <div className={`flex-1 flex flex-col items-start justify-between h-100`}>
-        <span className="font_size_24 text-$37 info-infomation">{title}</span>
-        <div className="w-100 flex-1 justify-between flex flex-col pt-3">
+    <div onClick={() => router.push(`/application-detail?page=${page || "app"}&id=${item.id}`)} className={`${s.item_2} flex  mt_43`}>
+      <div className={`${s.sm_img} relative bg-gray-400 border-2`}>
+        <img className="w-100 h-100" src={item.Imageurl} alt="" />
+      </div>
+      <div className={`flex-1 flex flex-col items-end justify-between `}>
+        <span className="font_size_24 text-$37 info-infomation self-start">{item.Title || "-"}</span>
+        <div className="w-100 flex-1 justify-end flex flex-col pt-3">
           <div className="c_sub_title w-100 flex items-center justify-between">
             <div className="flex items-center">
               <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.svg} mr-2 relative`}></img>
-              <span className="font_14 text-$68">{date}</span>
+              <span className="font_14 text-$68">{dayjs(item.Time).format("YYYY-MM-DD")}</span>
             </div>
-            <span className="font_14 text-$68">浏览：{view}</span>
+            <span className="font_14 text-$68">浏览：{item.views}</span>
           </div>
-          <div className={`${s.line}`}></div>
+          <div className={`${s.line} my-3`}></div>
           <div className=" flex w-100 items-center justify-between c_sub_title">
             <span className="font_14 text-$68">View more</span>
             <img src="/assets/2560/example/right_arrow.svg" className={`${s.arrow} relative`}></img>
@@ -56,7 +58,7 @@ const ApplicationCard_2 = ({ title = "", date = "", view = "" }) => {
   );
 };
 
-export const MApplicationCard = ({ item, page }) => {
+export const MApplicationCard = ({ item, page = "" }) => {
   const router = useRouter();
   return (
     <div onClick={() => router.push(`/application-detail?page=${page || "app"}&id=${item.id}`)} className={`${s.m_item_1}  flex flex-col mb_43  `}>
@@ -106,6 +108,7 @@ const ApplicationCard = ({ item }) => {
 
 export default function index() {
   const [list, setList] = React.useState([]);
+  const [list_2, setlist_2] = useState([]);
   React.useEffect(() => {
     async function getList() {
       fetch("/web/tableInfo/app")
@@ -113,9 +116,10 @@ export default function index() {
         .then((res) => {
           if (res.code == 200 && Array.isArray(res.value) && res.value.length > 0) {
             let val = res.value;
-            val = val.sort((a, b) => a.OrderNu - b.OrderNu);
+            val = val.sort((a, b) => a.OrderNu - b.OrderNu) || [];
+            const newList = val.splice(0, 3);
+            setlist_2(newList);
             setList(val);
-            // setList([...val, ...val, ...val, ...val]);
           }
         });
     }
@@ -123,26 +127,27 @@ export default function index() {
   }, []);
   return (
     <>
-      <div className="w-100 mt_90 mobile:hidden flex flex-col items-center justify-center">
-        <div className={`${s.m_wrap} mb_43 flex  justify-between flex-wrap `}>
-          {list.map((item) => (
+      <div className="w-100 mt_90 mobile:hidden flex flex-col items-center justify-center  ">
+        <div className={`${s.m_wrap} mb_43 flex  justify-around flex-wrap `}>
+          {[...list_2, ...list].map((item) => (
             <MApplicationCard key={item.id} item={item} />
           ))}
         </div>
       </div>
-      <div className=" mt_43 pb_86 hidden mobile:block">
-        <div className={`${s.wrap}`}>
-          <div className={`${s.content} w-100 d-center flex-wrap`}>
-            {list.map((item) => (
+      <div className=" mt_43 pb_86 hidden mobile:block px-0 ">
+        <div className={`${s.wrap} flex justify-center `}>
+          <div className={`${s.content} w-100 d-center flex-wrap mw_2100 `}>
+            {list_2.map((item) => (
               <ApplicationCard key={item.id} item={item} />
+            ))}
+            {list.map((item, index) => (
+              <ApplicationCard_2 item={item} />
             ))}
           </div>
         </div>
         {/* <div className="w-100 p-0 d-center">
           <div className={`${s.content_2} flex justify-center flex-wrap `}>
-            {list.map((item, index) => (
-              <ApplicationCard_2 title="岳阳医院患者效果标题标题标题题标题标题标 标题标题" date="2020年7月25日" view="231" />
-            ))}
+
           </div>
         </div>
         <div className="w-100 flex items-center justify-center mt_100">

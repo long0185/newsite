@@ -136,7 +136,7 @@ export default function index() {
   return (
     <>
       <div className={` mobile:hidden w-100`}>
-        <div className={`${s.m_wrap} mt_63 mb_43 flex flex-wrap justify-between`}>
+        <div className={`${s.m_wrap} mt_63 mb_43 flex flex-wrap justify-around`}>
           {list.map((item) => (
             <MApplicationCard page="News" item={item} />
           ))}

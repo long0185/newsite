@@ -22,10 +22,6 @@ export default function IregoNav() {
       href: "#feature",
       name: "产品特点",
     },
-    {
-      href: "/out/service-guide",
-      name: "使用指南",
-    },
   ];
   return (
     <>

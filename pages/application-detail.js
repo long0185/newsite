@@ -138,12 +138,25 @@ export default function applicationdetail() {
   const ref = useRef();
   const router = useRouter();
   const [list, setList] = useState([]);
-  const [num, setNum] = useState(1);
-  const [html, setHtml] = useState("");
   const [item, setItem] = useState(null);
   const [index, setIndex] = useState(0);
   const { query } = router;
   const { page, id } = query;
+  const getUrl = (page) => {
+    switch (page) {
+      case "health":
+        return "/out/info-tip";
+      case "News":
+        return "/out/info-infomation";
+      case "app":
+        return "/out/example-irego";
+      case "appmo":
+        return "/out/example-iremo";
+      default:
+        return "/";
+    }
+  };
+  console.log("page: ", page);
   const [_id, set_id] = useState(id);
   useEffect(() => {
     fetch(`/web/tableInfo/${page}`, {
@@ -199,7 +212,7 @@ export default function applicationdetail() {
               <img onClick={() => handleClick("right")} className={`${s.right_icon} cursor-pointer  h-100 absolute`} src="/assets/right-active.svg"></img>
             </div>
             <div className={`${s.back}  absolute w-100 flex justify-center items-center`}>
-              <button onClick={() => router.back()} className={`${s.back_btn} mb_100 rounded  bg-$white text-$37 border border-$primary`}>
+              <button onClick={() => router.push(getUrl(page))} className={`${s.back_btn} mb_100 rounded  bg-$white text-$37 border border-$primary`}>
                 返回列表
               </button>
             </div>
@@ -226,7 +239,7 @@ export default function applicationdetail() {
         <div className={`${s.m_middle} bg-gray-300 opacity-100 pt_100 pb_200 z-10 w-screen flex  mobile:hidden items-center justify-center`}>
           <ul className={`${s.m_ul}  h-100`}>
             <div className={`${s.back}  absolute w-100 flex justify-center items-center`}>
-              <button onClick={() => router.back()} className={`${s.back_btn} rounded  bg-$white text-$37 border border-$primary`}>
+              <button onClick={() => router.push(getUrl(page))} className={`${s.back_btn} rounded  bg-$white text-$37 border border-$primary`}>
                 返回列表
               </button>
             </div>

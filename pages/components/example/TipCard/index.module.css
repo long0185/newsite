@@ -53,7 +53,7 @@
 }
 
 .m_wrap{
-    padding: 0 44px;
+    padding: 0 22px;
 
   /* width: 980px;
   height: 423px; */
@@ -67,6 +67,8 @@
 .m_item_1{
   width: 472px;
 	height: 473px;
+  margin-left: 10px;
+  margin-right: 10px;
 	box-shadow: 0px 11px 23px 0px
 		rgba(1, 1, 1, 0.2);
 }

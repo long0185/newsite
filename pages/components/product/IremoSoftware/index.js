@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./index.module.css";
 import s from "./index.module.css";
 
@@ -37,8 +37,12 @@ let list = [
 
 import Banner from "../../Banner";
 import { motion } from "framer-motion";
+import { useInViewport } from "react-in-viewport";
+import { l_variants, r_variants } from "../IregoAppearance";
 export default function index() {
   const [num, setnum] = useState(2);
+  const myRef = useRef();
+  const { inViewport } = useInViewport(myRef);
   const handleClick = (direction) => {
     if (direction == "left") {
       const newNum = num - 1 < 0 ? 0 : num - 1;
@@ -50,7 +54,7 @@ export default function index() {
     }
   };
   return (
-    <div id="software" className="product-software w-100 flex items-center justify-center flex-col">
+    <div ref={myRef} id="software" className="product-software w-100 flex items-center justify-center flex-col">
       <Banner
         img={"/assets/newtitle/iremo/title_3.png"}
         desc={
@@ -107,15 +111,19 @@ export default function index() {
       </div>
       <div className="w-100 hidden mobile:flex items-center justify-center">
         <div className={`${styles.game} d-center relative`}>
-          <img src="/assets/2560/product/iremo/game_1.png" className={`${styles.game_img} relative`}></img>
+          <motion.img variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} src="/assets/2560/product/iremo/game_1.png" className={`${styles.game_img} relative`}></motion.img>
           <div className={`${styles.sm_img_wrap} absolute flex`}>
-            <img src="/assets/2560/product/iremo/sm_img_2.png" className={`${styles.sm_img_1} relative`}></img>
-            <img src="/assets/2560/product/iremo/sm_img_1.png" className={`${styles.sm_img_2} relative`}></img>
+            <motion.img variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} src="/assets/2560/product/iremo/sm_img_2.png" className={`${styles.sm_img_1} relative`}></motion.img>
+            <motion.img variants={r_variants} animate={`${inViewport ? "enter" : "leave"}`} src="/assets/2560/product/iremo/sm_img_1.png" className={`${styles.sm_img_2} relative`}></motion.img>
           </div>
-          <img src="/assets/2560/product/iremo/s_bottom_img_1.png" className={`${styles.game_img} relative`}></img>
+          <motion.img variants={r_variants} animate={`${inViewport ? "enter" : "leave"}`} src="/assets/2560/product/iremo/s_bottom_img_1.png" className={`${styles.game_img} relative`}></motion.img>
           <div className="absolute bottom-5 flex justify-around w-100 ">
-            <span className=" pl-8 font_21">水果采摘（肩肘关机活动度训练）</span>
-            <span className="pr-8 font_21">喝水ADL（日常生活能力训练）</span>
+            <motion.span variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} className=" pl-8 font_21">
+              水果采摘（肩肘关机活动度训练）
+            </motion.span>
+            <motion.span variants={r_variants} animate={`${inViewport ? "enter" : "leave"}`} className="pr-8 font_21">
+              喝水ADL（日常生活能力训练）
+            </motion.span>
           </div>
         </div>
       </div>
