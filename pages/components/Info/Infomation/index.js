@@ -5,94 +5,10 @@ import { useRouter } from "next/router";
 import { MApplicationCard } from "../../example/Application";
 import dayjs from "dayjs";
 
-let _list = [
-  {
-    id: 1,
-    element: (
-      <div className="w-100 h-100 flex flex-col pt-5">
-        <div className="w-100 flex flex-col items-center justify-center">
-          <span className="font_24 font-black">标题标题标题标题标题标题标题</span>
-          <div className="flex justify-center items-center">
-            <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.icon} calendar-icon img-fluid mr-1`}></img>
-            <span>2021年7月23日</span>
-          </div>
-        </div>
-        <div className="flex items-center px-5">
-          <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
-        </div>
-        <div className="flex justify-center mt-3">
-          <div className="w-50 bg-gray-600 h-96"></div>
-        </div>
-        <div className="flex items-center px-5 mt-3">
-          <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
-        </div>
-        <div className="flex justify-center mt-3">
-          <div className="w-50 bg-gray-600 h-60"></div>
-        </div>
-        <div></div>
-      </div>
-    ),
-  },
-  {
-    id: 2,
-    element: (
-      <div className="w-100 h-100 flex flex-col pt-5">
-        <div className="w-100 flex flex-col items-center justify-center">
-          <span className="font_24 font-black">标题标题标题标题标题标题标题</span>
-          <div className="flex justify-center items-center">
-            <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.icon} calendar-icon img-fluid mr-1`}></img>
-            <span>2021年7月23日</span>
-          </div>
-        </div>
-        <div className="flex items-center px-5">
-          <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
-        </div>
-        <div className="flex justify-center mt-3">
-          <div className="w-50 bg-gray-600 h-96"></div>
-        </div>
-        <div className="flex items-center px-5 mt-3">
-          <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
-        </div>
-        <div className="flex justify-center mt-3 mb-5">
-          <div className="w-50 bg-gray-600 h-60"></div>
-        </div>
-        <div></div>
-      </div>
-    ),
-  },
-  {
-    id: 3,
-    element: (
-      <div className="w-100 h-100 flex flex-col pt-5">
-        <div className="w-100 flex flex-col items-center justify-center">
-          <span className="font_24 font-black">标题标题标题标题标题标题标题</span>
-          <div className="flex justify-center items-center">
-            <img src="/assets/2560/service/useguide/calendar.svg" className={`${s.icon} calendar-icon img-fluid mr-1`}></img>
-            <span>2021年7月23日</span>
-          </div>
-        </div>
-        <div className="flex items-center px-5">
-          <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
-        </div>
-        <div className="flex justify-center mt-3">
-          <div className="w-50 bg-gray-600 h-96"></div>
-        </div>
-        <div className="flex items-center px-5 mt-3">
-          <span>缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容缩略内容</span>
-        </div>
-        <div className="flex justify-center mt-3">
-          <div className="w-50 bg-gray-600 h-60"></div>
-        </div>
-        <div></div>
-      </div>
-    ),
-  },
-];
-
 const ApplicationCard = ({ item, page }) => {
   const router = useRouter();
   return (
-    <div onClick={() => router.push(`/application-detail?page=${page}&id=${item.id}`)} className={`${s.item} flex flex-col `}>
+    <div onClick={() => router.push(`/application-detail?page=${page}&id=${item.id}`)} className={`${s.item} mt_43 flex flex-col `}>
       <img src={item.Imageurl} className={`${s.img} relative bg-info`}></img>
       <div className={`${s.desc} p-3 px-7 flex-1 border flex flex-col justify-between items-start`}>
         <div className="font_size_24 text-$37">{item.Title}</div>
@@ -143,11 +59,20 @@ export default function index() {
         </div>
       </div>
       <div className={`${s.content} mt_43  hidden mobile:flex flex-wrap justify-center pb_86 `}>
-        {list.map((item, index) => (
-          <div className="flex d-center mt_43">
-            <ApplicationCard page="News" item={item} />
+        <div className={`${s.wrap} flex justify-center `}>
+          <div className={`${s.content} w-100 d-center flex-wrap mw_2100`}>
+            {list.map((item) => (
+              <ApplicationCard page="News" key={item.id} item={item} />
+            ))}
           </div>
-        ))}
+        </div>
+        {/* <div className="mw_2100">
+          {list.map((item, index) => (
+            <div className="flex d-center mt_43">
+              <ApplicationCard page="News" item={item} />
+            </div>
+          ))}
+        </div> */}
         {/* <div className="flex justify-center items-center mb_100 mt_100">
           <button onClick={() => setList([...list, 1])} className="l_btn bg-$primary text-white hover:bg-yellow-300">
             Show more
