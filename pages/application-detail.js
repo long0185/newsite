@@ -145,13 +145,13 @@ export default function applicationdetail() {
   const getUrl = (page) => {
     switch (page) {
       case "health":
-        return "/out/info-tip";
+        return "/info-tip";
       case "News":
-        return "/out/info-infomation";
+        return "/info-infomation";
       case "app":
-        return "/out/example-irego";
+        return "/example-irego";
       case "appmo":
-        return "/out/example-iremo";
+        return "/example-iremo";
       default:
         return "/";
     }
