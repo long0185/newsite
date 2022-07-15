@@ -41,7 +41,7 @@
 }
 .sm_img_wrap {
   height: 336x;
-  z-index: 999;
+  z-index: 9;
 }
 .wrap {
   flex: 0 0 2181px;
