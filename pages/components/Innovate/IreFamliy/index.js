@@ -4,7 +4,7 @@ export default function index() {
   return (
     <div className={`${s.wrap} w-100 flex items-center justify-center flex-col`}>
       <img
-        src="/assets/2560/Innovate/title_famliy.png"
+        src="/assets/ire-banner.png"
         className={`${s.title_img} relative`}
       ></img>
       <div className={`${s.content} flex items-center justify-center flex-col mobile:flex-row`}>

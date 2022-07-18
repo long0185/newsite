@@ -13,7 +13,7 @@ export default function index() {
         </div>
         <div className="flex flex-col mt-3 mobile:mt-0">
           <span className="font_43 interact-big-title font-black mb-2">用户端</span>
-          <span className="font_size_24 text-white interact-sm-title">及时训,无需医生陪伴,训练中采集和存储数据,完成后自动生成报告,为患者提供更优质可靠的康复训练数据。</span>
+          <span className="font_size_24 text-white interact-sm-title">及时训练,无需医生陪伴,实时采集和存储 数据,结束自动生成报告,为患者提供更优质可靠的康复训练数据。</span>
           <img className="interact-top-img img-fluid" src="/assets/2560/product/irego/user.png"></img>
         </div>
       </div>

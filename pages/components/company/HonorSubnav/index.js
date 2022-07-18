@@ -12,7 +12,7 @@ const list = [
   },
   {
     id: 2,
-    name: "知识产权",
+    name: "期刊论文",
     children: [getImgUrl("knowledge_1"), getImgUrl("knowledge_2"), getImgUrl("knowledge_3"), getImgUrl("knowledge_4")],
   },
   {

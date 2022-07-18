@@ -105,12 +105,12 @@ export default function index() {
     getList();
   }, []);
   const handClick = (direction) => {
-    if (direction == "left") {
+    if (direction == "right") {
       const newNum = num - 1 < -1 ? -1 : num - 1;
 
       setnum(newNum);
     }
-    if (direction == "right") {
+    if (direction == "left") {
       const newNum = num + 1 > 0 ? 0 : num + 1;
 
       setnum(newNum);
@@ -122,7 +122,7 @@ export default function index() {
         img={"/assets/2560/company/title_team.png"}
         desc={
           <>
-            <span>公司组织结构完整，下设：技术部、生产部、营销部、品质部、设计部、财务部、行政部七大部门，研发团队：博士5人，硕士6人，本科19人。</span>
+            <span>公司组织结构完整，下设：技术部、生产部、营销部、品质部、设计部、财务部、行政部七大部门。</span>
             <span>核心研发成员6人，研发团队：博士5人，硕士19人，本科15人。 研发团队核心人员具有参与美国、德国相关的康复机器人研发经验，掌握核心关键技术。</span>
           </>
         }

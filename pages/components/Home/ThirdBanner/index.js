@@ -19,7 +19,6 @@ export default function index() {
         .then((res) => {
           if (res.code == 200 && Array.isArray(res.value) && res.value.length > 0) {
             let val = res.value;
-            console.log("val: ", val);
             setList(val);
           }
         });
@@ -50,7 +49,7 @@ export default function index() {
               <span className="big_modal_text  text-white top-40 clear-both absolute">{list[1]?.textName.split("•")[1] || `成功案例`}</span>
               <img src="/assets/2560/modal-enter.svg" alt="" className="big_modal_icon img-fluid clear-both absolute" />
             </motion.div>
-            <div className={`${s.innovate_btn} absolute  z-10`}>{(list[0] || {}).textName || `成功案例`}</div>
+            <div className={`${s.innovate_btn} absolute  z-10`}>{(list[1] || {}).textName || `成功案例`}</div>
             {/* <img className="w-100 h-100" src={(list[0] || {}).ImageUrl} /> */}
           </a>
           {/* <div className={`${s.innovate_btn} absolute bottom-2 left-2`}>合作案例 · 实施中</div> */}

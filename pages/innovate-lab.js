@@ -17,7 +17,7 @@ export default function innovatelab() {
           </div>
           <div className="h_333 w_1633 flex justify-center   ">
             <div className="bg-white opacity-80 flex-1 flex flex-col items-center justify-center">
-              <div className=" leading-10 font_16 px-12 color-$color">金矢机器人目前已于上海大学、上海中医药大学联合， 组建联合实验室，进行智能康复机器人的创新研究与开发， 目前已经完成下肢康复机器人iReGo、上肢康复机器人iReMo、 认知康复机器人iReCog等“爱睿家iRE+”系列产品。</div>
+              <div className=" leading-10 font_16 px-12 color-$color">金矢机器人目前已于上海大学、上海中医药大学联合， 组建联合实验室，进行智能康复机器人的创新研究与开发， 目前已经完成下肢康复机器人iReGo、上肢康复机器人iReMo、 认知康复机器人iReCog等“爱睿家iRe+”系列产品。</div>
             </div>
             <div className="flex-1 bg-$primary opacity-80 flex items-center justify-center ">
               <img src="/assets/2560/Innovate/tubiao2.svg  " alt="" className={`wh_200 img-fluid `} />

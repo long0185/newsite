@@ -55,7 +55,7 @@ export default function index() {
             />
             <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
               <span className=" top-8 bg-black  text-center py-3 w-100">
-                上海中医药大学
+              iRe+康复训练场景
               </span>
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function index() {
             />
             <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
               <span className=" top-8 bg-black  text-center py-3 w-100">
-                上海中医药大学
+              iRe+康复训练场景
               </span>
             </div>
           </div>
