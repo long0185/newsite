@@ -45,7 +45,6 @@ export default function index() {
         <Banner img='/assets/2560/Innovate/title-pro.png' />
         <div className='flex m-4 h_567'>
           <div className={`w_857 h_567 relative mr-3 ${s.img_wrap}`}>
-<<<<<<< HEAD
             <img
               src="/assets/2560/Innovate/project-1.png"
               className="w-100 h-100 absolute z-10"
@@ -65,17 +64,6 @@ export default function index() {
               <span className=" top-8 bg-black  text-center py-3 w-100">
               iRe+康复训练场景
               </span>
-=======
-            <img src='/assets/2560/Innovate/project-1.png' className='w-100 h-100 absolute z-10' />
-            <div className='w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer'>
-              <span className=' top-8 bg-black  text-center py-3 w-100'>iRe+康复训练场景</span>
-            </div>
-          </div>
-          <div className='w_857 relative ml-3 h_567'>
-            <img src='/assets/2560/Innovate/project-3.png' className='w-100 h-100 absolute z-10' />
-            <div className='w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer'>
-              <span className=' top-8 bg-black  text-center py-3 w-100'>iRe+康复训练场景</span>
->>>>>>> 10c07ff (update)
             </div>
           </div>
         </div>

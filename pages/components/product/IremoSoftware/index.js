@@ -42,7 +42,7 @@ import { motion } from "framer-motion";
 import { useInViewport } from "react-in-viewport";
 import { l_variants, r_variants } from "../IregoAppearance";
 export default function index() {
-  const [num, setnum] = useState(2);
+  const [num, setnum] = useState(0);
   const myRef = useRef();
   const { inViewport } = useInViewport(myRef);
   const handleClick = (direction) => {

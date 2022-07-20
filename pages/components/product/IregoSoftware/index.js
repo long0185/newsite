@@ -40,7 +40,7 @@ let list = [
 ];
 
 export default function index() {
-  const [num, setnum] = useState(2);
+  const [num, setnum] = useState(0);
   const handleClick = (direction) => {
     if (direction == "left") {
       const newNum = num - 1 < 0 ? 0 : num - 1;

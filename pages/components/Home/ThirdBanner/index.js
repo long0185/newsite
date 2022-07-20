@@ -56,10 +56,7 @@ export default function index() {
               </div>
             </motion.div>
             <div className={`${s.innovate_btn} absolute  z-10`}>{(list[1] || {}).textName || `成功案例`}</div>
-<<<<<<< HEAD
             {/* <img className="w-100 h-100" src={(list[0] || {}).ImageUrl} /> */}
-=======
->>>>>>> 10c07ff (update)
           </a>
         </div>
       </div>

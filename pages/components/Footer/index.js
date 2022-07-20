@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import s from "./index.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ToTop from "../ToTop";
+import { useRouter } from "next/router";
 
 const variants = {
   show: {
@@ -25,8 +27,10 @@ const variants = {
 export default function Footer() {
   const [show, setShow] = useState(false);
   const [m_show, setM_show] = useState(false);
+  const { pathname } = useRouter();
   return (
     <>
+    {(pathname !== "/"&&!show) && <ToTop />}
       <div className='mobile:hidden bg-gray-100 pt-5 pb-2 w-screen items-center justify-around h_267 flex flex-col'>
         <div className='flex justify-around items-center w-100'>
           <div className='flex items-center pl-3'>
@@ -69,11 +73,7 @@ export default function Footer() {
         <div className='left-footer pl-16'>
           <span className='pl-3 ml-3'>Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. 沪ICP备19033942号</span>
           <span className='mx-3'>|</span>
-<<<<<<< HEAD
           <a href="/out/legal-declaration">
-=======
-          <a href='/out/legal-declaration'>
->>>>>>> 10c07ff (update)
             <span className='mx-3 cursor-pointer'>法律声明</span>
           </a>
           <span className='mx-3'>|</span>
