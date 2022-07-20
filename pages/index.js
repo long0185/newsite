@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useEffect, useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { motion } from "framer-motion";
@@ -42,6 +44,7 @@ class PC extends React.Component {
     super(props);
     this.state = {
       isPC: true,
+      IS_FIRST_VISIT: localStorage.getItem("isFirstVisit") || "false",
       sectionsColor: [],
       num: 0,
       fullpages: [
@@ -59,6 +62,12 @@ class PC extends React.Component {
         },
       ],
     };
+  }
+  componentDidMount() {
+    localStorage.setItem("isFirstVisit", "false");
+  }
+  componentWillUnmount() {
+    localStorage.setItem("isFirstVisit", "true");
   }
   onLeave(origin, destination, direction) {
     console.log("onLeave", { origin, destination, direction });
@@ -83,36 +92,36 @@ class PC extends React.Component {
 
     const Menu = () => (
       <div
-        className="menu"
+        className='menu'
         style={{
           position: "fixed",
           top: 0,
           zIndex: 100,
-        }}
-      ></div>
+        }}></div>
     );
 
     return (
-      <div className="hidden mobile:block App">
+      <div className='hidden mobile:block App'>
         <ContactUs />
-        <motion.div
-          className={`${s.modal} fixed flex items-center justify-center bottom-0 top-0 left-0 right-0 border bg-gray-200`}
-          animate={{
-            scale: [1, 2, 3, 4, 6],
-            opacity: [1, 1, 1, 0.9, 0],
-            transitionEnd: {
-              display: "none",
-            },
-          }}
-          transition={{
-            times: [0, 0.2, 0.5, 0.8, 1],
-            delay: 3.6,
-            duration: 0.3,
-            ease: "linear",
-          }}
-        >
-          <Modal />
-        </motion.div>
+        {this.state.IS_FIRST_VISIT == "false" && (
+          <motion.div
+            className={`${s.modal} fixed flex items-center justify-center bottom-0 top-0 left-0 right-0 border bg-gray-200`}
+            animate={{
+              scale: [1, 2, 3, 4, 6],
+              opacity: [1, 1, 1, 0.9, 0],
+              transitionEnd: {
+                display: "none",
+              },
+            }}
+            transition={{
+              times: [0, 0.2, 0.5, 0.8, 1],
+              delay: 3.6,
+              duration: 0.3,
+              ease: "linear",
+            }}>
+            <Modal />
+          </motion.div>
+        )}
         <Menu />
         <ReactFullpage
           scrollingSpeed={1000}
@@ -138,7 +147,7 @@ class PC extends React.Component {
 
 const Mobile = () => {
   return (
-    <div className="App">
+    <div className='App'>
       <ContactUs />
       <Navbar />
       <MobileCarousel />

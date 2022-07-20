@@ -69,7 +69,11 @@ export default function Footer() {
         <div className='left-footer pl-16'>
           <span className='pl-3 ml-3'>Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. 沪ICP备19033942号</span>
           <span className='mx-3'>|</span>
+<<<<<<< HEAD
           <a href="/out/legal-declaration">
+=======
+          <a href='/out/legal-declaration'>
+>>>>>>> 10c07ff (update)
             <span className='mx-3 cursor-pointer'>法律声明</span>
           </a>
           <span className='mx-3'>|</span>

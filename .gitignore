@@ -1,5 +1,5 @@
-node_modules
+node_modules/
 .next
-out
-/out
+out.zip
+out/
 package-lock.json

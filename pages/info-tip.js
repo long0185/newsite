@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import Banner from "./components/Info/Banner";
 import NavBar from "./components/Navbar";
@@ -6,7 +8,7 @@ export default function info() {
   return (
     <>
       <NavBar />
-      <div className="mt_104 min_height">
+      <div className='mt_104 min_height'>
         <Banner />
         <TipCard />
       </div>

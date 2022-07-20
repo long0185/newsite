@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 import s from "./index.module.css";
 
@@ -31,7 +33,7 @@ export default function index() {
   const [index, setIndex] = useState(1);
   return (
     <div className={`flex w-100 justify-center flex-col  mb_100`}>
-      <ul className="product-subnav nav w-100 nav-pills flex justify-center items-center">
+      <ul className='product-subnav nav w-100 nav-pills flex justify-center items-center'>
         {list.map((item) => (
           <li key={item.id} className={`${s.nav_item} d-center mx-3`} onClick={() => setIndex(item.id)}>
             <span className={`${s.link} ${item.id == index ? s.active : ""} flex items-center justify-center`}>{item.name}</span>

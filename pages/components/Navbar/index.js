@@ -1,3 +1,5 @@
+/** @format */
+
 import * as React from "react";
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
@@ -116,15 +118,12 @@ const ResponsiveAppBar = () => {
   const [m_open, setM_open] = React.useState(false);
   const enter = (domain = "") => {
     const _domain = domain.replace("/", "");
-    console.log("_domain: ", _domain);
-    console.log("navkey", navkey);
+    setisOpen(!isOpen);
     if (_domain == navkey) {
-      setisOpen(false);
     } else if (_domain == "home") {
       setNavkey(_domain);
     } else {
       setNavkey(_domain);
-      setisOpen(true);
     }
   };
   const leave = (id) => {
@@ -180,13 +179,13 @@ const ResponsiveAppBar = () => {
   const [state, setState] = React.useState({ scrollTop: 0 });
 
   return (
-    <div className="fixed top-0 z-50 w-100 p-0 flex flex-col nav-wrap">
+    <div className='fixed top-0 z-50 w-100 p-0 flex flex-col nav-wrap'>
       <nav className={`flex navbar z-20 w-100 py-1 relative items-center justify-between ${isOpen ? "border-bottom" : ""} `}>
-        <div className="block mobile:hidden relative ml-16 h-14 w-14">
-          <img onClick={() => setM_open(!m_open)} className="w-100 h-100 img-fluid" src="/assets/2560/menu.svg" />
+        <div className='block mobile:hidden relative ml-16 h-14 w-14'>
+          <img onClick={() => setM_open(!m_open)} className='w-100 h-100 img-fluid' src='/assets/2560/menu.svg' />
         </div>
-        <img onClick={() => push("/")} src="/assets/2560/home/logo.svg" className="hidden mobile:block navbar-brand relative img-fluid cursor-pointer"></img>
-        <img onClick={() => push("/")} src="/assets/2560/home/logo.svg" className="mobile:hidden m_logo  relative cursor-pointer"></img>
+        <img onClick={() => push("/")} src='/assets/2560/home/logo.svg' className='hidden mobile:block navbar-brand relative img-fluid cursor-pointer'></img>
+        <img onClick={() => push("/")} src='/assets/2560/home/logo.svg' className='mobile:hidden m_logo  relative cursor-pointer'></img>
         <ul className={`hidden  mobile:flex flex-row justify-center pl-5`}>
           {navBar.map((item) => (
             <li key={item.path} className={`relative  h-100 navbar_li ${pathname.split("-")[0] == item.domain ? "active" : ""} `}>
@@ -195,8 +194,7 @@ const ResponsiveAppBar = () => {
                 onClick={() => {
                   enter(item.domain);
                 }}
-                className={`nav-link cursor-pointer font_size_24 ${pathname.split("-")[0] == item.domain ? "active" : ""}`}
-              >
+                className={`nav-link cursor-pointer font_size_24 ${pathname.split("-")[0] == item.domain ? "active" : ""}`}>
                 {item.name}
               </span>
               {/* </Link> */}
@@ -209,32 +207,31 @@ const ResponsiveAppBar = () => {
               onClick={() => {
                 setM_open(!m_open);
               }}
-              className={`${s.close_icon} absolute z-20 top-0 z-100 right-0 `}
-            >
-              <img onClick={() => console.log("close")} src="/assets/2560/home/close.svg" className="h-20 w-20 img-fluid p-4 ml-5"></img>
+              className={`${s.close_icon} absolute z-20 top-0 z-100 right-0 `}>
+              <img onClick={() => console.log("close")} src='/assets/2560/home/close.svg' className='h-20 w-20 img-fluid p-4 ml-5'></img>
             </li>
             <li className={`${s.m_top} justify-center items-center z-10 absolute border-bottom top-0 flex w-100`}>
-              <img onClick={() => push("/")} src="/assets/2560/home/logo.svg" className="m_logo relative img-fluid cursor-pointer mr-"></img>
+              <img onClick={() => push("/")} src='/assets/2560/home/logo.svg' className='m_logo relative img-fluid cursor-pointer mr-'></img>
             </li>
             {navBar.map((item) => (
               <li key={item.path} className={`relative mt_110 ml_110 pr_110 `}>
                 {item.path == "/" ? (
                   <Link href={item.path}>
-                    <span className="font_36 text-$37">{item.name}</span>
+                    <span className='font_36 text-$37'>{item.name}</span>
                   </Link>
                 ) : (
                   <Disclosure>
                     {({ open }) => (
                       <>
-                        <Disclosure.Button className="flex justify-between w-full rounded-lg focus-visible:ring focus-visible:ring-opacity-75 bottom">
-                          <span className="font_36 text-$37">{item.name}</span>
+                        <Disclosure.Button className='flex justify-between w-full rounded-lg focus-visible:ring focus-visible:ring-opacity-75 bottom'>
+                          <span className='font_36 text-$37'>{item.name}</span>
                           <ChevronUpIcon className={`${open ? "transform rotate-180" : "rotate-90"} h-20 opacity-50`} />
                         </Disclosure.Button>
                         {Array.isArray(item.children) &&
                           item.children.map((ele, i) => (
                             <Disclosure.Panel key={i} className={`${i == 0 ? "border-top" : i == item.children.length - 1 ? "border-bottom pb-16" : ""} pt-16 text-$37 pl-10`}>
                               <Link href={ele.path}>
-                                <span className="pl-10 font_size_30 text-$68">{ele.name}</span>
+                                <span className='pl-10 font_size_30 text-$68'>{ele.name}</span>
                               </Link>
                             </Disclosure.Panel>
                           ))}
@@ -244,9 +241,9 @@ const ResponsiveAppBar = () => {
                 )}
               </li>
             ))}
-            <li className="ml-110 pl_110 pr_110 h_517 mt_110 bg-gray-100 w-100 flex flex-col items-center">
+            <li className='ml-110 pl_110 pr_110 h_517 mt_110 bg-gray-100 w-100 flex flex-col items-center'>
               <div className={`${s.m_bottom} mt_110 flex items-center justify-center`}>
-                <img className={`${s.m_phone}`} src="/assets/2560/home/phone.svg" />
+                <img className={`${s.m_phone}`} src='/assets/2560/home/phone.svg' />
                 <span className={`${s.m_num} font_30 text-$86`}>咨询热线：400-120-8888</span>
               </div>
               {/* <div className={`${s.m_bottom} mt-10 flex items-center justify-center`}>
@@ -257,20 +254,20 @@ const ResponsiveAppBar = () => {
           </motion.ul>
         </motion.div>
 
-        <div className=" mobile:hidden flex pr-16 justify-around items-center">
+        <div className=' mobile:hidden flex pr-16 justify-around items-center'>
           {/* <img src="/assets/2560/home/share.svg" className="w_53 h_53 mr-16" alt="" /> */}
           {/* <img src="/assets/2560/home/cart.svg" alt="" className="w_65" /> */}
         </div>
-        <div className="navbar-right hidden mobile:flex justify-around">
-          <div className="relative opacity-0">
-            <img src="/assets/2560/home/share.svg" className="img-fluid" alt="" />
+        <div className='navbar-right hidden mobile:flex justify-around'>
+          <div className='relative opacity-0'>
+            <img src='/assets/2560/home/share.svg' className='img-fluid' alt='' />
           </div>
           {/* <div className="relative cart ml-5">
             <img src="/assets/2560/home/cart.svg" alt="" className="img-fluid" />
           </div> */}
         </div>
       </nav>
-      <motion.nav className="hidden sub-navbar w-screen mobile:flex items-center absolute bg-white  justify-center z-10 border" animate={isOpen ? "open" : "closed"} variants={variants}>
+      <motion.nav className='hidden sub-navbar w-screen mobile:flex items-center absolute bg-white  justify-center z-10 border' animate={isOpen ? "open" : "closed"} variants={variants}>
         {navkey &&
           subnav[navkey].map((item, index) => {
             if (item.path == "/") {
@@ -279,7 +276,7 @@ const ResponsiveAppBar = () => {
             } else {
               return (
                 <Link href={item.path} key={item.path + item.index}>
-                  <div className="">
+                  <div className=''>
                     <span className={`nav-link cursor-pointer hover:bg-$primary hover:text-white mx-5 ${item.path == pathname ? "main_bg" : ""} `}>{item.name}</span>
                   </div>
                 </Link>

@@ -621,7 +621,7 @@ a:hover {
   width: 195px;
   height: 195px;
   left: 50%;
-  margin-left: -90px;
+  margin-left: -97px;
 }
 .modal_svg {
   width: 129px;
@@ -632,10 +632,10 @@ a:hover {
 .big_modal_icon {
   width: 62px;
   height: 62px;
-  top: 60%;
-  position: absolute;
-  left: 50%;
-  margin-left: 60px;
+  /* top: 60%; */
+  /* position: absolute; */
+  /* left: 50%; */
+  /* margin-left: 60px; */
 }
 .modal_icon {
   width: 48px;
@@ -646,13 +646,7 @@ a:hover {
   margin-left: 27px;
 }
 .big_modal_text {
-  position: absolute;
-  top: 58%;
-  left: 50%;
-  margin-left: -110px;
   font-size: 54px;
-  width: 168px;
-  height: 38px;
 }
 
 .modal_text {

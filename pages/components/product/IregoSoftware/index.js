@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 import Banner from "../../Banner";
 import Carousel from "../../../components/Carousel";
@@ -21,19 +23,19 @@ let list = [
     text: "酷跑猫",
   },
   {
-    img_src: "/assets/2560/product/irego/dog.png",
+    img_src: "/assets/2560/product/irego/hit-mouse.png",
     id: 4,
-    text: "汪汪天使",
+    text: "打地鼠",
   },
   {
-    img_src: "/assets/2560/product/irego/forest.png",
+    img_src: "/assets/2560/product/irego/fly-sky.png",
     id: 5,
-    text: "梦幻森林",
+    text: "太空飞行",
   },
   {
-    img_src: "/assets/2560/product/irego/run-cat.png",
+    img_src: "/assets/2560/product/irego/puzzle.png",
     id: 6,
-    text: "酷跑猫",
+    text: "宇宙拼图",
   },
 ];
 
@@ -50,21 +52,21 @@ export default function index() {
     }
   };
   return (
-    <div id="software" className="product-software w-100 flex justify-center items-center flex-col">
-      <Banner img={"/assets/newtitle/irego/title_3.png"} desc="通过游戏进行训练，增加趣味性。结合VR实现虚拟现实场景，增加训练的本体感和灵活度" />
-      <div className="mobile:hidden flex justify-between flex-wrap w_1000 h_1063">
+    <div id='software' className='product-software w-100 flex justify-center items-center flex-col'>
+      <Banner img={"/assets/newtitle/irego/title_3.png"} desc='通过游戏进行训练，增加趣味性。结合VR实现虚拟现实场景，增加训练的本体感和灵活度' />
+      <div className='mobile:hidden flex justify-between flex-wrap w_1000 h_1063'>
         {list.map((item, index) => (
           <div className={`${s.m_game_img} relative`} key={index}>
             <img src={item.img_src} className={`w-100 h-100 absolute`}></img>
-            <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
-              <span className=" top-8 bg-black  text-center py-3 w-100">{item.text}</span>
+            <div className='w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer'>
+              <span className=' top-8 bg-black  text-center py-3 w-100'>{item.text}</span>
             </div>
           </div>
         ))}
       </div>
-      <div className="hidden software-content w-100 mobile:flex items-center justify-center relative">
-        <div className="flex-1 flex items-center justify-center z-10 bg-$gray border h_505 opacity-90 left-0 ">
-          <img src="/assets/2560/home/left-arrow.svg" className={`${s.icon} cursor-pointer`} onClick={() => handleClick("left")} />
+      <div className='hidden software-content w-100 mobile:flex items-center justify-center relative'>
+        <div className='flex-1 flex items-center justify-center z-10 bg-$gray border h_505 opacity-90 left-0 '>
+          <img src='/assets/2560/home/left-arrow.svg' className={`${s.icon} cursor-pointer`} onClick={() => handleClick("left")} />
         </div>
         <div className={`${s.wrap}`}>
           <motion.div
@@ -74,20 +76,19 @@ export default function index() {
               transition: {
                 duration: 2,
               },
-            }}
-          >
+            }}>
             {list.map((item) => (
-              <div key={item.id} className=" flex-1 h-100 h_505 relative">
-                <img className="w-100 h-100 img-fluid absolute z-10" src={item.img_src} alt="" />
-                <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
-                  <span className=" top-8 bg-black  text-center py-3 w-100">{item.text}</span>
+              <div key={item.id} className=' flex-1 h-100 h_505 relative'>
+                <img className='w-100 h-100 img-fluid absolute z-10' src={item.img_src} alt='' />
+                <div className='w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer'>
+                  <span className=' top-8 bg-black  text-center py-3 w-100'>{item.text}</span>
                 </div>
               </div>
             ))}
           </motion.div>
         </div>
-        <div className="flex-1 flex items-center justify-center z-10 bg-$gray border h_505 opacity-90 right-0">
-          <img src="/assets/2560/home/right-arrow.svg" className={`${s.icon} cursor-pointer`} onClick={() => handleClick("right")} />
+        <div className='flex-1 flex items-center justify-center z-10 bg-$gray border h_505 opacity-90 right-0'>
+          <img src='/assets/2560/home/right-arrow.svg' className={`${s.icon} cursor-pointer`} onClick={() => handleClick("right")} />
         </div>
       </div>
     </div>

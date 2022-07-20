@@ -1,37 +1,39 @@
+/** @format */
+
 import React, { useRef, useState } from "react";
 import styles from "./index.module.css";
 import s from "./index.module.css";
 
 let list = [
   {
-    img_src: "/assets/2560/product/iremo/game-mirror.png",
+    img_src: "/assets/2560/product/iremo/qiqiaoban.png",
     id: 1,
-    text: "酷跑猫",
+    text: "七巧板",
   },
   {
     img_src: "/assets/2560/product/iremo/game-ball.png",
     id: 2,
-    text: "酷跑猫",
+    text: "足球游戏",
   },
   {
     img_src: "/assets/2560/product/iremo/game-write.png",
     id: 3,
-    text: "酷跑猫",
+    text: "写字游戏",
   },
   {
     img_src: "/assets/2560/product/iremo/game-mirror.png",
     id: 4,
-    text: "酷跑猫",
+    text: "镜像游戏",
   },
   {
-    img_src: "/assets/2560/product/iremo/game-ball.png",
+    img_src: "/assets/2560/product/iremo/quare.png",
     id: 5,
-    text: "酷跑猫",
+    text: "舒尔适方格",
   },
   {
-    img_src: "/assets/2560/product/iremo/game-write.png",
+    img_src: "/assets/2560/product/iremo/mirror-firut.png",
     id: 6,
-    text: "酷跑猫",
+    text: "镜像摘水果",
   },
 ];
 
@@ -54,7 +56,7 @@ export default function index() {
     }
   };
   return (
-    <div ref={myRef} id="software" className="product-software w-100 flex items-center justify-center flex-col">
+    <div ref={myRef} id='software' className='product-software w-100 flex items-center justify-center flex-col'>
       <Banner
         img={"/assets/newtitle/iremo/title_3.png"}
         desc={
@@ -67,19 +69,19 @@ export default function index() {
       <div className={`w-100 text-center mb_43`}>
         <span className={`${styles.subtitle}`}>平面康复训练游戏</span>
       </div>
-      <div className="mobile:hidden flex justify-between flex-wrap w_1000 h_878">
+      <div className='mobile:hidden flex justify-between flex-wrap w_1000 h_878'>
         {list.map((item, index) => (
           <div key={index} className={`relative ${s.m_game_img}`}>
             <img src={item.img_src} className={`${s.m_game_img} absolute`}></img>
-            <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
-              <span className=" top-8 bg-black  text-center py-3 w-100">{item.text}</span>
+            <div className='w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer'>
+              <span className=' top-8 bg-black  text-center py-3 w-100'>{item.text}</span>
             </div>
           </div>
         ))}
       </div>
-      <div className="hidden iremo-software-content w-100 mobile:flex items-center justify-center relative">
-        <div className="flex-1 flex items-center justify-center z-10 bg-$gray border h_415 opacity-90 left-0 ">
-          <img src="/assets/2560/home/left-arrow.svg" className={`${s.icon} cursor-pointer`} onClick={() => handleClick("left")} />
+      <div className='hidden iremo-software-content w-100 mobile:flex items-center justify-center relative'>
+        <div className='flex-1 flex items-center justify-center z-10 bg-$gray border h_415 opacity-90 left-0 '>
+          <img src='/assets/2560/home/left-arrow.svg' className={`${s.icon} cursor-pointer`} onClick={() => handleClick("left")} />
         </div>
         <div className={`${s.wrap}`}>
           <motion.div
@@ -89,55 +91,54 @@ export default function index() {
               transition: {
                 duration: 2,
               },
-            }}
-          >
+            }}>
             {list.map((item) => (
-              <div key={item.id} className=" flex-1 h-100 h_415 relative">
-                <img className="w-100 h-100  absolute z-10" src={item.img_src} alt="" />
-                <div className="w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer">
-                  <span className=" top-8 bg-black  text-center py-3 w-100">{item.text}</span>
+              <div key={item.id} className=' flex-1 h-100 h_415 relative'>
+                <img className='w-100 h-100  absolute z-10' src={item.img_src} alt='' />
+                <div className='w-100 h-100 opacity-01 flex justify-center items-end absolute z-20  hover:opacity-60 text-transparent hover:text-white cursor-pointer'>
+                  <span className=' top-8 bg-black  text-center py-3 w-100'>{item.text}</span>
                 </div>
               </div>
             ))}
           </motion.div>
         </div>
-        <div className="flex-1 flex items-center justify-center z-10 bg-$gray border h_415 opacity-90 right-0">
-          <img src="/assets/2560/home/right-arrow.svg" className={`${s.icon} cursor-pointer`} onClick={() => handleClick("right")} />
+        <div className='flex-1 flex items-center justify-center z-10 bg-$gray border h_415 opacity-90 right-0'>
+          <img src='/assets/2560/home/right-arrow.svg' className={`${s.icon} cursor-pointer`} onClick={() => handleClick("right")} />
         </div>
       </div>
 
       <div className={`w-100 text-center ${styles.subtitle_wrap}`}>
         <span className={`${styles.subtitle}`}>空间康复训练游戏</span>
       </div>
-      <div className="w-100 hidden mobile:flex items-center justify-center">
+      <div className='w-100 hidden mobile:flex items-center justify-center'>
         <div className={`${styles.game} d-center relative`}>
-          <motion.img variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} src="/assets/2560/product/iremo/game_1.png" className={`${styles.game_img} relative`}></motion.img>
+          <motion.img variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} src='/assets/2560/product/iremo/game_1.png' className={`${styles.game_img} relative`}></motion.img>
           <div className={`${styles.sm_img_wrap} absolute flex`}>
-            <motion.img variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} src="/assets/2560/product/iremo/sm_img_2.png" className={`${styles.sm_img_1} relative`}></motion.img>
-            <motion.img variants={r_variants} animate={`${inViewport ? "enter" : "leave"}`} src="/assets/2560/product/iremo/sm_img_1.png" className={`${styles.sm_img_2} relative`}></motion.img>
+            <motion.img variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} src='/assets/2560/product/iremo/sm_img_2.png' className={`${styles.sm_img_1} relative`}></motion.img>
+            <motion.img variants={r_variants} animate={`${inViewport ? "enter" : "leave"}`} src='/assets/2560/product/iremo/sm_img_1.png' className={`${styles.sm_img_2} relative`}></motion.img>
           </div>
-          <motion.img variants={r_variants} animate={`${inViewport ? "enter" : "leave"}`} src="/assets/2560/product/iremo/s_bottom_img_1.png" className={`${styles.game_img} relative`}></motion.img>
-          <div className="absolute bottom-5 flex justify-around w-100 ">
-            <motion.span variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} className=" pl-8 font_21">
+          <motion.img variants={r_variants} animate={`${inViewport ? "enter" : "leave"}`} src='/assets/2560/product/iremo/s_bottom_img_1.png' className={`${styles.game_img} relative`}></motion.img>
+          <div className='absolute bottom-5 flex justify-around w-100 '>
+            <motion.span variants={l_variants} animate={`${inViewport ? "enter" : "leave"}`} className=' pl-8 font_21'>
               水果采摘（肩肘关机活动度训练）
             </motion.span>
-            <motion.span variants={r_variants} animate={`${inViewport ? "enter" : "leave"}`} className="pr-8 font_21">
+            <motion.span variants={r_variants} animate={`${inViewport ? "enter" : "leave"}`} className='pr-8 font_21'>
               喝水ADL（日常生活能力训练）
             </motion.span>
           </div>
         </div>
       </div>
-      <div className="mobile:hidden flex items-center justify-center">
+      <div className='mobile:hidden flex items-center justify-center'>
         <div className={`${styles.m_game} flex items-center justify-around relative`}>
-          <img src="/assets/2560/product/iremo/game_1.png" className={`${styles.m_game_img_2} relative`}></img>
+          <img src='/assets/2560/product/iremo/game_1.png' className={`${styles.m_game_img_2} relative`}></img>
           <div className={`${styles.sm_img_wrap} absolute flex`}>
-            <img src="/assets/2560/product/iremo/sm_img_2.png" className={`${styles.sm_img_1} relative`}></img>
-            <img src="/assets/2560/product/iremo/sm_img_1.png" className={`${styles.sm_img_2} relative`}></img>
+            <img src='/assets/2560/product/iremo/sm_img_2.png' className={`${styles.sm_img_1} relative`}></img>
+            <img src='/assets/2560/product/iremo/sm_img_1.png' className={`${styles.sm_img_2} relative`}></img>
           </div>
-          <img src="/assets/2560/product/iremo/s_bottom_img_1.png" className={`${styles.m_game_img_2} relative`}></img>
+          <img src='/assets/2560/product/iremo/s_bottom_img_1.png' className={`${styles.m_game_img_2} relative`}></img>
           <div className={`${s.m_desc} absolute flex justify-around w-100 `}>
-            <span className=" pl-2 font_18 text-$37">水果采摘（肩肘关机活动度训练）</span>
-            <span className="pr-2 font_18 text-$37">喝水ADL（日常生活能力训练）</span>
+            <span className=' pl-2 font_18 text-$37'>水果采摘（肩肘关机活动度训练）</span>
+            <span className='pr-2 font_18 text-$37'>喝水ADL（日常生活能力训练）</span>
           </div>
         </div>
       </div>

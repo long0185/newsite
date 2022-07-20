@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 import s from "./index.module.css";
 import Menu from "../../Menu";
@@ -33,9 +35,11 @@ export default function index() {
           <a href={(list[0] || {}).link}>
             <img className={`w-100 h-100 absolute `} src={(list[0] || {}).ImageUrl || "/assets/2560/home/example-area.png"} />
             <motion.div className={`${s.modal} absolute z-100 z-50 clear-both bg-$primary `} whileHover={{ opacity: 0.9 }} whileTap={{ opacity: 0 }}>
-              <img src={`https://www.irego.cn/web/picgure/modal-${getImgName(list[0]?.ImageUrl)}.jpeg`} className="big_modal_svg top-38 absolute" alt="" />
-              <span className="big_modal_text  text-white top-40 clear-both absolute">{list[0]?.textName.split("•")[1] || `成功案例`}</span>
-              <img src="/assets/2560/modal-enter.svg" alt="" className="big_modal_icon img-fluid clear-both absolute" />
+              <img src={`https://www.irego.cn/web/picgure/modal-${getImgName(list[0]?.ImageUrl)}.jpeg`} className='big_modal_svg top-38 absolute' alt='' />
+              <div style={{ top: "58%", left: "50%", transform: "translateX(-50%)" }} className='absolute top-40 clear-both flex items-center'>
+                <span className='big_modal_text text-white top-40 '>{list[0]?.textName.split("•")[1] || `成功案例`}</span>
+                <img src='/assets/2560/modal-enter.svg' alt='' className='ml-3 mt-1 big_modal_icon img-fluid clear-both ' />
+              </div>
             </motion.div>
             <div className={`${s.innovate_btn} absolute  z-10`}>{(list[0] || {}).textName || `成功案例`}</div>
             {/* <img className="w-100 h-100" src={(list[0] || {}).ImageUrl} /> */}
@@ -45,14 +49,18 @@ export default function index() {
           <a href={(list[1] || {}).link}>
             <img className={`w-100 h-100 absolute `} src={(list[1] || {}).ImageUrl || "/assets/2560/home/example-area.png"} />
             <motion.div className={`${s.modal} absolute z-100 z-50 clear-both bg-$primary `} whileHover={{ opacity: 0.9 }} whileTap={{ opacity: 0 }}>
-              <img src={`https://www.irego.cn/web/picgure/modal-${getImgName(list[1]?.ImageUrl)}.jpeg`} className="big_modal_svg top-38 absolute" alt="" />
-              <span className="big_modal_text  text-white top-40 clear-both absolute">{list[1]?.textName.split("•")[1] || `成功案例`}</span>
-              <img src="/assets/2560/modal-enter.svg" alt="" className="big_modal_icon img-fluid clear-both absolute" />
+              <img src={`https://www.irego.cn/web/picgure/modal-${getImgName(list[1]?.ImageUrl)}.jpeg`} className='big_modal_svg top-38 absolute' alt='' />
+              <div style={{ top: "58%", left: "50%", transform: "translateX(-50%)" }} className='absolute clear-both flex items-center'>
+                <span className='big_modal_text  text-white top-40 '>{list[1]?.textName.split("•")[1] || `成功案例`}</span>
+                <img src='/assets/2560/modal-enter.svg' alt='' className='big_modal_icon ml-3 mt-1 img-fluid clear-both ' />
+              </div>
             </motion.div>
             <div className={`${s.innovate_btn} absolute  z-10`}>{(list[1] || {}).textName || `成功案例`}</div>
+<<<<<<< HEAD
             {/* <img className="w-100 h-100" src={(list[0] || {}).ImageUrl} /> */}
+=======
+>>>>>>> 10c07ff (update)
           </a>
-          {/* <div className={`${s.innovate_btn} absolute bottom-2 left-2`}>合作案例 · 实施中</div> */}
         </div>
       </div>
       <div className={`${s.news} flex justify-center`}>
@@ -60,9 +68,9 @@ export default function index() {
           <a href={(list[2] || {}).link}>
             <img className={`${s.news_1} img-fluid absolute `} src={(list[2] || {}).ImageUrl || "/assets/2560/home/example-area.png"} />
             <motion.div className={`${s.modal} absolute z-100 z-50 clear-both bg-$primary `} whileHover={{ opacity: 0.9 }} whileTap={{ opacity: 0 }}>
-              <img src={`https://www.irego.cn/web/picgure/modal-${getImgName(list[2]?.ImageUrl)}.jpeg`} className="modal_svg img-fluid top-32 absolute" alt="" />
-              <span className="modal_text text-6xl text-white top-40 clear-both absolute">{list[2]?.textName.split("•")[1] || `成功案例`}</span>
-              <img src="/assets/2560/modal-enter.svg" alt="" className="modal_icon img-fluid clear-both absolute" />
+              <img src={`https://www.irego.cn/web/picgure/modal-${getImgName(list[2]?.ImageUrl)}.jpeg`} className='modal_svg img-fluid top-32 absolute' alt='' />
+              <span className='modal_text text-6xl text-white top-40 clear-both absolute'>{list[2]?.textName.split("•")[1] || `成功案例`}</span>
+              <img src='/assets/2560/modal-enter.svg' alt='' className='modal_icon img-fluid clear-both absolute' />
             </motion.div>
             <div className={`${s.innovate_btn} absolute  z-10`}>{(list[2] || {}).textName || `成功案例`}</div>
           </a>
@@ -71,9 +79,9 @@ export default function index() {
           <a href={(list[3] || {}).link}>
             <img className={`${s.news_1} img-fluid absolute z-10`} src={(list[3] || {}).ImageUrl || "/assets/2560/home/example-personal.png"} />
             <motion.div className={`${s.modal} absolute z-100 z-50 clear-both bg-$primary `} whileHover={{ opacity: 0.9 }} whileTap={{ opacity: 0 }}>
-              <img src={`https://www.irego.cn/web/picgure/modal-${getImgName(list[3]?.ImageUrl)}.jpeg`} className="modal_svg img-fluid top-32 absolute" alt="" />
-              <span className="modal_text text-6xl text-white top-40 clear-both absolute">{list[3]?.textName.split("•")[1] || `成功案例`}</span>
-              <img src="/assets/2560/modal-enter.svg" alt="" className="modal_icon img-fluid clear-both absolute" />
+              <img src={`https://www.irego.cn/web/picgure/modal-${getImgName(list[3]?.ImageUrl)}.jpeg`} className='modal_svg img-fluid top-32 absolute' alt='' />
+              <span className='modal_text text-6xl text-white top-40 clear-both absolute'>{list[3]?.textName.split("•")[1] || `成功案例`}</span>
+              <img src='/assets/2560/modal-enter.svg' alt='' className='modal_icon img-fluid clear-both absolute' />
             </motion.div>
             <div className={`${s.innovate_btn} absolute z-20 `}>{(list[3] || {}).textName || `成功案例`}</div>
           </a>
@@ -82,9 +90,9 @@ export default function index() {
           <a href={(list[4] || {}).link}>
             <img className={`${s.news_1} img-fluid absolute`} src={(list[4] || {}).ImageUrl || "/assets/2560/home/example-his.png"} />
             <motion.div className={`${s.modal} absolute z-100 z-50 clear-both bg-$primary `} whileHover={{ opacity: 0.9 }} whileTap={{ opacity: 0 }}>
-              <img src={`https://www.irego.cn/web/picgure/modal-${getImgName(list[4]?.ImageUrl)}.jpeg`} className="modal_svg img-fluid top-32 absolute" alt="" />
-              <span className="modal_text text-6xl text-white top-40 clear-both absolute">{list[4]?.textName.split("•")[1] || `成功案例`}</span>
-              <img src="/assets/2560/modal-enter.svg" alt="" className="modal_icon img-fluid clear-both absolute" />
+              <img src={`https://www.irego.cn/web/picgure/modal-${getImgName(list[4]?.ImageUrl)}.jpeg`} className='modal_svg img-fluid top-32 absolute' alt='' />
+              <span className='modal_text text-6xl text-white top-40 clear-both absolute'>{list[4]?.textName.split("•")[1] || `成功案例`}</span>
+              <img src='/assets/2560/modal-enter.svg' alt='' className='modal_icon img-fluid clear-both absolute' />
             </motion.div>
             <div className={`${s.innovate_btn} absolute`}>{(list[4] || {}).textName || `成功案例`}</div>
           </a>
