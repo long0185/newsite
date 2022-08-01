@@ -30,7 +30,7 @@ export default function Footer() {
   const { pathname } = useRouter();
   return (
     <>
-    {(pathname !== "/"&&!show) && <ToTop />}
+      {pathname !== "/" && !show && <ToTop />}
       <div className='mobile:hidden bg-gray-100 pt-5 pb-2 w-screen items-center justify-around h_267 flex flex-col'>
         <div className='flex justify-around items-center w-100'>
           <div className='flex items-center pl-3'>
@@ -71,9 +71,9 @@ export default function Footer() {
       </div>
       <div className='hidden mobile:flex footer w-100 items-center justify-between relative'>
         <div className='left-footer pl-16'>
-          <span className='pl-3 ml-3'>Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. 沪ICP备19033942号</span>
+          <span className='pl-3 ml-3'>Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. 沪ICP备19033942号-2</span>
           <span className='mx-3'>|</span>
-          <a href="/out/legal-declaration">
+          <a href='/out/legal-declaration'>
             <span className='mx-3 cursor-pointer'>法律声明</span>
           </a>
           <span className='mx-3'>|</span>
