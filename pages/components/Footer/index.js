@@ -53,7 +53,10 @@ export default function Footer() {
           </div>
         </div>
         <div className='flex w-100 flex-col justify-center items-center'>
-          <span className='font_size_24 text-$86 text-center'>Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. 沪ICP备19033942号</span>
+          <span className="className='font_size_24 text-$86 text-center'">Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved.</span>
+          <a href='http://beian.miit.gov.cn/' target={`_blank`} className='font_size_24 text-$86 text-center'>
+            沪ICP备19033942号-2
+          </a>
           <div className='flex font_size_24 text-$8 mt-3'>
             <a href='/out/legal-declaration' className='font_size_24 text-$86'>
               法律声明
@@ -71,7 +74,10 @@ export default function Footer() {
       </div>
       <div className='hidden mobile:flex footer w-100 items-center justify-between relative'>
         <div className='left-footer pl-16'>
-          <span className='pl-3 ml-3'>Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. 沪ICP备19033942号-2</span>
+          <span className='pl-3 ml-3'>Copyright © 2016上海金矢机器人科技有限公司 All Rights Reserved. </span>
+          <a href='http://beian.miit.gov.cn/' target={`_blank`} className=' hover:text-blue-500 hover:border-b-2 border-blue-500'>
+            沪ICP备19033942号-2
+          </a>
           <span className='mx-3'>|</span>
           <a href='/out/legal-declaration'>
             <span className='mx-3 cursor-pointer'>法律声明</span>

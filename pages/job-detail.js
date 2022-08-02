@@ -1,3 +1,5 @@
+/** @format */
+
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -104,37 +106,37 @@ const showList = _list.map((item, index) => {
   return {
     id: index,
     element: (
-      <div className="w-100 h-100 flex flex-col pt-10">
-        <div className="w-100 flex flex-col items-start justify-start p-10">
-          <span className="font_36 font-black mb-10">{item.name}</span>
-          <div className="flex justify-center items-center mt-3">
-            <span className="detail_desc font-black mr-5">职位薪资:</span>
-            <span className="detail_desc font-$color">{item.salary}k</span>
+      <div className='w-100 h-100 flex flex-col pt-10'>
+        <div className='w-100 flex flex-col items-start justify-start p-10'>
+          <span className='font_36 font-black mb-10'>{item.name}</span>
+          <div className='flex justify-center items-center mt-3'>
+            <span className='detail_desc font-black mr-5'>职位薪资:</span>
+            <span className='detail_desc font-$color'>{item.salary}k</span>
           </div>
-          <div className="flex justify-center items-center mt-3">
-            <span className="detail_desc font-black mr-5">工作年限:</span>
-            <span className="detail_desc font-$color">{item.rang}年</span>
+          <div className='flex justify-center items-center mt-3'>
+            <span className='detail_desc font-black mr-5'>工作年限:</span>
+            <span className='detail_desc font-$color'>{item.rang}年</span>
           </div>
-          <div className="flex justify-center items-center mt-3">
-            <span className="detail_desc font-black mr-5">招聘人数:</span>
-            <span className="detail_desc font-$color">{item.num}</span>
+          <div className='flex justify-center items-center mt-3'>
+            <span className='detail_desc font-black mr-5'>招聘人数:</span>
+            <span className='detail_desc font-$color'>{item.num}</span>
           </div>
-          <div className="flex justify-center items-center mt-3">
-            <span className="detail_desc font-black mr-5">工作地点</span>
-            <span className="detail_desc font-$color">{item.area}</span>
+          <div className='flex justify-center items-center mt-3'>
+            <span className='detail_desc font-black mr-5'>工作地点</span>
+            <span className='detail_desc font-$color'>{item.area}</span>
           </div>
-          <div className="flex justify-center items-center mt-3">
-            <span className="detail_desc font-black">岗位职责:</span>
+          <div className='flex justify-center items-center mt-3'>
+            <span className='detail_desc font-black'>岗位职责:</span>
           </div>
-          <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+          <div className='flex justify-center items-start flex-col mt-3 detail_desc'>
             <p>1. 本科以上学历，具有2年以上相关工作经验，根据产品设计需求，实现、维护及优化WEB前端页面和业务功能</p>
             <p>2. 负责公司移动端，PC端产品研发，有实际移动平台web前端开发和HTML5实践工作经验</p>
             <p>3. 根据产品需求负责完成开发和调试工作，深入解析代码, 提升代码执行效率</p>
           </div>
-          <div className="flex justify-center items-center mt-3">
-            <span className="detail_desc font-black">技能要求:</span>
+          <div className='flex justify-center items-center mt-3'>
+            <span className='detail_desc font-black'>技能要求:</span>
           </div>
-          <div className="flex justify-center items-start flex-col mt-3 detail_desc">
+          <div className='flex justify-center items-start flex-col mt-3 detail_desc'>
             <p>1.有扎实的javascript基础（作用域，继承，闭包，面向对象设计等）</p>
             <p>2.熟悉Vue、React等框架，具有Vue实际项目经验，（熟悉Echarts，element-ui等可视化组件者优先考虑）</p>
             <p>3.根据产品需求负责完成开发和调试工作，深入解析代码, 提升代码执行效率</p>
@@ -168,6 +170,7 @@ export default function applicationdetail() {
           const _item = val.find((item) => item.id == id);
           const index = val.findIndex((item) => item.id == id);
           setIndex(index);
+          setNum(index);
           setList(val);
         }
       });
@@ -186,14 +189,14 @@ export default function applicationdetail() {
   return (
     <div>
       <Navbar />
-      <div className="mt_104">
-        <div className={`mobile:hidden flex`}>
+      <div className='mt_104'>
+        {/* <div className={`mobile:hidden flex`}>
           <ul className={`${s.ul} h-100`}>
             <div className={`${s.back}  absolute w-100 flex justify-center items-center`}>
               <button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>
                 返回列表
               </button>
-              <a href="https://jobs.51job.com/all/co5284121.html">
+              <a href='https://jobs.51job.com/all/co5284121.html'>
                 <button className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>提交简历</button>
               </a>
             </div>
@@ -201,37 +204,37 @@ export default function applicationdetail() {
             {Array.isArray(list) &&
               list.map((item, idx) => (
                 <motion.li key={item.id} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == id ? "100" : "10"}` }} variants={variants} animate={idx < index ? "left" : index > index ? "right" : "mid"}>
-                  <div className="w-100 h-100 flex flex-col pt-10">
-                    <div className="w-100 flex flex-col items-start justify-start p-10 text-$37">
-                      <span className="font_36 font-black mb-10">{item.Name}</span>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">职位薪资:</span>
-                        <span className="detail_desc font-$color">{item.Money}</span>
+                  <div className='w-100 h-100 flex flex-col pt-10'>
+                    <div className='w-100 flex flex-col items-start justify-start p-10 text-$37'>
+                      <span className='font_36 font-black mb-10'>{item.Name}</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>职位薪资:</span>
+                        <span className='detail_desc font-$color'>{item.Money}</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">工作年限:</span>
-                        <span className="detail_desc font-$color">{item.Time}年</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>工作年限:</span>
+                        <span className='detail_desc font-$color'>{item.Time}年</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">招聘人数:</span>
-                        <span className="detail_desc font-$color">{item.Number}</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>招聘人数:</span>
+                        <span className='detail_desc font-$color'>{item.Number}</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">工作地点</span>
-                        <span className="detail_desc font-$color">{item.Place}</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>工作地点</span>
+                        <span className='detail_desc font-$color'>{item.Place}</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black">岗位职责:</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black'>岗位职责:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
+                      <div className='flex justify-center items-start flex-col mt-3 detail_desc text-$68'>
                         {item.Descrip.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black">技能要求:</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black'>技能要求:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
+                      <div className='flex justify-center items-start flex-col mt-3 detail_desc text-$68'>
                         {item.Skills.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
@@ -241,54 +244,54 @@ export default function applicationdetail() {
                 </motion.li>
               ))}
           </ul>
-        </div>
+        </div> */}
         <div className={`${s.m_middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen flex  mobile:hidden items-center justify-center`}>
           <ul className={`${s.m_ul} h-100`}>
             <div className={`${s.back}   absolute w-100 flex flex-col justify-center items-center`}>
-              <div className="w-100 flex justify-center items-center ">
+              <div className='w-100 flex justify-center items-center '>
                 <button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>
                   返回列表
                 </button>
-                <a href="https://jobs.51job.com/all/co5284121.html" className={`${s.back_btn}`}>
+                <a href='https://jobs.51job.com/all/co5284121.html' className={`${s.back_btn}`}>
                   <button className={`${s.back_btn} w-100 rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>提交简历</button>
                 </a>
               </div>
-              <span className="mt-7">简历投递邮箱：zhaopin@ga-robot.com</span>
+              <span className='mt-7'>简历投递邮箱：zhaopin@ga-robot.com</span>
             </div>
             {Array.isArray(list) &&
               list.map((item, idx) => (
                 <motion.li key={item.id} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == id ? "100" : "10"}` }} variants={m_variants} animate={idx < index ? "left" : idx > index ? "right" : "mid"}>
-                  <div className="w-100 h-100 flex flex-col pt-10">
-                    <div className="w-100 flex flex-col items-start justify-start p-10 text-$37">
-                      <span className="font_36 font-black mb-10">{item.Name}</span>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">职位薪资:</span>
-                        <span className="detail_desc font-$color">{item.Money}</span>
+                  <div className='w-100 h-100 flex flex-col pt-10'>
+                    <div className='w-100 flex flex-col items-start justify-start p-10 text-$37'>
+                      <span className='font_36 font-black mb-10'>{item.Name}</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>职位薪资:</span>
+                        <span className='detail_desc font-$color'>{item.Money}</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">工作年限:</span>
-                        <span className="detail_desc font-$color">{item.Time}年</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>工作年限:</span>
+                        <span className='detail_desc font-$color'>{item.Time}年</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">招聘人数:</span>
-                        <span className="detail_desc font-$color">{item.Number}</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>招聘人数:</span>
+                        <span className='detail_desc font-$color'>{item.Number}</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">工作地点</span>
-                        <span className="detail_desc font-$color">{item.Place}</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>工作地点</span>
+                        <span className='detail_desc font-$color'>{item.Place}</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black">岗位职责:</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black'>岗位职责:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
+                      <div className='flex justify-center items-start flex-col mt-3 detail_desc text-$68'>
                         {item.Descrip.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black">技能要求:</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black'>技能要求:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
+                      <div className='flex justify-center items-start flex-col mt-3 detail_desc text-$68'>
                         {item.Skills.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
@@ -302,8 +305,8 @@ export default function applicationdetail() {
         <div className={`${s.middle} bg-gray-300 opacity-100 pt_104 pb_200 z-10 w-screen hidden mobile:flex items-center justify-center`}>
           <ul className={`${s.ul} h-100`}>
             <div className={`absolute top_45 w-100 z-20 h-20`}>
-              <img onClick={() => handleClick("left")} className={`${s.left_icon} cursor-pointer h-100 absolute`} src="/assets/2560/home/left-arrow.svg"></img>
-              <img onClick={() => handleClick("right")} className={`${s.right_icon} cursor-pointer  h-100 absolute`} src="/assets/2560/home/right-arrow.svg"></img>
+              <img onClick={() => handleClick("left")} className={`${s.left_icon} cursor-pointer h-100 absolute`} src='/assets/2560/home/left-arrow.svg'></img>
+              <img onClick={() => handleClick("right")} className={`${s.right_icon} cursor-pointer  h-100 absolute`} src='/assets/2560/home/right-arrow.svg'></img>
             </div>
 
             <div className={`${s.back}  absolute w-100 flex flex-col justify-center items-center`}>
@@ -311,48 +314,48 @@ export default function applicationdetail() {
                 <button onClick={() => router.back()} className={`${s.back_btn} rounded text-$color px-5 py-1 bg-white border-1 border-$primary mr-2`}>
                   返回列表
                 </button>
-                <a href="https://jobs.51job.com/all/co5284121.html">
+                <a href='https://jobs.51job.com/all/co5284121.html'>
                   <button className={`${s.back_btn} rounded text-white px-5 py-1 bg-$primary border-1 border-$primary ml-2`}>投递简历</button>
                 </a>
               </div>
-              <span className="mt-5">zhaopin@ga-robot.com</span>
+              <span className='mt-5'>zhaopin@ga-robot.com</span>
             </div>
 
             {Array.isArray(list) &&
               list.length > 0 &&
               list.map((item, index) => (
-                <motion.li key={index} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == 1 ? "100" : "10"}` }} variants={variants} animate={index < num ? "left" : index > num ? "right" : "mid"}>
-                  <div className="w-100 h-100 flex flex-col pt-10">
-                    <div className="w-100 flex flex-col items-start justify-start p-10 text-$37">
-                      <span className="font_36 font-black mb-10">{item.Name}</span>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">职位薪资:</span>
-                        <span className="detail_desc font-$color">{item.Money}</span>
+                <motion.li key={item.id} className={`${s.li} rounded-xl shadow-2xl`} style={{ zIndex: `${item?.id == id ? "100" : "10"}` }} variants={variants} animate={index < num ? "left" : index > num ? "right" : "mid"}>
+                  <div className='w-100 h-100 flex flex-col pt-10'>
+                    <div className='w-100 flex flex-col items-start justify-start p-10 text-$37'>
+                      <span className='font_36 font-black mb-10'>{item.Name}</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>职位薪资:</span>
+                        <span className='detail_desc font-$color'>{item.Money}</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">工作年限:</span>
-                        <span className="detail_desc font-$color">{item.Time}年</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>工作年限:</span>
+                        <span className='detail_desc font-$color'>{item.Time}年</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">招聘人数:</span>
-                        <span className="detail_desc font-$color">{item.Number}</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>招聘人数:</span>
+                        <span className='detail_desc font-$color'>{item.Number}</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black mr-5">工作地点</span>
-                        <span className="detail_desc font-$color">{item.Place}</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black mr-5'>工作地点</span>
+                        <span className='detail_desc font-$color'>{item.Place}</span>
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black">岗位职责:</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black'>岗位职责:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
+                      <div className='flex justify-center items-start flex-col mt-3 detail_desc text-$68'>
                         {item.Descrip.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
                       </div>
-                      <div className="flex justify-center items-center mt-3">
-                        <span className="detail_desc font-black">技能要求:</span>
+                      <div className='flex justify-center items-center mt-3'>
+                        <span className='detail_desc font-black'>技能要求:</span>
                       </div>
-                      <div className="flex justify-center items-start flex-col mt-3 detail_desc text-$68">
+                      <div className='flex justify-center items-start flex-col mt-3 detail_desc text-$68'>
                         {item.Skills.split("\n").map((ele, idx) => (
                           <p key={idx}>{ele}</p>
                         ))}
